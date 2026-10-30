@@ -1,0 +1,16 @@
+:root {
+  --color-background: #f5f5f1;
+  --color-foreground: #151a1d;
+  --color-dark: #10191f;
+  --color-muted: #6c7478;
+  --color-accent: #83d7ed;
+  --color-line: rgba(21, 26, 29, 0.16);
+
+  --font-body: Arial, Helvetica, sans-serif;
+
+  --page-gutter: clamp(20px, 5vw, 84px);
+  --section-space: clamp(88px, 13vw, 180px);
+
+  --transition-fast: 220ms ease;
+  --transition-medium: 450ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}

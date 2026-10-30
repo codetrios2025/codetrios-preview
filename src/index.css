@@ -1,0 +1,285 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('/assets/fonts/Rubik-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('/assets/fonts/Rubik-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('/assets/fonts/Rubik-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('/assets/fonts/Rubik-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'BricolageGrotesque-Bold';
+    src: url('/assets/fonts/BricolageGrotesque-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+} 
+
+/* ---------- Fallback fonts with matched metrics (reduce CLS) ---------- */
+@font-face {
+    font-family: 'Rubik Fallback';
+    src: local('Arial');
+    size-adjust: 104%;
+    ascent-override: 93%;
+    descent-override: 25%;
+    line-gap-override: 0%;
+}
+@font-face {
+    font-family: 'Bricolage Fallback';
+    src: local('Arial');
+    size-adjust: 98%;
+    ascent-override: 95%;
+    descent-override: 25%;
+    line-gap-override: 0%;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+}
+body {
+  margin: 0;
+   font-family: 'Rubik', 'Rubik Fallback', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+h1, h2{
+  font-family: 'BricolageGrotesque-Bold', 'Bricolage Fallback', sans-serif;
+}
+strong{font-weight: 500;}
+a{text-decoration: none;}
+ul, figure, ol{margin: 0;padding: 0;}
+li{list-style-type: none;}
+.imgFull{width: auto;max-width: 100%;height: auto;}
+h3, h4{font-weight: 500;}
+p{line-height: 26px;}
+input[type="number"]::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+.menuToggle, .closeBtn, .subToggle{display: none;}
+.boxHeight .col-md-4{display: flex;}
+
+button{border: none;}
+
+.fade-text {
+  display: inline-block;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.servicesCol ul li{display: block!important;}
+.faqStyle{position: relative;width: 960px;margin: 30px auto 0;max-width: 100%;}
+.faqStyle .accordion-button:focus{outline: 0;box-shadow: none;}
+.faqStyle .accordion-item{margin-bottom: 20px;border-radius: 4px;overflow: hidden;}
+.faqStyle .accordion-item .accordion-header button{    outline: 0;background: #4b72ff;color: #fff;font-weight: 500;font-size: 20px;}
+.faqStyle .accordion-collapse{background: rgb(247, 247, 247);}
+.faqStyle .accordion-button::after{filter: brightness(0) invert(1);}
+.faqStyle .accordion-body p{margin: 0;}
+
+@media only screen and (min-width:580px){
+  .centerCarousel .react-multi-carousel-track {justify-content: center;margin: 0 auto;}
+}
+
+@media (max-width: 1199px){
+body{font-size: 14px;}
+p{line-height: 24px;}
+}
+
+@media (max-width: 992px){
+.faqStyle .accordion-item .accordion-header button{font-size: 18px;}  
+.menuToggle{display: block;background: transparent;padding: 0;color: #000;font-size: 30px;margin: 0 0;border: none;position: absolute;right: 0;top: -6px;}
+.closeBtn{display: block;border: none;}
+header .mainMenu{background: #7C3AED;position: fixed;top: 0;right: -100%;width: 300px;height: 100%;padding-top: 30px;overflow: auto;z-index: 99;}
+header .mainMenu.activeMenu{right: 0;}
+header .mainMenu ul{flex-direction: column;height: 100%;}
+header .mainMenu ul li{position: relative;}
+header .mainMenu ul li a{color: #fff;padding: 10px 15px;width: 100%;border-bottom: 1px dotted #fff;}
+header .mainMenu ul ul{display: none;}
+.mainMenu .closeBtn{margin: 0;padding: 0;top: 5px;right: 5px;position: absolute;background: #000;color: #fff;width: 30px;height: 30px;display: flex;align-items: center;justify-content: center;border-radius: 50%;}
+.mainMenu ul li a .icon{display: none;}
+.mainMenu ul li .subToggle{        position: absolute;top: 0;right: 0;margin: 0;padding: 0;padding: 10px;background: #6217e3;color: #fff;border-radius: 0;z-index: 9;display: block;}
+.mainMenu ul ul:after, .mainMenu ul ul:before{content: none!important;}        
+header .mainMenu ul li .subMenuMob {background: #854ce7;position: relative;top: 0!important;flex-direction: column;        padding: 0 0;display: none!important;border: none;}
+header .mainMenu ul li .subMenuMob.open{display: flex!important;}
+header .mainMenu ul li .subMenuMob li{width: 100%;margin: 0;}
+header .mainMenu ul li .subMenuMob li a{        padding: 10px 30px;}
+.servicesView .col-md-4{width: 50%;}
+.aboutCls .col-md-6{width: 100%;}
+.aboutCls figure{margin-bottom: 30px;display: block;}
+.popStyle .container{max-width: 100%;}
+.boxHeight .col-md-4{width: 50%;}
+.servicesCol .col-md-5, .servicesCol .col-md-7{width: 100%}
+.servicesCol .col-md-5{margin-bottom: 30px;}
+}
+
+/* FULLSCREEN LOADER */
+.loader-wrapper {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+.loader-wrapper div{width: 300px;height: 70px;display: flex;
+    justify-content: center;position: relative;}
+/* Stack both images on top of each other (so icon hides cleanly) */
+.loader-wrapper img {
+  position: absolute;
+}
+
+@media (max-width: 767px){
+.faqStyle .accordion-item .accordion-header button {font-size: 16px;line-height: 26px;padding: 15px;}  
+.faqStyle .accordion-body {padding: 15px 15px 0;}
+.servicesView .col-md-4{width: 100%;}
+.boxHeight .col-md-4 {width: 100%;}
+}
+.error-text {color: #ff4d4d;font-size: 14px;margin-top: 4px;}
+
+/* ICON ANIMATION */
+.loader-icon {width: 80px;animation: moveIcon 2.5s ease-in-out forwards;transition: opacity 0.4s ease;transition: all 0.2s linear;left: 120px;}
+
+@keyframes moveIcon {
+  0%   { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(0) scale(1) rotate(180deg); }
+  50%  { transform: translate(0) scale(0.5); }
+  75%  { transform: translate(0) scale(1) rotate(180deg); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* ICON HIDES COMPLETELY */
+.hide-icon {
+  opacity: 1 !important;
+  width: 30px;
+  left: 10px;
+}
+
+/* LOGO FADE IN */
+.loader-logo {
+  width: 260px;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+.react-multi-carousel-list{padding-bottom: 40px;}
+
+
+
+/* new coman style css */
+.btnStyle {
+    color: #fff;
+    padding: 14px 30px;
+    position: relative;
+    z-index: 1;
+    border: none;
+    overflow: hidden;
+    background: linear-gradient(90deg, #8E42FF 0%, #5A63FF 45%, #18A8FF 100%);
+    border-radius: 30px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.btnStyle .icon{margin-left: 5px;width: 18px;height: 18px;}
+.btnStyle:hover{background: linear-gradient(90deg,#18A8FF 0%,#5A63FF 55%,#8E42FF 100%);}
+
+.sectionHead{
+  position: relative;
+    width: 600px;
+    max-width:100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto 30px;
+}
+.sectionHead .tag{
+    color: #38d8ff;
+    font-size: 12px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+.sectionHead h2{
+    font-family: 'BricolageGrotesque-Bold';
+    color: #fff;
+    font-size: 45px;
+    margin: 10px 0;
+}
+.sectionHead h2 span{
+    color: #38d8ff;
+}
+.sectionHead p{
+  color:#b9d8f5;
+  font-size: 14px;
+  
+}
+
+@media (max-width: 1399px) {
+.sectionHead{
+  margin: 0 auto 20px;
+}  
+.sectionHead h2{
+  font-size: 40px;
+  margin: 10px 0 0;
+}
+}
+
+@media (max-width: 1199px) {
+  .btnStyle{
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .btnStyle{
+    font-size: 12px;
+    padding: 12px 20px;
+  }
+  .sectionHead h2{
+    font-size: 32px;
+    margin: 5px 0 0;
+  }  
+  .sectionHead p, .sectionHead{
+    text-align: left;
+  }
+  .sectionHead p{
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width: 580px) {
+.sectionHead h2{
+    font-size: 28px;
+  } 
+}

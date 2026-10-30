@@ -1,0 +1,97 @@
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import Style from '../CSS/Header.module.css';
+import { Link, Outlet  } from "react-router-dom";
+import Logo from '../../assets/images/codetrios_logo.svg';
+import { ChevronDown, Menu, CircleX } from "lucide-react";
+// import ContactUs from "../HomeRoute/Contact";
+
+const Header=()=>{
+    const [isOPen, setIsopen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [subOpen, setSubOpen] = useState(false); 
+    const [isScrolled, setIsScrolled] = useState(false);
+    const closeMenu = () => {
+    setMenuOpen(false);
+    setSubOpen(false);
+  };
+   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+    const formOpenHandler=()=>{
+        setIsopen(true);
+    }
+    const formCloseHandler=()=>{
+        setIsopen(false);
+    }
+
+    return(
+        <>
+            <header className={`header ${isScrolled ? Style.headerFix : ""}`}>
+                <Container>
+                    <Row>
+                        <Col>
+                            <div className={Style.head}>
+                                <div className={Style.logo}>
+                                    <Link to='' alt='codetrios'><img src={Logo} alt="codetrios" width="180" height="42" fetchPriority="high" loading="eager" decoding="async" /></Link>
+                                </div>
+                                <button type="button" className="menuToggle"  onClick={() => setMenuOpen(true)}><Menu /></button>
+                                <div className={Style.headFlex}>
+                                    <div className={`mainMenu ${menuOpen ? "activeMenu" : ""}`}>
+                                        <button type='button' className="closeBtn"  onClick={() => setMenuOpen(false)}><CircleX /></button>
+                                        <ul>
+                                            <li><Link onClick={closeMenu} to="" title="Home"><span>Home</span></Link></li>
+                                            <li><Link onClick={closeMenu} to="/about-us" title="About"><span>About</span></Link></li>
+                                            <li>
+                                                <Link onClick={closeMenu} to="/services" title="Services"><span>Services <ChevronDown className="icon" /></span></Link>
+                                                <button type="button" className="subToggle" onClick={() => setSubOpen(!subOpen)}>
+                                                    <ChevronDown className={subOpen ? "rotate" : ""} />
+                                                </button>
+                                                <ul className={`subMenuMob ${Style.subMenu} ${subOpen ? "open" : ""}`}>
+                                                    <li><Link onClick={closeMenu} to="/website-design-services" title="website design services">Website Design</Link></li>
+                                                    <li><Link onClick={closeMenu} to="/web-development-services" title="web-development-services">Web Development</Link></li>
+                                                    <li><Link onClick={closeMenu} to="/web-application-development" title="web application development">Web Applications</Link></li>
+                                                    <li><Link onClick={closeMenu} to="/ui-ux-design-services" title="ui ux design services">Design Services</Link></li>
+                                                    <li><Link onClick={closeMenu} to="/ecommerce-development-services" title="ecommerce development services">eCommerce Solutions</Link></li>
+                                                    <li><Link onClick={closeMenu} to="/custom-software-solutions" title="custom software solutions">Technology Solutions</Link></li>
+                                                    <li><Link onClick={closeMenu} to="/digital-strategy-consulting" title="digital strategy consulting">Digital Strategy</Link></li>
+                                                    <li><Link onClick={closeMenu} to="/web-hosting-services" title="web hosting services">Web Hosting Service</Link></li>
+                                                    <li><Link onClick={closeMenu} to="/geo-seo-services" title="Geo & SEO Services">Geo & SEO Services</Link></li>
+                                                </ul>
+                                            </li>
+                                            <li><Link onClick={closeMenu} to="/technologies" title="About"><span>Technologies</span></Link></li>
+                                            <li><Link onClick={closeMenu} to="/portfolio" title="Portfolio"><span>Portfolio</span></Link></li>
+                                            <li><Link onClick={closeMenu} to="/contact-us" title="Contact Us"><span>Contact Us</span></Link></li> 
+                                        </ul>
+                                    </div>
+                                    <button type="button" onClick={formOpenHandler} className={Style.getTouch}>Get Started</button>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </header >
+            {/* {isOPen && 
+                <div className={Style.formPop}>
+                    <div className={Style.formElem}>
+                        <button type='button' onClick={formCloseHandler} className={Style.closeBtn}><X /></button>
+                        <ContactUs />
+                    </div>
+                </div>
+            } */}
+        </>
+    )
+}
+
+export default Header

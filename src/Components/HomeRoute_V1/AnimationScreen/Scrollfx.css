@@ -1,0 +1,78 @@
+/* ScrollFX: scroll reveal, parallax, progress bar.
+   Everything is gated behind html.fx-on, which the component only adds when motion is allowed,
+   so with reduced motion (or before the component mounts) the page is fully visible and static. */
+
+:root {
+  --fx-ease: cubic-bezier(0.16, 1, 0.3, 1); /* expo-out: fast start, long soft landing */
+  --fx-dur: 0.9s;
+  --fx-dist: 44px;
+}
+
+/* ---------- progress bar ---------- */
+.fx-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 3px;
+  z-index: 9999;
+  pointer-events: none;
+}
+.fx-progress span {
+  display: block;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, #38bdf8, #7c5cff);
+  will-change: transform;
+}
+
+/* ---------- reveal ---------- */
+/* Horizontal travel must never create a sideways scrollbar. `clip` (unlike `hidden`) doesn't break position: sticky. */
+html.fx-on body { overflow-x: clip; }
+
+/* waiting to enter the viewport */
+html.fx-on [data-reveal]:not([data-revealed]) { opacity: 0; }
+
+/* entering: a keyframe animation that uses the individual `translate` / `scale` properties,
+   so it never fights your own `transform` or `transition` rules (e.g. card hover lifts). */
+html.fx-on [data-reveal] { --rv-name: fx-up; }
+html.fx-on [data-reveal="down"] { --rv-name: fx-down; }
+html.fx-on [data-reveal="left"] { --rv-name: fx-left; }
+html.fx-on [data-reveal="right"] { --rv-name: fx-right; }
+html.fx-on [data-reveal="zoom"] { --rv-name: fx-zoom; }
+html.fx-on [data-reveal="fade"] { --rv-name: fx-fade; }
+html.fx-on [data-reveal="clip"] { --rv-name: fx-clip; overflow: hidden; }
+
+html.fx-on [data-reveal][data-revealed="1"] {
+  animation: var(--rv-name) var(--rv-dur, var(--fx-dur)) var(--fx-ease) var(--rv-delay, 0ms) backwards;
+}
+/* scrolling up: the image wipe opens from the bottom instead of the top */
+html.fx-on [data-reveal="clip"][data-rv-up] { --rv-name: fx-clip-up; }
+
+/* image wipes in while settling from a slight zoom */
+html.fx-on [data-reveal="clip"][data-revealed="1"] img {
+  animation: fx-settle 1.6s var(--fx-ease) var(--rv-delay, 0ms) backwards;
+}
+
+/* --rv-dir is +1 when scrolling down, -1 when scrolling up, so vertical reveals always travel with the scroll */
+@keyframes fx-up    { from { opacity: 0; translate: 0 calc(var(--fx-dist) * var(--rv-dir, 1)); } }
+@keyframes fx-down  { from { opacity: 0; translate: 0 calc(var(--fx-dist) * -1 * var(--rv-dir, 1)); } }
+@keyframes fx-left  { from { opacity: 0; translate: calc(var(--fx-dist) * -1) 0; } }
+@keyframes fx-right { from { opacity: 0; translate: var(--fx-dist) 0; } }
+@keyframes fx-zoom  { from { opacity: 0; scale: 0.92; translate: 0 calc(var(--fx-dist) * 0.5 * var(--rv-dir, 1)); } }
+@keyframes fx-fade  { from { opacity: 0; } }
+@keyframes fx-clip  { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes fx-clip-up { from { clip-path: inset(100% 0 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes fx-settle { from { scale: 1.35; } }
+
+/* ---------- parallax ---------- */
+html.fx-on [data-parallax],
+html.fx-on [data-drift] {
+  translate: 0 var(--py, 0px);
+  will-change: translate;
+}
+html.fx-on [data-parallax-zoom] { scale: 1.16; }
+html.fx-on [data-scroll-fade] { will-change: opacity; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-progress { display: none; }
+}

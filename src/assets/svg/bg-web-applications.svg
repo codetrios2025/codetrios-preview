@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+<defs>
+<radialGradient id="g1" cx="78%" cy="14%" r="65%"><stop offset="0" stop-color="#8b5cf6" stop-opacity=".62"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+<radialGradient id="g2" cx="8%" cy="88%" r="60%"><stop offset="0" stop-color="#3b82f6" stop-opacity=".5"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/></radialGradient>
+<linearGradient id="a1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
+<pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#9cc7ff" fill-opacity=".14"/></pattern>
+<filter id="sh" x="-25%" y="-25%" width="150%" height="160%"><feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#000" flood-opacity=".55"/></filter>
+</defs>
+<style>
+.fl{animation:fl 6s ease-in-out infinite}
+.fl2{animation:fl 7.5s ease-in-out -2.5s infinite}
+.pulse{animation:pl 2s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.25}}
+</style>
+<rect width="800" height="600" fill="#040f20"/>
+<rect width="800" height="600" fill="url(#g1)"/>
+<rect width="800" height="600" fill="url(#g2)"/>
+<rect width="800" height="600" fill="url(#dots)"/>
+<g transform="translate(400 150) scale(.9)">
+<defs><linearGradient id="ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22d3ee" stop-opacity=".45"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></linearGradient></defs>
+<g filter="url(#sh)"><rect x="-230" y="-130" width="430" height="266" rx="18" fill="#0b1433" stroke="#8b5cf6" stroke-opacity=".55"/></g>
+<rect x="-230" y="-130" width="64" height="266" rx="18" fill="#8b5cf6" fill-opacity=".1"/>
+<rect x="-214" y="-100" width="30" height="22" rx="7" fill="url(#a1)" fill-opacity="1"/><rect x="-214" y="-64" width="30" height="22" rx="7" fill="#8b5cf6" fill-opacity="0.22"/><rect x="-214" y="-28" width="30" height="22" rx="7" fill="#8b5cf6" fill-opacity="0.22"/><rect x="-214" y="8" width="30" height="22" rx="7" fill="#8b5cf6" fill-opacity="0.22"/><rect x="-214" y="44" width="30" height="22" rx="7" fill="#8b5cf6" fill-opacity="0.22"/>
+<rect x="-150" y="-118" width="130" height="18" rx="9" fill="#8b5cf6" fill-opacity=".18"/>
+<circle cx="130" cy="-109" r="10" fill="#a78bfa" stroke="#0b1433" stroke-width="2"/><circle cx="148" cy="-109" r="10" fill="#22d3ee" stroke="#0b1433" stroke-width="2"/><circle cx="166" cy="-109" r="10" fill="#f472b6" stroke="#0b1433" stroke-width="2"/>
+<rect x="-150" y="-84" width="78" height="54" rx="10" fill="#a78bfa" fill-opacity=".14" stroke="#a78bfa" stroke-opacity=".4"/><rect x="-140" y="-74" width="34" height="6" rx="3" fill="#cbd5f5" fill-opacity=".55"/><rect x="-140" y="-58" width="50" height="13" rx="6.5" fill="#a78bfa"/><rect x="-62" y="-84" width="78" height="54" rx="10" fill="#22d3ee" fill-opacity=".14" stroke="#22d3ee" stroke-opacity=".4"/><rect x="-52" y="-74" width="34" height="6" rx="3" fill="#cbd5f5" fill-opacity=".55"/><rect x="-52" y="-58" width="50" height="13" rx="6.5" fill="#22d3ee"/><rect x="26" y="-84" width="78" height="54" rx="10" fill="#f472b6" fill-opacity=".14" stroke="#f472b6" stroke-opacity=".4"/><rect x="36" y="-74" width="34" height="6" rx="3" fill="#cbd5f5" fill-opacity=".55"/><rect x="36" y="-58" width="50" height="13" rx="6.5" fill="#f472b6"/>
+<rect x="-150" y="-18" width="236" height="138" rx="12" fill="#8b5cf6" fill-opacity=".08" stroke="#8b5cf6" stroke-opacity=".25"/>
+<path d="M-136 96C-112 62 -92 80 -68 52S-22 20 2 40 48 8 72 -2V108H-136Z" fill="url(#ar)"/>
+<path d="M-136 96C-112 62 -92 80 -68 52S-22 20 2 40 48 8 72 -2" fill="none" stroke="#22d3ee" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="72" cy="-2" r="6" fill="#22d3ee" stroke="#0b1433" stroke-width="2"/>
+<g transform="translate(142 52)"><circle r="40" fill="none" stroke="#1e293b" stroke-width="16"/>
+<circle r="40" fill="none" stroke="url(#a1)" stroke-width="16" stroke-dasharray="150 102" transform="rotate(-90)" stroke-linecap="round"/>
+<circle r="40" fill="none" stroke="#22d3ee" stroke-width="16" stroke-dasharray="52 200" transform="rotate(75)" stroke-linecap="round"/></g>
+<g class="fl"><g transform="translate(120 -160)">
+<rect width="96" height="30" rx="15" fill="#0b1433" stroke="#34d399" stroke-opacity=".8"/>
+<circle class="pulse" cx="20" cy="15" r="5" fill="#34d399"/>
+<text x="34" y="20" font-family="'Segoe UI', Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#6ee7b7">Live data</text></g></g>
+</g>
+</svg>

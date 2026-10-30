@@ -1,0 +1,193 @@
+.servicesSection {position: relative;overflow: hidden;padding: 90px 0 100px;color: #f5f8ff;background:radial-gradient(ellipse at 5% 15%,rgba(20, 103, 255, 0.12),transparent 36%),radial-gradient(ellipse at 95% 85%,rgba(117, 62, 255, 0.1),transparent 34%),#031329;}
+.servicesSection::before,
+.servicesSection::after {position: absolute;z-index: 0;width: 340px;height: 340px;border: 1px solid rgba(22, 200, 255, 0.08);border-radius: 50%;content: "";pointer-events: none;}
+.servicesSection::before {top: 120px;left: -230px;box-shadow:0 0 0 35px rgba(22, 200, 255, 0.018),0 0 0 70px rgba(22, 200, 255, 0.012);}
+.servicesSection::after {right: -250px;bottom: 50px;border-color: rgba(129, 71, 255, 0.12);box-shadow:0 0 0 35px rgba(129, 71, 255, 0.018),0 0 0 70px rgba(129, 71, 255, 0.012);}
+
+.servicesGrid{position: relative;display: flex;flex-direction: column;gap: 20px;}
+.cardContainer{display: grid;grid-template-columns: repeat(2, 1fr);gap: 20px;}
+.cardContainer.cardRowBottom{display: grid;grid-template-columns: repeat(3, 1fr);gap: 20px;}
+.cardContainer.cardUpDown{display: grid;grid-template-columns: repeat(1, 1fr);gap: 20px;}
+.card-a {--accent: #38bdf8; }
+.card-b {--accent: #34d399; }
+.card-c {--accent: #fb923c; }
+.card-d {--accent: #a78bfa; }
+.card-e {--accent: #f472b6; }
+.card-f {--accent: #7c5cff; }
+.servicesGrid .card{
+    position: relative;
+    display: flex;
+    min-width: 0;
+    min-height: 500px;
+    flex-direction: column;justify-content: flex-end;
+    overflow: hidden;
+    padding: 25px;
+    border: 1px solid rgba(87, 163, 231, 0.22);
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(13, 39, 72, 0.94), rgba(5, 22, 44, 0.98));
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    isolation: isolate;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;align-items: flex-start;
+}
+.cardContainer.cardRowBottom .card{
+    min-height: 360px;
+}
+.servicesGrid .card .cardBg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: var(--img);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #06182e;
+  filter: saturate(0.9) contrast(1.05);
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.servicesGrid .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(2, 15, 31, 0.08) 0%, rgba(2, 15, 31, 0.32) 38%, rgba(2, 15, 31, 0.86) 72%, rgba(2, 15, 31, 0.97) 100%),
+    linear-gradient(135deg, rgba(14, 90, 180, 0.3), rgba(124, 92, 255, 0.16));
+}
+.servicesGrid .card:hover,
+.servicesGrid .card:focus-within {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--accent, #38bdf8) 70%,transparent);
+  box-shadow: 0 24px 60px -22px color-mix(in srgb, var(--accent, #38bdf8) 60%, transparent);
+}
+.servicesGrid .card:hover .cardBg { transform: scale(1.06); }
+.cardContainer.cardUpDown .btncard{
+    display: flex;
+    align-items: center;
+    min-height: 150px;
+    justify-content: center;
+}
+
+/* .servicesGrid .card.cardOne{justify-content: flex-end;} */
+.servicesGrid .card span{
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #73d9ff;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+.servicesGrid .card h3 a{
+    color: inherit;
+    text-decoration: none;}
+.servicesGrid .card h3 a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}    
+.servicesGrid .card h3{
+    margin: 0 0 12px;
+    color: #f5f8ff;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+.servicesGrid .card p{
+    margin: 0 0 10px;
+    color: #b4c8e0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+.servicesGrid .card .cardGo{
+    position: absolute;
+  top: 18px;
+  right: 18px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(4, 22, 43, 0.55);
+  border: 1px solid rgba(120, 190, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.servicesGrid .card .cardGo svg{ width: 16px; height: 16px; }
+.servicesGrid .card:hover .cardGo { background: linear-gradient(135deg, var(--accent, #38bdf8), #7c5cff); transform: rotate(45deg); }
+.servicesGrid .card .cardChips { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 0; padding: 0; list-style: none; }
+.servicesGrid .card .cardChips li {
+  padding: 5px 11px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #eef7ff;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  background: color-mix(in srgb, var(--accent) 18%, rgba(4, 22, 43, 0.5));
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.cardContainer.cardUpDown .btncard{
+    display: flex;
+    align-items: center;
+    min-height: 150px;
+    justify-content: center;
+}
+.mobService{
+    display: none;
+}
+
+@media (max-width: 1399px) {
+.servicesGrid .card .cardChips li{
+    font-size: 10px;
+}
+.servicesGrid .card p{
+    font-size: 13px;
+    line-height: 1.7;
+}
+}
+
+@media (max-width: 1199px) {
+
+.servicesGrid .card{
+    min-height: 400px;
+    padding: 15px;
+}
+.cardContainer.cardUpDown .btncard{min-height: 90px;}
+.servicesGrid .card span{margin-bottom: 6px;}
+.servicesGrid .card h3{
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+}
+
+@media (max-width: 991px) {
+.servicesGrid .card .cardBg{
+    opacity: 0.4;
+}
+.card.btncard{
+    display: none!important;
+}
+
+.mobService{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+    .servicesGrid .card {
+        min-height: 360px;
+    }
+.cardContainer.cardRowBottom, .cardContainer{display: grid;grid-template-columns: repeat(1, 1fr);gap: 20px;}
+}
+
+@media (max-width: 767px) {
+.servicesGrid .card {
+    min-height: 400px;
+}
+.servicesSection{padding: 60px 0;}
+}

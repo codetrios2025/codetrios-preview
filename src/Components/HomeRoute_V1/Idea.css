@@ -1,0 +1,159 @@
+.ideaSection{
+  position: relative;
+  background: radial-gradient(ellipse at 10% 45%,rgba(22, 139, 255, 0.11),transparent 38%),#031329;
+  padding: 80px 0;
+}
+/* .ideabg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#ffffff0b 1px, #0000 1px), linear-gradient(90deg, #ffffff0b 1px, #0000 1px);
+    background-size: 54px 54px;
+    -webkit-mask-image: radial-gradient(90% 70% at 50% 0, #000 35%, #0000 75%);
+    mask-image: radial-gradient(90% 70% at 50% 0, #000 35%, #0000 75%);
+    opacity: .4;
+} */
+.ideaSection h2{
+  font-family: 'BricolageGrotesque-Bold';
+  color: #fff;
+  font-size: 55px;
+  margin: 0 0 20px;
+
+}
+.ideaSection h2 span{
+  display: block;
+   color:#38d8ff;
+}
+.ideaSection p{
+  color: #b9d8f5;
+  font-size: 18px;line-height: 30px;
+}
+
+.value{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+.value .value-card{
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 15px;
+  border: 1px solid rgba(87, 163, 231, 0.22);
+  border-radius: 15px;
+}
+.value-card span{
+  border: 1px solid rgba(66, 204, 255, 0.38);
+  background: linear-gradient(140deg,rgba(129, 71, 255, 0.28),rgba(22, 200, 255, 0.12));
+  color: #72e2ff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.value-card span svg{
+  width: 20px;
+  height: 20px;
+}
+.value-card h5{
+  font-size: 14px;
+  color: #fff;
+  margin: 0 0 5px;
+}
+.value-card p{
+  margin: 0;
+  font-size: 12px;
+  line-height: normal;
+}
+.ideaContent ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+.ideaContent ul li{
+  display: flex;
+  gap:10px
+}
+.ideaContent ul li svg{
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+} 
+.ideaContent ul li a{
+  color: #b9d8f5;
+  font-size: 14px;
+}
+.formArea{
+  padding-left: 50px;
+}
+.formContainer{
+  position: relative;
+  padding: 30px;
+  background: linear-gradient(145deg, rgba(17, 43, 73, 0.95), rgba(5, 20, 40, 0.96));
+  border-radius: 30px;
+  border: 1px solid rgba(87, 163, 231, 0.22);
+  box-shadow: 0 -6px 60px -32px color-mix(in srgb, var(--accent, #38bdf8) 60%, transparent);
+}
+
+@media (max-width: 1399px) {
+  .ideaSection h2{font-size: 45px;}
+  .ideaSection p{font-size: 16px;line-height: 26px;}
+  .ideaSection .value-card p{font-size: 12px;line-height: normal;}
+}
+
+@media (max-width: 1199px) {
+  .ideaSection h2{font-size: 38px;}
+  .ideaSection p{font-size: 14px;line-height: 24px;}
+  .ideaSection .value-card p{font-size: 12px;line-height: normal;}
+  .formArea{padding: 0;}
+}
+
+@media (max-width: 991px) {
+.ideaSection h2{font-size: 34px;}  
+.ideaContent{
+  border-bottom: 1px solid rgba(87, 163, 231, 0.22);
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.value{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+  .ideaSection .col-md-6{
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 767px) {
+.ideaSection h2{font-size: 32px;}  
+.formArea .contactHead h3{font-size: 24px;}
+.ideaSection{padding: 60px 0;}
+}
+
+@media (max-width: 580px) {
+  .value{
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.formContainer{
+  padding: 25px 15px 30px;    border-radius: 20px;
+}
+.contactHead span{
+  width: 32px;
+  height: 32px;
+
+}
+.contactHead span svg {
+    width: 15px;
+}
+.inputFlex{
+  flex-direction: column;
+}
+}

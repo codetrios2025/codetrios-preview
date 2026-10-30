@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+<defs>
+<radialGradient id="g1" cx="78%" cy="14%" r="65%"><stop offset="0" stop-color="#fb923c" stop-opacity=".62"/><stop offset="1" stop-color="#fb923c" stop-opacity="0"/></radialGradient>
+<radialGradient id="g2" cx="8%" cy="88%" r="60%"><stop offset="0" stop-color="#f43f5e" stop-opacity=".5"/><stop offset="1" stop-color="#f43f5e" stop-opacity="0"/></radialGradient>
+<linearGradient id="a1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fb923c"/><stop offset="1" stop-color="#f43f5e"/></linearGradient>
+<pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#9cc7ff" fill-opacity=".14"/></pattern>
+<filter id="sh" x="-25%" y="-25%" width="150%" height="160%"><feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#000" flood-opacity=".55"/></filter>
+</defs>
+<style>
+.fl{animation:fl 6s ease-in-out infinite}
+.fl2{animation:fl 7.5s ease-in-out -2.5s infinite}
+.pulse{animation:pl 2s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.25}}
+</style>
+<rect width="800" height="600" fill="#040f20"/>
+<rect width="800" height="600" fill="url(#g1)"/>
+<rect width="800" height="600" fill="url(#g2)"/>
+<rect width="800" height="600" fill="url(#dots)"/>
+<g transform="translate(400 150) scale(.9)">
+<g transform="rotate(-9 -170 20)"><g filter="url(#sh)"><rect x="-262" y="-60" width="124" height="168" rx="16" fill="#1c1233" stroke="#fb923c" stroke-opacity=".5"/></g>
+<rect x="-250" y="-48" width="100" height="78" rx="11" fill="#fb923c" fill-opacity=".85"/><circle cx="-200" cy="-9" r="22" fill="#fff" fill-opacity=".35"/>
+<rect x="-250" y="42" width="80" height="8" rx="4" fill="#e9d5ff" fill-opacity=".5"/><rect x="-250" y="58" width="48" height="10" rx="5" fill="#fbbf24"/></g>
+<g filter="url(#sh)"><rect x="-86" y="-132" width="172" height="254" rx="20" fill="#1c1233" stroke="#fb7185" stroke-opacity=".7" stroke-width="1.5"/></g>
+<rect x="-72" y="-118" width="144" height="122" rx="14" fill="url(#a1)"/>
+<path d="M-38 -44a38 38 0 0 1 76 0" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+<rect x="-50" y="-50" width="18" height="34" rx="9" fill="#fff"/><rect x="32" y="-50" width="18" height="34" rx="9" fill="#fff"/>
+<rect x="-64" y="-110" width="50" height="22" rx="11" fill="#fff"/>
+<text x="-39" y="-95" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#e11d48">-30%</text>
+<polygon points="-60.0,21.0 -58.1,25.5 -53.3,25.8 -57.0,29.0 -55.9,33.7 -60.0,31.1 -64.1,33.7 -63.0,29.0 -66.7,25.8 -61.9,25.5" fill="#fbbf24"/><polygon points="-43.0,21.0 -41.1,25.5 -36.3,25.8 -40.0,29.0 -38.9,33.7 -43.0,31.1 -47.1,33.7 -46.0,29.0 -49.7,25.8 -44.9,25.5" fill="#fbbf24"/><polygon points="-26.0,21.0 -24.1,25.5 -19.3,25.8 -23.0,29.0 -21.9,33.7 -26.0,31.1 -30.1,33.7 -29.0,29.0 -32.7,25.8 -27.9,25.5" fill="#fbbf24"/><polygon points="-9.0,21.0 -7.1,25.5 -2.3,25.8 -6.0,29.0 -4.9,33.7 -9.0,31.1 -13.1,33.7 -12.0,29.0 -15.7,25.8 -10.9,25.5" fill="#fbbf24"/><polygon points="8.0,21.0 9.9,25.5 14.7,25.8 11.0,29.0 12.1,33.7 8.0,31.1 3.9,33.7 5.0,29.0 1.3,25.8 6.1,25.5" fill="#fbbf24"/>
+<rect x="-72" y="42" width="104" height="10" rx="5" fill="#e9d5ff" fill-opacity=".55"/>
+<rect x="-72" y="58" width="62" height="14" rx="7" fill="#fbbf24"/>
+<rect x="-72" y="82" width="144" height="34" rx="17" fill="url(#a1)"/>
+<text x="0" y="104" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#fff">Add to Cart</text>
+<g class="fl"><g transform="translate(160 -88)">
+<circle r="38" fill="#1c1233" stroke="#fbbf24" stroke-width="2"/>
+<path d="M-17 -14h7l6 20h22l5-15H-8" fill="none" stroke="#fbbf24" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="-2" cy="16" r="3.5" fill="#fbbf24"/><circle cx="17" cy="16" r="3.5" fill="#fbbf24"/>
+<circle cx="24" cy="-26" r="13" fill="#f43f5e"/><text x="24" y="-21" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#fff">3</text></g></g>
+<g class="fl2"><g transform="translate(96 56)">
+<rect width="176" height="46" rx="14" fill="#07261e" stroke="#34d399" stroke-opacity=".8"/>
+<circle cx="26" cy="23" r="11" fill="#34d399"/><path d="M20 23l4.5 4.5L33 19" stroke="#07261e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="46" y="28" font-family="'Segoe UI', Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#6ee7b7">Order placed</text></g></g>
+</g>
+</svg>

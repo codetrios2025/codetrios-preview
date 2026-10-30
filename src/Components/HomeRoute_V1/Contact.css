@@ -1,0 +1,85 @@
+.contactForm{
+  position: relative;
+}
+.contactHead{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.contactHead h3{
+  color: #fff;
+  font-size: 30px;
+  margin: 0;
+  font-weight: 600;
+}
+.contactHead span{
+  background: linear-gradient(90deg, #8E42FF 0%, #5A63FF 45%, #18A8FF 100%);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.contactHead span svg{
+  width: 18px;
+}
+.fomrStyle{
+  position: relative;
+}
+.inputFlex{
+  display: flex;
+  /* grid-template-columns: repeat(2, minmax(0, 1fr));  */
+  gap: 10px; 
+  margin-bottom: 15px;
+}
+.inputFlex .group{
+  flex: 1;
+  position: relative;
+}
+.inputFlex .group label{
+  display: none;
+}
+.inputFlex .group .icon{
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  color: #759bbe;
+}
+.inputFlex .group .icon svg{
+  width: 20px;
+}
+.inputFlex .group input, .inputFlex .group textarea{
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(119, 193, 255, 0.24);
+  border-radius: 10px;
+  color: #fff;
+  padding: 15px 20px 15px 40px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  font-size: 14px;
+}
+.inputFlex .group input::placeholder, .inputFlex .group textarea::placeholder{
+  color: #759bbe;
+}
+input:focus-visible, textarea:focus-visible{
+  outline: 0;
+}
+.error-text{
+  color:oklch(81% .117 11.638)!important;
+  font-size: 10px!important;
+  margin: 0!important;
+  display: flex;
+  align-items: center;
+  line-height: normal;
+}
+.error-text svg{
+  width: 14px;
+  margin-right: 5px;
+}
+.buttonFlex button{
+  width: 100%;
+}

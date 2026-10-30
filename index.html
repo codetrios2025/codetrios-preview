@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png"
+    />
+    <link rel="preload" as="image" href="/images/heroBanner.webp" fetchpriority="high"/>
+    <!-- Fonts used above the fold -->
+    <link rel="preload" href="/assets/fonts/Rubik-Light.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/Rubik-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/Rubik-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/BricolageGrotesque-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- Viewport -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <!-- Google Search Console -->
+    <meta
+      name="google-site-verification"
+      content="LrYq1xUfpFgGpnFX7HA-wmRxAdZgc03kPBMJ1KK61Sc"
+    />
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+
+    <!-- Google reCAPTCHA -->
+    <script
+      src="https://www.google.com/recaptcha/api.js"
+      async
+      defer
+    ></script>
+
+    <!-- Google Analytics 4 + Google Ads -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-QRFGCRY4CP"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+
+      /* Google Analytics 4 */
+      gtag("config", "G-QRFGCRY4CP");
+
+      /* Google Ads */
+      gtag("config", "AW-18425023725");
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script
+      type="module"
+      src="/src/main.jsx"
+    ></script>
+  </body>
+</html>
