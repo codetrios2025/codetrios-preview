@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import "./AnimatedHeroBackground.css";
 import logoIcon from '../../../assets/images/ct_icon.svg';
 const PARTICLE_COUNT = 48;
+const FRAME_INTERVAL = 33;
 
 export default function AnimatedHeroBackground({
   children,
@@ -106,6 +107,11 @@ export default function AnimatedHeroBackground({
 
     const draw = (timestamp = 0, staticFrame = false) => {
       if (destroyed) return;
+
+      if (!staticFrame && lastFrame && timestamp - lastFrame < FRAME_INTERVAL) {
+        raf = requestAnimationFrame(draw);
+        return;
+      }
 
       const delta = lastFrame
         ? Math.min(timestamp - lastFrame, 32)

@@ -33,11 +33,13 @@
   display: flex;
   /* grid-template-columns: repeat(2, minmax(0, 1fr));  */
   gap: 10px; 
-  margin-bottom: 15px;
+  margin:0 0 15px;
 }
 .inputFlex .group{
   flex: 1;
   position: relative;
+  padding: 0;
+  margin: 0;
 }
 .inputFlex .group label{
   display: none;
@@ -50,6 +52,9 @@
 }
 .inputFlex .group .icon svg{
   width: 20px;
+}
+.recaptchaSlot{
+  min-height: 78px;
 }
 .inputFlex .group input, .inputFlex .group textarea{
   width: 100%;
@@ -68,13 +73,16 @@
 input:focus-visible, textarea:focus-visible{
   outline: 0;
 }
-.error-text{
+.inputFlex .group p.error-text{
   color:oklch(81% .117 11.638)!important;
   font-size: 10px!important;
   margin: 0!important;
   display: flex;
   align-items: center;
   line-height: normal;
+  position: relative!important;
+  top:0;
+  left: 0;
 }
 .error-text svg{
   width: 14px;

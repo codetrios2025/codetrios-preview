@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 // import contactImage from "../../assets/images/contact_img.webp";
 
 import ReCAPTCHA from "react-google-recaptcha";
@@ -21,6 +21,7 @@ import {
 
 const ContactUs = () => {
   const recaptchaRef = useRef(null);
+  const recaptchaContainerRef = useRef(null);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstname: "",
@@ -35,6 +36,24 @@ const ContactUs = () => {
   const [captchaToken, setCaptchaToken] = useState("");
   const [loading, setLoading] = useState(false);
   const [apiMessage, setApiMessage] = useState("");
+  const [shouldLoadRecaptcha, setShouldLoadRecaptcha] = useState(
+    () => !("IntersectionObserver" in window)
+  );
+
+  useEffect(() => {
+    const element = recaptchaContainerRef.current;
+    if (!element || !("IntersectionObserver" in window)) return undefined;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setShouldLoadRecaptcha(true);
+        observer.disconnect();
+      }
+    }, { rootMargin: "300px 0px" });
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
 
   // Handle input change
   const handleChange = (e) => {
@@ -217,11 +236,15 @@ const ContactUs = () => {
                         className="g-recaptcha"
                         data-sitekey="6Ldc9-YrAAAAAPlEy99RO6N06uFh6LRqjJ76ggk4"
                       ></div> */}
-                      <ReCAPTCHA
-                        ref={recaptchaRef}
-                        sitekey="6Ldc9-YrAAAAAPlEy99RO6N06uFh6LRqjJ76ggk4"
-                        onChange={(token) => setCaptchaToken(token)}
-                      />
+                      <div className="recaptchaSlot" ref={recaptchaContainerRef}>
+                        {shouldLoadRecaptcha && (
+                          <ReCAPTCHA
+                            ref={recaptchaRef}
+                            sitekey="6Ldc9-YrAAAAAPlEy99RO6N06uFh6LRqjJ76ggk4"
+                            onChange={(token) => setCaptchaToken(token)}
+                          />
+                        )}
+                      </div>
                       {errors.captcha && (
                         <p className="error-text"><AlertCircle /> {errors.captcha}</p>
                       )}
@@ -230,7 +253,7 @@ const ContactUs = () => {
                   <div className="buttonFlex">
                     <button
                       type="button"
-                      className="btnStyle"
+                      className="ctBtn ct-primery-btn"
                       disabled={loading}
                       onClick={handleSubmit}
                     >

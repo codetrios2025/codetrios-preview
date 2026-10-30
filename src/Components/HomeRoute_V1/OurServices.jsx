@@ -19,7 +19,7 @@ const OurServices = () => {
             <div className='sectionHead'>
               <div className="tag" data-reveal="up">WHAT WE DO</div>
               <h2 data-reveal="up">Our <span>Services</span></h2>
-              <p data-reveal="up">At Codetrios, our work doesn’t stop at launch. We provide continuous website maintenance, updates, security monitoring, and performance optimization to ensure long-term success.</p>
+              <p className="halfWidth" data-reveal="up">At Codetrios, our work doesn’t stop at launch. We provide continuous website maintenance, updates, security monitoring, and performance optimization to ensure long-term success.</p>
             </div>
             <div className="servicesGrid">
               <div className={`cardContainer cardRowTop`}>

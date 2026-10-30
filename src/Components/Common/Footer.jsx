@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Logo from "../../assets/images/codetrios_logo.svg";
 import Style from "../CSS/Header.module.css";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin   } from "lucide-react";
 
 const Footer = () => {

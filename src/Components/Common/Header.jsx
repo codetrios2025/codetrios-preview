@@ -3,8 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import Style from '../CSS/Header.module.css';
 import { Link, Outlet  } from "react-router-dom";
 import Logo from '../../assets/images/codetrios_logo.svg';
-import { ChevronDown, Menu, CircleX } from "lucide-react";
 // import ContactUs from "../HomeRoute/Contact";
+import { Menu, ChevronDown, CircleX } from "lucide-react";
 
 const Header=()=>{
     const [isOPen, setIsopen] = useState(false);
@@ -85,7 +85,7 @@ const Header=()=>{
             {/* {isOPen && 
                 <div className={Style.formPop}>
                     <div className={Style.formElem}>
-                        <button type='button' onClick={formCloseHandler} className={Style.closeBtn}><X /></button>
+                        <button type='button' onClick={formCloseHandler} className={Style.closeBtn}><CircleX /></button>
                         <ContactUs />
                     </div>
                 </div>

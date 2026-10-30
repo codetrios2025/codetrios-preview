@@ -1,0 +1,82 @@
+.ct_service_container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 60px;
+}
+.ct_service_box{
+  display: flex;
+  align-items: flex-start;
+  color: var(--ct-gray);
+  gap: 40px;
+   padding-bottom: 40px;
+  border-bottom: 1px solid var(--ct-border);
+  position: relative;
+}
+.ct_service_numver{
+     font-size: 30px;
+    font-weight: 300;
+    color: var(--ct-border);
+    line-height: 30px;
+}
+.ct_service_icon{
+  color: #3aa4bd;
+}
+.ct_service_icon svg{
+  width: 50px;
+  height: 50px;
+}
+.ct_service_content{
+  padding-right: 100px;
+}
+.ct_service_content h3{
+  color: #fff;
+  font-size: 22px;
+}
+.ct_service_content p{margin: 0;line-height: 1.8;}
+.ct_service_link a{
+      right: 22px;
+    bottom: 20px;
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--ct-gray);
+    background: rgba(4, 22, 43, 0.55);
+    border: 1px solid var(--ct-border);
+    transition: transform 0.3s;
+}
+.ct_service_link a svg{width: 18px;}
+.ct_service_box:hover .ct_service_link a{background: linear-gradient(135deg, var(--accent, #38bdf8), #7c5cff);color:var(--ct-white)}
+
+
+.servicesPage .whyChooseUs{padding-top: 0;}
+.allService .weAreContent{margin-bottom: 60px;}
+
+.service-block-2 .benefitGrid .iconWrap{width: 48px;height: 48px;}
+
+/* laptop */
+
+@media (max-width: 1399px) {
+  .ct_service_content p{font-size: 15px;}
+  .ct_service_content {padding-right: 60px;}
+}
+
+@media (max-width: 1199px) {
+  .ct_service_content h3{font-size: 20px;}
+  .ct_service_content p{font-size: 14px;}
+  .ct_service_box{gap:30px;}
+}
+
+@media (max-width: 767px) {
+  .ct_service_box{        flex-direction: column;padding-bottom: 30px;gap: 20px;}
+  .ct_service_container{    gap: 30px;}
+  .ct_service_numver{position: absolute;right: 0;}
+  .ct_service_content{padding: 0;}
+
+  .services_industries{padding: 60px 0;}
+  
+}

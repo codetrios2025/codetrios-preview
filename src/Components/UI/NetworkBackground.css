@@ -1,0 +1,59 @@
+.network-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+
+  background:
+    radial-gradient(
+      ellipse at 80% 40%,
+      rgba(18, 58, 125, 0.2),
+      transparent 60%
+    ),
+    #061426;
+    opacity: .7;
+}
+
+.network-background__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Keep the copy readable while retaining the wave on the right. */
+.network-background__fade {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #061426 0%,
+      rgba(6, 20, 38, 0.96) 22%,
+      rgba(6, 20, 38, 0.65) 43%,
+      rgba(6, 20, 38, 0.08) 70%,
+      transparent 100%
+    ),
+    linear-gradient(
+      0deg,
+      #061426 0%,
+      transparent 20%
+    );
+}
+
+@media (max-width: 767px) {
+  .network-background__canvas {
+    opacity: 0.65;
+  }
+
+  .network-background__fade {
+    background: linear-gradient(
+      180deg,
+      #061426 0%,
+      rgba(6, 20, 38, 0.9) 35%,
+      rgba(6, 20, 38, 0.25) 75%,
+      #061426 100%
+    );
+  }
+}

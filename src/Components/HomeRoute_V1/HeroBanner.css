@@ -33,7 +33,7 @@
   border: 1px solid rgba(75, 190, 255, 0.36);
   border-radius: 999px;
   background: rgba(7, 31, 58, 0.55);
-  color:#38d8ff;
+  color:var(--brand-color);
   font-size: 12px;
   letter-spacing: 2.2px;
   line-height: 1.5;
@@ -43,7 +43,7 @@
   height: 7px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: #38d8ff;
+  background: var(--brand-color);
   box-shadow: 0 0 12px rgba(56, 216, 255, 0.65);
   content: "";
 }
@@ -56,7 +56,7 @@
   line-height: 1.30;
   text-wrap: balance;
 }
-.heroBanner h1 span{  color:#38d8ff}
+.heroBanner h1 span{  color:var(--brand-color)}
 .heroBanner .tagline span{
     font-size: 18px;
   font-weight: 400;
@@ -65,17 +65,17 @@
   color: #fff;
   text-transform: uppercase;
 }  
-.heroBanner .tagline span .highLight{background: linear-gradient(100deg, #4be0ff 0%, #36a9ff 55%, #879bff 100%);
+.heroBanner .tagline span .highLight{background: linear-gradient(100deg, var(--brand-color) 0%, var(--brand-color) 55%, #879bff 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;}
 .heroAction{  display: flex;flex-wrap: wrap;align-items: center;gap: 30px;margin-top: 0;}
-.heroAction a{color: #fff;border-bottom: 1px solid #fff;padding: 5px 0;}
+.heroAction a{}
 .heroAction a .icon{width: 20px;margin-left: 6px;}
 .heroBanner .content ul{display: flex;align-items: center;margin:40px 0 0;gap:20px}
 .heroBanner .content ul li{display: flex;align-items: center;color: #ccdbee;font-size: 14px;border-right:2px solid rgba(149, 192, 235, 0.3);padding-right:20px;margin: 0;}
 .heroBanner .content ul li:last-child{border: none;}
-.heroBanner .content ul li .icon{position: relative;margin-right: 15px;top:-2px;color:#38d8ff;}
+.heroBanner .content ul li .icon{position: relative;margin-right: 15px;top:-2px;color:var(--brand-color);}
 
 
 @media (max-width: 1600px) {
@@ -155,10 +155,14 @@
 }
 
 @media (max-width: 580px) {
+  .heroBanner .detail {
+        margin-top: 0;
+    }
   .heroBanner .content h1{
-    text-align: center;
-    font-size: 26px;
+    text-align: left;
+    font-size: 34px;
   }
+  .heroBanner .content h1 br{display: none;}
   .heroAction{
     gap: 15px;
   }
