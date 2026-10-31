@@ -45,7 +45,7 @@ const Header=()=>{
                         <Col>
                             <div className={Style.head}>
                                 <div className={Style.logo}>
-                                    <Link to='' alt='codetrios'><img src={Logo} alt="codetrios" width="180" height="42" fetchPriority="high" loading="eager" decoding="async" /></Link>
+                                    <Link to='' alt='codetrios'><img src={Logo} alt="codetrios" width="180" height="42" loading="lazy" /></Link>
                                 </div>
                                 <button type="button" className="menuToggle"  onClick={() => setMenuOpen(true)}><Menu /></button>
                                 <div className={Style.headFlex}>

@@ -48,7 +48,7 @@ const HeroBanner = ({data}) =>{
                         <Col>
                             <div className="detail">
                                 <div className="heroSubtitle hero-reveal-item reveal-1">Web Design & Development</div>
-                                <h1 className="hero-reveal-item reveal-2">Custom Web Development for <span>Growing Businesses</span></h1>
+                                <h1 className="hero-reveal-item reveal-2">Custom Web Development <br/>for <span>Growing Businesses</span></h1>
                                 <div className="tagline hero-reveal-item reveal-3">
                                     <span>Codetrios builds fast, secure, mobile-first websites designed around <br/>your business goals — not templates.</span>
                                 </div>
