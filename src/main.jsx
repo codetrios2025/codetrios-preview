@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 createRoot(document.getElementById('root')).render(
   <HelmetProvider>
-    <BrowserRouter basename='/codetrios-preview/'>
+    <BrowserRouter>
         <App />
     </BrowserRouter>
   </HelmetProvider>,
