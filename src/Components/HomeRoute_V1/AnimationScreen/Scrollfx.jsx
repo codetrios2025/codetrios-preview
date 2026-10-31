@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef } from "react";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
-import "./scrollfx.css";
+import "./Scrollfx.css";
 
 /**
  * <ScrollFX />  (mount once per page, e.g. in HomeRouteV1)

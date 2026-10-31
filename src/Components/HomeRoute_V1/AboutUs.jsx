@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import './About.css';
 import webImage from '../../assets/images/growth_about.webp';
-import { ArrowRight, Sparkles,
+import { Sparkles, ArrowUpRight,
   Code2,
   Workflow,
   Handshake,
@@ -64,7 +64,7 @@ const AboutUs = ({data}) =>{
                                 <li data-reveal="left">Seamless Digital Transformation: <span>We craft websites that redefine your online presence.</span></li>
                                 <li data-reveal="left">Responsive Design Excellence: <span>Your website, accessible and engaging on any device.</span></li>
                             </ul> */}
-                            <Link to="about-us" className="ctBtn ct-primery-btn" data-reveal="zoom">Explore More <ArrowRight className="icon" /></Link>
+                            <Link to="about-us" className="ctBtn ct-primery-btn" data-reveal="zoom">Explore More <ArrowUpRight className="icon" /></Link>
                         </div>
                     </Col>
                 </Row>
@@ -96,7 +96,7 @@ const AboutUs = ({data}) =>{
                           )
                         })}
                         <div className="projectBtn" data-reveal="zoom">
-                          <button type='button' className="ctBtn ct-primery-btn">Start A Project Now <ArrowRight className="icon" /></button>
+                          <button type='button' className="ctBtn ct-primery-btn">Start A Project Now <ArrowUpRight className="icon" /></button>
                         </div>
                       </div>
                     </div>

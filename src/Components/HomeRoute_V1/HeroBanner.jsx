@@ -47,7 +47,7 @@ const HeroBanner = ({data}) =>{
                                     <span>We don’t just build websites We <span className={`fade-text ${fade ? "fade-in" : "fade-out"} highLight`}>{words[index]}.</span></span>
                                 </div>
                                 <div className="heroAction" data-reveal="up" data-reveal-duration="1.1s">
-                                    <button type='button' onClick={formOpenHandler} className="ctBtn ct-primery-btn">Book Free Consultation <ArrowUpRight className="icon" /></button>
+                                    <button type='button' onClick={formOpenHandler} className="ctBtn ct-primery-btn">Book Free Consultation</button>
                                     <Link to='/' className="ctBtn ct-secoundary-btn">Explore Our Services <ArrowUpRight className="icon" /></Link>
                                 </div>
                                 <ul data-reveal="up" data-reveal-duration="1.1s">

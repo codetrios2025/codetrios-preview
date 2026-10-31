@@ -11,21 +11,22 @@ header.headerFix{background: #fff;top: 0;box-shadow: 0px 3px 20px 0px #0000001c;
 .head ul li:hover>a:before{height: 100%;}
 .footerBox{display: flex;}
 .footerBox .box{flex: 1;}
-.footerBox h4{font-size: 20px;margin-bottom: 15px; background: linear-gradient(90deg, #4f46e5, #8b5cf6, #06b6d4);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
-.footerBox ul li a{font-size: 14px;color: #000;line-height: 30px;}
-.footerBox ul li a:hover{color: #7C3AED;}
+.footerBox h4{font-size: 20px;margin-bottom: 15px;color: #fff;}
+.footerBox ul li a{font-size: 14px;color: #b9d8f5;line-height: 30px;}
+.footerBox ul li a:hover{color: #38d8ff;}
 .address{display: flex;flex-direction: column;}
-.address p{color: #000;display: flex;width: 100%;position: relative;padding-left: 30px;font-size: 14px;}
-.address p a{color: #000;}
-.address .icon{margin-right: 10px;color: #7C3AED;position: absolute;top: 4px;left: 0;font-size: 18px;}
-.copyRight{position: relative;padding: 15px;background: #7C3AED;text-align: center;margin-top: 30px;}
+.address p{color: #b9d8f5;display: flex;width: 100%;position: relative;padding-left: 30px;font-size: 14px;}
+.address p a{color: #b9d8f5;}
+.address .icon{margin-right: 10px;color: #b9d8f5;position: absolute;left: 0;width: 18px;}
+.copyRight{position: relative;padding: 15px;text-align: center;margin-top: 30px;    border-top: 1px solid rgba(87, 163, 231, 0.22);}
 .copyRight small{margin: 0;color: #fff;}
 .info ul{display:flex;align-items: center;justify-content: flex-start;}
 .info ul li{margin-right: 20px;}
 .info ul li a{color: #212529;font-size: 20px;}
-.info p{margin: 10px 0;font-size: 14px;color: #000;}
+.info p{margin: 10px 0;font-size: 14px;color: #b9d8f5;}
 /* footer */
-footer{padding: 30px 0 0;}
+footer{padding: 80px 0 0;    background: radial-gradient(ellipse at 76% 48%, rgba(0, 91, 190, 0.16), transparent 38%), linear-gradient(115deg, #041326 0%, #061a36 55%, #031126 100%);
+    border-top: 1px solid rgba(87, 163, 231, 0.22);}
 .info{position: relative;padding-right: 50px;}
 .info img{width: 150px;}
 .footerLink ul{display: flex;border-bottom: 1px solid #c4c4c4;padding-bottom: 25px;margin-bottom: 30px;justify-content: space-between;}
@@ -37,35 +38,11 @@ footer{padding: 30px 0 0;}
 .getTouch{    padding: 8px 25px;
     background: linear-gradient(90deg, #8E42FF 0%, #5A63FF 45%, #18A8FF 100%);
     color: #fff;
-    border-radius: 20px;
-    margin-left: 10px;text-transform: uppercase;}
+    border-radius: 1cqmin;
+    margin-left: 10px;}
 .getTouch:hover{    background: linear-gradient(90deg, #18A8FF 0%, #5A63FF 55%, #8E42FF 100%);}    
-.formPop{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: #000000a1;z-index: 9999;display: flex;align-items: center;justify-content: center;}
-.formElem{width: 800px;background: #fff;max-width: 95%;position: relative;height: 95%;overflow: auto;padding: 30px 15px 20px;}
-.formElem .contactFomr{display: flex;flex-wrap: wrap;}
-.formElem .contactFomr .contactImg{width: 50%;}
-.formElem .contactFomr .contactImg img{width: 100%;height: 100%;object-fit: cover;}
-.formElem .contactFomr .detail{width: 50%;margin: 0;}
-.formElem .contactFomr .inputFlex{margin: 0;}
-.formElem .contactFomr h2{padding-left: 15px;}
-.formElem{padding: 15px 0;}
-.formElem .contactFomr .inputFlex .group{position: relative;}
-.formElem .contactFomr .inputFlex .group p{    position: absolute;
-    left: 15px;
-    bottom: -23px;
-    margin: 0;
-    font-size: 12px;}
-.formPop .commonPading{padding: 0;}
-.formPop h2.title{font-size: 30px;}
-.formPop .inputFlex label{color:#4F4C4C;}
-.formPop .inputFlex .group input, .formPop .inputFlex .group textarea{border-color: #dee2e6;color: #4F4C4C;padding: 5px 0;font-weight: 400;}
-.formPop .inputFlex{flex-direction: column;}
-.formPop .inputFlex .group{margin-bottom: 20px;}
-.formPop .closeBtn{position: absolute;top: 0;right: 0;border: none;padding: 0 5px 4px;margin: 0;background: #7C3AED;color: #fff;font-size: 24px;line-height: normal;z-index: 99;
-display: block;
-}
-.formPop .buttonFlex{margin: 10px 0 0;}
-.formPop .buttonFlex button{background: #7C3AED;color: #fff;}
+
+.footerlogo img{background: #fff;height: auto;padding: 10px;border-radius: 10px;}
 @media (min-width:992px){
 .head ul li .subMenu{position: absolute;top: 0;left: 0;width: 300px;height: 0;background: #fff;border-top: 2px solid #053f71c4;padding: 15px 0 0;transition: all 0.2s linear;display: none;box-shadow: 0px 3px 20px 0px #0000001c;}
 .head ul li:hover .subMenu{height: auto;top: 71px;display: flex;flex-direction: column;}

@@ -65,7 +65,7 @@ const OurServices = () => {
                     <span className="cardGo"><ArrowUpRight aria-hidden="true" /></span>
                   </article>
                   <article className={`card btncard card-d`} data-reveal="zoom">
-                    <Link to='/' className="btnStyle">See All Services <ArrowRight aria-hidden="true" /></Link>
+                    <Link to='/' className="ctBtn ct-primery-btn">See All Services <ArrowUpRight aria-hidden="true" className="icon" /></Link>
                   </article>
                 </div>
                 <article className={`card card-f`} data-reveal="up">
@@ -77,7 +77,7 @@ const OurServices = () => {
                 </article>
               </div>
               <div className="mobService btncard">
-                  <Link to='/' className="btnStyle">See All Services <ArrowRight aria-hidden="true" /></Link>
+                  <Link to='/' className="ctBtn ct-primery-btn">See All Services <ArrowUpRight aria-hidden="true" /></Link>
                 </div>
             </div>
           </Col>
