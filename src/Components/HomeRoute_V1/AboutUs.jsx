@@ -12,29 +12,29 @@ const AboutUs = ({data}) =>{
 
     const whyChooseData = [
       {
-        title: "AI-First Approach",
+        title: "End-to-End Development",
         icon: Sparkles,
-        content: "Leverage the power of Artificial Intelligence to automate processes, improve efficiency, and build smarter applications that drive business growth.",
+        content: "Design, full-stack engineering, and launch—handled by one expert team.",
       },
       {
-        title: "Experienced Developers",
+        title: "SEO & Geo-Targeted Growth",
         icon: Code2,
-        content: "Our team of skilled developers, designers, and AI engineers delivers high-quality solutions using the latest technologies and industry best practices.",
+        content: "Built to rank higher on search engines and attract local customers.",
       },
       {
-        title: "Agile Development",
+        title: "Continuous Care & Security",
         icon: Workflow,
-        content: "We follow an agile methodology with transparent communication, regular updates, and rapid iterations to ensure faster project delivery.",
+        content: "24/7 performance tracking, updates, and maintenance long after launch.",
       },
       {
-        title: "End-to-End Solutions",
+        title: "Responsive Mobile Design",
         icon: Handshake,
-        content: "From strategy and UI/UX design to development, deployment, and maintenance—we handle every stage of your digital transformation.",
+        content: "Seamless, ultra-fast performance across every device and screen size.",
       },
       {
-        title: "NDA & IP Protection",
+        title: "AI chatboat Development",
         icon: ShieldCheck,
-        content: "Your ideas remain secure with strict Non-Disclosure Agreements (NDA) and complete intellectual property ownership.",
+        content: "We build chatboat where customer can chat and response according to there requirement.",
       },
     ];
 

@@ -3,17 +3,23 @@ import { Container, Row, Col } from "react-bootstrap";
 import './HeroBanner.css';
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Settings, ChartColumnBig, ShieldCheck  } from "lucide-react";
-
-// import { IoCloseSharp } from "react-icons/io5";
-// import ContactUs from "../HomeRoute/Contact";
-//  const words = ["maintain", "secure", "optimize"];
  const words = ["Reimagine", "Automate", "Optimize"];
 import AnimatedHeroBackground from "./AnimationScreen/AnimatedHeroBackground";
+
+
 const HeroBanner = ({data}) =>{
     const [isOPen, setIsopen] = useState(false);
     const [index, setIndex] = useState(0);
     const [fade, setFade] = useState(true);
-  
+    const [heroVisible, setHeroVisible] = useState(false);
+    useEffect(() => {
+    // Trigger hero reveal after initial render.
+    const revealTimer = requestAnimationFrame(() => {
+      setHeroVisible(true);
+    });
+
+    return () => cancelAnimationFrame(revealTimer);
+  }, []);
     useEffect(() => {
       const interval = setInterval(() => {
         setFade(false); // fade out
@@ -35,22 +41,22 @@ const HeroBanner = ({data}) =>{
             setIsopen(false);
         }
     return(
-        <AnimatedHeroBackground  className={'home-hero heroBanner'}>
+        <div className={`home-hero heroBanner ${heroVisible ? "hero-revealed" : ""}`}>
             <div className="content">
                 <Container className="home-hero__container">
                     <Row>
                         <Col>
-                            <div className="detail" data-drift="0.18" data-scroll-fade="0.85">
-                                <div className="heroSubtitle" data-reveal="down">Your Partner for Digital Growth Solutions</div>
-                                <h1>Web Development & Digital <br/>Solutions That Help <br/><span>Businesses Grow</span></h1>
-                                <div className="tagline" data-reveal="up">
-                                    <span>We don’t just build websites We <span className={`fade-text ${fade ? "fade-in" : "fade-out"} highLight`}>{words[index]}.</span></span>
+                            <div className="detail">
+                                <div className="heroSubtitle hero-reveal-item reveal-1">Web Design & Development</div>
+                                <h1 className="hero-reveal-item reveal-2">Custom Web Development for <span>Growing Businesses</span></h1>
+                                <div className="tagline hero-reveal-item reveal-3">
+                                    <span>Codetrios builds fast, secure, mobile-first websites designed around <br/>your business goals — not templates.</span>
                                 </div>
-                                <div className="heroAction" data-reveal="up" data-reveal-duration="1.1s">
+                                <div className="heroAction hero-reveal-item reveal-4">
                                     <button type='button' onClick={formOpenHandler} className="ctBtn ct-primery-btn">Book Free Consultation</button>
                                     <Link to='/' className="ctBtn ct-secoundary-btn">Explore Our Services <ArrowUpRight className="icon" /></Link>
                                 </div>
-                                <ul data-reveal="up" data-reveal-duration="1.1s">
+                                <ul className="hero-reveal-item reveal-5">
                                     <li><span className="icon"><Settings  /></span> Strategy-led</li>
                                     <li><span className="icon"><ChartColumnBig /></span> Build to scale</li>
                                     <li><span className="icon"><ShieldCheck /></span> Groeth-focused</li>
@@ -60,8 +66,7 @@ const HeroBanner = ({data}) =>{
                     </Row>
                 </Container>
             </div>
-            
-        </AnimatedHeroBackground >
+        </div>
     )
 }
 

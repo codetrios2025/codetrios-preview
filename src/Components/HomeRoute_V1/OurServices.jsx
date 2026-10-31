@@ -27,7 +27,7 @@ const OurServices = () => {
                   <div className="cardBg" style={{ "--img": `url(${bgWebsite})` }} aria-hidden="true" />
                   <span>Design & Experience</span>
                   <h3><Link to='/'>Website Design</Link></h3>
-                  <p>CodeTrios is a website design company in India helping businesses, startups, organizations, and growing brands build modern, responsive, and high-performing websites. We combine business strategy, UI/UX design, accessibility, performance, SEO-friendly architecture, and conversion-focused experiences to create websites that support real business goals.</p>
+                  <p>CodeTrios is a website design company in Delhi NCR helping businesses, startups, organizations, and growing brands build modern, responsive, and high-performing websites with new and elegant designs. We combine business strategy, UI/UX design, accessibility, performance, SEO-friendly architecture, and conversion-focused experiences to create websites that support real business goals in one solution .</p>
                   <span className="cardGo"><ArrowUpRight aria-hidden="true" /></span>
                   <ul className="cardChips">
                     <li>Responsive</li>
@@ -39,7 +39,7 @@ const OurServices = () => {
                   <div className="cardBg" style={{ "--img": `url(${bgDev})` }} aria-hidden="true" />
                   <span>Featured Service</span>
                   <h3>Web Development</h3>
-                  <p>CodeTrios is a web development company in India helping businesses, startups, organizations, and growing brands build fast, secure, and scalable websites and web applications. We combine modern frontend and backend technologies, responsive development, performance optimization, and maintainable architecture to create digital platforms designed around real business requirements.</p>
+                  <p>Codetrios  provide custom website development that automate your business tasks, work smoothly on any device, and help your team save time and work faster, helping businesses, startups, organizations, and growing brands build fast, secure and scalable websites and web applications.  </p>
                   <span className="cardGo"><ArrowUpRight aria-hidden="true" /></span>
                   <ul className="cardChips">
                     <li>Responsive</li>
@@ -53,15 +53,15 @@ const OurServices = () => {
                   <div className="cardBg" style={{ "--img": `url(${bgEcom})` }} aria-hidden="true" />
                   <span>Commerce & Growth</span>
                   <h3>E-Commerce Solutions</h3>
-                  <p>CodeTrios is an ecommerce development company in India helping businesses build secure, scalable, and conversion-focused online stores. We design and develop ecommerce websites around your products, customers, business model, and growth objectives, with a focus on usability, performance, mobile responsiveness, and reliable ecommerce functionality.</p>
+                  <p>CodeTrios is an ecommerce development company in Delhi NCR helping businesses build secure, scalable, and conversion-focused online stores. We design and develop ecommerce websites around your products, where user can easily view your offers ,product , new launch ,easily order where payment will be secure . we will give you best platform for your product or business .</p>
                   <span className="cardGo"><ArrowUpRight aria-hidden="true" /></span>
                 </article>
                 <div className={`cardContainer cardUpDown`}>
                   <article className={`card card-e`} data-reveal="up">
                     <div className="cardBg" style={{ "--img": `url(${bgApps})` }} aria-hidden="true" />
                     <span>Custom Platforms</span>
-                    <h3>Web Applications</h3>
-                    <p>CodeTrios is a website design company in India helping businesses, startups, organizations, and growing brands build modern, responsive, and high-performing websites. We combine business strategy, UI/UX design, accessibility, performance, SEO-friendly architecture, and conversion-focused experiences to create websites that support real business goals.</p>
+                    <h3>GEO & SEO Services</h3>
+                    <p>CodeTrios helps businesses increase their ranks across all search engines and AI-powered platforms through  LLM Optimization ,AI SEO & GEO Services. We optimize your website, content, and digital authority so your business becomes the trusted answer in Google Search, AI Overviews, ChatGPT, Gemini, Claude, Perplexity, and all AI-driven search experiences. </p>
                     <span className="cardGo"><ArrowUpRight aria-hidden="true" /></span>
                   </article>
                   <article className={`card btncard card-d`} data-reveal="zoom">
@@ -72,7 +72,7 @@ const OurServices = () => {
                   <div className="cardBg" style={{ "--img": `url(${bgDesign})` }} aria-hidden="true" />
                   <span>UI / UX</span>
                   <h3>Design Services</h3>
-                  <p>CodeTrios is a website design company in India helping businesses, startups, organizations, and growing brands build modern, responsive, and high-performing websites. We combine business strategy, UI/UX design, accessibility, performance, SEO-friendly architecture, and conversion-focused experiences to create websites that support real business goals.</p>
+                  <p>CodeTrios is a UI/UX design company in Delhi NCR creating unique, responsive, and user-focused experiences for websites, web applications, SaaS platforms, and digital products. Our design process combines user research, information architecture, wireframing, visual design, and usability to create digital experiences that are easy to understand and use.</p>
                   <span className="cardGo"><ArrowUpRight aria-hidden="true" /></span>
                 </article>
               </div>

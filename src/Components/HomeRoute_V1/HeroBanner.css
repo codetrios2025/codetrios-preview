@@ -1,7 +1,7 @@
 .heroBanner{height:100vh;  background:
     radial-gradient(ellipse at 76% 44%, rgba(0, 86, 190, .19), transparent 37%),
     radial-gradient(ellipse at 10% 100%, rgba(0, 75, 155, .13), transparent 38%),
-    linear-gradient(115deg, #061426 0%, #06172f 53%, #04152b 100%);}
+    linear-gradient(115deg, #061426 0%, #06172f 53%, #04152b 100%);position: relative;overflow: hidden;}
 .heroBanner .content {
     position: absolute;
     top: 0;
@@ -51,7 +51,7 @@
   margin: 20px 0 20px;
   font-weight: normal;
   color: #f7faff;
-  font-size: 50px;
+  font-size: 60px;
   letter-spacing: -2.1px;
   line-height: 1.30;
   text-wrap: balance;
@@ -60,10 +60,10 @@
 .heroBanner .tagline span{
     font-size: 18px;
   font-weight: 400;
+  display: block;
   line-height: 1.8;
-  margin: 0 0 30px;
+  margin: 0 0 20px;
   color: #fff;
-  text-transform: uppercase;
 }  
 .heroBanner .tagline span .highLight{background: linear-gradient(100deg, var(--brand-color) 0%, var(--brand-color) 55%, #879bff 100%);
   background-clip: text;
@@ -181,5 +181,86 @@
 @media (prefers-reduced-motion: reduce) {
   .heroBanner * {
     scroll-behavior: auto;
+  }
+}
+/* =========================================
+   HERO REVEAL ANIMATION
+========================================= */
+
+
+/* Initial hidden state */
+.heroBanner .hero-reveal-item {
+  opacity: 0;
+  transform: translateY(28px);
+  filter: blur(5px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.8s ease;
+
+  will-change: opacity, transform, filter;
+}
+
+/* Reveal state */
+.heroBanner.hero-revealed .hero-reveal-item {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Staggered reveal sequence */
+.heroBanner.hero-revealed .reveal-1 {
+  transition-delay: 0.1s;
+}
+
+.heroBanner.hero-revealed .reveal-2 {
+  transition-delay: 0.4s;
+}
+
+.heroBanner.hero-revealed .reveal-3 {
+  transition-delay: 0.75s;
+}
+
+.heroBanner.hero-revealed .reveal-4 {
+  transition-delay: 1s;
+}
+
+.heroBanner.hero-revealed .reveal-5 {
+  transition-delay: 1.3s;
+}
+
+/* Rotating keyword animation */
+.heroBanner .fade-text {
+  display: inline-block;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.heroBanner .fade-out {
+  opacity: 0;
+  transform: translateY(8px);
+  filter: blur(3px);
+}
+
+.heroBanner .fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  .heroBanner .hero-reveal-item,
+  .heroBanner .fade-text {
+    transition: none !important;
+    filter: none !important;
+    transform: none !important;
+  }
+
+  .heroBanner .hero-reveal-item {
+    opacity: 1;
   }
 }

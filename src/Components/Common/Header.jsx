@@ -39,6 +39,7 @@ const Header=()=>{
     return(
         <>
             <header className={`header ${isScrolled ? Style.headerFix : ""}`}>
+                
                 <Container>
                     <Row>
                         <Col>
