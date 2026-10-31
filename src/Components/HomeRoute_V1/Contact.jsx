@@ -130,138 +130,136 @@ const ContactUs = () => {
     }
   };
   return (
-    <div className="">
-            <div className="contactForm">
-              {/* <div className="">
-                <img src={contactImage} loading="lazy" />
-              </div> */}
-                <div className="contactHead">
-                  <h3>Get in touch</h3>
-                  <span><Mail /></span>
-                </div>
-                <div className="fomrStyle">
-                  <div className="inputFlex">
-                    <div className="group">
-                      <span className="icon"><User /></span>
-                      <label>First name</label>
-                      <input
-                        type="text"
-                        name="firstname"
-                        placeholder="First name"
-                        value={formData.firstname}
-                        onChange={handleChange}
-                      />
-                      {errors.firstname && (
-                        <p className="error-text"><AlertCircle /> {errors.firstname}</p>
-                      )}
-                    </div>
-                    <div className="group">
-                      <span className="icon"><User /></span>
-                      <label>Last name</label>
-                      <input
-                        type="text"
-                        name="lastname"
-                        placeholder="Last name"
-                        value={formData.lastname}
-                        onChange={handleChange}
-                      />
-                      {errors.lastname && (
-                        <p className="error-text"><AlertCircle /> {errors.lastname}</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="inputFlex">
-                    <div className="group">
-                      <span className="icon"><Building2 /></span>
-                      <input
-                        type="text"
-                        name="company"
-                        placeholder="Company"
-                        value={formData.company}
-                        onChange={handleChange}
-                      />
-                      {errors.company && (
-                        <p className="error-text"><AlertCircle /> {errors.company}</p>
-                      )}
-                    </div>
-                    <div className="group">
-                      <span className="icon"><Smartphone /></span>
-                      <label>Mobile</label>
-                      <input
-                        type="number"
-                        name="mobile"
-                        placeholder="Mobile"
-                        value={formData.mobile}
-                        onChange={handleChange}
-                      />
-                      {errors.mobile && (
-                        <p className="error-text"><AlertCircle /> {errors.mobile}</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="inputFlex">
-                    <div className="group">
-                      <span className="icon"><Mail /></span>
-                      <label>Email</label>
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        value={formData.email}
-                        onChange={handleChange}
-                      />
-                      {errors.email && (
-                        <p className="error-text"><AlertCircle /> {errors.email}</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="inputFlex">
-                    <div className="group">
-                      <span className="icon"><FileText /></span>
-                      <label>Your Requirement?</label>
-                      <textarea
-                        name="message"
-                        placeholder="Your Requirement?"
-                        value={formData.message}
-                        onChange={handleChange}
-                      ></textarea>
-                      {errors.message && (
-                        <p className="error-text"><AlertCircle /> {errors.message}</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="inputFlex">
-                    <div className="group">
-                      {/* <div
-                        className="g-recaptcha"
-                        data-sitekey="6Ldc9-YrAAAAAPlEy99RO6N06uFh6LRqjJ76ggk4"
-                      ></div> */}
-                      <div className="recaptchaSlot" ref={recaptchaContainerRef}>
-                        {shouldLoadRecaptcha && (
-                          <ReCAPTCHA
-                            ref={recaptchaRef}
-                            sitekey="6Ldc9-YrAAAAAPlEy99RO6N06uFh6LRqjJ76ggk4"
-                            onChange={(token) => setCaptchaToken(token)}
-                          />
-                        )}
-                      </div>
-                      {errors.captcha && (
-                        <p className="error-text"><AlertCircle /> {errors.captcha}</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="buttonFlex">
-                    <button
-                      type="button"
-                      className="ctBtn ct-primery-btn"
-                      disabled={loading}
-                      onClick={handleSubmit}
-                    >
-                      {loading ? "Submitting..." : "Submit"}
-                    </button>
-                  </div>
-                </div>
+    <div className="contactForm">
+      {/* <div className="">
+        <img src={contactImage} loading="lazy" /> 
+      </div> */}
+        <div className="contactHead">
+          <h3>Get in touch</h3>
+          <span><Mail /></span>
+        </div>
+        <div className="fomrStyle">
+          <div className="inputFlex">
+            <div className="group">
+              <span className="icon"><User /></span>
+              <label>First name</label>
+              <input
+                type="text"
+                name="firstname"
+                placeholder="First name"
+                value={formData.firstname}
+                onChange={handleChange}
+              />
+              {errors.firstname && (
+                <p className="error-text"><AlertCircle /> {errors.firstname}</p>
+              )}
             </div>
+            <div className="group">
+              <span className="icon"><User /></span>
+              <label>Last name</label>
+              <input
+                type="text"
+                name="lastname"
+                placeholder="Last name"
+                value={formData.lastname}
+                onChange={handleChange}
+              />
+              {errors.lastname && (
+                <p className="error-text"><AlertCircle /> {errors.lastname}</p>
+              )}
+            </div>
+          </div>
+          <div className="inputFlex">
+            <div className="group">
+              <span className="icon"><Building2 /></span>
+              <input
+                type="text"
+                name="company"
+                placeholder="Company"
+                value={formData.company}
+                onChange={handleChange}
+              />
+              {errors.company && (
+                <p className="error-text"><AlertCircle /> {errors.company}</p>
+              )}
+            </div>
+            <div className="group">
+              <span className="icon"><Smartphone /></span>
+              <label>Mobile</label>
+              <input
+                type="number"
+                name="mobile"
+                placeholder="Mobile"
+                value={formData.mobile}
+                onChange={handleChange}
+              />
+              {errors.mobile && (
+                <p className="error-text"><AlertCircle /> {errors.mobile}</p>
+              )}
+            </div>
+          </div>
+          <div className="inputFlex">
+            <div className="group">
+              <span className="icon"><Mail /></span>
+              <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              {errors.email && (
+                <p className="error-text"><AlertCircle /> {errors.email}</p>
+              )}
+            </div>
+          </div>
+          <div className="inputFlex">
+            <div className="group">
+              <span className="icon"><FileText /></span>
+              <label>Your Requirement?</label>
+              <textarea
+                name="message"
+                placeholder="Your Requirement?"
+                value={formData.message}
+                onChange={handleChange}
+              ></textarea>
+              {errors.message && (
+                <p className="error-text"><AlertCircle /> {errors.message}</p>
+              )}
+            </div>
+          </div>
+          <div className="inputFlex">
+            <div className="group">
+              {/* <div
+                className="g-recaptcha"
+                data-sitekey="6Ldc9-YrAAAAAPlEy99RO6N06uFh6LRqjJ76ggk4"
+              ></div> */}
+              <div className="recaptchaSlot" ref={recaptchaContainerRef}>
+                {shouldLoadRecaptcha && (
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey="6Ldc9-YrAAAAAPlEy99RO6N06uFh6LRqjJ76ggk4"
+                    onChange={(token) => setCaptchaToken(token)}
+                  />
+                )}
+              </div>
+              {errors.captcha && (
+                <p className="error-text"><AlertCircle /> {errors.captcha}</p>
+              )}
+            </div>
+          </div>
+          <div className="buttonFlex">
+            <button
+              type="button"
+              className="ctBtn ct-primery-btn"
+              disabled={loading}
+              onClick={handleSubmit}
+            >
+              {loading ? "Submitting..." : "Submit"}
+            </button>
+          </div>
+        </div>
     </div>
   );
 };
