@@ -63,16 +63,36 @@ const Header=()=>{
                         <Col>
                             <div className={Style.head}>
                                 <div className={Style.logo}>
-                                    <Link to='' alt='codetrios'><img src={Logo} alt="codetrios" width="180" height="42" fetchPriority="high" loading="eager" decoding="async" /></Link>
+                                    <Link to="/" aria-label="CodeTrios homepage">
+                                        <img
+                                            src={Logo}
+                                            alt="CodeTrios"
+                                            width="180"
+                                            height="42"
+                                            fetchPriority="high"
+                                            loading="eager"
+                                            decoding="async"
+                                        />
+                                        </Link>
                                 </div>
-                                <button type="button" className="menuToggle"  onClick={() => setMenuOpen(true)}><Menu /></button>
+                                <button type="button" className="menuToggle" aria-label="Open navigation menu"  onClick={() => setMenuOpen(true)}><Menu /></button>
                                 <div className={Style.headFlex}>
                                     <div className={`mainMenu ${menuOpen ? "activeMenu" : ""}`}>
                                         <div className={Style.mobMenuHead}>
                                             <div className={Style.logo}>
-                                                <Link to='' alt='codetrios'><img src={Logo} alt="codetrios" width="180" height="42" fetchPriority="high" loading="eager" decoding="async" /></Link>
+                                                <Link to="/" aria-label="CodeTrios homepage">
+                                                    <img
+                                                        src={Logo}
+                                                        alt="CodeTrios"
+                                                        width="180"
+                                                        height="42"
+                                                        fetchPriority="high"
+                                                        loading="eager"
+                                                        decoding="async"
+                                                    />
+                                                </Link>
                                             </div>
-                                            <button type='button' className="closeBtn"  onClick={() => setMenuOpen(false)}>
+                                            <button type='button' className="closeBtn" aria-label="Close navigation menu" onClick={() => setMenuOpen(false)}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x preview-icon"><path vector-effect="non-scaling-stroke" d="M18 6 6 18"/><path vector-effect="non-scaling-stroke" d="m6 6 12 12"/></svg>
                                             </button>
                                         </div>
