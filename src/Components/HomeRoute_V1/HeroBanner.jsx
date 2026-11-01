@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import './HeroBanner.css';
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Settings, ChartColumnBig, ShieldCheck  } from "lucide-react";
-import HeroVideo from '../../assets/videos/process-visual-700x600-fallback.mp4';
+import HeroVideo from '../../assets/videos/process-visual-1400x1200.webm';
 // const words = ["Reimagine", "Automate", "Optimize"];
 
 const HeroBanner = ({data}) =>{
