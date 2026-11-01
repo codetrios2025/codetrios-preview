@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import './HeroBanner.css';
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Settings, ChartColumnBig, ShieldCheck  } from "lucide-react";
-import HeroVideo from '../../assets/videos/process-visual-1400x1200.webm';
+import HeroVideo from '../../assets/videos/process-visual-700x600-fallback.mp4';
 // const words = ["Reimagine", "Automate", "Optimize"];
 
 const HeroBanner = ({data}) =>{
@@ -53,24 +53,12 @@ useEffect(() => {
 
     return(
         <div className={`home-hero heroBanner ${heroVisible ? "hero-revealed" : ""}`}>
-            <div className="hero-video">
-                <video
-                    ref={videoRef}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="auto"
-                    aria-hidden="true"
-                >
-                    <source src={HeroVideo} type="video/mp4" />
-                </video>
-                </div>
             <div className="content">
                 <Container className="home-hero__container">
                     <Row>
                         <Col>
                             <div className="detail">
+                                <div>
                                 <div className="heroSubtitle hero-reveal-item reveal-1">Professional Web Design & Development Company</div>
                                 <h1 className="hero-reveal-item reveal-2">Custom Web Development <br/>for <span>Growing Businesses</span></h1>
                                 <div className="tagline hero-reveal-item reveal-3">
@@ -85,6 +73,20 @@ useEffect(() => {
                                     <li><span className="icon"><ChartColumnBig /></span> Build to scale</li>
                                     <li><span className="icon"><ShieldCheck /></span> Groeth-focused</li>
                                 </ul>
+                                </div>
+                                <div className="hero-video">
+                                    <video
+                                        ref={videoRef}
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        preload="auto"
+                                        aria-hidden="true"
+                                    >
+                                        <source src={HeroVideo} type="video/mp4" />
+                                    </video>
+                                    </div>
                             </div>
                         </Col>
                     </Row>

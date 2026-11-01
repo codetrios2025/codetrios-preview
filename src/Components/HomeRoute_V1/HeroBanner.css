@@ -2,7 +2,7 @@
     radial-gradient(ellipse at 76% 44%, rgba(0, 86, 190, .19), transparent 37%),
     radial-gradient(ellipse at 10% 100%, rgba(0, 75, 155, .13), transparent 38%),
     linear-gradient(115deg, #061426 0%, #06172f 53%, #04152b 100%);position: relative;overflow: hidden;}
-.heroBanner .hero-video { position: absolute; top: 200px;right: 150px;width: 500px;height: 430px;border-radius:20px;overflow: hidden;}
+.heroBanner .hero-video { position: absolute; top: 40px;right: 0;width: 500px;height: 430px;border-radius:20px;overflow: hidden;}
 .heroBanner .hero-video video { width: 100%; height: 100%; object-position: right center; }
 
 
@@ -27,6 +27,7 @@
   align-items: flex-start;
   padding-top:0;
   text-align: left;
+  position: relative;
 }
 .heroSubtitle{  display: inline-flex;
   align-items: center;
@@ -105,6 +106,7 @@
   .heroBanner .detail{
     margin-top: 120px;
   }
+  .heroBanner .hero-video{top: 0;width: 460px;height: auto;}
 }
 
 @media (max-width: 1199px) {
@@ -126,17 +128,27 @@
   .heroBanner .content ul li .icon svg{
     width: 18px;
   }
+      .heroBanner .hero-video {
+        top: 0;
+        width: 320px;}
 }
 
 @media (max-width: 991px) {
-  
+  .heroBanner .hero-video{
+    z-index: -1;
+    opacity: .5;
+  }
+  .heroBanner .content h1{font-size: 35px;}
+  .heroBanner .tagline span{font-size: 14px;}
   
 }
 
 @media (max-width: 767px) {
-  .heroBanner .detail{
-    align-items: left;
-  }
+  .heroBanner .detail{margin: 140px 0 0;}
+  .heroBanner .content{justify-content: flex-start;}
+  .heroBanner .hero-video{position: relative;width: 100%;}
+
+
   .heroBanner .tagline span{
     font-size: 14px;
   }
@@ -145,7 +157,7 @@
   }
   .heroSubtitle{
     padding: 6px 10px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-size: 9px
   }
   .heroBanner .tagline span{
@@ -156,13 +168,15 @@
 }
 
 @media (max-width: 580px) {
-  .heroBanner .content h1{line-height: normal;margin: 20px 0;}
+  .heroBanner .detail{margin: 150px 0 0;}
+  .heroBanner .hero-video{opacity: .2;top: -20px;}
+  .heroBanner .content h1{line-height: normal;margin: 15px 0;}
   .heroBanner .content ul li{font-size: 12px;}
   .heroBanner .tagline span{font-weight: 500;}
   .heroBanner .tagline span br{display: none;}
-  .heroBanner .detail {
+  /* .heroBanner .detail {
         margin-top: 0px;
-    }
+    } */
     
   .heroBanner .content h1{
     text-align: left;
