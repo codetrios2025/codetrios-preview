@@ -36,7 +36,8 @@ const STAGGER_MS = 90;
 const MAX_STAGGER_STEPS = 6;
 const MIN_RATIO = 0.12; // how much of an element must be visible before it reveals
 const THRESHOLDS = Array.from({ length: 21 }, (_, i) => i / 20);
-const SELECTOR = "[data-reveal],[data-parallax],[data-drift],[data-scroll-fade]";
+const SELECTOR =
+  "[data-reveal],[data-parallax],[data-drift],[data-scroll-fade]";
 
 let activeLenis = null;
 
@@ -52,18 +53,28 @@ export function scrollToTarget(target, options = {}) {
   let top;
   if (typeof target === "number") top = target;
   else {
-    const el = typeof target === "string" ? document.querySelector(target) : target;
-    if (el) top = el.getBoundingClientRect().top + window.scrollY + (options.offset || 0);
+    const el =
+      typeof target === "string" ? document.querySelector(target) : target;
+    if (el)
+      top =
+        el.getBoundingClientRect().top + window.scrollY + (options.offset || 0);
   }
   if (typeof top === "number") window.scrollTo({ top, behavior: "smooth" });
 }
 
-export default function ScrollFX({ offset = 80, smooth = true, progress = true, replay = true, animateOnScrollUp = false }) {
+export default function ScrollFX({
+  offset = 80,
+  smooth = true,
+  progress = true,
+  replay = true,
+  animateOnScrollUp = false,
+}) {
   const barRef = useRef(null);
 
   // Layout effect: the "fx-on" class (which hides not-yet-revealed elements) is applied before first paint, so nothing flashes.
   useLayoutEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+      return undefined;
 
     const root = document.documentElement;
     root.classList.add("fx-on");
@@ -145,10 +156,12 @@ export default function ScrollFX({ offset = 80, smooth = true, progress = true, 
 
     const movingIO = new IntersectionObserver(
       (entries) => {
-        entries.forEach((e) => (e.isIntersecting ? moving.add(e.target) : moving.delete(e.target)));
+        entries.forEach((e) =>
+          e.isIntersecting ? moving.add(e.target) : moving.delete(e.target),
+        );
         schedule();
       },
-      { rootMargin: "20% 0px 20% 0px" }
+      { rootMargin: "20% 0px 20% 0px" },
     );
 
     /* ---------- reveal ---------- */
@@ -164,7 +177,10 @@ export default function ScrollFX({ offset = 80, smooth = true, progress = true, 
       }
       const d = el.dataset;
       const base = parseFloat(d.revealDelay) || 0;
-      el.style.setProperty("--rv-delay", `${base + Math.min(index, MAX_STAGGER_STEPS) * STAGGER_MS}ms`);
+      el.style.setProperty(
+        "--rv-delay",
+        `${base + Math.min(index, MAX_STAGGER_STEPS) * STAGGER_MS}ms`,
+      );
       el.style.setProperty("--rv-dir", String(dir)); // scrolling up => vertical reveals come from above
       if (dir < 0) el.setAttribute("data-rv-up", "");
       else el.removeAttribute("data-rv-up");
@@ -186,19 +202,25 @@ export default function ScrollFX({ offset = 80, smooth = true, progress = true, 
         const ready = [];
         entries.forEach((e) => {
           const shown = e.target.hasAttribute("data-revealed");
-          if (e.isIntersecting && !shown && (e.intersectionRatio >= MIN_RATIO || e.intersectionRect.height >= vh * 0.4)) {
+          if (
+            e.isIntersecting &&
+            !shown &&
+            (e.intersectionRatio >= MIN_RATIO ||
+              e.intersectionRect.height >= vh * 0.4)
+          ) {
             ready.push(e);
           }
         });
         // stagger order follows the scroll: top-to-bottom going down, bottom-to-top going up; left to right within a row
         ready.sort(
           (a, b) =>
-            (Math.round(a.boundingClientRect.top / 24) - Math.round(b.boundingClientRect.top / 24)) * dir ||
-            a.boundingClientRect.left - b.boundingClientRect.left
+            (Math.round(a.boundingClientRect.top / 24) -
+              Math.round(b.boundingClientRect.top / 24)) *
+              dir || a.boundingClientRect.left - b.boundingClientRect.left,
         );
         ready.forEach((e, i) => reveal(e.target, i));
       },
-      { threshold: THRESHOLDS, rootMargin: "0px 0px -6% 0px" }
+      { threshold: THRESHOLDS, rootMargin: "0px 0px -6% 0px" },
     );
 
     // Resets only when the element is completely outside the real viewport (never while partly visible),
@@ -207,13 +229,18 @@ export default function ScrollFX({ offset = 80, smooth = true, progress = true, 
     const leaveIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting || !e.target.hasAttribute("data-revealed") || isOnce(e.target)) return;
+          if (
+            e.isIntersecting ||
+            !e.target.hasAttribute("data-revealed") ||
+            isOnce(e.target)
+          )
+            return;
           const viewH = e.rootBounds ? e.rootBounds.height : window.innerHeight;
           const leftThroughBottom = e.boundingClientRect.top >= viewH;
           if (leftThroughBottom || animateOnScrollUp) hide(e.target);
         });
       },
-      { threshold: 0 }
+      { threshold: 0 },
     );
 
     /* ---------- find elements now and as React adds them later ---------- */
@@ -222,7 +249,11 @@ export default function ScrollFX({ offset = 80, smooth = true, progress = true, 
         revealIO.observe(el);
         if (!isOnce(el)) leaveIO.observe(el);
       }
-      if (el.hasAttribute("data-parallax") || el.hasAttribute("data-drift") || el.hasAttribute("data-scroll-fade")) {
+      if (
+        el.hasAttribute("data-parallax") ||
+        el.hasAttribute("data-drift") ||
+        el.hasAttribute("data-scroll-fade")
+      ) {
         movingIO.observe(el);
       }
     };
@@ -232,12 +263,22 @@ export default function ScrollFX({ offset = 80, smooth = true, progress = true, 
       node.querySelectorAll(SELECTOR).forEach(register);
     };
     scan(document.body);
-    const mo = new MutationObserver((records) => records.forEach((r) => r.addedNodes.forEach(scan)));
+    const mo = new MutationObserver((records) =>
+      records.forEach((r) => r.addedNodes.forEach(scan)),
+    );
     mo.observe(document.body, { childList: true, subtree: true });
 
     /* ---------- smooth same-page anchor links (<a href="#x"> and <Link to="/#x">) ---------- */
     const onClick = (e) => {
-      if (!lenis || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      if (
+        !lenis ||
+        e.button !== 0 ||
+        e.metaKey ||
+        e.ctrlKey ||
+        e.shiftKey ||
+        e.altKey
+      )
+        return;
       const a = e.target.closest && e.target.closest("a[href]");
       if (!a || (a.target && a.target !== "_self")) return;
       let url;
@@ -246,8 +287,15 @@ export default function ScrollFX({ offset = 80, smooth = true, progress = true, 
       } catch {
         return;
       }
-      if (!url.hash || url.origin !== window.location.origin || url.pathname !== window.location.pathname) return;
-      const target = document.getElementById(decodeURIComponent(url.hash.slice(1)));
+      if (
+        !url.hash ||
+        url.origin !== window.location.origin ||
+        url.pathname !== window.location.pathname
+      )
+        return;
+      const target = document.getElementById(
+        decodeURIComponent(url.hash.slice(1)),
+      );
       if (!target) return;
       if (!e.defaultPrevented) {
         e.preventDefault();
