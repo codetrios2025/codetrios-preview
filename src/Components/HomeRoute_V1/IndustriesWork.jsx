@@ -84,7 +84,7 @@ const industriesData = [
 
 export default function IndustriesWork(){
   return(
-    <div className="ourIndustries" id="Industries">
+    <div className="ourIndustries blockPadding" id="Industries">
       <Container>
         <Row>
           <Col>

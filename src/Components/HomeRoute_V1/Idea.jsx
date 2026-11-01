@@ -20,7 +20,7 @@ import ContactUs from "./Contact";
 
 export default function Idea (){
   return(
-    <div className="ideaSection">
+    <div className="ideaSection blockPadding">
       <div className="ideabg"></div>
       <Container>
         <Row>

@@ -1,6 +1,5 @@
 .ourIndustries{
   position: relative;
-  padding: 100px 0;
       background: radial-gradient(ellipse at 76% 48%, rgba(0, 91, 190, 0.16), transparent 38%), linear-gradient(115deg, #041326 0%, #061a36 55%, #031126 100%);
 }
 .industrie-grid{
@@ -151,7 +150,7 @@
 
 .ourIndustries .content {
   position: sticky;
-  top: 110px;
+  top: 40%;
   align-self: start;
 }
 
@@ -189,7 +188,6 @@
   top: 0;
   margin-bottom: 10px;
 }
-.industrie-grid .sectionHead{text-align: center;}
 .industrie-grid .content, .industrie-card{width: 100%;}  
 .industrie-card{display: grid;grid-template-columns: repeat(2, 1fr); gap:40px}
 .du-card{width: 100%;}
