@@ -41,7 +41,7 @@ const HeroBanner = ({data}) =>{
             setIsopen(false);
         }
     return(
-        <div className={`home-hero heroBanner ${heroVisible ? "hero-revealed" : ""}`}>
+        <AnimatedHeroBackground className={`home-hero heroBanner ${heroVisible ? "hero-revealed" : ""}`}>
             <div className="content">
                 <Container className="home-hero__container">
                     <Row>
@@ -66,7 +66,7 @@ const HeroBanner = ({data}) =>{
                     </Row>
                 </Container>
             </div>
-        </div>
+        </AnimatedHeroBackground>
     )
 }
 

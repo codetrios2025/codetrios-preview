@@ -98,7 +98,7 @@
     margin: 0 0 20px;
   }
   .heroBanner .detail{
-    margin-top: 70px;
+    margin-top: 120px;
   }
 }
 
@@ -109,7 +109,8 @@
   .heroBanner .content h1{
     font-size: 45px;
     letter-spacing: 0;
-    line-height: 1.4;
+    line-height: normal;
+    margin: 10px 0;
   } 
   .heroBanner .content ul li{
     font-size: 13px;
@@ -145,26 +146,30 @@
   .heroBanner .tagline span{
     font-size: 13px;
   }
- 
+ .heroBanner{border-bottom: 1px solid var(--ct-border);}
   
 }
 
 @media (max-width: 580px) {
+  .heroBanner .content h1{line-height: normal;margin: 20px 0;}
   .heroBanner .content ul li{font-size: 12px;}
+  .heroBanner .tagline span{font-weight: 500;}
   .heroBanner .tagline span br{display: none;}
   .heroBanner .detail {
-        margin-top: 0;
+        margin-top: 0px;
     }
+    
   .heroBanner .content h1{
     text-align: left;
-    font-size: 34px;
+    font-size: 35px;
   }
   .heroBanner .content h1 br{display: none;}
   .heroAction{
     gap: 15px;
   }
   .heroBanner .content ul{
-    gap:15px
+    gap:15px;
+    margin-top: 30px;
   }
   .heroBanner .content ul li{
     padding: 0;

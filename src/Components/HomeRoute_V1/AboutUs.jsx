@@ -2,38 +2,34 @@ import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import './About.css';
 import webImage from '../../assets/images/growth_about.webp';
-import { Sparkles, ArrowUpRight,
-  Code2,
-  Workflow,
-  Handshake,
-  ShieldCheck, } from "lucide-react";
+import { ArrowUpRight, Workflow, ShieldCheck, ChartNoAxesCombined, MonitorSmartphone, Bot } from "lucide-react";
 import { Link } from 'react-router-dom';
 const AboutUs = ({data}) =>{
 
     const whyChooseData = [
       {
         title: "End-to-End Development",
-        icon: Sparkles,
+        icon: Workflow,
         content: "Design, full-stack engineering, and launch—handled by one expert team.",
       },
       {
         title: "SEO & Geo-Targeted Growth",
-        icon: Code2,
+        icon: ChartNoAxesCombined,
         content: "Built to rank higher on search engines and attract local customers.",
       },
       {
         title: "Continuous Care & Security",
-        icon: Workflow,
+        icon: ShieldCheck,
         content: "24/7 performance tracking, updates, and maintenance long after launch.",
       },
       {
         title: "Responsive Mobile Design",
-        icon: Handshake,
+        icon: MonitorSmartphone,
         content: "Seamless, ultra-fast performance across every device and screen size.",
       },
       {
         title: "AI chatboat Development",
-        icon: ShieldCheck,
+        icon: Bot,
         content: "We build chatboat where customer can chat and response according to there requirement.",
       },
     ];

@@ -91,3 +91,12 @@ input:focus-visible, textarea:focus-visible{
 .buttonFlex button{
   width: 100%;
 }
+@media (max-width: 767px) {
+.closeBtn{ right: 15px;width: 30px;height: 30px;top: 28px;}
+.inputFlex .group input, .formPop .inputFlex .group textarea{padding: 10px 15px 10px 30px;}
+.inputFlex .group .icon svg{width: 14px;}
+.inputFlex .group .icon{top: 9px;left: 10px;}
+.contactHead h3{font-size: 24px;}
+.contactHead{margin-bottom: 20px;}
+
+}

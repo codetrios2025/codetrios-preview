@@ -80,7 +80,7 @@ input[type="number"]::-webkit-inner-spin-button{
   -webkit-appearance: none;
   margin: 0;
 }
-.menuToggle, .closeBtn, .subToggle{display: none;}
+.menuToggle, .subToggle{display: none;}
 .boxHeight .col-md-4{display: flex;}
 
 button{border: none;}
@@ -117,24 +117,23 @@ body{font-size: 14px;}
 p{line-height: 24px;}
 }
 
-@media (max-width: 992px){
+@media (max-width: 991px){
 .faqStyle .accordion-item .accordion-header button{font-size: 18px;}  
-.menuToggle{display: block;background: transparent;padding: 0;color: #000;font-size: 30px;margin: 0 0;border: none;position: absolute;right: 0;top: -6px;}
-.closeBtn{display: block;border: none;}
-header .mainMenu{background: #7C3AED;position: fixed;top: 0;right: -100%;width: 300px;height: 100%;padding-top: 30px;overflow: auto;z-index: 99;}
-header .mainMenu.activeMenu{right: 0;}
-header .mainMenu ul{flex-direction: column;height: 100%;}
-header .mainMenu ul li{position: relative;}
-header .mainMenu ul li a{color: #fff;padding: 10px 15px;width: 100%;border-bottom: 1px dotted #fff;}
-header .mainMenu ul ul{display: none;}
-.mainMenu .closeBtn{margin: 0;padding: 0;top: 5px;right: 5px;position: absolute;background: #000;color: #fff;width: 30px;height: 30px;display: flex;align-items: center;justify-content: center;border-radius: 50%;}
+.menuToggle{display: block;background: linear-gradient(90deg, #8E42FF 0%, #5A63FF 45%, #18A8FF 100%);padding: 0;color: #fff;margin: 0 0;border: none;position: absolute;right: 0;top: 10px;
+padding: 7px;border-radius: 10px;}
+.header .mainMenu{background: #0a2349;position: fixed;top: 0;right: -100%;width: 100%;height: 100%;overflow: auto;z-index: 99;transition:.4s;padding: 0 0;}
+.header .mainMenu.activeMenu{right: 0;}
+.header .mainMenu ul{flex-direction: column;padding: 0 15px;margin-top: 20px;}
+.header .mainMenu ul li{position: relative;}
+.header .mainMenu ul li a{color: #fff;padding: 10px 15px;width: 100%;border-bottom: 1px solid var(--ct-border);}
+.header .mainMenu ul ul{display: none;}
 .mainMenu ul li a .icon{display: none;}
-.mainMenu ul li .subToggle{        position: absolute;top: 0;right: 0;margin: 0;padding: 0;padding: 10px;background: #6217e3;color: #fff;border-radius: 0;z-index: 9;display: block;}
+.mainMenu ul li .subToggle{        position: absolute;top: 0;right: 0;margin: 0;padding: 0;padding: 10px;background: transparent;color: #fff;border-radius: 0;z-index: 9;display: block;}
 .mainMenu ul ul:after, .mainMenu ul ul:before{content: none!important;}        
-header .mainMenu ul li .subMenuMob {background: #854ce7;position: relative;top: 0!important;flex-direction: column;        padding: 0 0;display: none!important;border: none;}
+header .mainMenu ul li .subMenuMob {background: transparent;position: relative;top: 0!important;flex-direction: column;        padding: 0 0;display: none!important;border: none;margin: 0;}
 header .mainMenu ul li .subMenuMob.open{display: flex!important;}
 header .mainMenu ul li .subMenuMob li{width: 100%;margin: 0;}
-header .mainMenu ul li .subMenuMob li a{        padding: 10px 30px;}
+header .mainMenu ul li .subMenuMob li a{        padding: 10px 30px;border: none;}
 .servicesView .col-md-4{width: 50%;}
 .aboutCls .col-md-6{width: 100%;}
 .aboutCls figure{margin-bottom: 30px;display: block;}
@@ -166,6 +165,7 @@ header .mainMenu ul li .subMenuMob li a{        padding: 10px 30px;}
 .faqStyle .accordion-body {padding: 15px 15px 0;}
 .servicesView .col-md-4{width: 100%;}
 .boxHeight .col-md-4 {width: 100%;}
+.menuToggle{padding: 6px;border-radius: 6px;}
 }
 .error-text {color: #ff4d4d;font-size: 14px;margin-top: 4px;}
 
@@ -465,6 +465,9 @@ color-mix(in srgb, var(--accent, var(--brand-color)) 60%, transparent);
   .why_features .faqStyle .accordion-item .accordion-header button{font-size: 14px;line-height: 20px;}
   .why_features .faqStyle .accordion-body{font-size: 13px;}
   .why_features .faqStyle .accordion-body p{line-height: 20px;}
+
+  .formElem{padding: 20px 15px;border-radius: 15px;}
+  .formPop .closeBtn{ right: 15px;width: 30px;height: 30px;top: 20px;}
 }
 
 
@@ -478,7 +481,7 @@ color-mix(in srgb, var(--accent, var(--brand-color)) 60%, transparent);
   .benefitGrid{gap: 15px;}
   .benefitGrid .benefitCard, .services_process_grid .process_box{padding: 15px;}
   
-  .actionBtn{flex-direction: column;align-items: flex-start;gap: 15px 0;}
+  .actionBtn{gap: 15px;}
 
   .services_process_grid{    grid-template-columns: repeat(1, minmax(0, 1fr));}
 

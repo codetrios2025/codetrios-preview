@@ -60,9 +60,6 @@
 
 /* Tablet */
 @media (max-width: 991px) {
-  .ct-ai-hero {
-    min-height: 600px;
-  }
 
   .ct-ai-hero__shade {
     background: linear-gradient(
@@ -72,17 +69,11 @@
     );
   }
 
-  .ct-ai-hero .home-hero__container {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
 }
 
 /* Mobile */
 @media (max-width: 576px) {
-  .ct-ai-hero {
-    height: 560px;
-  }
+ 
 
   .ct-ai-hero__shade {
     background: linear-gradient(
@@ -92,10 +83,7 @@
     );
   }
 
-  .ct-ai-hero .home-hero__container {
-    padding-top: 64px;
-    padding-bottom: 64px;
-  }
+  
 }
 
 /* No moving glow for users who prefer reduced motion. */
@@ -660,12 +648,13 @@
   .ct-floating-chip--right {
     right: -1%;
   }
+  .ct-ai-hero__shade, .ct-digital-visual{display: none;}
 }
 
 /* Mobile: preserve the hero text and keep the visual lightweight */
 
 @media (max-width: 767px) {
-  .ct-ai-hero__shade, .ct-digital-visual{display: none;}
+  
 
   .ct-digital-visual {
     top: auto;
