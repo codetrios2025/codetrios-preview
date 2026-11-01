@@ -104,17 +104,19 @@ const Header=()=>{
                                                 <button type="button" className="subToggle" onClick={() => setSubOpen(!subOpen)}>
                                                     <ChevronDown className={subOpen ? "rotate" : ""} />
                                                 </button>
-                                                <ul className={`subMenuMob ${Style.subMenu} ${subOpen ? "open" : ""}`}>
-                                                    <li><Link onClick={closeMenu} to="/website-design-services" title="website design services">Website Design</Link></li>
-                                                    <li><Link onClick={closeMenu} to="/web-development-services" title="web-development-services">Web Development</Link></li>
-                                                    <li><Link onClick={closeMenu} to="/web-application-development" title="web application development">Web Applications</Link></li>
-                                                    <li><Link onClick={closeMenu} to="/ui-ux-design-services" title="ui ux design services">Design Services</Link></li>
-                                                    <li><Link onClick={closeMenu} to="/ecommerce-development-services" title="ecommerce development services">eCommerce Solutions</Link></li>
-                                                    <li><Link onClick={closeMenu} to="/custom-software-solutions" title="custom software solutions">Technology Solutions</Link></li>
-                                                    <li><Link onClick={closeMenu} to="/digital-strategy-consulting" title="digital strategy consulting">Digital Strategy</Link></li>
-                                                    <li><Link onClick={closeMenu} to="/web-hosting-services" title="web hosting services">Web Hosting Service</Link></li>
-                                                    <li><Link onClick={closeMenu} to="/geo-seo-services" title="Geo & SEO Services">Geo & SEO Services</Link></li>
-                                                </ul>
+                                                <div className={`subMenuMob ${Style.subMenu} ${subOpen ? "open" : ""}`}>
+                                                    <ul>
+                                                        <li><Link onClick={closeMenu} to="/website-design-services" title="website design services">Website Design</Link></li>
+                                                        <li><Link onClick={closeMenu} to="/web-development-services" title="web-development-services">Web Development</Link></li>
+                                                        <li><Link onClick={closeMenu} to="/web-application-development" title="web application development">Web Applications</Link></li>
+                                                        <li><Link onClick={closeMenu} to="/ui-ux-design-services" title="ui ux design services">Design Services</Link></li>
+                                                        <li><Link onClick={closeMenu} to="/ecommerce-development-services" title="ecommerce development services">eCommerce Solutions</Link></li>
+                                                        <li><Link onClick={closeMenu} to="/custom-software-solutions" title="custom software solutions">Technology Solutions</Link></li>
+                                                        <li><Link onClick={closeMenu} to="/digital-strategy-consulting" title="digital strategy consulting">Digital Strategy</Link></li>
+                                                        <li><Link onClick={closeMenu} to="/web-hosting-services" title="web hosting services">Web Hosting Service</Link></li>
+                                                        <li><Link onClick={closeMenu} to="/geo-seo-services" title="Geo & SEO Services">Geo & SEO Services</Link></li>
+                                                    </ul>
+                                                </div>
                                             </li>
                                             <li><Link onClick={closeMenu} to="/technologies" title="About"><span>Technologies</span></Link></li>
                                             <li><Link onClick={closeMenu} to="/portfolio" title="Portfolio"><span>Portfolio</span></Link></li>

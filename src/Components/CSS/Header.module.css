@@ -79,12 +79,43 @@ footer{padding: 80px 0 0;    background: radial-gradient(ellipse at 76% 48%, rgb
 .mobMenuHead{display:none}
 
 @media (min-width:992px){
-.head ul li .subMenu{position: absolute;top: 0;left: 0;width: 300px;height: 0;background: #fff;border-top: 2px solid #053f71c4;padding: 15px 0 0;transition: all 0.2s linear;display: none;box-shadow: 0px 3px 20px 0px #0000001c;}
-.head ul li:hover .subMenu{height: auto;top: 71px;display: flex;flex-direction: column;}
+    .head ul li .subMenu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        display: none;
+        height: 0;
+    }
+.head ul li .subMenu ul{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: #0a2349;
+        border: 1px solid var(--ct-border);
+        padding: 15px 0;
+        transition: all 0.2s linear;
+        box-shadow: 0px 3px 20px 0px #0000001c;
+        border-radius: 10px;
+        overflow: hidden;
+}
+.head ul li:hover .subMenu{height: auto;
+        top: 33px;
+        display: flex;
+        padding-top: 20px;
+        flex-direction: column;}
 .head ul li .subMenu li{width: 100%;margin: 0 0 0 0;}
 .head ul li .subMenu li:last-child{margin: 0;}
-.head ul li .subMenu li a{padding: 10px 15px;font-weight: 500;}
-.head ul li .subMenu li a:hover{background: #875ad6;color: #fff;}
+.head ul li .subMenu li a{
+            padding: 10px 15px;
+        font-weight: 500;
+        border-left: 2px solid transparent;
+}
+.head ul li .subMenu li a:hover{
+            background: #0f2d5b;
+        color: #fff;
+        border-color: var(--brand-color);
+}
 .head ul li .subMenu li a:hover::before{content: none;}
 }
 
