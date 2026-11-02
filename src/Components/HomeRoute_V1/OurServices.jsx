@@ -12,7 +12,7 @@ import bgDesign from "../../assets/svg/bg-design-services.svg";
 
 const OurServices = () => {
   return (
-    <section className="servicesSection" id="our-services">
+    <section className="servicesSection blockPadding" id="our-services">
       <Container>
         <Row>
           <Col>
@@ -56,18 +56,6 @@ const OurServices = () => {
                   <p>CodeTrios is an ecommerce development company in Delhi NCR helping businesses build secure, scalable, and conversion-focused online stores. We design and develop ecommerce websites around your products, where user can easily view your offers ,product , new launch ,easily order where payment will be secure . we will give you best platform for your product or business .</p>
                   <span className="cardGo"><ArrowUpRight aria-hidden="true" /></span>
                 </article>
-                <div className={`cardContainer cardUpDown`}>
-                  <article className={`card card-e`} data-reveal="up">
-                    <div className="cardBg" style={{ "--img": `url(${bgApps})` }} aria-hidden="true" />
-                    <span>Custom Platforms</span>
-                    <h3>GEO & SEO Services</h3>
-                    <p>CodeTrios helps businesses increase their ranks across all search engines and AI-powered platforms through  LLM Optimization ,AI SEO & GEO Services. We optimize your website, content, and digital authority so your business becomes the trusted answer in Google Search, AI Overviews, ChatGPT, Gemini, Claude, Perplexity, and all AI-driven search experiences. </p>
-                    <span className="cardGo"><ArrowUpRight aria-hidden="true" /></span>
-                  </article>
-                  <article className={`card btncard card-d`} data-reveal="zoom">
-                    <Link to='/' className="ctBtn ct-primery-btn">See All Services <ArrowUpRight aria-hidden="true" className="icon" /></Link>
-                  </article>
-                </div>
                 <article className={`card card-f`} data-reveal="up">
                   <div className="cardBg" style={{ "--img": `url(${bgDesign})` }} aria-hidden="true" />
                   <span>UI / UX</span>
@@ -75,8 +63,15 @@ const OurServices = () => {
                   <p>CodeTrios is a UI/UX design company in Delhi NCR creating unique, responsive, and user-focused experiences for websites, web applications, SaaS platforms, and digital products. Our design process combines user research, information architecture, wireframing, visual design, and usability to create digital experiences that are easy to understand and use.</p>
                   <span className="cardGo"><ArrowUpRight aria-hidden="true" /></span>
                 </article>
+                <article className={`card card-e`} data-reveal="up">
+                  <div className="cardBg" style={{ "--img": `url(${bgApps})` }} aria-hidden="true" />
+                  <span>Custom Platforms</span>
+                  <h3>GEO & SEO Services</h3>
+                  <p>CodeTrios helps businesses increase their ranks across all search engines and AI-powered platforms through  LLM Optimization ,AI SEO & GEO Services. We optimize your website, content, and digital authority so your business becomes the trusted answer in Google Search, AI Overviews, ChatGPT, Gemini, Claude, Perplexity, and all AI-driven search experiences. </p>
+                  <span className="cardGo"><ArrowUpRight aria-hidden="true" /></span>
+                </article>
               </div>
-              <div className="mobService btncard">
+              <div className="btncard">
                   <Link to='/' className="ctBtn ct-primery-btn">See All Services <ArrowUpRight aria-hidden="true" /></Link>
                 </div>
             </div>

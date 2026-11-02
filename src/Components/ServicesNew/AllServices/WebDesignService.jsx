@@ -51,7 +51,7 @@ const websiteDesignServices = [
     title: "Business Website Design", 
     content: "Professional websites that communicate your services, establish credibility and encourage enquiries.",
     link: "/",
-    icon: BriefcaseBusiness 
+    icon: BriefcaseBusiness, 
   },
   { 
     title: "Responsive Website Design", 

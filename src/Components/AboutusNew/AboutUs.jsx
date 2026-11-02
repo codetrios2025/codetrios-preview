@@ -18,6 +18,7 @@ import {
   LockKeyhole,
   ArrowUpRight,
 } from "lucide-react";
+import Accordion from 'react-bootstrap/Accordion';
 //compontnts
 import NetworkBackground from '../UI/NetworkBackground.jsx';
 import SEO from '../SEO/websiteMeta.jsx';
@@ -32,31 +33,37 @@ const whyChooseData = [
     icon: MessageCircle,
     title: "Clear Communication",
     description:
-      "We keep you informed with regular updates, honest advice, and clear communication throughout your project.",
+      "We keep things straightforward. You know what is being developed, what comes next, and how your project is progressing",
   },
   {
     icon: Users,
-    title: "Experienced Developers",
+    title: "Experienced Development Team",
     description:
-      "Our team brings together design and development expertise to create practical digital solutions.",
+      "Our team brings together more than 8 years of combined experience across website development, CMS platforms, backend systems, and modern applications.",
   },
   {
     icon: Code2,
-    title: "Thoughtful Development",
+    title: "Solutions Built Around Your Needs",
     description:
-      "We focus on clean code, usability, and maintainable solutions built around your business needs.",
+      "We don't believe every business needs the same website or software. We focus on your requirements and recommend an approach that makes sense.",
   },
   {
     icon: ShieldCheck,
-    title: "End-to-End Support",
+    title: "Quality-Focused Development",
     description:
-      "From planning and development to launch and ongoing improvements, we support you throughout the project.",
+      "We pay attention to website performance, responsive layouts, clean code, usability, and maintainability throughout development.",
   },
   {
     icon: LockKeyhole,
-    title: "Ownership & Confidentiality",
+    title: "Support Beyond Launch",
     description:
-      "We respect your ideas, business information, and project requirements throughout our collaboration.",
+      "Our work doesn't have to end when your website goes live. We can help with maintenance, updates, improvements, and new functionality as your business grows.",
+  },
+  {
+    icon: LockKeyhole,
+    title: "Respect for Your Work",
+    description:
+      "Your ideas, business information, and project requirements matter. We approach every collaboration with professionalism and confidentiality.",
   },
 ];
 // what we build data
@@ -88,12 +95,12 @@ const technologyGroups = [
   {
     title: "Frontend",
     icon: Monitor,
-    technologies: ["React", "JavaScript", "HTML5", "CSS3"],
+    technologies: ["React", "JavaScript", "HTML5", "CSS3", "Bootstrap"],
   },
   {
     title: "Backend & Applications",
     icon: Settings,
-    technologies: ["Node.js", "PHP", "Laravel"],
+    technologies: ["Node.js", "Express.js", "PHP", "Laravel"],
   },
   {
     title: "CMS & Content",
@@ -101,16 +108,48 @@ const technologyGroups = [
     technologies: ["WordPress", "Drupal", "Strapi"],
   },
   {
-    title: "Databases",
+    title: "Databases MANAGEMENT",
     icon: Database,
     technologies: ["MySQL", "MongoDB"],
   },
   {
-    title: "Cloud Platforms",
+    title: "CLOUD & DEPLOYMENT",
     icon: Cloud,
     technologies: ["AWS", "Google Cloud"],
   },
 ];
+
+//FAQ 
+const faqs = [
+  {
+      question: "What does CodeTrios do?",
+      answer: "CodeTrios is a web development and digital solutions company offering website design, custom web development, ecommerce development, web applications, CMS development, mobile application development, and website maintenance."
+  },
+  {
+      question: "Does CodeTrios provide website development services in Delhi NCR?",
+      answer: "Yes. CodeTrios provides website design, custom website development, ecommerce development, and web application services to businesses in Faridabad, Delhi NCR, and across India."
+  },
+  {
+      question: "Which technologies does CodeTrios use?",
+      answer: "Our development technologies include React.js, Node.js, PHP, Laravel, WordPress, Drupal, JavaScript, MySQL, and MongoDB. We select the technology stack according to each project's requirements."
+  },
+  {
+      question: "Can CodeTrios develop a custom business website?",
+      answer: "Yes. We develop custom business websites based on your brand, services, target audience, and functional requirements. Websites can include enquiry forms, CMS integration, API connections, and other business-specific features."
+  },
+  {
+      question: "Does CodeTrios offer website redesign and maintenance?",
+      answer: "Yes. We can help improve existing websites through redesign, performance optimization, bug fixing, content updates, security maintenance, and new functionality."
+  },
+  {
+      question: "Does CodeTrios work with startups and established businesses?",
+      answer: "Yes. We work with startups, small businesses, educational institutions, and established organizations that need websites, web applications, or custom digital solutions."
+  },
+  {
+      question: "How can I start a project with CodeTrios?",
+      answer: "You can contact CodeTrios through the website or email info@codetrios.com . Share your project requirements, and our team can discuss the scope, suitable technologies, and next steps."
+  },
+]
 
 export default function Aboutus(){
   return(
@@ -140,8 +179,9 @@ export default function Aboutus(){
               <Col>
                 <div className='innerBannerContent'>
                   <div className="tag">About CodeTrios</div>
-                  <h1>Thoughtful technology. <br />Built around <span>your business.</span></h1>
-                  <p>CodeTrios is a web development and digital solutions company in India helping businesses build, improve, and scale their digital presence. We provide website design, web development, ecommerce development, web application development, custom software development, UI/UX design, digital strategy consulting, web hosting, and SEO & GEO services.</p>
+                  <h1>Technology That Makes Your Business Move Forward To New Level</h1>
+                  <p>Looking for a reliable web development company in Delhi NCR? CodeTrios helps businesses turn ideas into digital solutions with new technology.</p>
+                  <p>We design and develop websites, web applications, ecommerce platforms, and custom software that help businesses work smarter and grow online. From the first discussion to development and ongoing support, we focus on building technology that serves a real purpose with your dream.</p>
                   <div className='actionRow'>
                     <ActionButton />
                   </div>
@@ -157,10 +197,15 @@ export default function Aboutus(){
                   <div className='weAreContent'>
                     <div className='sectionHead'>
                       <div className="tag">Our Story</div>
-                      <h2>Building Digital Experiences That Move <span>Businesses Forward</span></h2>
+                      <h2>Good Ideas Deserve Better <span>Technology & Digital</span> Layout</h2>
                     </div>
                     <div className='secDetail'>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.</p>
+                      <p>Every business has different goals, challenges and ways of working. We believe its technology should reflect that in to real.</p>
+                      <p>CodeTrios was built around a simple idea: make quality web development and digital solutions accessible to businesses that want to grow.</p>
+                      <p>We are a team of developers with more than 12 years of combined industry experience in website development, custom applications, CMS platforms, and modern web technologies.</p>
+                      <p>We take time to understand what a business actually needs before recommending a solution. Whether it's building a website from scratch, improving an existing platform, or developing a custom application, our focus stays on usability, performance, and long-term value.</p>
+                      <p>Based in Delhi NCR, CodeTrios works with businesses looking for dependable web development and technology services in India and beyond.</p>
+                      <p>We can maintain your current website also with new ideas and security. </p>
                     </div>
                   </div>
                 </Col>
@@ -168,36 +213,6 @@ export default function Aboutus(){
             </Container>
         </div>
         <Servicesslider />
-        {/* <div className='whatWeDo'>
-          <Container>
-            <Row>
-              <Col>
-              <div className="whatWeDoContent">
-                <div className='sectionHead'>
-                  <h2>What We Build</h2>
-                  <p>We help businesses build, improve, and scale their digital presence. We provide website design, web development, ecommerce development, web application development, custom software development, UI/UX design, digital strategy consulting, web hosting, and SEO & GEO services.</p>
-                </div>
-                <div className="benefitGrid">
-                  {whatWeBuild.map((item, index) =>{
-                    const IconComponent = item.icon;
-                    return(
-                      <div className="benefitCard" key={index} data-reveal="up">
-                        <div className="cardTop">
-                          <div className="iconWrap">
-                            <IconComponent aria-hidden="true" />
-                          </div>
-                        </div>
-                        <h3>{item.title}</h3>
-                        <p>{item.content}</p>
-                      </div>
-                    )
-                  })}
-                </div>
-              </div>
-              </Col>
-            </Row>
-          </Container>
-        </div> */}
         <div className='technologyStack' aria-labelledby="technology-expertise-title">
           <Container>
             <Row>
@@ -205,8 +220,10 @@ export default function Aboutus(){
                 <div className="technology-layout">
                   <div className='sectionHead'>
                     <div className="tag">Technology Expertise</div>
-                    <h2> The technology <br /> behind your<br /> <span>next project.</span></h2>
-                    <p>We leverage a diverse range of technologies to deliver innovative solutions that meet the unique needs of our clients. Our expertise spans across front-end and back-end development, cloud computing, AI & machine learning, and more.</p>
+                    <h2>The Right Technology for the <span>Project Solution.</span></h2>
+                    <p>Every project has different requirements. We choose technologies based on what your business needs today and what it may need in the future.</p>
+                    <p>Our development experience covers modern JavaScript frameworks, backend programming, content management systems, databases, and cloud platforms.</p>
+                    <p>We also work with API integrations, third-party services, website performance optimization, and deployment workflows to deliver complete digital solutions.</p>
                       <Link to="/" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                   </div>
                   <div className="technology-grid">
@@ -253,9 +270,9 @@ export default function Aboutus(){
                 <Col>
                     <div className='why_container'>
                         <div className="sectionHead">
-                          <div className="tag">Why businesses choose CodeTrios</div>
-                          <h2 id="ct-why-heading">Reliable partners for your{" "}<span>digital growth.</span></h2>
-                          <p>We bring together the right people, clear communication, and thoughtful technology to help your business move forward.</p>
+                          <div className="tag">THE CODETRIOS APPROACH</div>
+                          <h2 id="ct-why-heading">A Development <span>Partner</span> Who Understands Your <span>Business</span>.</h2>
+                          <p>Choosing a development company is not just about finding someone who can write code or just post your business online. It's about working with a team that understands your requirements and takes responsibility for building the right solution.</p>
                         </div>
                         <div className="why_features">
                             {whyChooseData.map(({ icon: Icon, title, description }) => (
@@ -269,6 +286,36 @@ export default function Aboutus(){
                                 </div>
                               </div>
                             ))}
+                        </div>
+                    </div>
+                </Col>
+              </Row>
+            </Container>
+        </div>
+
+        {/* Frequently Asked Questions */}
+        <div className='whyChooseUs block-top-space-none'>
+            <Container>
+              <Row>
+                <Col>
+                    <div className='why_container'>
+                        <div className="sectionHead">
+                          <div className="tag">Frequently Asked Questions</div>
+                          <h2>Questions About Our Web <span>Development & Digital</span> Services</h2>
+                        </div>
+                        <div className="why_features">
+                          <Accordion defaultActiveKey="0" className='faqStyle'>
+                              {faqs.map((item, index) =>{
+                                  return(
+                                      <Accordion.Item eventKey={index.toString()} key={index}>
+                                          <Accordion.Header>{item.question}</Accordion.Header>
+                                          <Accordion.Body>
+                                              <p>{item.answer}</p>
+                                          </Accordion.Body>
+                                      </Accordion.Item>
+                                  )
+                              })}
+                          </Accordion>
                         </div>
                     </div>
                 </Col>

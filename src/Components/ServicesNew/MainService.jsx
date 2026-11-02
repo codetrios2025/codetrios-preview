@@ -291,6 +291,14 @@ export default function ServicesScreen() {
                       <div className='ct_service_content'>
                         <h3>{item.title}</h3>
                         <p>{item.content}</p>
+                        <ul>
+                          <li><Link to="" title=''>Business Website Design</Link></li>
+                          <li><Link to="" title=''>Responsive Website Design</Link></li>
+                          <li><Link to="" title=''>Website Redesign</Link></li>
+                          <li><Link to="" title=''>Landing Page Design</Link></li>
+                          <li><Link to="" title=''>Ecommerce Website Design</Link></li>
+                          <li><Link to="" title=''>UI/UX Website Design</Link></li>
+                        </ul>
                       </div>
                       <div className='ct_service_link'>
                         <Link to={item.link} title=''><ArrowRight /></Link>

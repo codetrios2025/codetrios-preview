@@ -24,8 +24,9 @@ export default function ProjectCAT() {
             <div className="projectCAT__container">
               <div className='sectionHead'>
                 <div className="tag">Let’s work together</div>
-                <h2>Let’s build your <span>next chapter.</span></h2>
-                <p>Share your ideas with us, and we’ll help you turn them into a practical digital solution for your business.</p>
+                <h2>Have a Project in Mind? <br /><span>Let's Make It Happen.</span></h2>
+                <p>Whether you need a new business website, a custom web application, an ecommerce platform, or improvements to an existing website, we'd be happy to discuss your ideas and give you best result.</p>
+                <p>Tell us what you're planning. We'll help you understand the possibilities and find a practical way forward to your business.</p>
               </div>
               <div className="projectCAT__btn">
                 <button type='button' onClick={formOpenHandler} className="ctBtn ct-primery-btn">Discuss Your Project <ArrowUpRight size={19} aria-hidden="true" /></button>

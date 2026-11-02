@@ -1,4 +1,4 @@
-.servicesSection {position: relative;overflow: hidden;padding: 90px 0 100px;color: #f5f8ff;background:radial-gradient(ellipse at 5% 15%,rgba(20, 103, 255, 0.12),transparent 36%),radial-gradient(ellipse at 95% 85%,rgba(117, 62, 255, 0.1),transparent 34%),#031329;}
+.servicesSection {position: relative;overflow: hidden;color: #f5f8ff;background:radial-gradient(ellipse at 5% 15%,rgba(20, 103, 255, 0.12),transparent 36%),radial-gradient(ellipse at 95% 85%,rgba(117, 62, 255, 0.1),transparent 34%),#031329;}
 .servicesSection::before,
 .servicesSection::after {position: absolute;z-index: 0;width: 340px;height: 340px;border: 1px solid rgba(22, 200, 255, 0.08);border-radius: 50%;content: "";pointer-events: none;}
 .servicesSection::before {top: 120px;left: -230px;box-shadow:0 0 0 35px rgba(22, 200, 255, 0.018),0 0 0 70px rgba(22, 200, 255, 0.012);}
@@ -18,7 +18,7 @@
     position: relative;
     display: flex;
     min-width: 0;
-    min-height: 500px;
+    min-height: 430px;
     flex-direction: column;justify-content: flex-end;
     overflow: hidden;
     padding: 25px;
@@ -28,9 +28,6 @@
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
     isolation: isolate;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;align-items: flex-start;
-}
-.cardContainer.cardRowBottom .card{
-    min-height: 360px;
 }
 .servicesGrid .card .cardBg {
   position: absolute;
@@ -60,11 +57,11 @@
   box-shadow: 0 24px 60px -22px color-mix(in srgb, var(--accent, #38bdf8) 60%, transparent);
 }
 .servicesGrid .card:hover .cardBg { transform: scale(1.06); }
-.cardContainer.cardUpDown .btncard{
+.servicesGrid .btncard{
     display: flex;
     align-items: center;
-    min-height: 150px;
     justify-content: center;
+    margin-top: 10px;
 }
 
 /* .servicesGrid .card.cardOne{justify-content: flex-end;} */

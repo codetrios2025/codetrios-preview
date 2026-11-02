@@ -22,7 +22,7 @@ const SERVICES = [
     tag: "Design & Experience",
     title: "Website Design",
     short: "Modern, responsive, conversion-focused",
-    text: "CodeTrios is a website design company in India helping businesses, startups and growing brands build modern, responsive, high-performing websites. We combine business strategy, UI/UX design, accessibility and SEO-friendly architecture to create websites that support real business goals.",
+    text: "Your website should represent your business and make a first impression. We create clean, modern, mobile-friendly designs that make it easier for users to explore your services and contact you.",
     chips: ["Responsive", "UI/UX", "SEO-friendly"],
     href: "/",
   },
@@ -30,7 +30,7 @@ const SERVICES = [
     tag: "Featured Service",
     title: "Web Development",
     short: "Fast, secure, scalable builds",
-    text: "We build fast, secure and scalable websites and web applications using modern frontend and backend technologies, performance optimization and maintainable architecture, designed around your real business requirements.",
+    text: "Need more than a basic & normal website? We build custom websites and web platforms using modern frontend and backend technologies, with a focus on performance, security, and scalability.",
     chips: ["React", "APIs", "Performance"],
     href: "/",
   },
@@ -38,7 +38,7 @@ const SERVICES = [
     tag: "Commerce & Growth",
     title: "E-Commerce Solutions",
     short: "Stores that turn visitors into buyers",
-    text: "Online stores with secure payments, easy product catalogs and checkout flows tuned for conversion, so your shop is simple to manage and a pleasure to buy from on any device.",
+    text: "We develop ecommerce websites that make online shopping simple and easy. From product catalogues and shopping carts to payment gateway integration, we build solutions that support your online business.",
     chips: ["Payments", "Catalog", "Checkout"],
     href: "/",
   },
@@ -46,7 +46,7 @@ const SERVICES = [
     tag: "Custom Platforms",
     title: "Web Applications",
     short: "Dashboards, portals and custom tools",
-    text: "Custom web applications, portals and dashboards that automate workflows and turn your data into something your team can use every day, built to grow with your business.",
+    text: "We develop custom web applications for businesses that need more efficient ways to manage their work. This includes dashboards, admin panels, customer portals, management systems, and API-based applications.",
     chips: ["Dashboards", "Portals", "Automation"],
     href: "/",
   },
@@ -54,7 +54,7 @@ const SERVICES = [
     tag: "UI / UX",
     title: "Design Services",
     short: "From wireframe to polished interface",
-    text: "User research, wireframes, prototypes and polished interface design. We shape clear, accessible experiences and a consistent visual system before a single line of code is written.",
+    text: "Good design is about more than appearance. We create user-friendly interfaces and thoughtful digital experiences that help people navigate websites and applications with ease.",
     chips: ["Wireframes", "Prototypes", "Design systems"],
     href: "/",
   },
@@ -124,13 +124,10 @@ export default function ServicesSlider() {
                 {/* ---------- copy ---------- */}
                 <div className="svSlider__copy">
                   <div className="sectionHead">
-                    <div className="tag" data-reveal="up">OUR SERVICES</div>
-                    <h2 data-reveal="up">
-                      Websites &amp; software that <span>grow your business</span>
-                    </h2>
-                    <p data-reveal="up">
-                      From first idea to launch and beyond, CodeTrios designs, builds and maintains websites, stores and web applications that are fast, secure and made to convert.
-                    </p>
+                    <div className="tag" data-reveal="up">WHAT WE DO</div>
+                    <h2 data-reveal="up">Digital Solutions <span>Designed</span> Around Your <span>Business.</span></h2>
+                    <p data-reveal="up">A website is the first place where people interact with your business. It should be easy to use, work smoothly and give users a reason to connect with you.</p>
+                    <p>At CodeTrios, we provide website development, software development, and digital services that help businesses establish and improve their online presence.</p>
                   </div>
                   <div className="svSlider__cta" data-reveal="up">
                     <Link to="/" className="ctBtn ct-primery-btn">
