@@ -291,10 +291,18 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
 /* page sub heading */
 .weAreBlock{position: relative;border-top: 1px solid var(--ct-border);}
 .weAreBlock .weAreContent{display: flex;flex-wrap: wrap;align-items: center;}
-.weAreContent h2 span{color: var(--brand-color);}
+.weAreContent h2 span, .weAreBlock h1 span{color: var(--brand-color);}
 .weAreContent .sectionHead{text-align: left;width: 45%;justify-content: center;margin: 0;}
 .weAreContent .secDetail{width: 55%;border-left: 1px solid var(--ct-border);padding-left: 60px;display: flex;flex-direction: column;gap: 15px;}
 .weAreContent p{font-size: 16px;line-height: 2;color: var(--ct-gray);margin: 0 0 0;}
+.weAreBlock h1{
+      font-size: 55px;
+    line-height: 70px;
+    color: var(--ct-white);
+    margin: 10px 0 20px;
+    font-family: 'BricolageGrotesque-Bold';
+}
+.blockhead-top-space{padding-top: 100px;}
 /* page sub heading */
 
 /* Our progress */

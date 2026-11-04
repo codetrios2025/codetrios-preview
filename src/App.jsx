@@ -7,7 +7,10 @@ import HomeRouteV1 from "./Components/HomeRoute_V1/HomeRouteV1";
 
 const AboutUs = lazy(() => import("./Components/AboutusNew/AboutUs"));
 const ServicesScreen = lazy(() => import("./Components/ServicesNew/MainService"));
+// Webste design
 const WebsiteDesign = lazy(() => import("./Components/ServicesNew/AllServices/WebDesignService"));
+const ResponsiveDesign = lazy(() => import("./Components/ServicesNew/WebDesignServices/ResponsiveWebDesign"));
+
 const WebsiteDevelopment = lazy(() => import("./Components/ServicesNew/AllServices/WebDevelopmentServices"));
 const WebApplication = lazy(() => import ('./Components/ServicesNew/AllServices/WebApplicationServices'));
 const UIUXDesign = lazy(() => import ('./Components/ServicesNew/AllServices/DesignService'));
@@ -33,7 +36,11 @@ function App() {
         <Route index element={<HomeRouteV1 />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/services" element={<ServicesScreen />} />
+
+        {/* Website design route */}
         <Route path="/website-design-services" element={<WebsiteDesign />} />
+        <Route path="/responsive-website-design" element={<ResponsiveDesign />} />
+        
         <Route path="/web-development-services" element={<WebsiteDevelopment />} />
         <Route path="/web-application-development" element={<WebApplication />} />
         <Route path="/ui-ux-design-services" element={<UIUXDesign />} />
@@ -42,6 +49,7 @@ function App() {
         <Route path="/digital-strategy-consulting" element={<DigitalStrategy />} />
         <Route path="/web-hosting-services" element={<WebHosting />} />
         <Route path="/geo-seo-services" element={<GeoSeoServices />} />
+
       </Route>
     </Routes>
       {/* <ToastContainer />
