@@ -180,8 +180,7 @@ export default function Aboutus(){
                 <div className='innerBannerContent'>
                   <div className="tag">About CodeTrios</div>
                   <h1>Technology That Makes Your Business Move Forward To New Level</h1>
-                  <p>Looking for a reliable web development company in Delhi NCR? CodeTrios helps businesses turn ideas into digital solutions with new technology.</p>
-                  <p>We design and develop websites, web applications, ecommerce platforms, and custom software that help businesses work smarter and grow online. From the first discussion to development and ongoing support, we focus on building technology that serves a real purpose with your dream.</p>
+                  <p>Looking for a reliable <strong>web development company in Delhi NCR?</strong> CodeTrios helps businesses turn ideas into digital solutions with new technology. we design and develop websites, web applications, ecommerce platforms, and custom software that help businesses work smarter and grow online. From the first discussion to development and ongoing support, we focus on building technology that serves a real purpose with your dream.</p>
                   <div className='actionRow'>
                     <ActionButton />
                   </div>

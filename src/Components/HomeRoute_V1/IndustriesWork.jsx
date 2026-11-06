@@ -28,56 +28,56 @@ const industriesData = [
     number : "01",
     icon: GraduationCap,
     title: "Education",
-    text: "Learning platforms, school and college websites, student portals.",
+    text: "School websites, admission enquiry systems, student portals, ERP solutions, and educational platforms.",
     img: eduImg,
   },
   {
     number : "02",
     icon: Stethoscope,
     title: "Healthcare",
-    text: "Hospital websites, appointment systems, patient management solutions.",
+    text: "Hospital websites, doctor profiles, appointment enquiry systems, and healthcare-related digital platforms.",
     img: healthcareImg,
   },
   {
     number : "03",
     icon: ShoppingCart,
-    title: "E-commerce",
-    text: "Online stores, secure payments, product catalogs and shopping experiences.",
+    title: " Ecommerce & Retail",
+    text: "Online stores, product catalogues, shopping platforms, and ecommerce integrations.",
     img: ecomImg,
   },
   {
     number : "04",
     icon: Building2,
     title: "Real Estate",
-    text: "Property websites, listing portals, lead generation and virtual experiences.",
+    text: "Property websites, project listings, enquiry forms, and property management solutions.",
     img: estateImg,
   },
   {
     number : "05",
     icon: Hotel,
     title: "Hospitality",
-    text: "Hotel websites, online booking, guest services and reservation systems.",
+    text: "Hotel and hospitality websites, service listings, booking enquiries, and customer engagement platforms.",
     img: hospitalityImg,
   },
   {
     number : "06",
     icon: Factory,
     title: "Manufacturing",
-    text: "Business websites, production workflows, automation and operational software.",
+    text: "Business websites, product catalogues, enquiry systems, and custom operational software.",
     img: manufacturingImg,
   },
   {
     number : "07",
     icon: Rocket,
     title: "Startups",
-    text: "MVP development, scalable platforms and digital products for growing businesses.",
+    text: "Business websites, MVP development, SaaS platforms, and custom digital products.",
     img: startupsImg,
   },
   {
     number : "08",
     icon: BriefcaseBusiness,
-    title: "Corporate & Technology",
-    text: "Corporate websites, custom software, web applications and digital transformation.",
+    title: " Corporate & B2B",
+    text: "Corporate websites, business portals, custom applications, and solutions for business operations.",
     img: technologyImg,
   },
 ]
@@ -93,7 +93,7 @@ export default function IndustriesWork(){
                 <div className='sectionHead'>
                   <div className="tag" data-reveal="up">WHO WE WORK WITH</div>
                   <h2 data-reveal="up">Industries We Serve</h2>
-                  <p data-reveal="up">CodeTrios is a website design company in India helping businesses, startups, organizations, and growing brands build modern, responsive, and high-performing websites. We combine business strategy, UI/UX design, accessibility, performance, SEO-friendly architecture, and conversion-focused experiences to create websites that support real business goals.</p>
+                  <p data-reveal="up">Digital Solutions for Different Industries. Every industry has its own requirements. We work with businesses and organizations to create websites and applications that support their day-to-day needs.</p>
                 </div>
               </div>
               <div className="industrie-card">
