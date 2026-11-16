@@ -5,6 +5,7 @@ import CarouselImport from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Accordion from 'react-bootstrap/Accordion';
 import '../mainservices.css';
+import '../../AboutusNew/Aboutus.css';
 //icon
 import {
   BriefcaseBusiness,
@@ -26,6 +27,17 @@ import {
   Hotel,
   Factory,
   Rocket,
+  Code2,
+  FileCode,
+  LayoutTemplate,
+  Atom,
+  Image,
+  Bot,
+  Users,
+  Smartphone,
+  Palette,
+  SearchCheck,
+  Headset,
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -49,117 +61,169 @@ const Carousel = CarouselImport.default ?? CarouselImport;
 const websiteDesignServices = [
   { 
     title: "Business Website Design", 
-    content: "Professional websites that communicate your services, establish credibility and encourage enquiries.",
+    content: "Professional websites that showcase your services, build trust and generate enquiries.",
     link: "/",
     icon: BriefcaseBusiness, 
   },
   { 
     title: "Responsive Website Design", 
-    content: "Layouts and interactions designed to work effectively across mobile, tablet and desktop screens.",
+    content: "Mobile-friendly designs that work smoothly across smartphones, tablets and desktops.",
     link: "/",
     icon: MonitorSmartphone 
   },
   { 
     title: "Website Redesign", 
-    content: "Modernize an existing website with improved navigation, visual design, content hierarchy and user experience.",
+    content: "Modernise your existing website with better layouts, navigation and user experience.",
     link: "/",
     icon: RefreshCw 
   },
   { 
     title: "Landing Page Design", 
-    content: "Focused landing pages designed around specific campaigns, services, products or conversion goals.",
+    content: "Engaging landing pages designed to promote services, products and campaigns.",
     link: "/",
     icon: PanelsTopLeft 
   },
   { 
     title: "Ecommerce Website Design", 
-    content: "Customer-friendly storefront experiences with intuitive product discovery, shopping flows and responsive layouts.",
+    content: "User-friendly online stores with organised products and smooth shopping experiences.",
     link: "/",
     icon: ShoppingCart 
   },
-  { 
-    title: "UI/UX Website Design", 
-    content: "Wireframes, user journeys, prototypes and interface designs that make websites easier to navigate and use.",
-    link: "/",
-    icon: PenTool 
-  },
+  // { 
+  //   title: "UI/UX Website Design", 
+  //   content: "Wireframes, user journeys, prototypes and interface designs that make websites easier to navigate and use.",
+  //   link: "/",
+  //   icon: PenTool 
+  // },
 ];
 //websiteTypes data
 const websiteTypes = [
   { 
     title: "Corporate Websites", 
-    content: "Structured websites for established organizations and larger businesses.",
+    content: "Professional websites that showcase your organisation, services and brand identity.",
     link: "/",
     icon: Building2 
   },
   { 
     title: "Small Business Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    content: "Affordable, modern websites that help small businesses build an online presence.",
     link: "/",
     icon: Store 
   },
   { 
     title: "Portfolio Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    content: "Creative websites that highlight your work, projects, skills and achievements.",
     link: "/",
     icon: Images 
   },
   { 
     title: "Ecommerce Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    content: "Online stores designed for easy product browsing and smooth shopping experiences.",
     link: "/",
     icon: ShoppingBag 
   },
   { 
     title: "Educational Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    content: "Informative websites for schools, colleges and educational institutions.",
     link: "/",
     icon: GraduationCap 
   },
   { 
     title: "Healthcare Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    content: "User-friendly websites for hospitals, clinics and healthcare professionals.",
     link: "/",
     icon: HeartPulse 
   },
   { 
     title: "Landing Pages", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    content: "Focused web pages designed to promote products, services and campaigns.",
     link: "/",
     icon: MousePointerClick 
   },
   { 
     title: "CMS-Based Websites",
-    content: "Websites designed for companies that need a professional digital presence.",
+    content: "Easy-to-manage websites that let you update content without technical knowledge.",
     link: "/",
     icon: Blocks 
   },
+];
+// why choose us data
+const whyChooseData = [
+  {
+    icon: Users,
+    title: "User-Centered Design",
+    description:
+      "We create intuitive website layouts that make information easy to find and navigate.",
+  },
+  {
+    icon: Smartphone,
+    title: "Responsive Experiences",
+    description:
+      "We design websites that adapt to mobile phones, tablets and desktop screens.",
+  },
+  {
+    icon: Palette,
+    title: "Brand-Focused Approach",
+    description:
+      "We align website layouts, visuals and content presentation with your brand identity.",
+  },
+  {
+    icon: SearchCheck,
+    title: "SEO-Friendly Structure",
+    description:
+      "We consider page hierarchy, navigation, headings and technical SEO requirements.",
+  },
+  {
+    icon: Code2,
+    title: "Modern Technologies",
+    description:
+      "We select suitable design tools and frontend technologies for each project.",
+  },
+  {
+    icon: Headset,
+    title: "Ongoing Support",
+    description:
+      "	We provide website maintenance and technical assistance after launch.",
+  },
+ 
 ];
 // Our Process Data
 const processData = [
   {
     number: "01",
-    title: "Discover",
+    title: "Understanding Your Requirements",
     description:
-      "We understand your business goals, audience, and requirements to create a clear project roadmap.",
+      "We understand your business, target audience, goals and design expectations.",
   },
   {
     number: "02",
-    title: "Design & Build",
+    title: "Research & Planning",
     description:
-      "We design intuitive interfaces and develop scalable, high-performance digital solutions.",
+      "We research your industry, competitors and users to plan the website structure and user journey.",
   },
   {
     number: "03",
-    title: "Review & Launch",
+    title: "Wireframing & Layout Planning",
     description:
-      "We test, refine, and launch your solution to ensure quality, performance, and reliability.",
+      "We create wireframes and page layouts to organise content, navigation and important website elements.",
   },
   {
     number: "04",
-    title: "Support & Maintenance",
+    title: "UI/UX Design",
     description:
-      "We provide ongoing technical support, updates, security monitoring, and performance optimization to keep your digital solutions running smoothly.",
+      "We design attractive, intuitive and user-friendly interfaces that match your brand identity.",
+  },
+  {
+    number: "05",
+    title: "Responsive Design",
+    description:
+      "We adapt the designs for mobile phones, tablets and desktops to ensure a consistent experience across devices.",
+  },
+  {
+    number: "06",
+    title: "Design Review & Finalisation",
+    description:
+      "We review the designs, incorporate your feedback and finalise the approved layouts for development.",
   },
 ];
 //industries Data
@@ -221,31 +285,103 @@ const industriesData = [
     img: technologyImg,
   },
 ]
+const technologiesData = [
+  {
+    icon: PenTool,
+    title: "Figma",
+    description: "Website wireframes, UI/UX design and interactive prototypes.",
+  },
+  {
+    icon: PanelsTopLeft  ,
+    title: "WordPress & Elementor",
+    description: "Custom website layouts and page design.",
+  },
+  {
+    icon: Code2    ,
+    title: "HTML5 & CSS3",
+    description: "Clean, structured and visually appealing web layouts.",
+  },
+  {
+    icon: FileCode  ,
+    title: "JavaScript & jQuery",
+    description: "Interactive website elements and dynamic experiences.",
+  },
+  {
+    icon: LayoutTemplate    ,
+    title: "Bootstrap",
+    description: "Responsive layouts and mobile-friendly design.",
+  },
+  {
+    icon: Atom ,
+    title: "React.js",
+    description: "Modern, component-based user interfaces.",
+  },
+  {
+    icon: Image ,
+    title: "Adobe Photoshop ",
+    description: "Website graphics and image editing.",
+  },
+  {
+    icon: Bot ,
+    title: "AI-Powered Design Tools",
+    description: "AI-assisted design exploration and creative workflow improvements.",
+  },
+];
+const technologyGroups = [
+  {
+    title: "Design & Creative Tools",
+    icon: PenTool,
+    technologies: ["Figma", "Adobe Photoshop"],
+  },
+  {
+    title: "CMS & Website Platforms",
+    icon: PanelsTopLeft,
+    technologies: ["WordPress", "Elementor"],
+  },
+  {
+    title: "Frontend Technologies",
+    icon: Code2,
+    technologies: ["HTML5", "CSS3", "JavaScript", "jQuery"],
+  },
+  {
+    title: "Frameworks & AI Tools",
+    icon: Atom,
+    technologies: ["Bootstrap", "React.js", "AI-powered design tools"],
+  },
+];
 //FAQ data
 const faqs = [
   {
       question: "How much does website design cost in India?",
-      answer: "Website design costs in India vary depending on the number of pages, design complexity, functionality, content requirements, integrations, and customization involved. A simple business website generally requires a smaller design scope than an ecommerce website or a complex digital platform. CodeTrios evaluates your requirements and recommends a website design approach based on your business goals and project scope."
+      answer: "Website design costs depend on the number of pages, design requirements, functionality and technology used. Contact CodeTrios for a quotation based on your project."
   },
   {
-      question: "How long does it take to design a website?",
-      answer: "Website design timelines depend on the website's size, number of pages, design complexity, functionality, content requirements, and feedback cycles. A straightforward business website usually requires less design time than a large ecommerce website or custom digital product. CodeTrios determines the expected timeline during the project planning stage."
+      question: "How long does it take to design and develop a website?",
+      answer: "A basic business website may take around 1–3 weeks, while larger or more complex projects may require additional time."
   },
   {
-      question: "Does CodeTrios provide responsive website design?",
-      answer: "Yes. CodeTrios designs responsive websites that work across desktops, tablets, and smartphones. Our design process considers mobile usability, navigation, content hierarchy, readability, and consistent user experiences across different screen sizes."
+      question: "Will my website work on mobile phones?",
+      answer: "Yes. We focus on responsive website design so your website can adapt to mobile phones, tablets and desktop screens."
   },
   {
-      question: "Can CodeTrios redesign an existing website?",
-      answer: "Yes. CodeTrios provides website redesign and revamp services for businesses with outdated, difficult-to-use, or poorly performing websites. A redesign can improve visual design, information architecture, usability, responsive behavior, accessibility, performance, and conversion-focused layouts."
+      question: "Do you provide WordPress website design services?",
+      answer: "Yes. We develop WordPress websites using custom themes, Elementor and other suitable tools based on your requirements."
   },
   {
-      question: "Does CodeTrios design WordPress websites?",
-      answer: "Yes. CodeTrios provides WordPress website design for businesses, organizations, and projects that need a flexible content management system. WordPress websites can be designed with responsive layouts, user-friendly content management, SEO-friendly architecture, and requirements specific to the business."
+      question: "Can you redesign my existing website?",
+      answer: "Yes. We can redesign existing websites to improve their appearance, navigation, responsiveness, performance and user experience."
   },
   {
-      question: "Does CodeTrios provide ecommerce website design?",
-      answer: "Yes. CodeTrios provides ecommerce website design for online stores, including Shopify, WooCommerce, and custom ecommerce requirements. The design focuses on product discovery, navigation, mobile usability, checkout experiences, customer trust, and conversion."
+      question: "Will my website be SEO-friendly?",
+      answer: "We follow SEO-friendly development practices, including proper page structure, metadata, responsive layouts and performance optimisation. Ongoing SEO services can also be discussed separately."
+  },
+  {
+      question: "Do you provide website maintenance after launch?",
+      answer: "Yes. We provide website maintenance and support, including content updates, bug fixes, technical assistance and other maintenance requirements."
+  },
+  {
+      question: "Do you provide website design services outside Delhi NCR?",
+      answer: "Yes. CodeTrios works with businesses and organisations across Delhi NCR and other locations in India."
   }
 ];
 
@@ -253,23 +389,23 @@ const faqs = [
 const relatedServices = [
   { 
     title: "Web Development", 
-    content: "Build fast, secure and scalable websites with modern frontend, backend and API development.",
-    link: "/",
+    content: "Custom, responsive and scalable websites built with modern frontend and backend technologies.",
+    link: "/web-development-services",
   },
   { 
     title: "Ecommerce Development", 
-    content: "Build high-performing online stores with responsive design, secure payments and ecommerce integrations.",
-    link: "/",
+    content: "Feature-rich online stores with product management, secure payments and seamless shopping experiences.",
+    link: "/ecommerce-development-services",
   },
   { 
     title: "UI/UX Design", 
-    content: "Design intuitive, accessible and user-focused interfaces that improve usability, engagement and conversions.",
-    link: "/",
+    content: "Creative UI/UX, graphic and interface design that strengthens your brand identity.",
+    link: "/ui-ux-design-services",
   },
   { 
     title: "SEO & GEO Services", 
-    content: "Improve search engine visibility and AI search discoverability with technical SEO, content optimization and GEO strategies.",
-    link: "/",
+    content: "Improve Google rankings and AI search visibility through SEO, content optimisation and Generative Engine Optimisation.",
+    link: "/geo-seo-services",
   },
 ];
 
@@ -309,15 +445,16 @@ export default function WebsiteDesignService(){
           faqs={faqs}
       />
       <div className='servicesPage innerPageBg allService'>
+        {/* Hero Banner Section */}
         <div className="innerHeroBanner">
           <NetworkBackground />
           <Container>
             <Row>
               <Col>
                 <div className='innerBannerContent'>
-                  <div className="tag">Our Services</div>
+                  <div className="tag">Our Website Design Services</div>
                   <h1>Website Design Company in <span>India</span></h1>
-                  <p>CodeTrios is a website design company in India helping businesses, startups, organizations, and growing brands create modern, responsive, and high-performing websites. We combine business strategy, UI/UX design, accessibility, performance, SEO-friendly architecture, and conversion-focused experiences to build websites around real business goals.</p>
+                  <p>At CodeTrios, we design modern, responsive and user-friendly websites that help businesses build credibility, connect with their audience and grow online.We provide professional website design and development services in Delhi NCR and across India, creating websites that combine attractive design, smooth performance, easy navigation and SEO-friendly structure.</p>
                   <div className='actionRow'>
                     <ActionButton />
                   </div>
@@ -326,6 +463,7 @@ export default function WebsiteDesignService(){
             </Row>
           </Container>
         </div>
+        {/* Website Design Services Section  */}
         <div className='weAreBlock blockPadding'>
           <Container>
             <Row>
@@ -336,9 +474,8 @@ export default function WebsiteDesignService(){
                     <h2>Website Design Services Built Around Your <span>Business Goals</span></h2>
                   </div>
                   <div className='secDetail'>
-                    <p>Our website design services cover the complete design journey, from understanding your business and audience to creating the visual interface and preparing a scalable design system for development. We design websites for companies, startups, institutions, professional organizations, and growing brands.</p>
-                    <p>Our approach focuses on responsive UI/UX, clear information architecture, mobile-first experiences, fast-loading pages, accessibility, SEO-friendly structure, and conversion-focused layouts. The result is a website that is easier for visitors to navigate and easier for businesses to manage and grow.</p>
-                    <p>Depending on your requirements, CodeTrios can design corporate websites, business websites, ecommerce stores, landing pages, WordPress websites, and redesigned digital experiences. Once the design is finalized, our web development services can turn the approved designs into fast, responsive, and scalable websites.</p>
+                    <p>At CodeTrios, we create modern, responsive and user-friendly website designs that reflect your brand and support your business growth. From business websites to ecommerce stores, we focus on attractive layouts, easy navigation, mobile-friendly experiences and SEO-friendly structures.</p>
+                    <p>Whether you need a new website or want to redesign an existing one, our goal is to create a digital experience that engages visitors and turns them into potential customers.</p>
                   </div>
                 </div>
               </Col>
@@ -366,14 +503,15 @@ export default function WebsiteDesignService(){
             </Row>
           </Container>
         </div>
+        {/* Website Type */}
         <div className='service-block-2 border-block blockPadding'>
             <Container>
               <Row>
                 <Col>
                   <div className='sectionHead'>
                     <div className="tag">Types of Websites We Design</div>
-                    <h2>Website Design for Every <span>Business Need</span></h2>
-                    <p className='halfWidth'>Different businesses need different website experiences. CodeTrios designs websites around their purpose, content, audience and functionality.</p>
+                    <h2>Website Design Solutions for <span>Every Business</span></h2>
+                    <p className='halfWidth'>Every business has different goals and audiences. At CodeTrios, we design websites that match your requirements, business, brand identity and business objectives.</p>
                   </div>
                   <div className="benefitGrid">
                     {websiteTypes.map((item, index) =>{
@@ -395,15 +533,43 @@ export default function WebsiteDesignService(){
               </Row>
             </Container>
         </div>
-
-        {/* Our Process */}
+        {/* Why businesses choose Section */}
+        <div className='whyChooseUs block-mg-top'>
+          <Container>
+            <Row>
+              <Col>
+                  <div className='why_container'>
+                      <div className="sectionHead">
+                        <div className="tag">WHY CHOOSE CODETRIOS</div>
+                        <h2>A Website Design <span>Partner</span> Focused on Your <span>Business Goals</span></h2>
+                        <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
+                      </div>
+                      <div className="why_features">
+                        {whyChooseData.map(({ icon: Icon, title, description }) => (
+                          <div className="features_box" key={title}>
+                            <div className="features_icon" aria-hidden="true">
+                              <Icon size={25} strokeWidth={1.7} />
+                            </div>
+                            <div className="feature_content">
+                              <h3>{title}</h3>
+                              <p>{description}</p>
+                            </div>
+                          </div>
+                        ))} 
+                      </div>
+                  </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        {/* Our Process Section */}
         <div className='services_process blockPadding'> 
           <Container>
             <Row>
               <Col>
                 <div className='services_process_container'>
                   <div className='sectionHead'>
-                      <div className="tag">Our Process</div>
+                      <div className="tag">OUR WORKING PROCESS</div>
                       <h2>A clear path from <span>idea to launch</span></h2>
                       <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
                   </div>
@@ -425,15 +591,94 @@ export default function WebsiteDesignService(){
             </Row>
           </Container>
         </div>
+
+        {/* website design Technologies & Tools  */}
+        <div className='technologyStack block-mg-top' aria-labelledby="technology-expertise-title">
+          <Container>
+            <Row>
+              <Col>
+                <div className="technology-layout">
+                  <div className='sectionHead'>
+                    <div className="tag">Technologies & Tools</div>
+                    <h2>Technologies & Tools We Work With</h2>
+                    <p>We use modern design tools and frontend technologies to create attractive, responsive and user-friendly website experiences.</p>
+                    <Link to="/" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
+                  </div>
+                  <div className="technology-grid">
+                    <ul className="technology-expertise__groups">
+                      {technologyGroups.map(({ title, icon: Icon, technologies }) => (
+                        <li className="technology-expertise__group" key={title}>
+                          <Icon
+                            className="technology-expertise__icon"
+                            size={44}
+                            strokeWidth={1.5}
+                            aria-hidden="true"
+                          />
+
+                          <div className="technology-expertise__group-content">
+                            <h3 className="technology-expertise__group-title">
+                              {title}
+                            </h3>
+
+                            <ul className="technology-expertise__tags">
+                              {technologies.map((technology) => (
+                                <li
+                                  className="technology-expertise__tag"
+                                  key={technology}
+                                >
+                                  {technology}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        {/* <div className='whyChooseUs block-mg-top'>
+          <Container>
+            <Row>
+              <Col>
+                  <div className='why_container'>
+                      <div className="sectionHead">
+                        <div className="tag">Technologies & Tools</div>
+                        <h2>Technologies & Tools We Work With</h2>
+                        <p>We use modern design tools and frontend technologies to create attractive, responsive and user-friendly website experiences.</p>
+                      </div>
+                      <div className="why_features">
+                        {technologiesData.map(({ icon: Icon, title, description }) => (
+                          <div className="features_box" key={title}>
+                            <div className="features_icon" aria-hidden="true">
+                              <Icon size={25} strokeWidth={1.7} />
+                            </div>
+                            <div className="feature_content">
+                              <h3>{title}</h3>
+                              <p>{description}</p>
+                            </div>
+                          </div>
+                        ))}
+                        <p>We choose the right tools and technologies based on your design requirements, brand identity and website goals.</p>
+                      </div>
+                  </div>
+              </Col>
+            </Row>
+          </Container>
+        </div> */}
+
         {/* Industries Section */}
-        <div className='services_industries blockPadding' aria-labelledby="industries-heading">
+        <div className='services_industries blockPadding block-mg-top' aria-labelledby="industries-heading">
           <Container>
             <Row>
               <Col>
                 <div className='services_industries_bg'>
                   <div className='sectionHead'>
-                      <div className="tag">WHO WE WORK WITH</div>
-                      <h2>Industries <span>We Serve</span></h2>
+                      <div className="tag">INDUSTRIES WE SERVE</div>
+                      <h2>Website Design for <span>Different Industries</span></h2>
                       <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
                   </div>
                   <div className="industries-section">
@@ -452,7 +697,7 @@ export default function WebsiteDesignService(){
                         return (
                           <article className="industry-card" key={item.number}>
                             <div className="industry-card-image">
-                              <img src={item.img} alt={`${item.title} industry`} loading="lazy" decoding="async" width="400" height="480"/>
+                              <img src={item.img} alt={`${item.title} website design solutions by CodeTrios`} loading="lazy" decoding="async" width="400" height="480"/>
                             </div>
                             <div className="industry-card-overlay" />
                             {/* <span className="industry-card-number">{item.number}</span> */}
@@ -471,31 +716,12 @@ export default function WebsiteDesignService(){
             </Row>
           </Container>
         </div>
-        {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
-          <Container>
-            <Row>
-              <Col>
-                  <div className='why_container'>
-                      <div className="sectionHead">
-                        <div className="tag">Why businesses choose CodeTrios</div>
-                        <h2>Digital Solutions Built Around Your {" "}<span>Goals</span></h2>
-                        <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
-                      </div>
-                      <div className="why_features">
-                        
-                      </div>
-                  </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
         {/* Related Services */}
-        <div className='related-services'>
+        <div className='related-services blockPadding '>
           <Container>
             <Row>
               <Col>
-                <div className='inner-bg'>
+                <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
                     <h2>Explore Our Other Digital Services</h2>
@@ -505,7 +731,7 @@ export default function WebsiteDesignService(){
                       return(
                         <div className="benefitCard" key={index} data-reveal="up">
                           
-                          <h3><Link to={item.link} title={item.link}>{item.title}</Link></h3>
+                          <h3><Link to={item.link}>{item.title}</Link></h3>
                           <p>{item.content}</p>
                           <span className='benefitGo'><ArrowUpRight /></span>
                         </div>
@@ -525,7 +751,7 @@ export default function WebsiteDesignService(){
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our Web <span>Development & Digital</span> Services</h2>
+                          <h2>Questions About Our <span>Website Design Services</span></h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>

@@ -62,33 +62,28 @@ const serviceData = [
     services:[
       {
         title: "Business and corporate website design",
-        link: "Business and corporate website design",
+        link: "business-and-corporate-website-design",
         altTitle: "Business and corporate website design"
       },
       {
         title: "Responsive and mobile-friendly layouts",
-        link: "Responsive and mobile-friendly layouts",
+        link: "responsive-and-mobile-friendly-layouts",
         altTitle: "Responsive and mobile-friendly layouts"
       },
       {
-        title: "UI/UX design and wireframing",
-        link: "UI/UX design and wireframing",
-        altTitle: "UI/UX design and wireframing"
-      },
-      {
         title: "Landing page design",
-        link: "Landing page design",
+        link: "landing-page-design",
         altTitle: "Landing page design"
       },
       {
         title: "Website redesign",
-        link: "Website redesign",
+        link: "website-redesign",
         altTitle: "Website redesign"
       },
       {
         title: "SEO-friendly page structures",
-        link: "SEO-friendly page structures",
-        altTitle: "SEO-friendly page structures"
+        link: "SEO-friendly-page-structures",
+        altTitle: "SEO-friendly page-structures"
       },
     ]
   },
@@ -101,7 +96,7 @@ const serviceData = [
     services:[
       {
         title: "Custom website development",
-        link: "Custom website development",
+        link: "custom-website-development",
         altTitle: "Custom website development"
       },
       {
@@ -118,16 +113,6 @@ const serviceData = [
         title: "WordPress and Drupal development",
         link: "WordPress and Drupal development",
         altTitle: "WordPress and Drupal development"
-      },
-      {
-        title: "API integration and database development",
-        link: "API integration and database development",
-        altTitle: "API integration and database development"
-      },
-      {
-        title: "Website optimization and technical improvements",
-        link: "Website optimization and technical improvements",
-        altTitle: "Website optimization and technical improvements"
       },
     ]
   },
@@ -203,11 +188,6 @@ const serviceData = [
         altTitle: "SaaS application development"
       },
       {
-        title: "API-based application development",
-        link: "API-based application development",
-        altTitle: "API-based application development"
-      },
-      {
         title: "Third-party integrations",
         link: "Third-party integrations",
         altTitle: "Third-party integrations"
@@ -242,11 +222,6 @@ const serviceData = [
         altTitle: "Wireframes and prototypes"
       },
       {
-        title: "Landing page design",
-        link: "Landing page design",
-        altTitle: "Landing page design"
-      },
-      {
         title: "User experience improvements",
         link: "User experience improvements",
         altTitle: "User experience improvements"
@@ -255,16 +230,11 @@ const serviceData = [
   },
   {
     number : "06",
-    title : "CUSTOM SOFTWARE & TECHNOLOGY SOLUTIONS",
+    title : "Custom Software & Technology Solutions",
     icon : Blocks,
     content : "Sometimes your business needs more than a website, that's why we are here. It needs software that follows specific workflows, connects different systems, or reduces repetitive tasks.We develop custom software and technology solutions based on how your business operates, helping teams manage information, improve processes, and work more efficiently.",
     link : "/custom-software-solutions",
-    services:[
-      {
-        title: "Custom PHP and Node.js development",
-        link: "Custom PHP and Node.js development",
-        altTitle: "Custom PHP and Node.js development"
-      },
+    services:[ 
       {
         title: "Business process automation",
         link: "Business process automation",
@@ -290,16 +260,11 @@ const serviceData = [
         link: "Existing software improvements",
         altTitle: "Existing software improvements"
       },
-      {
-        title: "AI-powered workflow solutions",
-        link: "AI-powered workflow solutions",
-        altTitle: "AI-powered workflow solutions"
-      },
     ]
   },
   {
     number : "07",
-    title : "ADDITIONAL DIGITAL SERVICES",
+    title : "Additional Digital Services",
     icon : ChartNoAxesCombined,
     content : " Codetrios provide Complete Support Beyond Digital Development. Building a digital product is only one part of the journey. We also help businesses maintain their websites, improve their online visibility, and manage their technology as their needs change. Our additional services are designed to support you after launch and as your business grows.",
     link : "/digital-strategy-consulting",
@@ -755,12 +720,10 @@ export default function ServicesScreen() {
                 <div className='sectionHead'>
                     <div className="tag">Our Process</div>
                     <h2>A clear path from <span>idea to launch</span></h2>
-                    <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                    <p>We keep the development process clear and collaborative to visible to every one. Every project starts with understanding your requirements and ends with a solution that is tested, launched, and ready to use.</p>
                 </div>
                 <div className='services_process_grid'>
                   {processData.map((item) => {
-                    const Icon = item.icon;
-  
                     return (
                       <div className="process_box box-icon-hover" key={item.number}>
                         <span className="number">

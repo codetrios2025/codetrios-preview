@@ -26,6 +26,10 @@ import {
   Hotel,
   Factory,
   Rocket,
+  Monitor,
+  Settings,
+  Database,
+  Cloud,
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -46,40 +50,40 @@ import technologyImg from '../../../assets/images/technology-img.jpg';
 const Carousel = CarouselImport.default ?? CarouselImport;
 
 //website Design Services data
-const websiteDesignServices = [
+const webAppServicesData = [
   { 
-    title: "Business Website Design", 
-    content: "Professional websites that communicate your services, establish credibility and encourage enquiries.",
+    title: "Custom Web Application Development", 
+    content: "Build applications with customised features and functionality designed around your business requirements.",
     link: "/",
     icon: BriefcaseBusiness 
   },
   { 
-    title: "Responsive Website Design", 
-    content: "Layouts and interactions designed to work effectively across mobile, tablet and desktop screens.",
+    title: "Business Process Automation", 
+    content: "Automate repetitive tasks, reduce manual work and improve everyday business operations.",
     link: "/",
     icon: MonitorSmartphone 
   },
   { 
-    title: "Website Redesign", 
-    content: "Modernize an existing website with improved navigation, visual design, content hierarchy and user experience.",
+    title: "Enterprise Web Application Development", 
+    content: "Develop scalable applications to manage business operations, teams, workflows and organisational processes.",
     link: "/",
     icon: RefreshCw 
   },
   { 
-    title: "Landing Page Design", 
-    content: "Focused landing pages designed around specific campaigns, services, products or conversion goals.",
+    title: "Customer Portal Development", 
+    content: "Create secure customer portals for account management, information access and online services.",
     link: "/",
     icon: PanelsTopLeft 
   },
   { 
-    title: "Ecommerce Website Design", 
-    content: "Customer-friendly storefront experiences with intuitive product discovery, shopping flows and responsive layouts.",
+    title: "Dashboard Development", 
+    content: "Get interactive dashboards to monitor business activities, track performance and manage important information.",
     link: "/",
     icon: ShoppingCart 
   },
   { 
-    title: "UI/UX Website Design", 
-    content: "Wireframes, user journeys, prototypes and interface designs that make websites easier to navigate and use.",
+    title: "API Development & Integration", 
+    content: "Connect applications with third-party platforms, payment gateways and external business systems.",
     link: "/",
     icon: PenTool 
   },
@@ -87,79 +91,126 @@ const websiteDesignServices = [
 //websiteTypes data
 const websiteTypes = [
   { 
-    title: "Corporate Websites", 
-    content: "Structured websites for established organizations and larger businesses.",
+    title: "CRM Applications", 
+    content: "Manage customer information, sales activities, leads and business relationships through customised CRM solutions.",
     link: "/",
     icon: Building2 
   },
   { 
-    title: "Small Business Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "ERP Applications", 
+    content: "Manage business processes, resources, operations and organisational information from one platform.",
     link: "/",
     icon: Store 
   },
   { 
-    title: "Portfolio Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Project Management Applications", 
+    content: "Organise projects, assign tasks, track progress and manage team activities efficiently.",
     link: "/",
     icon: Images 
   },
   { 
-    title: "Ecommerce Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "School Management Applications", 
+    content: "Manage admissions, student records, attendance, academic information and school administration.",
     link: "/",
     icon: ShoppingBag 
   },
   { 
-    title: "Educational Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Healthcare Applications", 
+    content: "Develop appointment systems, patient management platforms and healthcare administration solutions.",
     link: "/",
     icon: GraduationCap 
   },
   { 
-    title: "Healthcare Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Ecommerce Applications", 
+    content: "Build customised online shopping platforms with product management, customer accounts and order processing.",
     link: "/",
     icon: HeartPulse 
   },
   { 
-    title: "Landing Pages", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Employee Management Applications", 
+    content: "Manage employee records, attendance, tasks, leave requests and organisational workflows.",
     link: "/",
     icon: MousePointerClick 
   },
   { 
-    title: "CMS-Based Websites",
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Booking & Appointment Applications",
+    content: "Create online booking platforms with appointment scheduling, availability management and customer notifications.",
     link: "/",
     icon: Blocks 
+  },
+  { 
+    title: "Inventory Management Applications",
+    content: "Track stock, manage products, monitor inventory and streamline business operations.",
+    link: "/",
+    icon: Blocks 
+  },
+  { 
+    title: "Custom Business Applications",
+    content: "Develop application solutions based on your specific workflows, business goals and functional requirements.",
+    link: "/",
+    icon: Blocks 
+  },
+];
+//technology data
+const technologyGroups = [
+  {
+    title: "Frontend Development",
+    icon: Monitor,
+    technologies: ["React.js", "JavaScript", "HTML5", "CSS3", "Bootstrap"],
+  },
+  {
+    title: "Backend Development",
+    icon: Settings,
+    technologies: ["Node.js", "Express.js", "PHP", "Laravel", "Drupal"],
+  },
+  {
+    title: "Database Technologies",
+    icon: Database,
+    technologies: ["MongoDB", "MySQL"],
+  },
+  {
+    title: "Integration & Infrastructure",
+    icon: Cloud,
+    technologies: ["REST APIs", "Payment Gateways", "Cloud Services"],
   },
 ];
 // Our Process Data
 const processData = [
   {
     number: "01",
-    title: "Discover",
+    title: "Requirement Analysis",
     description:
-      "We understand your business goals, audience, and requirements to create a clear project roadmap.",
+      "We understand your business objectives, application requirements, users and expected functionality.",
   },
   {
     number: "02",
-    title: "Design & Build",
+    title: "Planning & Architecture",
     description:
-      "We design intuitive interfaces and develop scalable, high-performance digital solutions.",
+      "We define the application structure, technology stack, database design and development roadmap.",
   },
   {
     number: "03",
-    title: "Review & Launch",
+    title: "UI/UX Design",
     description:
-      "We test, refine, and launch your solution to ensure quality, performance, and reliability.",
+      "We create user-friendly layouts, wireframes and interfaces for a smooth application experience.",
   },
   {
     number: "04",
-    title: "Support & Maintenance",
+    title: "Application Development",
     description:
-      "We provide ongoing technical support, updates, security monitoring, and performance optimization to keep your digital solutions running smoothly.",
+      "We develop frontend interfaces, backend functionality, databases and required integrations.",
+  },
+  {
+    number: "04",
+    title: "Testing & Optimisation",
+    description:
+      "We test application functionality, security, performance and compatibility across different devices and browsers.",
+  },
+  {
+    number: "04",
+    title: "Deployment & Support",
+    description:
+      "We deploy the application, configure the server and provide ongoing technical support and maintenance.",
   },
 ];
 //industries Data
@@ -224,44 +275,52 @@ const industriesData = [
 //FAQ data
 const faqs = [
   {
-      question: "What does a web development company do?",
-      answer: "A web development company builds and maintains websites and web applications, including frontend interfaces, backend systems, databases, APIs, integrations, testing, deployment, and ongoing technical support."
+      question: "What is web application development?",
+      answer: "Web application development involves creating browser-based applications that allow users to access services, manage information and perform business tasks online."
   },
   {
-      question: "How much do web development services cost in India?",
-      answer: "The cost of web development depends on factors such as project complexity, required features, technology, integrations, design requirements, content management needs, and ongoing support. CodeTrios provides project-specific estimates based on business and technical requirements."
+      question: "How much does custom web application development cost in India?",
+      answer: "The cost depends on features, complexity, technology, integrations and project requirements. Contact CodeTrios for a customised project estimate."
   },
   {
-      question: "How long does it take to develop a website?",
-      answer: "Website development timelines depend on the size and complexity of the project. A simple business website may take a few weeks, while custom websites and web applications with advanced functionality, integrations, or workflows can take longer."
+      question: "What types of web applications does CodeTrios develop?",
+      answer: "We develop CRM systems, ERP solutions, dashboards, customer portals, school management systems, booking platforms, inventory systems and custom business applications."
   },
   {
-      question: "Do you develop SEO-friendly websites?",
-      answer: "Yes. CodeTrios follows SEO-friendly development practices such as responsive design, clean site structure, performance optimization, crawlable content, proper technical implementation, and structured data where appropriate."
+      question: "Which technologies are used for web application development?",
+      answer: "We use React.js, Node.js, Express.js, PHP, MongoDB, MySQL, JavaScript and other modern technologies depending on project requirements."
   },
   {
-      question: "What is the difference between web design and web development?",
-      answer: "Web design focuses on visual appearance, layout, branding, and user experience, while web development focuses on building the frontend and backend functionality that makes a website or web application work."
+      question: "Can you develop web applications according to specific business requirements?",
+      answer: "Yes. We develop custom web applications with features, workflows and functionality tailored to your business operations."
   },
   {
-      question: "Does CodeTrios provide custom web development?",
-      answer: "Yes. CodeTrios provides custom web development for businesses and organizations that require specific functionality, integrations, workflows, or application features."
+      question: "What is the difference between a website and a web application?",
+      answer: "A website mainly provides information about a business, product or service, while a web application allows users to interact with data and perform tasks such as bookings, payments, account management and reporting."
   },
   {
-      question: "Which technologies does CodeTrios use?",
-      answer: "Depending on project requirements, CodeTrios works with technologies including React.js, Node.js, PHP, WordPress, Drupal, Strapi, APIs, databases, and modern web development tools."
+      question: "Can a web application be accessed on mobile devices?",
+      answer: "Yes. We develop responsive web applications that work across smartphones, tablets and desktop devices through a web browser."
   },
   {
-      question: "Can CodeTrios develop an existing website further?",
-      answer: "Yes. Existing websites can be extended with new features, integrations, performance improvements, redesigns, CMS functionality, and other technical enhancements."
+      question: "Can you integrate APIs and third-party services?",
+      answer: "Yes. We integrate payment gateways, CRM systems, external APIs, email services and other business tools to connect different platforms."
   },
   {
-      question: "Does CodeTrios provide website maintenance?",
-      answer: "Yes. Website maintenance can include updates, security improvements, backups, bug fixes, performance optimization, monitoring, and feature enhancements."
+      question: "How long does it take to develop a web application?",
+      answer: "Development time depends on application complexity and required features. A basic application may take a few weeks, while larger business applications may require several months."
   },
   {
-      question: "Can CodeTrios build scalable web applications?",
-      answer: "Yes. CodeTrios develops scalable web applications using appropriate frontend, backend, database, API, and hosting architecture based on project requirements."
+      question: "Are web applications secure?",
+      answer: "We follow security-conscious development practices, including authentication, access control, input validation and secure API communication, based on project requirements."
+  },
+  {
+      question: "Do you provide web application maintenance and support?",
+      answer: "Yes. We provide ongoing maintenance, bug fixes, security updates, performance optimisation and technical support."
+  },
+  {
+      question: "Do you provide web application development services outside Delhi NCR?",
+      answer: "Yes. CodeTrios works with startups, businesses and organisations across Delhi NCR and throughout India."
   },
 ]
 
@@ -341,9 +400,9 @@ export default function WebApplicationService(){
             <Row>
               <Col>
                 <div className='innerBannerContent'>
-                  <div className="tag">Our Services</div>
+                  <div className="tag">WEB APPLICATION DEVELOPMENT SERVICES</div>
                   <h1>Web Application Development Company in India</h1>
-                  <p>CodeTrios is a web development company in India helping businesses, startups, organizations, and growing brands build fast, secure, and scalable websites and web applications. We combine modern frontend and backend technologies, responsive development, performance optimization, and maintainable architecture to create digital platforms designed around real business requirements.</p>
+                  <p>At CodeTrios, we develop custom web applications that help businesses streamline operations, automate workflows and improve productivity. We build secure, responsive and scalable applications tailored to your business requirements. from customer portals and management dashboards to enterprise applications and custom business software, we create solutions that simplify complex processes and support business growth.</p>
                   <div className='actionRow'>
                     <ActionButton />
                   </div>
@@ -358,13 +417,12 @@ export default function WebApplicationService(){
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
-                    <div className="tag">WHAT WE DESIGN</div>
-                    <h2>Website Design Services Built Around Your <span>Business Goals</span></h2>
+                    <div className="tag">CUSTOM WEB APPLICATION SOLUTIONS</div>
+                    <h2>Web Application Development Services Built Around Your <span>Business Goals</span></h2>
                   </div>
                   <div className='secDetail'>
-                    <p>Our website design services cover the complete design journey, from understanding your business and audience to creating the visual interface and preparing a scalable design system for development. We design websites for companies, startups, institutions, professional organizations, and growing brands.</p>
-                    <p>Our approach focuses on responsive UI/UX, clear information architecture, mobile-first experiences, fast-loading pages, accessibility, SEO-friendly structure, and conversion-focused layouts. The result is a website that is easier for visitors to navigate and easier for businesses to manage and grow.</p>
-                    <p>Depending on your requirements, CodeTrios can design corporate websites, business websites, ecommerce stores, landing pages, WordPress websites, and redesigned digital experiences. Once the design is finalized, our web development services can turn the approved designs into fast, responsive, and scalable websites.</p>
+                    <p>Every business has unique operational needs. At CodeTrios, we develop custom web applications that solve business challenges, improve efficiency and deliver better digital experiences.</p>
+                    <p>Our solutions combine modern frontend technologies, powerful backend systems, database management and API integrations.</p>
                   </div>
                 </div>
               </Col>
@@ -372,7 +430,7 @@ export default function WebApplicationService(){
             <Row>
               <Col>
                 <div className="benefitGrid">
-                  {websiteDesignServices.map((item, index) =>{
+                  {webAppServicesData.map((item, index) =>{
                     const IconComponent = item.icon;
                     return(
                       <div className="benefitCard" key={index} data-reveal="up">
@@ -397,9 +455,9 @@ export default function WebApplicationService(){
               <Row>
                 <Col>
                   <div className='sectionHead'>
-                    <div className="tag">Types of Websites We Design</div>
-                    <h2>Website Design for Every <span>Business Need</span></h2>
-                    <p className='halfWidth'>Different businesses need different website experiences. CodeTrios designs websites around their purpose, content, audience and functionality.</p>
+                    <div className="tag">APPLICATIONS WE BUILD</div>
+                    <h2>Web Application Solutions for <span>Every Business</span></h2>
+                    <p className='halfWidth'>We develop web applications for different business requirements, industries and operational needs.</p>
                   </div>
                   <div className="benefitGrid">
                     {websiteTypes.map((item, index) =>{
@@ -421,7 +479,73 @@ export default function WebApplicationService(){
               </Row>
             </Container>
         </div>
+        {/* website design Technologies & Tools  */}
+        <div className='technologyStack block-mg-top' aria-labelledby="technology-expertise-title">
+          <Container>
+            <Row>
+              <Col>
+                <div className="technology-layout">
+                  <div className='sectionHead'>
+                    <div className="tag">Technologies & Tools</div>
+                    <h2>Technologies & Tools We Work With</h2>
+                    <p>We use modern technologies and frameworks to develop powerful, reliable and scalable web applications.</p>
+                    <Link to="/" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
+                  </div>
+                  <div className="technology-grid">
+                    <ul className="technology-expertise__groups">
+                      {technologyGroups.map(({ title, icon: Icon, technologies }) => (
+                        <li className="technology-expertise__group" key={title}>
+                          <Icon
+                            className="technology-expertise__icon"
+                            size={44}
+                            strokeWidth={1.5}
+                            aria-hidden="true"
+                          />
 
+                          <div className="technology-expertise__group-content">
+                            <h3 className="technology-expertise__group-title">
+                              {title}
+                            </h3>
+
+                            <ul className="technology-expertise__tags">
+                              {technologies.map((technology) => (
+                                <li
+                                  className="technology-expertise__tag"
+                                  key={technology}
+                                >
+                                  {technology}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        {/* Why businesses choose */}
+        <div className='whyChooseUs block-mg-top'>
+          <Container>
+            <Row>
+              <Col>
+                  <div className='why_container'>
+                      <div className="sectionHead">
+                        <div className="tag">Why businesses choose CodeTrios</div>
+                        <h2>Digital Solutions Built Around Your {" "}<span>Goals</span></h2>
+                        <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
+                      </div>
+                      <div className="why_features">
+                        
+                      </div>
+                  </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
         {/* Our Process */}
         <div className='services_process blockPadding'> 
           <Container>
@@ -430,8 +554,8 @@ export default function WebApplicationService(){
                 <div className='services_process_container'>
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
-                      <h2>A clear path from <span>idea to launch</span></h2>
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <h2>Our Web Application Development <span>Process</span></h2>
+                      <p>We follow a structured development process to deliver reliable, secure and scalable web applications.</p>
                   </div>
                   <div className='services_process_grid'>
                     {processData.map((item) => {
@@ -497,34 +621,16 @@ export default function WebApplicationService(){
             </Row>
           </Container>
         </div>
-        {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
-          <Container>
-            <Row>
-              <Col>
-                  <div className='why_container'>
-                      <div className="sectionHead">
-                        <div className="tag">Why businesses choose CodeTrios</div>
-                        <h2>Digital Solutions Built Around Your {" "}<span>Goals</span></h2>
-                        <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
-                      </div>
-                      <div className="why_features">
-                        
-                      </div>
-                  </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
         {/* Related Services */}
-        <div className='related-services'>
+        <div className='related-services blockPadding'>
           <Container>
             <Row>
               <Col>
-                <div className='inner-bg'>
+                <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
-                    <h2>Explore Our Other Digital Services</h2>
+                    <h2>No data</h2>
+                    {/* <h2>Explore Our Other Digital Services</h2> */}
                   </div>
                   <div className="benefitGrid">
                     {relatedServices.map((item, index) =>{
