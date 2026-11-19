@@ -403,44 +403,33 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
 
 /* Contact form */
 .formPop{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: #000000a1;z-index: 9999;display: flex;align-items: center;justify-content: center;}
-.formElem{width: 600px;max-width: 95%;position: relative;max-height: 95%;overflow: auto;padding: 30px 15px 20px;
-    position: relative;
-    padding: 30px;
-    background: linear-gradient(145deg, rgb(17, 43, 73), rgb(5, 20, 40));
-    border-radius: 30px;
-    border: 1px solid rgba(87, 163, 231, 0.22);
-    box-shadow: 0 -6px 60px -32px 
-color-mix(in srgb, var(--accent, var(--brand-color)) 60%, transparent);
-}
-.formPop .closeBtn{position: absolute;top: 30px;right: 30px;border: none;background: linear-gradient(90deg, #8E42FF 0%, #5A63FF 45%, #18A8FF 100%);
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    cursor: pointer;
-    z-index: 9;
-}
+.formElem{width: 600px;max-width: 95%;position: relative;max-height: 95%;overflow: auto;padding: 30px 15px 20px;position: relative;padding: 30px;background: linear-gradient(145deg, rgb(17, 43, 73), rgb(5, 20, 40));border-radius: 12px;border: 1px solid rgba(87, 163, 231, 0.22);box-shadow: 0 -6px 60px -32px color-mix(in srgb, #38d8ff78 60%, transparent);}
+.formPop .closeBtn{position: absolute;top: 30px;right: 30px;border: none;background: linear-gradient(90deg, #8E42FF 0%, #5A63FF 45%, #18A8FF 100%);width: 40px;height: 40px;border-radius: 10px;display: flex;align-items: center;justify-content: center;color: #fff;cursor: pointer;z-index: 9;}
 .formPop .contactHead span{display: none;}
-
 .ourTechnologies{position: relative;}
-.ourTechnologies .why_features{
-  position: relative;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
-}
+.ourTechnologies .why_features{position: relative;display: grid;grid-template-columns: repeat(4, minmax(0, 1fr));gap: 20px;}
 
 /* Contact form */
-.related-services{
-  position: relative;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-    backdrop-filter: blur(6px);
-}
+.related-services{position: relative;background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));backdrop-filter: blur(6px);}
 /* Laptop */
-
+.ourPlatForm{
+  position: relative;
+}
+.ourPlatForm h2{
+  font-family: 'BricolageGrotesque-Bold';
+    color: #fff;
+    font-size: 35px;
+    margin: 10px 0 20px;
+}
+.boxContainer{margin-bottom: 50px;}
+.boxContainer:last-child{margin: 0;}
+.boxContainer .boxElem {border: 1px solid var(--ct-border);border-radius: 28px;background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));padding: 40px;backdrop-filter: blur(6px);display: flex;flex-wrap: wrap;color: #fff;position: relative;align-items: center;}
+.boxContainer .boxElem .leftArea {width: 50%;padding-right: 50px;display: flex;flex-direction: column;justify-content: center;}
+.boxContainer h5 {font-size: 22px;font-weight: 500;margin: 0 0 10px;}
+.boxContainer .boxElem .leftArea  p{color: var(--ct-gray);}
+.boxContainer .boxElem .rightArea {width: 50%;display: flex;justify-content: center;gap: 10px;flex-wrap: wrap;align-content: flex-start;}
+.boxContainer .boxElem .techLogo {width: 20%;text-align: center;margin-bottom: 20px;padding: 10px 0;border-radius: 10px;border: 1px solid transparent;cursor: pointer;display: flex;flex-direction: column;justify-content: center;align-items: center;background: #fff;}
+.boxContainer .boxElem .techLogo h6 {font-size: 13px;margin: 10px 0 0;color: #000;font-weight: 500;}
 
 @media (max-width: 1399px) {
   .innerBannerContent{width: 740px;}
@@ -453,6 +442,8 @@ color-mix(in srgb, var(--accent, var(--brand-color)) 60%, transparent);
   .weAreContent p{font-size: 15px;}
 
   .services_process_grid h3{font-size: 18px;}
+
+  .boxContainer .boxElem .leftArea{padding: 0;}
 }
 
 @media (max-width: 1199px) {
@@ -480,6 +471,9 @@ color-mix(in srgb, var(--accent, var(--brand-color)) 60%, transparent);
   .technology-expertise__group{gap: clamp(20px, 2vw, 40px);}
   .technology-expertise__icon{width:35px}
   .technology-layout{padding: 30px;gap: clamp(30px, 5vw, 70px);}
+  
+  .boxContainer .boxElem .techLogo{width: 25%;}
+  .ourPlatForm h2{font-size: 30px;}
 }
 
 @media (max-width: 1100px) {
@@ -516,6 +510,11 @@ color-mix(in srgb, var(--accent, var(--brand-color)) 60%, transparent);
     .services_process_grid .process_box{padding-right: 0;}
    
    .sectionHead p, .benefitGrid .benefitCard p {font-size: 14px;}
+
+   .boxContainer .boxElem .leftArea, .boxContainer .boxElem .rightArea{width: 100%;}
+   .boxContainer .boxElem .rightArea{margin-top: 10px;}
+   .boxContainer .boxElem .techLogo{width: 20%;}
+   .boxContainer .boxElem{padding: 20px;}
 }
 
 @media (max-width: 767px) {
@@ -556,6 +555,10 @@ color-mix(in srgb, var(--accent, var(--brand-color)) 60%, transparent);
 
   .formElem{padding: 20px 15px;border-radius: 15px;}
   .formPop .closeBtn{ right: 15px;width: 30px;height: 30px;top: 20px;}
+
+  .ourPlatForm h2{font-size: 26px;}
+  .boxContainer h5{font-size: 18px;}
+  .boxContainer .boxElem{border-radius: 20px;}
 }
 
 
@@ -575,6 +578,11 @@ color-mix(in srgb, var(--accent, var(--brand-color)) 60%, transparent);
 
   .industries-section {margin-top: 20px;}  
   .industries-carousel-item {padding: 0;}
+
+  .boxContainer .boxElem .techLogo {width: 31%;}
+  .boxContainer .boxElem .techLogo h6{font-size: 11px;}
+  .boxContainer .boxElem{padding: 20px 15px;}
+
 }
 
 

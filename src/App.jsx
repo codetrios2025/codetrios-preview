@@ -20,6 +20,9 @@ const DigitalStrategy = lazy(() => import ('./Components/ServicesNew/AllServices
 const WebHosting = lazy(() => import ('./Components/ServicesNew/AllServices/WebHostingServices'));
 const GeoSeoServices = lazy(() => import ('./Components/ServicesNew/AllServices/GeoSeoServices'));
 
+// Other Pages
+const Technologies = lazy(() => import ('./Components/Pages/Technologies'));
+const Portfolio = lazy(() => import('./Components/Pages/Portfolios'));
 function App() {
   // useEffect(() => {
   //   AOS.init({
@@ -50,6 +53,9 @@ function App() {
         <Route path="/web-hosting-services" element={<WebHosting />} />
         <Route path="/geo-seo-services" element={<GeoSeoServices />} />
 
+        {/* Other Routes */}
+        <Route path="/technologies" element={<Technologies />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Route>
     </Routes>
       {/* <ToastContainer />

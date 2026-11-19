@@ -9,19 +9,9 @@ import '../../AboutusNew/Aboutus.css';
 //icon
 import {
   BriefcaseBusiness,
-  MonitorSmartphone,
-  RefreshCw,
-  PanelsTopLeft,
   ShoppingCart,
-  PenTool,
   Building2,
-  Store,
-  Images,
-  ShoppingBag,
   GraduationCap,
-  HeartPulse,
-  MousePointerClick,
-  Blocks,
   ArrowUpRight,
   Stethoscope,
   Hotel,
@@ -31,7 +21,15 @@ import {
   Monitor,
   Settings,
   FileText,
-  Cloud
+  Cloud,
+  Server,
+  Layers,
+  Code2,
+  AppWindow,
+  Workflow,
+  Hospital,
+  Users,
+  LayoutDashboard,
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -57,37 +55,37 @@ const webDevelopmentServicesData = [
     title: "Frontend Development", 
     content: "Build responsive and interactive user interfaces using React.js, JavaScript, HTML5, CSS3 and modern frontend technologies.",
     link: "/",
-    icon: BriefcaseBusiness 
+    icon: Monitor 
   },
   { 
     title: "Backend Development", 
     content: "Develop secure server-side applications, business logic, databases and custom backend functionality.",
     link: "/",
-    icon: MonitorSmartphone 
+    icon: Server 
   },
   { 
     title: "Full Stack Development", 
     content: "Get complete web development solutions covering frontend, backend, database management and API integration.",
     link: "/",
-    icon: RefreshCw 
+    icon: Layers 
   },
   { 
     title: "Custom Web Development", 
     content: "Develop tailored websites and web solutions designed around your specific business requirements.",
     link: "/",
-    icon: PanelsTopLeft 
+    icon: Code2 
   },
   { 
     title: "Web Application Development", 
     content: "Build feature-rich web applications that simplify business operations and improve productivity.",
     link: "/",
-    icon: ShoppingCart 
+    icon: AppWindow 
   },
   { 
     title: "API Development & Integration", 
     content: "Connect websites and applications with third-party services, payment gateways and external systems.",
     link: "/",
-    icon: PenTool 
+    icon: Workflow 
   },
 ];
 //websiteTypes data
@@ -102,43 +100,43 @@ const websiteTypes = [
     title: "Business Websites", 
     content: "Professional websites that showcase services, generate enquiries and support business growth.",
     link: "/",
-    icon: Store 
+    icon: BriefcaseBusiness 
   },
   { 
     title: "Ecommerce Platforms", 
     content: "Online shopping platforms with product management, payment integration and order management.",
     link: "/",
-    icon: Images 
+    icon: ShoppingCart 
   },
   { 
     title: "Educational Portals", 
     content: "School and college websites, admission systems, student portals and educational management platforms.",
     link: "/",
-    icon: ShoppingBag 
+    icon: GraduationCap 
   },
   { 
     title: "Healthcare Platforms", 
     content: "Hospital websites, doctor profiles, appointment booking systems and healthcare applications.",
     link: "/",
-    icon: GraduationCap 
+    icon: Hospital 
   },
   { 
     title: "Customer Portals", 
     content: "Secure platforms where customers can access information, manage accounts and interact with your business.",
     link: "/",
-    icon: HeartPulse 
+    icon: Users 
   },
   { 
     title: "Web-Based Management Systems", 
     content: "Custom applications for managing projects, employees, operations, records and business workflows.",
     link: "/",
-    icon: MousePointerClick 
+    icon: LayoutDashboard 
   },
   { 
     title: "CMS-Based Websites",
     content: "Content management solutions using WordPress, Drupal and custom CMS platforms for easy website management.",
     link: "/",
-    icon: Blocks 
+    icon: FileText 
   },
 ];
 // Our Process Data
@@ -428,7 +426,7 @@ export default function WebDevelopmentService(){
                             <IconComponent aria-hidden="true" />
                           </div>
                         </div>
-                        <h3><Link to={item.link}>{item.title}</Link></h3>
+                        <h3>{item.title}</h3>
                         <p>{item.content}</p>
                         <span className='benefitGo'><ArrowUpRight /></span>
                       </div>

@@ -8,19 +8,8 @@ import '../mainservices.css';
 //icon
 import {
   BriefcaseBusiness,
-  MonitorSmartphone,
-  RefreshCw,
-  PanelsTopLeft,
-  ShoppingCart,
-  PenTool,
-  Building2,
-  Store,
-  Images,
-  ShoppingBag,
   GraduationCap,
   HeartPulse,
-  MousePointerClick,
-  Blocks,
   ArrowUpRight,
   Stethoscope,
   Hotel,
@@ -30,6 +19,19 @@ import {
   Settings,
   Database,
   Cloud,
+  AppWindow,
+  Workflow,
+  Building2,
+  Users,
+  ChartNoAxesCombined,
+  Plug,
+  ContactRound,
+  Network,
+  Kanban,
+  ShoppingCart,
+  UsersRound,
+  CalendarCheck,
+  Package,
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -55,37 +57,37 @@ const webAppServicesData = [
     title: "Custom Web Application Development", 
     content: "Build applications with customised features and functionality designed around your business requirements.",
     link: "/",
-    icon: BriefcaseBusiness 
+    icon: AppWindow 
   },
   { 
     title: "Business Process Automation", 
     content: "Automate repetitive tasks, reduce manual work and improve everyday business operations.",
     link: "/",
-    icon: MonitorSmartphone 
+    icon: Workflow 
   },
   { 
     title: "Enterprise Web Application Development", 
     content: "Develop scalable applications to manage business operations, teams, workflows and organisational processes.",
     link: "/",
-    icon: RefreshCw 
+    icon: Building2 
   },
   { 
     title: "Customer Portal Development", 
     content: "Create secure customer portals for account management, information access and online services.",
     link: "/",
-    icon: PanelsTopLeft 
+    icon: Users 
   },
   { 
     title: "Dashboard Development", 
     content: "Get interactive dashboards to monitor business activities, track performance and manage important information.",
     link: "/",
-    icon: ShoppingCart 
+    icon: ChartNoAxesCombined 
   },
   { 
     title: "API Development & Integration", 
     content: "Connect applications with third-party platforms, payment gateways and external business systems.",
     link: "/",
-    icon: PenTool 
+    icon: Plug 
   },
 ];
 //websiteTypes data
@@ -94,61 +96,61 @@ const websiteTypes = [
     title: "CRM Applications", 
     content: "Manage customer information, sales activities, leads and business relationships through customised CRM solutions.",
     link: "/",
-    icon: Building2 
+    icon: ContactRound 
   },
   { 
     title: "ERP Applications", 
     content: "Manage business processes, resources, operations and organisational information from one platform.",
     link: "/",
-    icon: Store 
+    icon: Network 
   },
   { 
     title: "Project Management Applications", 
     content: "Organise projects, assign tasks, track progress and manage team activities efficiently.",
     link: "/",
-    icon: Images 
+    icon: Kanban 
   },
   { 
     title: "School Management Applications", 
     content: "Manage admissions, student records, attendance, academic information and school administration.",
     link: "/",
-    icon: ShoppingBag 
+    icon: GraduationCap 
   },
   { 
     title: "Healthcare Applications", 
     content: "Develop appointment systems, patient management platforms and healthcare administration solutions.",
     link: "/",
-    icon: GraduationCap 
+    icon: HeartPulse 
   },
   { 
     title: "Ecommerce Applications", 
     content: "Build customised online shopping platforms with product management, customer accounts and order processing.",
     link: "/",
-    icon: HeartPulse 
+    icon: ShoppingCart 
   },
   { 
     title: "Employee Management Applications", 
     content: "Manage employee records, attendance, tasks, leave requests and organisational workflows.",
     link: "/",
-    icon: MousePointerClick 
+    icon: UsersRound 
   },
   { 
     title: "Booking & Appointment Applications",
     content: "Create online booking platforms with appointment scheduling, availability management and customer notifications.",
     link: "/",
-    icon: Blocks 
+    icon: CalendarCheck 
   },
   { 
     title: "Inventory Management Applications",
     content: "Track stock, manage products, monitor inventory and streamline business operations.",
     link: "/",
-    icon: Blocks 
+    icon: Package 
   },
   { 
     title: "Custom Business Applications",
     content: "Develop application solutions based on your specific workflows, business goals and functional requirements.",
     link: "/",
-    icon: Blocks 
+    icon: BriefcaseBusiness 
   },
 ];
 //technology data
@@ -439,7 +441,7 @@ export default function WebApplicationService(){
                             <IconComponent aria-hidden="true" />
                           </div>
                         </div>
-                        <h3><Link to={item.link}>{item.title}</Link></h3>
+                        <h3>{item.title}</h3>
                         <p>{item.content}</p>
                         <span className='benefitGo'><ArrowUpRight /></span>
                       </div>
@@ -629,8 +631,7 @@ export default function WebApplicationService(){
                 <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
-                    <h2>No data</h2>
-                    {/* <h2>Explore Our Other Digital Services</h2> */}
+                    <h2>Explore Our Other Digital Services</h2>
                   </div>
                   <div className="benefitGrid">
                     {relatedServices.map((item, index) =>{

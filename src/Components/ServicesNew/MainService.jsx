@@ -688,12 +688,7 @@ export default function ServicesScreen() {
                           <ul>
                             {item.services.map((itemList) => (
                               <li key={itemList.link}>
-                                <Link
-                                  to={itemList.link}
-                                  title={itemList.altTitle}
-                                >
                                   {itemList.title}
-                                </Link>
                               </li>
                             ))}
                           </ul>
@@ -800,19 +795,19 @@ export default function ServicesScreen() {
                         <h2>Need Heading</h2>
                         <p>More Than Development. A Team That Understands Your Goals. Finding a best development partner is about more than choosing technologies. You need a team that listens, understands your requirements, and cares about the final result with your requirement and new technology .</p>
                       </div>
-                      <div className="why_features">
-                        {whyChooseData.map(({ icon: Icon, title, description }) => (
-                          <div className="features_box" key={title}>
-                            <div className="features_icon" aria-hidden="true">
-                              <Icon size={25} strokeWidth={1.7} />
+                        <div className="why_features">
+                          {whyChooseData.map(({ icon: Icon, title, description }) => (
+                            <div className="features_box" key={title}>
+                              <div className="features_icon" aria-hidden="true">
+                                <Icon size={25} strokeWidth={1.7} />
+                              </div>
+                              <div className="feature_content">
+                                <h3>{title}</h3>
+                                <p>{description}</p>
+                              </div>
                             </div>
-                            <div className="feature_content">
-                              <h3>{title}</h3>
-                              <p>{description}</p>
-                            </div>
-                          </div>
-                        ))} 
-                      </div>
+                          ))} 
+                        </div>
                   </div>
               </Col>
             </Row>

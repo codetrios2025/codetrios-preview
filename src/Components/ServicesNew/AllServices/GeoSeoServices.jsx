@@ -8,24 +8,35 @@ import '../mainservices.css';
 //icon
 import {
   BriefcaseBusiness,
-  MonitorSmartphone,
-  RefreshCw,
-  PanelsTopLeft,
   ShoppingCart,
-  PenTool,
   Building2,
-  Store,
-  Images,
-  ShoppingBag,
-  GraduationCap,
-  HeartPulse,
-  MousePointerClick,
   Blocks,
   ArrowUpRight,
   Stethoscope,
   Hotel,
   Factory,
-  Rocket,
+  Rocket, 
+  Search,
+  Sparkles,
+  MessageCircleQuestion,
+  MapPin,
+  Settings,
+  FileText,
+  FileSearch,
+  ExternalLink,
+  MapPinned,
+  Code2,
+  BrainCircuit,
+  MessageSquareText,
+  NotebookPen,
+  ClipboardCheck,
+  Network,
+  GraduationCap,
+  Target,
+  Crosshair,
+  ChartNoAxesCombined,
+  RefreshCw,
+  CodeXml,
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -44,122 +55,221 @@ import manufacturingImg from '../../../assets/images/manufacturing-img.jpg';
 import startupsImg from '../../../assets/images/startups-img.jpg';
 import technologyImg from '../../../assets/images/technology-img.jpg';
 const Carousel = CarouselImport.default ?? CarouselImport;
-
-//website Design Services data
-const websiteDesignServices = [
+import {
+  SearchConsoleIcon,
+  GoogleAnalyticsIcon,
+  KeywordPlannerIcon,
+  BusinessProfileIcon,
+  PageSpeedIcon,
+  RichResultsIcon,
+} from "../SVGIcon";
+//Main SEO, GEO & AEO Services Data
+const SeoServicesData = [
   { 
-    title: "Business Website Design", 
-    content: "Professional websites that communicate your services, establish credibility and encourage enquiries.",
+    title: "Search Engine Optimisation (SEO)", 
+    content: "Improve your website's visibility on Google and other search engines through technical SEO, keyword research, on-page optimisation and quality content.",
     link: "/",
-    icon: BriefcaseBusiness 
+    icon: Search 
   },
   { 
-    title: "Responsive Website Design", 
-    content: "Layouts and interactions designed to work effectively across mobile, tablet and desktop screens.",
+    title: "Generative Engine Optimisation (GEO)", 
+    content: "Prepare your website content for AI-powered search experiences by improving content quality, brand information, topical relevance and online discoverability.",
     link: "/",
-    icon: MonitorSmartphone 
+    icon: Sparkles 
   },
   { 
-    title: "Website Redesign", 
-    content: "Modernize an existing website with improved navigation, visual design, content hierarchy and user experience.",
+    title: "Answer Engine Optimisation (AEO)", 
+    content: "Make your website more useful for question-based searches with clear answers, informative content, structured headings and relevant FAQs.",
     link: "/",
-    icon: RefreshCw 
+    icon: MessageCircleQuestion 
   },
   { 
-    title: "Landing Page Design", 
-    content: "Focused landing pages designed around specific campaigns, services, products or conversion goals.",
+    title: "Local SEO", 
+    content: "Improve your visibility in location-based searches and help nearby customers discover your business, services and contact information.",
     link: "/",
-    icon: PanelsTopLeft 
+    icon: MapPin 
   },
   { 
-    title: "Ecommerce Website Design", 
-    content: "Customer-friendly storefront experiences with intuitive product discovery, shopping flows and responsive layouts.",
+    title: "Technical SEO", 
+    content: "Improve website crawlability, indexing, page performance, mobile usability, website structure and technical health.",
+    link: "/",
+    icon: Settings 
+  },
+  { 
+    title: "Content SEO", 
+    content: "Create and optimise website pages, service descriptions and blogs around relevant search topics and customer needs.",
+    link: "/",
+    icon: FileText 
+  },
+];
+//SEO, GEO & AEO Types data
+const SEOTypes = [
+  { 
+    title: "On-Page SEO", 
+    content: "Optimise page titles, meta descriptions, headings, URLs, internal links and website content to improve search relevance.",
+    link: "/",
+    icon: FileSearch 
+  },
+  { 
+    title: "Off-Page SEO", 
+    content: "Build your website's online authority through relevant backlinks, brand mentions and genuine industry relationships.",
+    link: "/",
+    icon: ExternalLink 
+  },
+  { 
+    title: "Local SEO", 
+    content: "Improve local search visibility through Google Business Profile optimisation, business information consistency and location-focused content.",
+    link: "/",
+    icon: MapPinned 
+  },
+  { 
+    title: "Technical SEO", 
+    content: "Identify and resolve issues related to indexing, crawling, broken links, redirects, site speed and website structure.",
+    link: "/",
+    icon: Code2 
+  },
+  { 
+    title: "Ecommerce SEO", 
+    content: "Optimise product pages, category pages, product descriptions and website navigation to improve online store visibility.",
     link: "/",
     icon: ShoppingCart 
   },
   { 
-    title: "UI/UX Website Design", 
-    content: "Wireframes, user journeys, prototypes and interface designs that make websites easier to navigate and use.",
+    title: "AI Search Optimisation", 
+    content: "Improve how your brand, services and expertise are represented across AI-powered search and discovery experiences.",
     link: "/",
-    icon: PenTool 
+    icon: BrainCircuit 
+  },
+  { 
+    title: "Answer Engine Optimisation", 
+    content: "Create question-focused content, FAQs and clear informational sections that address common customer queries.",
+    link: "/",
+    icon: MessageSquareText 
+  },
+  { 
+    title: "Content Marketing & Blog SEO",
+    content: "Develop useful blogs, articles and website content that attract relevant visitors and answer search intent.",
+    link: "/",
+    icon: NotebookPen 
+  },
+  { 
+    title: "Website SEO Audit",
+    content: "Analyse your website's technical health, content quality, keyword targeting and optimisation opportunities.",
+    link: "/",
+    icon: ClipboardCheck 
   },
 ];
-//websiteTypes data
-const websiteTypes = [
-  { 
-    title: "Corporate Websites", 
-    content: "Structured websites for established organizations and larger businesses.",
-    link: "/",
-    icon: Building2 
+//whyChoose data
+const whyChooseData = [
+  {
+    icon: Network,
+    title: "SEO & GEO Integrated Strategy",
+    description:
+      "Combine traditional SEO practices with optimization for AI-powered search experiences.",
   },
-  { 
-    title: "Small Business Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
-    link: "/",
-    icon: Store 
+  {
+    icon: GraduationCap,
+    title: "Technical & Content Expertise",
+    description:
+      "Address website performance, search accessibility, content quality and website structure.",
   },
-  { 
-    title: "Portfolio Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
-    link: "/",
-    icon: Images 
+  {
+    icon: Target,
+    title: "Business-Focused Approach",
+    description:
+      "Build optimization strategies around your services, audience, competition and business objectives.",
   },
-  { 
-    title: "Ecommerce Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
-    link: "/",
-    icon: ShoppingBag 
+  {
+    icon: Crosshair,
+    title: "Search Intent Optimization",
+    description:
+      "Align website pages with the information customers are actively looking for.",
   },
-  { 
-    title: "Educational Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
-    link: "/",
-    icon: GraduationCap 
+  {
+    icon: ChartNoAxesCombined,
+    title: "Transparent Performance Tracking",
+    description:
+      "Monitor search visibility, organic traffic, indexing and relevant business enquiries.",
   },
-  { 
-    title: "Healthcare Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
-    link: "/",
-    icon: HeartPulse 
+  {
+    icon: RefreshCw,
+    title: "Continuous Optimization",
+    description:
+      "Identify new opportunities and improve your website based on performance data.",
   },
-  { 
-    title: "Landing Pages", 
-    content: "Websites designed for companies that need a professional digital presence.",
-    link: "/",
-    icon: MousePointerClick 
+ 
+];
+// Tools we use
+const toolsData = [
+  {
+    icon: SearchConsoleIcon ,
+    title: "Google Search Console",
+    description: "Search performance, indexing and technical monitoring.",
   },
-  { 
-    title: "CMS-Based Websites",
-    content: "Websites designed for companies that need a professional digital presence.",
-    link: "/",
-    icon: Blocks 
+  {
+    icon: GoogleAnalyticsIcon ,
+    title: "Google Analytics 4",
+    description: "Website traffic and visitor behaviour analysis.",
+  },
+  {
+    icon: KeywordPlannerIcon ,
+    title: "Google Keyword Planner",
+    description: "Keyword research and search demand insights.",
+  },
+  {
+    icon: BusinessProfileIcon ,
+    title: "Google Business Profile",
+    description: "Local business visibility and information management.",
+  },
+  {
+    icon: PageSpeedIcon ,
+    title: "Google PageSpeed Insights",
+    description: "Website performance and loading analysis.",
+  },
+  {
+    icon: RichResultsIcon ,
+    title: "Google Rich Results Test",
+    description: "Structured data validation.",
   },
 ];
+
 // Our Process Data
 const processData = [
   {
     number: "01",
-    title: "Discover",
+    title: "Website & Business Analysis",
     description:
-      "We understand your business goals, audience, and requirements to create a clear project roadmap.",
+      "We understand your business, services, target audience, competitors and existing online presence",
   },
   {
     number: "02",
-    title: "Design & Build",
+    title: "Keyword & Search Intent Research",
     description:
-      "We design intuitive interfaces and develop scalable, high-performance digital solutions.",
+      "We identify relevant keywords, customer questions, local search terms and topics related to your services.",
   },
   {
     number: "03",
-    title: "Review & Launch",
+    title: "Technical SEO Audit",
     description:
-      "We test, refine, and launch your solution to ensure quality, performance, and reliability.",
+      "We review website structure, indexing, crawlability, speed, mobile usability and technical issues.",
   },
   {
     number: "04",
-    title: "Support & Maintenance",
+    title: "Content & On-Page Optimisation",
     description:
-      "We provide ongoing technical support, updates, security monitoring, and performance optimization to keep your digital solutions running smoothly.",
+      "We improve website content, headings, metadata, internal links and page structure to match user search intent.",
+  },
+  {
+    number: "05",
+    title: "GEO & AEO Optimisation",
+    description:
+      "We strengthen content clarity, brand information, topical coverage and question-based answers for AI-powered discovery.",
+  },
+  {
+    number: "06",
+    title: "Monitoring & Improvement",
+    description:
+      "We track search performance, keyword visibility, website traffic and other relevant metrics to identify further opportunities.",
   },
 ];
 //industries Data
@@ -168,49 +278,49 @@ const industriesData = [
     number : "01",
     icon: GraduationCap,
     title: "Education",
-    text: "Learning platforms, school and college websites, student portals.",
+    text: "School and college websites, admission portals, learning platforms and student management systems.",
     img: eduImg,
   },
   {
     number : "02",
     icon: Stethoscope,
     title: "Healthcare",
-    text: "Hospital websites, appointment systems, patient management solutions.",
+    text: "Hospital websites, doctor profiles, appointment booking and patient management solutions.",
     img: healthcareImg,
   },
   {
     number : "03",
     icon: ShoppingCart,
-    title: "E-commerce",
-    text: "Online stores, secure payments, product catalogs and shopping experiences.",
+    title: "E-commerce & Retail",
+    text: "Online stores, product catalogues, shopping platforms and payment integrations.",
     img: ecomImg,
   },
   {
     number : "04",
     icon: Building2,
-    title: "Real Estate",
-    text: "Property websites, listing portals, lead generation and virtual experiences.",
+    title: "Real Estate & Construction",
+    text: "Property listing websites, real estate portals, project showcases and lead management systems.",
     img: estateImg,
   },
   {
     number : "05",
     icon: Hotel,
-    title: "Hospitality",
-    text: "Hotel websites, online booking, guest services and reservation systems.",
+    title: "Hospitality & Tourism",
+    text: "Hotel websites, travel portals, online booking and reservation systems.",
     img: hospitalityImg,
   },
   {
     number : "06",
     icon: Factory,
     title: "Manufacturing",
-    text: "Business websites, production workflows, automation and operational software.",
+    text: "Manufacturing websites, product catalogues, inventory systems and production management solutions.",
     img: manufacturingImg,
   },
   {
     number : "07",
     icon: Rocket,
     title: "Startups",
-    text: "MVP development, scalable platforms and digital products for growing businesses.",
+    text: "Startup websites, MVP development, business applications and scalable digital products.",
     img: startupsImg,
   },
   {
@@ -224,44 +334,52 @@ const industriesData = [
 //FAQ data
 const faqs = [
   {
-      question: "What does a web development company do?",
-      answer: "A web development company builds and maintains websites and web applications, including frontend interfaces, backend systems, databases, APIs, integrations, testing, deployment, and ongoing technical support."
+      question: "What is the difference between SEO, GEO and AEO?",
+      answer: "SEO improves visibility in traditional search engines. GEO focuses on discoverability in generative AI search experiences, while AEO focuses on providing clear answers to users' questions across answer-based search platforms."
   },
   {
-      question: "How much do web development services cost in India?",
-      answer: "The cost of web development depends on factors such as project complexity, required features, technology, integrations, design requirements, content management needs, and ongoing support. CodeTrios provides project-specific estimates based on business and technical requirements."
+      question: "Why does my business need SEO services?",
+      answer: "SEO helps customers discover your business through relevant online searches. It can improve organic visibility, attract targeted visitors and generate potential business enquiries."
   },
   {
-      question: "How long does it take to develop a website?",
-      answer: "Website development timelines depend on the size and complexity of the project. A simple business website may take a few weeks, while custom websites and web applications with advanced functionality, integrations, or workflows can take longer."
+      question: "What are GEO services and how do they help businesses?",
+      answer: "GEO services focus on improving your brand's discoverability in AI-powered search experiences. They involve useful content, clear brand information, topical relevance and a technically accessible website."
   },
   {
-      question: "Do you develop SEO-friendly websites?",
-      answer: "Yes. CodeTrios follows SEO-friendly development practices such as responsive design, clean site structure, performance optimization, crawlable content, proper technical implementation, and structured data where appropriate."
+      question: "What is Answer Engine Optimisation (AEO)?",
+      answer: "AEO is the process of organising and improving website content so that search and answer platforms can understand and identify useful responses to customer questions."
   },
   {
-      question: "What is the difference between web design and web development?",
-      answer: "Web design focuses on visual appearance, layout, branding, and user experience, while web development focuses on building the frontend and backend functionality that makes a website or web application work."
+      question: "Can SEO help my business rank on Google?",
+      answer: "SEO improves your website's eligibility and opportunities to appear for relevant searches. Actual rankings depend on competition, website quality, search intent and many other factors."
   },
   {
-      question: "Does CodeTrios provide custom web development?",
-      answer: "Yes. CodeTrios provides custom web development for businesses and organizations that require specific functionality, integrations, workflows, or application features."
+      question: "Can GEO help my business appear in ChatGPT and other AI platforms?",
+      answer: "GEO strategies can improve your brand's online discoverability through useful content, accurate business information and relevant online references. However, appearance in AI-generated responses cannot be guaranteed."
   },
   {
-      question: "Which technologies does CodeTrios use?",
-      answer: "Depending on project requirements, CodeTrios works with technologies including React.js, Node.js, PHP, WordPress, Drupal, Strapi, APIs, databases, and modern web development tools."
+      question: "How long does SEO take to show results?",
+      answer: "SEO is a long-term process. Some technical improvements may show benefits sooner, while meaningful organic visibility and traffic growth can take several months depending on competition and website condition."
   },
   {
-      question: "Can CodeTrios develop an existing website further?",
-      answer: "Yes. Existing websites can be extended with new features, integrations, performance improvements, redesigns, CMS functionality, and other technical enhancements."
+      question: "Do you provide local SEO services in Delhi NCR?",
+      answer: "Yes. We help businesses improve local online visibility through location-focused content, Google Business Profile optimisation and local SEO practices."
   },
   {
-      question: "Does CodeTrios provide website maintenance?",
-      answer: "Yes. Website maintenance can include updates, security improvements, backups, bug fixes, performance optimization, monitoring, and feature enhancements."
+      question: "Do you provide SEO services for WordPress websites?",
+      answer: "Yes. We provide SEO optimisation for WordPress websites, including metadata, website structure, content, technical improvements and performance optimisation."
   },
   {
-      question: "Can CodeTrios build scalable web applications?",
-      answer: "Yes. CodeTrios develops scalable web applications using appropriate frontend, backend, database, API, and hosting architecture based on project requirements."
+      question: "How do you measure SEO performance?",
+      answer: "We monitor relevant metrics such as organic clicks, impressions, keyword visibility, website traffic, indexing status and enquiries using analytical and search performance tools."
+  },
+  {
+      question: "Do you provide SEO audits for existing websites?",
+      answer: "Yes. We analyse existing websites to identify technical issues, content gaps, keyword opportunities and areas that need improvement."
+  },
+  {
+      question: "Do you provide SEO and GEO services outside Delhi NCR?",
+      answer: "Yes. CodeTrios works with businesses and organisations across Delhi NCR and throughout India."
   },
 ]
 
@@ -269,34 +387,41 @@ const faqs = [
 const relatedServices = [
   {
     title: "Website Design",
-    content:"Create professional, responsive and conversion-focused websites with modern UI design and intuitive user experiences.",
+    content:"Create modern, responsive and user-friendly websites that reflect your brand identity.",
     link: "/website-design-services",
     linkTitle: "Explore Website Design Services",
   },
   {
+    title: "Web Development",
+    content:"Build fast, secure and scalable websites using modern frontend and backend technologies.",
+    link: "/web-development-services",
+    linkTitle: "Explore Web Development",
+  },
+  {
     title: "Ecommerce Development",
-    content:"Build high-performing online stores with responsive design, secure payments and ecommerce integrations.",
+    content:"Build online stores with product management, secure payments and shopping integrations.",
     link: "/ecommerce-development-services",
     linkTitle: "Explore Ecommerce Development Services",
   },
   {
     title: "Web Application Development",
-    content:"Develop secure and scalable web applications that streamline business processes and improve digital experiences.",
+    content:"Develop custom business applications, dashboards and digital platforms.",
     link: "/web-application-development",
     linkTitle: "Explore Web Application Development",
   },  
   {
-    title: "UI/UX Design",
-    content:"Design intuitive, accessible and user-focused interfaces that improve usability, engagement and conversions.",
-    link: "/ui-ux-design-services",
-    linkTitle: "Explore UI/UX Design Services",
-  },
-  {
     title: "Custom Software Development",
-    content:"Develop custom software solutions that automate workflows, solve business challenges and support long-term growth.",
+    content:"Get custom software, API integrations and business automation solutions.",
     link: "/custom-software-solutions",
     linkTitle: "Explore Custom Software Solutions",
   },
+  {
+    title: "Digital Strategy",
+    content:"Develop practical digital strategies to improve your online presence and business growth.",
+    link: "/digital-strategy-consulting",
+    linkTitle: "Explore Digital Strategy",
+  },
+  
 ];
 
 
@@ -313,11 +438,11 @@ export default function GeoSeoService(){
       <SchemaGraph
         pageType="service"
         pageName="GEO & SEO Services"
-        pageDescription="CodeTrios provides SEO and Generative Engine Optimization services designed to improve search visibility and visibility across AI-powered search experiences."
+        pageDescription="CodeTrios provides SEO, Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO) services to help businesses improve organic search performance and discoverability across AI-powered search platforms."
         pageUrl="https://www.codetrios.com/geo-seo-services"
         serviceName="GEO & SEO Services"
-        serviceDescription="SEO and Generative Engine Optimization services focused on improving organic search visibility and AI search visibility."
-        serviceType="SEO and Generative Engine Optimization"
+        serviceDescription="SEO, GEO and AEO solutions covering technical optimization, keyword research, content optimization, local SEO and AI search discoverability."
+        serviceType="Search Engine Optimization, Generative Engine Optimization and Answer Engine Optimization"
         breadcrumbs={[
             {
                 name: "Home",
@@ -341,9 +466,10 @@ export default function GeoSeoService(){
             <Row>
               <Col>
                 <div className='innerBannerContent'>
-                  <div className="tag">Our Services</div>
-                  <h1>SEO & Generative Engine Optimization (GEO) Services in India</h1>
-                  <p>CodeTrios is a web development company in India helping businesses, startups, organizations, and growing brands build fast, secure, and scalable websites and web applications. We combine modern frontend and backend technologies, responsive development, performance optimization, and maintainable architecture to create digital platforms designed around real business requirements.</p>
+                  <div className="tag">SEO, GEO & AI Search Optimization</div>
+                  <h1>SEO, GEO & AEO Services in India</h1>
+                  <p>Help your business get discovered online with CodeTrios SEO, GEO and AEO services. We help businesses improve search engine visibility, reach relevant audiences and build a stronger digital presence across traditional and AI-powered search platforms. From technical SEO and content optimisation to local SEO and AI search visibility, we focus on strategies that help customers find your business when they search for products, services and solutions.</p>
+
                   <div className='actionRow'>
                     <ActionButton />
                   </div>
@@ -358,13 +484,12 @@ export default function GeoSeoService(){
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
-                    <div className="tag">WHAT WE DESIGN</div>
-                    <h2>Website Design Services Built Around Your <span>Business Goals</span></h2>
+                    <div className="tag">OUR SEO & AI SEARCH SERVICES</div>
+                    <h2>SEO, GEO & AEO Services Built Around Your <span>Business Goals</span></h2>
                   </div>
                   <div className='secDetail'>
-                    <p>Our website design services cover the complete design journey, from understanding your business and audience to creating the visual interface and preparing a scalable design system for development. We design websites for companies, startups, institutions, professional organizations, and growing brands.</p>
-                    <p>Our approach focuses on responsive UI/UX, clear information architecture, mobile-first experiences, fast-loading pages, accessibility, SEO-friendly structure, and conversion-focused layouts. The result is a website that is easier for visitors to navigate and easier for businesses to manage and grow.</p>
-                    <p>Depending on your requirements, CodeTrios can design corporate websites, business websites, ecommerce stores, landing pages, WordPress websites, and redesigned digital experiences. Once the design is finalized, our web development services can turn the approved designs into fast, responsive, and scalable websites.</p>
+                    <p>Online visibility is about more than ranking for keywords. Your website needs to reach the right users, provide useful information and build trust.</p>
+                    <p>At CodeTrios, we combine traditional SEO practices with GEO and AEO strategies to help your business become easier to discover across different search experience like : AI tool ,Google search etc.</p>
                   </div>
                 </div>
               </Col>
@@ -372,7 +497,7 @@ export default function GeoSeoService(){
             <Row>
               <Col>
                 <div className="benefitGrid">
-                  {websiteDesignServices.map((item, index) =>{
+                  {SeoServicesData.map((item, index) =>{
                     const IconComponent = item.icon;
                     return(
                       <div className="benefitCard" key={index} data-reveal="up">
@@ -381,7 +506,7 @@ export default function GeoSeoService(){
                             <IconComponent aria-hidden="true" />
                           </div>
                         </div>
-                        <h3><Link to={item.link}>{item.title}</Link></h3>
+                        <h3>{item.title}</h3>
                         <p>{item.content}</p>
                         <span className='benefitGo'><ArrowUpRight /></span>
                       </div>
@@ -397,12 +522,12 @@ export default function GeoSeoService(){
               <Row>
                 <Col>
                   <div className='sectionHead'>
-                    <div className="tag">Types of Websites We Design</div>
-                    <h2>Website Design for Every <span>Business Need</span></h2>
-                    <p className='halfWidth'>Different businesses need different website experiences. CodeTrios designs websites around their purpose, content, audience and functionality.</p>
+                    <div className="tag">SEO & AI SEARCH OPTIMIZATION</div>
+                    <h2>SEO, GEO & AEO Solutions for <span>Every Business</span></h2>
+                    <p className='halfWidth'>Different businesses have different Users and search requirements. We develop optimisation strategies based on your industry, services, target locations and business objectives.</p>
                   </div>
                   <div className="benefitGrid">
-                    {websiteTypes.map((item, index) =>{
+                    {SEOTypes.map((item, index) =>{
                       const IconComponent = item.icon;
                       return(
                         <div className="benefitCard" key={index} data-reveal="up">
@@ -421,7 +546,64 @@ export default function GeoSeoService(){
               </Row>
             </Container>
         </div>
-
+        {/* Why businesses choose */}
+        <div className='whyChooseUs block-mg-top'>
+          <Container>
+            <Row>
+              <Col>
+                  <div className='why_container'>
+                      <div className="sectionHead">
+                        <div className="tag">Why businesses choose CodeTrios</div>
+                        <h2>Why Choose CodeTrios for <span>SEO & GEO Services?</span></h2>
+                        <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
+                      </div>
+                      <div className="why_features">
+                        {whyChooseData.map(({ icon: Icon, title, description }) => (
+                          <div className="features_box" key={title}>
+                            <div className="features_icon" aria-hidden="true">
+                              <Icon size={25} strokeWidth={1.7} />
+                            </div>
+                            <div className="feature_content">
+                              <h3>{title}</h3>
+                              <p>{description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                  </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        {/* Tools we work */}
+        <div className='whyChooseUs'>
+            <Container>
+              <Row>
+                <Col>
+                    <div className='why_container'>
+                        <div className="sectionHead">
+                          <div className="tag">SEO & ANALYTICS TOOLS</div>
+                          <h2><span>SEO, GEO & AEO</span> Tools We Work With</h2>
+                          <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
+                        </div>
+                        <div className="why_features">
+                          {toolsData.map(({ icon: Icon, title, description }) => (
+                            <div className="features_box" key={title}>
+                              <div className="features_icon" aria-hidden="true">
+                                <Icon size={25} strokeWidth={1.7} />
+                              </div>
+                              <div className="feature_content">
+                                <h3>{title}</h3>
+                                <p>{description}</p>
+                              </div>
+                            </div>
+                          ))} 
+                        </div>
+                    </div>
+                </Col>
+              </Row>
+            </Container>
+          </div>
         {/* Our Process */}
         <div className='services_process blockPadding'> 
           <Container>
@@ -429,9 +611,9 @@ export default function GeoSeoService(){
               <Col>
                 <div className='services_process_container'>
                   <div className='sectionHead'>
-                      <div className="tag">Our Process</div>
-                      <h2>A clear path from <span>idea to launch</span></h2>
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <div className="tag">OUR OPTIMIZATION WORKFLOW</div>
+                      <h2>Our SEO, GEO & AEO Process</h2>
+                      <p>We follow a structured approach to understand your website, identify opportunities and improve its online visibility in the world.</p>
                   </div>
                   <div className='services_process_grid'>
                     {processData.map((item) => {
@@ -460,7 +642,7 @@ export default function GeoSeoService(){
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
                       <h2>Industries <span>We Serve</span></h2>
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <p>CodeTrios designs and develops digital solutions for businesses and organisations across multiple industries. From corporate websites and educational portals to healthcare platforms and ecommerce applications, we deliver solutions tailored to industry-specific needs.</p>
                   </div>
                   <div className="industries-section">
                     <Carousel
@@ -497,31 +679,13 @@ export default function GeoSeoService(){
             </Row>
           </Container>
         </div>
-        {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
-          <Container>
-            <Row>
-              <Col>
-                  <div className='why_container'>
-                      <div className="sectionHead">
-                        <div className="tag">Why businesses choose CodeTrios</div>
-                        <h2>Digital Solutions Built Around Your {" "}<span>Goals</span></h2>
-                        <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
-                      </div>
-                      <div className="why_features">
-                        
-                      </div>
-                  </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+        
         {/* Related Services */}
-        <div className='related-services'>
+        <div className='related-services blockPadding'>
           <Container>
             <Row>
               <Col>
-                <div className='inner-bg'>
+                <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
                     <h2>Explore Our Other Digital Services</h2>
@@ -551,7 +715,7 @@ export default function GeoSeoService(){
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our Web <span>Development & Digital</span> Services</h2>
+                          <h2>Frequently Asked Questions About <span>SEO, GEO & AEO</span> Services</h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>

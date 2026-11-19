@@ -285,48 +285,7 @@ const industriesData = [
     img: technologyImg,
   },
 ]
-const technologiesData = [
-  {
-    icon: PenTool,
-    title: "Figma",
-    description: "Website wireframes, UI/UX design and interactive prototypes.",
-  },
-  {
-    icon: PanelsTopLeft  ,
-    title: "WordPress & Elementor",
-    description: "Custom website layouts and page design.",
-  },
-  {
-    icon: Code2    ,
-    title: "HTML5 & CSS3",
-    description: "Clean, structured and visually appealing web layouts.",
-  },
-  {
-    icon: FileCode  ,
-    title: "JavaScript & jQuery",
-    description: "Interactive website elements and dynamic experiences.",
-  },
-  {
-    icon: LayoutTemplate    ,
-    title: "Bootstrap",
-    description: "Responsive layouts and mobile-friendly design.",
-  },
-  {
-    icon: Atom ,
-    title: "React.js",
-    description: "Modern, component-based user interfaces.",
-  },
-  {
-    icon: Image ,
-    title: "Adobe Photoshop ",
-    description: "Website graphics and image editing.",
-  },
-  {
-    icon: Bot ,
-    title: "AI-Powered Design Tools",
-    description: "AI-assisted design exploration and creative workflow improvements.",
-  },
-];
+//technology Data
 const technologyGroups = [
   {
     title: "Design & Creative Tools",
@@ -600,7 +559,7 @@ export default function WebsiteDesignService(){
                 <div className="technology-layout">
                   <div className='sectionHead'>
                     <div className="tag">Technologies & Tools</div>
-                    <h2>Technologies & Tools We Work With</h2>
+                    <h2>Website Design <span>Technologies & Tools</span> We Use</h2>
                     <p>We use modern design tools and frontend technologies to create attractive, responsive and user-friendly website experiences.</p>
                     <Link to="/" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                   </div>
@@ -640,35 +599,6 @@ export default function WebsiteDesignService(){
             </Row>
           </Container>
         </div>
-        {/* <div className='whyChooseUs block-mg-top'>
-          <Container>
-            <Row>
-              <Col>
-                  <div className='why_container'>
-                      <div className="sectionHead">
-                        <div className="tag">Technologies & Tools</div>
-                        <h2>Technologies & Tools We Work With</h2>
-                        <p>We use modern design tools and frontend technologies to create attractive, responsive and user-friendly website experiences.</p>
-                      </div>
-                      <div className="why_features">
-                        {technologiesData.map(({ icon: Icon, title, description }) => (
-                          <div className="features_box" key={title}>
-                            <div className="features_icon" aria-hidden="true">
-                              <Icon size={25} strokeWidth={1.7} />
-                            </div>
-                            <div className="feature_content">
-                              <h3>{title}</h3>
-                              <p>{description}</p>
-                            </div>
-                          </div>
-                        ))}
-                        <p>We choose the right tools and technologies based on your design requirements, brand identity and website goals.</p>
-                      </div>
-                  </div>
-              </Col>
-            </Row>
-          </Container>
-        </div> */}
 
         {/* Industries Section */}
         <div className='services_industries blockPadding block-mg-top' aria-labelledby="industries-heading">
