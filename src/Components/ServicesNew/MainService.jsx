@@ -713,8 +713,8 @@ export default function ServicesScreen() {
             <Col>
               <div className='services_process_container'>
                 <div className='sectionHead'>
-                    <div className="tag">Our Process</div>
-                    <h2>A clear path from <span>idea to launch</span></h2>
+                    <div className="tag">HOW WE WORK</div>
+                    <h2>From Your Idea to a <br/>Working <span>Digital Solution</span></h2>
                     <p>We keep the development process clear and collaborative to visible to every one. Every project starts with understanding your requirements and ends with a solution that is tested, launched, and ready to use.</p>
                 </div>
                 <div className='services_process_grid'>
@@ -744,7 +744,7 @@ export default function ServicesScreen() {
               <div className='services_industries_bg'>
                 <div className='sectionHead'>
                     <div className="tag">WHO WE WORK WITH</div>
-                    <h2>Digital Solutions for Multiple & Different <span>Industries</span></h2>
+                    <h2>Digital Solutions for <br/>Multiple & Different <span>Industries</span></h2>
                     <p>Every industry has its own way of working. We partner with businesses and organizations to build websites and applications that fit their day-to-day needs—not the other way around.</p>
                 </div>
                 <div className="industries-section">

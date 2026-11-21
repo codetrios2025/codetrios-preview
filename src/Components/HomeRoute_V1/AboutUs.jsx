@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import './About.css';
 import webImage from '../../assets/images/growth_about.webp';
 import { ArrowUpRight, Workflow, ShieldCheck, ChartNoAxesCombined, MonitorSmartphone, Bot } from "lucide-react";
 import { Link } from 'react-router-dom';
+import ContactUs from './Contact';
 const AboutUs = ({data}) =>{
-
+  const [isOPen, setIsopen] = useState(false);
+    const formOpenHandler=()=>{
+        setIsopen(true);
+    }
+    const formCloseHandler=()=>{
+        setIsopen(false);
+    }
     const whyChooseData = [
       {
         title: "End-to-End Development",
@@ -92,7 +99,7 @@ const AboutUs = ({data}) =>{
                           )
                         })}
                         <div className="projectBtn" data-reveal="zoom">
-                          <button type='button' className="ctBtn ct-primery-btn">Start A Project Now <ArrowUpRight className="icon" /></button>
+                          <button type='button' onClick={formOpenHandler} className="ctBtn ct-primery-btn">Start A Project Now <ArrowUpRight className="icon" /></button>
                         </div>
                       </div>
                     </div>
@@ -100,6 +107,16 @@ const AboutUs = ({data}) =>{
                 </Row>
               </Container>
             </div>
+            {isOPen && 
+                <div className="formPop">
+                    <div className="formElem">
+                        <button type='button' onClick={formCloseHandler} className="closeBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-x preview-icon"><path vectorEffect="non-scaling-stroke" d="M18 6 6 18"/><path vectorEffect="non-scaling-stroke" d="m6 6 12 12"/></svg>
+                        </button>
+                        <ContactUs />
+                    </div>
+                </div>
+            }
         </div>
     )
 }

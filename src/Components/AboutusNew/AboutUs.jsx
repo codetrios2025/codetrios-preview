@@ -223,7 +223,7 @@ export default function Aboutus(){
                     <p>Every project has different requirements. We choose technologies based on what your business needs today and what it may need in the future.</p>
                     <p>Our development experience covers modern JavaScript frameworks, backend programming, content management systems, databases, and cloud platforms.</p>
                     <p>We also work with API integrations, third-party services, website performance optimization, and deployment workflows to deliver complete digital solutions.</p>
-                      <Link to="/" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
+                      <Link to="/technologies" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                   </div>
                   <div className="technology-grid">
                     <ul className="technology-expertise__groups">

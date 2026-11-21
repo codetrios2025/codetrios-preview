@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, Settings, ChartColumnBig, ShieldCheck  } from "lucide-react";
 import HeroVideo from '../../assets/videos/process-visual-700x600-fallback.mp4';
 // const words = ["Reimagine", "Automate", "Optimize"];
-
+import ContactUs from "./Contact";
 const HeroBanner = ({data}) =>{
     const [isOPen, setIsopen] = useState(false);
     const [index, setIndex] = useState(0);
@@ -92,6 +92,16 @@ useEffect(() => {
                     </Row>
                 </Container>
             </div>
+            {isOPen && 
+                <div className="formPop">
+                    <div className="formElem">
+                        <button type='button' onClick={formCloseHandler} className="closeBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-x preview-icon"><path vectorEffect="non-scaling-stroke" d="M18 6 6 18"/><path vectorEffect="non-scaling-stroke" d="m6 6 12 12"/></svg>
+                        </button>
+                        <ContactUs />
+                    </div>
+                </div>
+            }
         </div>
     )
 }

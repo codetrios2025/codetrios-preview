@@ -24,7 +24,7 @@ const SERVICES = [
     short: "Modern, responsive, conversion-focused",
     text: "Your website should represent your business and make a first impression. We create clean, modern, mobile-friendly designs that make it easier for users to explore your services and contact you.",
     chips: ["Responsive", "UI/UX", "SEO-friendly"],
-    href: "/",
+    href: "/website-design-services",
   },
   {
     tag: "Featured Service",
@@ -32,7 +32,7 @@ const SERVICES = [
     short: "Fast, secure, scalable builds",
     text: "Need more than a basic & normal website? We build custom websites and web platforms using modern frontend and backend technologies, with a focus on performance, security, and scalability.",
     chips: ["React", "APIs", "Performance"],
-    href: "/",
+    href: "/Explore Web Development Services",
   },
   {
     tag: "Commerce & Growth",
@@ -40,7 +40,7 @@ const SERVICES = [
     short: "Stores that turn visitors into buyers",
     text: "We develop ecommerce websites that make online shopping simple and easy. From product catalogues and shopping carts to payment gateway integration, we build solutions that support your online business.",
     chips: ["Payments", "Catalog", "Checkout"],
-    href: "/",
+    href: "/ecommerce-development-services",
   },
   {
     tag: "Custom Platforms",
@@ -48,7 +48,7 @@ const SERVICES = [
     short: "Dashboards, portals and custom tools",
     text: "We develop custom web applications for businesses that need more efficient ways to manage their work. This includes dashboards, admin panels, customer portals, management systems, and API-based applications.",
     chips: ["Dashboards", "Portals", "Automation"],
-    href: "/",
+    href: "/web-application-development",
   },
   {
     tag: "UI / UX",
@@ -56,7 +56,7 @@ const SERVICES = [
     short: "From wireframe to polished interface",
     text: "Good design is about more than appearance. We create user-friendly interfaces and thoughtful digital experiences that help people navigate websites and applications with ease.",
     chips: ["Wireframes", "Prototypes", "Design systems"],
-    href: "/",
+    href: "/ui-ux-design-services",
   },
 ];
 
@@ -130,7 +130,7 @@ export default function ServicesSlider() {
                     <p>At CodeTrios, we provide website development, software development, and digital services that help businesses establish and improve their online presence.</p>
                   </div>
                   <div className="svSlider__cta" data-reveal="up">
-                    <Link to="/" className="ctBtn ct-primery-btn">
+                    <Link to="/services" className="ctBtn ct-primery-btn">
                       Explore Our Work <ArrowUpRight aria-hidden="true" size={19} />
                     </Link>
                   </div>
