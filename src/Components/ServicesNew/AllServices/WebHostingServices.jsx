@@ -562,6 +562,7 @@ export default function WebHostingService(){
                         <div className="tag">HOSTING TECHNOLOGIES & PLATFORMS </div>
                         <h2>Hosting Technologies, Platforms & Server <span>Environments</span></h2>
                         <p>We work with commonly used hosting environments and website technologies to support different business requirements.</p>
+                        <Link to="/technologies" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                       </div>
                       <div className="why_features">
                         {technologiesData.map(({ icon: Icon, title, description }) => (

@@ -601,7 +601,8 @@ export default function EcommerceDevelopmentService(){
                         <div className="sectionHead">
                           <div className="tag">OUR ECOMMERCE TECHNOLOGIES</div>
                           <h2>E-commerce <span>Technologies</span> We Use</h2>
-                          <p>Content missing</p>
+                          <p>We select technologies according to your business model, functionality and future growth requirements.</p>
+                          <Link to="/technologies" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                         </div>
                         <div className="why_features">
                           {technologiesData.map(({ icon: Icon, title, description }) => (

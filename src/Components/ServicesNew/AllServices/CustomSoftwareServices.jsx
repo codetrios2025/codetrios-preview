@@ -586,8 +586,8 @@ export default function CustomSoftwareService(){
                   <div className='sectionHead'>
                     <div className="tag">TECHNOLOGY STACK</div>
                     <h2>Technologies & Tools for <span>Custom Software</span> Development</h2>
-                    <p>We use modern design tools and frontend technologies to create attractive, responsive and user-friendly website experiences.</p>
-                    <Link to="/" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
+                    <p>We select technologies according to application requirements, performance needs and future scalability.</p>
+                    <Link to="/technologies" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                   </div>
                   <div className="technology-grid">
                     <ul className="technology-expertise__groups">

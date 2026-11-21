@@ -579,7 +579,7 @@ export default function DigitalStrategyService(){
                 <div className='weAreContent'>
                   <div className='sectionHead'>
                     <div className="tag">OUR CONSULTING SERVICES</div>
-                    <h2>Digital Strategy and Technology <span>Consulting Services</span></h2>
+                    <h2>Digital <span>Strategy and Technology</span> Consulting Services</h2>
                   </div>
                   <div className='secDetail'>
                     <p>We provide digital consulting and technology planning services to help businesses build a strong digital foundation.</p>
@@ -684,6 +684,7 @@ export default function DigitalStrategyService(){
                         <div className="tag">TECHNOLOGY & DIGITAL PLATFORMS </div>
                         <h2>Technologies & Digital Platforms We Work With</h2>
                         <p>Our recommendations are based on business requirements and the technologies suitable for each project.</p>
+                        <Link to="/technologies" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                       </div>
                       <div className="why_features">
                         {technologiesData.map(({ icon: Icon, title, description }) => (
@@ -710,7 +711,7 @@ export default function DigitalStrategyService(){
               <Col>
                 <div className='services_process_container'>
                   <div className='sectionHead'>
-                      <div className="tag">OUR CONSULTING APPROACH</div>
+                      <div className="tag">Our Process</div>
                       <h2>Our Digital Strategy Consulting <span>Process</span></h2>
                       <p>Content missing</p>
                   </div>
@@ -740,7 +741,7 @@ export default function DigitalStrategyService(){
                 <div className='services_industries_bg'>
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
-                      <h2>Digital Strategy Consulting for <span>Different Industries</span></h2>
+                      <h2>Digital Strategy Consulting <br/>for <span>Different Industries</span></h2>
                       <p>We provide digital strategy and technology consulting for businesses across different industries.</p>
                   </div>
                   <div className="industries-section">
