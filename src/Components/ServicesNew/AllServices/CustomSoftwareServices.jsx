@@ -8,24 +8,38 @@ import '../mainservices.css';
 //icon
 import {
   BriefcaseBusiness,
-  MonitorSmartphone,
-  RefreshCw,
-  PanelsTopLeft,
   ShoppingCart,
-  PenTool,
   Building2,
-  Store,
-  Images,
-  ShoppingBag,
   GraduationCap,
-  HeartPulse,
-  MousePointerClick,
-  Blocks,
   ArrowUpRight,
   Stethoscope,
   Hotel,
   Factory,
   Rocket,
+  Code2,
+  ContactRound,
+  Network,
+  Workflow,
+  PlugZap,
+  CloudCog,
+  RefreshCw,
+  LayoutDashboard,
+  Hospital,
+  UsersRound,
+  Kanban,
+  CalendarCheck,
+  ChartNoAxesCombined,
+  Target,
+  SlidersHorizontal,
+  Layers,
+  MousePointerClick,
+  Boxes,
+  Headset,
+  Monitor,
+  Server,
+  Database,
+  Smartphone,
+  Blocks, 
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -45,122 +59,215 @@ import startupsImg from '../../../assets/images/startups-img.jpg';
 import technologyImg from '../../../assets/images/technology-img.jpg';
 const Carousel = CarouselImport.default ?? CarouselImport;
 
-//website Design Services data
-const websiteDesignServices = [
+//Custom Software Services data
+const customServicesData = [
   { 
-    title: "Business Website Design", 
-    content: "Professional websites that communicate your services, establish credibility and encourage enquiries.",
+    title: "Custom Business Software Development", 
+    content: "We develop business software tailored to your organisation's workflows, helping you manage daily operations, business information, employees and customers from a centralised platform.",
     link: "/",
-    icon: BriefcaseBusiness 
+    icon: Code2 
   },
   { 
-    title: "Responsive Website Design", 
-    content: "Layouts and interactions designed to work effectively across mobile, tablet and desktop screens.",
-    link: "/",
-    icon: MonitorSmartphone 
-  },
-  { 
-    title: "Website Redesign", 
-    content: "Modernize an existing website with improved navigation, visual design, content hierarchy and user experience.",
-    link: "/",
-    icon: RefreshCw 
-  },
-  { 
-    title: "Landing Page Design", 
-    content: "Focused landing pages designed around specific campaigns, services, products or conversion goals.",
-    link: "/",
-    icon: PanelsTopLeft 
-  },
-  { 
-    title: "Ecommerce Website Design", 
-    content: "Customer-friendly storefront experiences with intuitive product discovery, shopping flows and responsive layouts.",
-    link: "/",
-    icon: ShoppingCart 
-  },
-  { 
-    title: "UI/UX Website Design", 
-    content: "Wireframes, user journeys, prototypes and interface designs that make websites easier to navigate and use.",
-    link: "/",
-    icon: PenTool 
-  },
-];
-//websiteTypes data
-const websiteTypes = [
-  { 
-    title: "Corporate Websites", 
-    content: "Structured websites for established organizations and larger businesses.",
+    title: "Enterprise Software Development", 
+    content: "Build software that supports complex business operations, multiple departments, user roles and organisational workflows.",
     link: "/",
     icon: Building2 
   },
   { 
-    title: "Small Business Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "CRM & Customer Management Solutions", 
+    content: "Manage customer information, enquiries, sales activities and business relationships through customised customer relationship management software.",
     link: "/",
-    icon: Store 
+    icon: ContactRound 
   },
   { 
-    title: "Portfolio Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "ERP & Management Software Development", 
+    content: "We develop customised management systems to connect business operations, organise information and improve workflow management.",
     link: "/",
-    icon: Images 
+    icon: Network 
   },
   { 
-    title: "Ecommerce Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Business Process Automation", 
+    content: "Reduce repetitive manual work by automating business activities, notifications, approvals and data processing through customised software.",
     link: "/",
-    icon: ShoppingBag 
+    icon: Workflow 
   },
   { 
-    title: "Educational Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "API Development & Third-Party Integration", 
+    content: "Connect different software applications and services through reliable API development and integration solutions.",
+    link: "/",
+    icon: PlugZap 
+  },
+  { 
+    title: "SaaS & Custom Application Development", 
+    content: "Develop software products and browser-based platforms designed around your business model, users and application requirements.",
+    link: "/",
+    icon: CloudCog 
+  },
+  { 
+    title: "Software Modernisation & Maintenance", 
+    content: "Improve existing applications through technology upgrades, code improvements, database optimisation and ongoing software maintenance.",
+    link: "/",
+    icon: RefreshCw 
+  },
+  
+  
+];
+//Custom Software type data
+const customServicesTypes = [
+  { 
+    title: "Business Management Systems", 
+    content: "Manage business activities, employees, customers, tasks and operational information through customised software.",
+    link: "/",
+    icon: LayoutDashboard 
+  },
+  { 
+    title: "School Management Software", 
+    content: "Digital solutions for student records, admissions, attendance, fees, communication and school administration.",
     link: "/",
     icon: GraduationCap 
   },
   { 
-    title: "Healthcare Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Hospital & Healthcare Management Software", 
+    content: "Applications for appointment management, doctor information, patient records and healthcare operations.",
     link: "/",
-    icon: HeartPulse 
+    icon: Hospital 
   },
   { 
-    title: "Landing Pages", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Inventory & Stock Management Software", 
+    content: "Track products, stock levels, purchases, orders and inventory activities through a centralised system.",
     link: "/",
-    icon: MousePointerClick 
+    icon: UsersRound 
   },
   { 
-    title: "CMS-Based Websites",
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Customer & Employee Portals", 
+    content: "Create secure portals where customers, employees and business partners can access relevant information and services.",
     link: "/",
-    icon: Blocks 
+    icon: UsersRound 
+  },
+  { 
+    title: "Project & Task Management Software", 
+    content: "Manage projects, assign tasks, track progress and organise team activities.",
+    link: "/",
+    icon: Kanban 
+  },
+  { 
+    title: "Booking & Appointment Systems", 
+    content: "Develop customised booking platforms for appointments, reservations and service scheduling.",
+    link: "/",
+    icon: CalendarCheck 
+  },
+  { 
+    title: "Reporting & Analytics Dashboards", 
+    content: "Organise business data into useful reports, performance summaries and management dashboards.",
+    link: "/",
+    icon: ChartNoAxesCombined 
+  },
+];
+//whyChoose data
+const whyChooseData = [
+  {
+    icon: Target,
+    title: "Solutions Built Around Your Business",
+    description:"We develop software based on your workflows, business requirements and operational challenges.",
+  },
+  {
+    icon: SlidersHorizontal,
+    title: "Customised Features & Functionality",
+    description:"Get the features your business needs instead of adjusting your processes to fit generic software.",
+  },
+  {
+    icon: Layers,
+    title: "Modern Technology Stack",
+    description:"We use technologies such as React, Node.js, PHP, MySQL and MongoDB according to project requirements.",
+  },
+  {
+    icon: MousePointerClick,
+    title: "Easy-to-Use Interfaces",
+    description:"We focus on intuitive application design, organised dashboards and user-friendly workflows.",
+  },
+  {
+    icon: Network,
+    title: "Connected Business Systems",
+    description:"Integrate APIs, databases, payment gateways and third-party applications to connect your business operations.",
+  },
+  {
+    icon: Boxes,
+    title: "Scalable Software Architecture",
+    description:"Build applications that can be extended with additional features, users and integrations as your requirements grow.",
+  },
+  {
+    icon: Headset,
+    title: "Development & Technical Support",
+    description:"Get assistance throughout the development process, deployment and agreed maintenance period.",
+  },
+ 
+];
+// technologies we work data
+const technologyGroups = [
+  {
+    title: "Frontend Development",
+    icon: Monitor,
+    technologies: ["React.js", "HTML5", "CSS3", "Bootstrap", "JavaScript", "jQuery"],
+  },
+  {
+    title: "Backend Development",
+    icon: Server,
+    technologies: ["Node.js", "Express.js", "PHP", "REST API Development"],
+  },
+  {
+    title: "Database Management",
+    icon: Database,
+    technologies: ["MySQL", "MongoDB"],
+  },
+  {
+    title: "Mobile Application Development",
+    icon: Smartphone,
+    technologies: ["React Native"],
+  },
+  {
+    title: "CMS & Platform Integration",
+    icon: Blocks,
+    technologies: ["WordPress", "Drupal"],
   },
 ];
 // Our Process Data
 const processData = [
   {
     number: "01",
-    title: "Discover",
-    description:
-      "We understand your business goals, audience, and requirements to create a clear project roadmap.",
+    title: "Requirement Analysis",
+    description:"Understand your business, existing processes, challenges and software requirements.",
   },
   {
     number: "02",
-    title: "Design & Build",
-    description:
-      "We design intuitive interfaces and develop scalable, high-performance digital solutions.",
+    title: "Planning & Architecture",
+    description:"Define application features, database structure, user roles, integrations and technical architecture.",
   },
   {
     number: "03",
-    title: "Review & Launch",
-    description:
-      "We test, refine, and launch your solution to ensure quality, performance, and reliability.",
+    title: "UI/UX Design",
+    description:"Create user-friendly interfaces, wireframes and application layouts based on user requirements.",
   },
   {
     number: "04",
-    title: "Support & Maintenance",
-    description:
-      "We provide ongoing technical support, updates, security monitoring, and performance optimization to keep your digital solutions running smoothly.",
+    title: "Software Development",
+    description:"Develop frontend interfaces, backend functionality, databases and required integrations.",
   },
+  {
+    number: "05",
+    title: "Testing & Optimisation",
+    description:"Test application functionality, usability, performance and security before deployment.",
+  },
+  {
+    number: "06",
+    title: "Deployment & Launch",
+    description:"Deploy the completed application to the selected hosting or server environment.",
+  },
+  {
+    number: "07",
+    title: "Maintenance & Support",
+    description:"Provide technical assistance, updates, bug fixes and improvements as agreed for the project.",
+  },
+  
 ];
 //industries Data
 const industriesData = [
@@ -168,28 +275,28 @@ const industriesData = [
     number : "01",
     icon: GraduationCap,
     title: "Education",
-    text: "Learning platforms, school and college websites, student portals.",
+    text: "School management systems, admission portals and student applications.",
     img: eduImg,
   },
   {
     number : "02",
     icon: Stethoscope,
     title: "Healthcare",
-    text: "Hospital websites, appointment systems, patient management solutions.",
+    text: "Hospital management, appointment booking and patient portals.",
     img: healthcareImg,
   },
   {
     number : "03",
     icon: ShoppingCart,
-    title: "E-commerce",
-    text: "Online stores, secure payments, product catalogs and shopping experiences.",
+    title: "E-commerce & Retail",
+    text: "Inventory, order management and ecommerce integrations.",
     img: ecomImg,
   },
   {
     number : "04",
     icon: Building2,
     title: "Real Estate",
-    text: "Property websites, listing portals, lead generation and virtual experiences.",
+    text: "Property management and lead management systems.",
     img: estateImg,
   },
   {
@@ -202,66 +309,74 @@ const industriesData = [
   {
     number : "06",
     icon: Factory,
-    title: "Manufacturing",
-    text: "Business websites, production workflows, automation and operational software.",
-    img: manufacturingImg,
+    title: "Logistics & Transportation",
+    text: "Shipment tracking and fleet management applications.",
+    img: "Need image",
   },
   {
     number : "07",
     icon: Rocket,
     title: "Startups",
-    text: "MVP development, scalable platforms and digital products for growing businesses.",
+    text: "MVP development, SaaS products and custom business applications.",
     img: startupsImg,
   },
   {
     number : "08",
     icon: BriefcaseBusiness,
     title: "Corporate & Technology",
-    text: "Corporate websites, custom software, web applications and digital transformation.",
+    text: "Business applications, CRM and enterprise software.",
     img: technologyImg,
   },
 ]
 //FAQ data
 const faqs = [
   {
-      question: "What does a web development company do?",
-      answer: "A web development company builds and maintains websites and web applications, including frontend interfaces, backend systems, databases, APIs, integrations, testing, deployment, and ongoing technical support."
+      question: "What is custom software development?",
+      answer: "Custom software development is the process of designing and building software specifically for a business's requirements, workflows and operational needs."
   },
   {
-      question: "How much do web development services cost in India?",
-      answer: "The cost of web development depends on factors such as project complexity, required features, technology, integrations, design requirements, content management needs, and ongoing support. CodeTrios provides project-specific estimates based on business and technical requirements."
+      question: "What types of custom software does CodeTrios develop?",
+      answer: "CodeTrios develops business management systems, CRM, ERP, dashboards, customer portals, SaaS applications, workflow automation systems and custom web applications."
   },
   {
-      question: "How long does it take to develop a website?",
-      answer: "Website development timelines depend on the size and complexity of the project. A simple business website may take a few weeks, while custom websites and web applications with advanced functionality, integrations, or workflows can take longer."
+      question: "How much does custom software development cost in India?",
+      answer: "The cost depends on application features, complexity, technology, integrations, database requirements and development time. Contact CodeTrios to discuss your requirements and receive a project estimate."
   },
   {
-      question: "Do you develop SEO-friendly websites?",
-      answer: "Yes. CodeTrios follows SEO-friendly development practices such as responsive design, clean site structure, performance optimization, crawlable content, proper technical implementation, and structured data where appropriate."
+      question: "What is the difference between custom software and ready-made software?",
+      answer: "Ready-made software provides standard features for multiple businesses, whereas custom software is developed around specific business processes and requirements."
   },
   {
-      question: "What is the difference between web design and web development?",
-      answer: "Web design focuses on visual appearance, layout, branding, and user experience, while web development focuses on building the frontend and backend functionality that makes a website or web application work."
+      question: "Can you develop software according to our business requirements?",
+      answer: "Yes. We analyse your requirements and develop software with suitable features, workflows, user roles and integrations."
   },
   {
-      question: "Does CodeTrios provide custom web development?",
-      answer: "Yes. CodeTrios provides custom web development for businesses and organizations that require specific functionality, integrations, workflows, or application features."
+      question: "Can custom software integrate with existing applications?",
+      answer: "Yes. We can integrate applications with APIs, payment gateways, databases, CRM, ERP and other third-party platforms where supported."
   },
   {
-      question: "Which technologies does CodeTrios use?",
-      answer: "Depending on project requirements, CodeTrios works with technologies including React.js, Node.js, PHP, WordPress, Drupal, Strapi, APIs, databases, and modern web development tools."
+      question: "Does CodeTrios develop CRM and ERP software?",
+      answer: "Yes. We develop customised CRM and ERP-related applications for customer management, business operations, inventory and reporting."
   },
   {
-      question: "Can CodeTrios develop an existing website further?",
-      answer: "Yes. Existing websites can be extended with new features, integrations, performance improvements, redesigns, CMS functionality, and other technical enhancements."
+      question: "Can you automate our business processes?",
+      answer: "Yes. We can develop workflow automation solutions for approvals, notifications, data processing and repetitive business activities."
   },
   {
-      question: "Does CodeTrios provide website maintenance?",
-      answer: "Yes. Website maintenance can include updates, security improvements, backups, bug fixes, performance optimization, monitoring, and feature enhancements."
+      question: "Which technologies are used for custom software development?",
+      answer: "We work with React.js, Node.js, Express.js, PHP, MySQL, MongoDB, JavaScript and other technologies based on project requirements."
   },
   {
-      question: "Can CodeTrios build scalable web applications?",
-      answer: "Yes. CodeTrios develops scalable web applications using appropriate frontend, backend, database, API, and hosting architecture based on project requirements."
+      question: "How long does custom software development take?",
+      answer: "The timeline depends on project size, features, integrations and complexity. We define an estimated development schedule after understanding your requirements."
+  },
+  {
+      question: "Do you provide software maintenance and support?",
+      answer: "Yes. We provide technical support, application updates, bug fixes and maintenance according to the agreed project scope."
+  },
+  {
+      question: "Does CodeTrios provide custom software development services across India?",
+      answer: "Yes. CodeTrios is based in India and works with businesses in Delhi NCR and other locations across the country."
   },
 ]
 
@@ -269,21 +384,27 @@ const faqs = [
 const relatedServices = [
   {
     title: "Website Design",
-    content:"Create professional, responsive and conversion-focused websites with modern UI design and intuitive user experiences.",
+    content:"Creative UI/UX, graphic and interface design that strengthens your brand identity.",
     link: "/website-design-services",
     linkTitle: "Explore Website Design Services",
   },
   {
-    title: "Ecommerce Development",
-    content:"Build high-performing online stores with responsive design, secure payments and ecommerce integrations.",
-    link: "/ecommerce-development-services",
-    linkTitle: "Explore Ecommerce Development Services",
+    title: "Web Development",
+    content:"Custom, responsive and scalable websites built with modern frontend and backend technologies.",
+    link: "/web-development-services",
+    linkTitle: "Explore Web Development Services",
   },
   {
-    title: "Web Application Development",
-    content:"Develop secure and scalable web applications that streamline business processes and improve digital experiences.",
+    title: "Web Applications",
+    content:"Powerful web applications designed to simplify business operations and improve productivity.",
     link: "/web-application-development",
     linkTitle: "Explore Web Application Development",
+  },
+    {
+    title: "eCommerce Solutions",
+    content:"Feature-rich online stores with product management, secure payments and seamless shopping experiences.",
+    link: "/ecommerce-development-services",
+    linkTitle: "Explore Ecommerce Development Services",
   },  
   {
     title: "UI/UX Design",
@@ -292,12 +413,19 @@ const relatedServices = [
     linkTitle: "Explore UI/UX Design Services",
   },
   {
-    title: "Custom Software Development",
-    content:"Develop custom software solutions that automate workflows, solve business challenges and support long-term growth.",
-    link: "/custom-software-solutions",
-    linkTitle: "Explore Custom Software Solutions",
+    title: "Web Hosting Service",
+    content:"Reliable hosting, server setup, website deployment and ongoing technical support.",
+    link: "/web-hosting-services",
+    linkTitle: "Explore Web Hosting Service",
   },
+  {
+    title: "GEO & SEO Services",
+    content:"Improve Google rankings and AI search visibility through SEO, content optimisation and Generative Engine Optimisation.",
+    link: "/geo-seo-services",
+    linkTitle: "Explore GEO & SEO Services",
+  },         
 ];
+
 
 
 export default function CustomSoftwareService(){
@@ -341,9 +469,9 @@ export default function CustomSoftwareService(){
             <Row>
               <Col>
                 <div className='innerBannerContent'>
-                  <div className="tag">Our Services</div>
+                  <div className="tag">Our Custom Software Services</div>
                   <h1>Custom Software Development Company in India</h1>
-                  <p>CodeTrios is a web development company in India helping businesses, startups, organizations, and growing brands build fast, secure, and scalable websites and web applications. We combine modern frontend and backend technologies, responsive development, performance optimization, and maintainable architecture to create digital platforms designed around real business requirements.</p>
+                  <p>CodeTrios is a custom software development company in India, helping businesses build digital solutions tailored to their operations, workflows and business goals. We design and develop custom business applications, enterprise software, automation systems, API integrations and scalable technology solutions. Whether you want to automate business operations, develop a management system, connect existing applications or build software from scratch, we create solutions based on Best Custom Software Development Company in Indiayour specific requirements.</p>
                   <div className='actionRow'>
                     <ActionButton />
                   </div>
@@ -358,13 +486,12 @@ export default function CustomSoftwareService(){
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
-                    <div className="tag">WHAT WE DESIGN</div>
-                    <h2>Website Design Services Built Around Your <span>Business Goals</span></h2>
+                    <div className="tag">WHAT WE DEVELOP</div>
+                    <h2>Our Custom Software Development Services</h2>
                   </div>
                   <div className='secDetail'>
-                    <p>Our website design services cover the complete design journey, from understanding your business and audience to creating the visual interface and preparing a scalable design system for development. We design websites for companies, startups, institutions, professional organizations, and growing brands.</p>
-                    <p>Our approach focuses on responsive UI/UX, clear information architecture, mobile-first experiences, fast-loading pages, accessibility, SEO-friendly structure, and conversion-focused layouts. The result is a website that is easier for visitors to navigate and easier for businesses to manage and grow.</p>
-                    <p>Depending on your requirements, CodeTrios can design corporate websites, business websites, ecommerce stores, landing pages, WordPress websites, and redesigned digital experiences. Once the design is finalized, our web development services can turn the approved designs into fast, responsive, and scalable websites.</p>
+                    <p>Need more content</p>
+                    <p>We provide custom software development services to help businesses simplify operations, improve productivity and manage their processes through technology.</p>
                   </div>
                 </div>
               </Col>
@@ -372,7 +499,7 @@ export default function CustomSoftwareService(){
             <Row>
               <Col>
                 <div className="benefitGrid">
-                  {websiteDesignServices.map((item, index) =>{
+                  {customServicesData.map((item, index) =>{
                     const IconComponent = item.icon;
                     return(
                       <div className="benefitCard" key={index} data-reveal="up">
@@ -381,7 +508,7 @@ export default function CustomSoftwareService(){
                             <IconComponent aria-hidden="true" />
                           </div>
                         </div>
-                        <h3><Link to={item.link}>{item.title}</Link></h3>
+                        <h3>{item.title}</h3>
                         <p>{item.content}</p>
                         <span className='benefitGo'><ArrowUpRight /></span>
                       </div>
@@ -397,12 +524,12 @@ export default function CustomSoftwareService(){
               <Row>
                 <Col>
                   <div className='sectionHead'>
-                    <div className="tag">Types of Websites We Design</div>
-                    <h2>Website Design for Every <span>Business Need</span></h2>
-                    <p className='halfWidth'>Different businesses need different website experiences. CodeTrios designs websites around their purpose, content, audience and functionality.</p>
+                    <div className="tag">TYPES OF SOFTWARE WE DEVELOP</div>
+                    <h2>Custom Software Solutions for <br/><span>Different Business</span></h2>
+                    <p className='halfWidth'>Content Missing</p>
                   </div>
                   <div className="benefitGrid">
-                    {websiteTypes.map((item, index) =>{
+                    {customServicesTypes.map((item, index) =>{
                       const IconComponent = item.icon;
                       return(
                         <div className="benefitCard" key={index} data-reveal="up">
@@ -421,8 +548,84 @@ export default function CustomSoftwareService(){
               </Row>
             </Container>
         </div>
+        {/* Why businesses choose */}
+        <div className='whyChooseUs block-mg-top'>
+          <Container>
+            <Row>
+              <Col>
+                  <div className='why_container'>
+                      <div className="sectionHead">
+                        <div className="tag">Why businesses choose CodeTrios</div>
+                        <h2>Why Choose CodeTrios for <span>Custom Software</span> Development?</h2>
+                        <p>Choosing the right software development partner helps ensure your technology supports your actual business requirements. CodeTrios combines business understanding, modern development technologies and practical software solutions.</p>
+                      </div>
+                      <div className="why_features">
+                        {whyChooseData.map(({ icon: Icon, title, description }) => (
+                          <div className="features_box" key={title}>
+                            <div className="features_icon" aria-hidden="true">
+                              <Icon size={25} strokeWidth={1.7} />
+                            </div>
+                            <div className="feature_content">
+                              <h3>{title}</h3>
+                              <p>{description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                  </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        {/* Technologies we work */}
+        <div className='technologyStack block-mg-top' aria-labelledby="technology-expertise-title">
+          <Container>
+            <Row>
+              <Col>
+                <div className="technology-layout">
+                  <div className='sectionHead'>
+                    <div className="tag">TECHNOLOGY STACK</div>
+                    <h2>Technologies & Tools for <span>Custom Software</span> Development</h2>
+                    <p>We use modern design tools and frontend technologies to create attractive, responsive and user-friendly website experiences.</p>
+                    <Link to="/" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
+                  </div>
+                  <div className="technology-grid">
+                    <ul className="technology-expertise__groups">
+                      {technologyGroups.map(({ title, icon: Icon, technologies }) => (
+                        <li className="technology-expertise__group" key={title}>
+                          <Icon
+                            className="technology-expertise__icon"
+                            size={44}
+                            strokeWidth={1.5}
+                            aria-hidden="true"
+                          />
 
-        {/* Our Process */}
+                          <div className="technology-expertise__group-content">
+                            <h3 className="technology-expertise__group-title">
+                              {title}
+                            </h3>
+
+                            <ul className="technology-expertise__tags">
+                              {technologies.map((technology) => (
+                                <li
+                                  className="technology-expertise__tag"
+                                  key={technology}
+                                >
+                                  {technology}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        {/* Our Process */} 
         <div className='services_process blockPadding'> 
           <Container>
             <Row>
@@ -430,8 +633,8 @@ export default function CustomSoftwareService(){
                 <div className='services_process_container'>
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
-                      <h2>A clear path from <span>idea to launch</span></h2>
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <h2>Our Custom Software Development <span>Process</span></h2>
+                      <p>Content missing</p>
                   </div>
                   <div className='services_process_grid'>
                     {processData.map((item) => {
@@ -460,7 +663,7 @@ export default function CustomSoftwareService(){
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
                       <h2>Industries <span>We Serve</span></h2>
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <p>CodeTrios develops custom software solutions for businesses and organisations across different industries.</p>
                   </div>
                   <div className="industries-section">
                     <Carousel
@@ -497,25 +700,7 @@ export default function CustomSoftwareService(){
             </Row>
           </Container>
         </div>
-        {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
-          <Container>
-            <Row>
-              <Col>
-                  <div className='why_container'>
-                      <div className="sectionHead">
-                        <div className="tag">Why businesses choose CodeTrios</div>
-                        <h2>Digital Solutions Built Around Your {" "}<span>Goals</span></h2>
-                        <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
-                      </div>
-                      <div className="why_features">
-                        
-                      </div>
-                  </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+        
         {/* Related Services */}
         <div className='related-services'>
           <Container>
@@ -551,7 +736,7 @@ export default function CustomSoftwareService(){
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our Web <span>Development & Digital</span> Services</h2>
+                          <h2>Questions About Our <span>Custom Software</span> Development</h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>

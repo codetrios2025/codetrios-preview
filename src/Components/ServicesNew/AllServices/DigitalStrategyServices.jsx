@@ -8,24 +8,37 @@ import '../mainservices.css';
 //icon
 import {
   BriefcaseBusiness,
-  MonitorSmartphone,
   RefreshCw,
-  PanelsTopLeft,
   ShoppingCart,
-  PenTool,
   Building2,
-  Store,
-  Images,
-  ShoppingBag,
   GraduationCap,
-  HeartPulse,
-  MousePointerClick,
   Blocks,
   ArrowUpRight,
   Stethoscope,
   Hotel,
   Factory,
   Rocket,
+  Compass,
+  Globe,
+  Cpu,
+  Workflow,
+  SearchCheck,
+  Layers,
+  Gauge,
+  Bot,
+  Code2,
+  Code,
+  ServerCog,
+  FileCode2,
+  Database,
+  BarChart3,
+  Search,
+  MapPin,
+  Sparkles,
+  Target,
+  Wrench,
+  Map,
+  TrendingUp,
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -45,121 +58,300 @@ import startupsImg from '../../../assets/images/startups-img.jpg';
 import technologyImg from '../../../assets/images/technology-img.jpg';
 const Carousel = CarouselImport.default ?? CarouselImport;
 
-//website Design Services data
-const websiteDesignServices = [
-  { 
-    title: "Business Website Design", 
-    content: "Professional websites that communicate your services, establish credibility and encourage enquiries.",
+//Digital Strategy Services data
+const digitalServicesData = [
+  {
+    title: "Digital Transformation Consulting",
+    content: "Plan and implement digital solutions that improve business operations, reduce manual work and support organisational growth.",
     link: "/",
-    icon: BriefcaseBusiness 
+    icon: Compass,
+    offer: [
+      "Digital transformation planning",
+      "Business process analysis",
+      "Technology adoption strategy",
+      "Digital workflow improvement",
+      "Existing system modernisation",
+    ],
   },
-  { 
-    title: "Responsive Website Design", 
-    content: "Layouts and interactions designed to work effectively across mobile, tablet and desktop screens.",
+  {
+    title: "Website & Digital Presence Strategy",
+    content: "Plan an effective online presence with the right website structure, content strategy, user experience and digital platforms.",
     link: "/",
-    icon: MonitorSmartphone 
+    icon: Globe,
+    offer: [
+      "Website planning and consultation",
+      "Website structure and navigation strategy",
+      "Website redesign recommendations",
+      "Content organisation",
+      "Digital presence improvement",
+    ],
   },
-  { 
-    title: "Website Redesign", 
-    content: "Modernize an existing website with improved navigation, visual design, content hierarchy and user experience.",
+  {
+    title: "Technology Consulting",
+    content: "Choose suitable technologies and development approaches based on your business goals, application requirements and technical needs.",
     link: "/",
-    icon: RefreshCw 
+    icon: Cpu,
+    offer: [
+      "Technology stack recommendations",
+      "Software architecture planning",
+      "CMS selection and consultation",
+      "Frontend and backend technology planning",
+      "Database and API integration strategy",
+    ],
   },
-  { 
-    title: "Landing Page Design", 
-    content: "Focused landing pages designed around specific campaigns, services, products or conversion goals.",
+  {
+    title: "Business Process Automation Consulting",
+    content: "Identify repetitive business activities and plan software solutions that improve efficiency and reduce manual effort.",
     link: "/",
-    icon: PanelsTopLeft 
+    icon: Workflow,
+    offer: [
+      "Workflow analysis",
+      "Automation opportunities",
+      "Business software planning",
+      "System integration recommendations",
+      "Custom application planning",
+    ],
   },
-  { 
-    title: "Ecommerce Website Design", 
-    content: "Customer-friendly storefront experiences with intuitive product discovery, shopping flows and responsive layouts.",
+  {
+    title: "SEO, GEO & AI Search Strategy",
+    content: "Improve your digital visibility by creating strategies for traditional search engines, local search and AI-powered search experiences.",
     link: "/",
-    icon: ShoppingCart 
+    icon: SearchCheck,
+    offer: [
+      "SEO strategy and keyword research",
+      "Website content planning",
+      "Local SEO recommendations",
+      "Generative Engine Optimisation (GEO)",
+      "Answer Engine Optimisation (AEO)",
+      "AI search visibility planning",
+    ],
   },
-  { 
-    title: "UI/UX Website Design", 
-    content: "Wireframes, user journeys, prototypes and interface designs that make websites easier to navigate and use.",
+  {
+    title: "Digital Product & Application Consulting",
+    content: "Plan websites, mobile applications and custom software products according to your business requirements and target users.",
     link: "/",
-    icon: PenTool 
+    icon: Layers,
+    offer: [
+      "Digital product planning",
+      "Application feature planning",
+      "MVP development consultation",
+      "User journey planning",
+      "Software requirement analysis",
+    ],
+  },
+  {
+    title: "Website Performance & Optimisation Consulting",
+    content: "Identify opportunities to improve website speed, usability, accessibility and technical performance.",
+    link: "/",
+    icon: Gauge,
+    offer: [
+      "Website performance analysis",
+      "Page speed recommendations",
+      "Mobile usability improvements",
+      "Technical SEO recommendations",
+      "Website improvement planning",
+    ],
+  },
+  {
+    title: "AI & Business Technology Consulting",
+    content: "Explore practical ways to use AI and modern technologies to improve customer interactions and business processes.",
+    link: "/",
+    icon: Bot,
+    offer: [
+      "AI integration planning",
+      "Chatbot and conversational AI consultation",
+      "Business automation opportunities",
+      "AI-powered application planning",
+      "Third-party tool integration strategy",
+    ],
   },
 ];
-//websiteTypes data
-const websiteTypes = [
-  { 
-    title: "Corporate Websites", 
-    content: "Structured websites for established organizations and larger businesses.",
+//Digital Consulting data
+const DigitalConsultingTypes = [
+  {
+    title: "Business Digital Transformation",
+    content: "Plan digital improvements that help businesses modernise operations and adopt suitable technologies.",
     link: "/",
-    icon: Building2 
+    icon: Building2,
   },
-  { 
-    title: "Small Business Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+  {
+    title: "Website & Online Presence Planning",
+    content: "Develop a clear website strategy to improve brand visibility, customer engagement and online enquiries.",
     link: "/",
-    icon: Store 
+    icon: Globe,
   },
-  { 
-    title: "Portfolio Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+  {
+    title: "Software & Application Planning",
+    content: "Identify the right software features, technologies and architecture before starting development.",
     link: "/",
-    icon: Images 
+    icon: Code2,
   },
-  { 
-    title: "Ecommerce Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+  {
+    title: "SEO & AI Search Strategy",
+    content: "Improve online discoverability through search optimisation, useful content and AI search visibility planning.",
     link: "/",
-    icon: ShoppingBag 
+    icon: SearchCheck,
   },
-  { 
-    title: "Educational Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+  {
+    title: "Business Automation Strategy",
+    content: "Identify manual workflows that can be improved through custom applications, integrations and automation.",
     link: "/",
-    icon: GraduationCap 
+    icon: Workflow,
   },
-  { 
-    title: "Healthcare Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+  {
+    title: "Digital Product Development Planning",
+    content: "Turn business ideas into structured digital products with defined features, user journeys and development roadmaps.",
     link: "/",
-    icon: HeartPulse 
+    icon: Rocket,
   },
-  { 
-    title: "Landing Pages", 
-    content: "Websites designed for companies that need a professional digital presence.",
+  {
+    title: "Technology Modernisation",
+    content: "Review existing websites and applications and plan practical upgrades to improve performance, usability and maintainability.",
     link: "/",
-    icon: MousePointerClick 
+    icon: RefreshCw,
   },
-  { 
-    title: "CMS-Based Websites",
-    content: "Websites designed for companies that need a professional digital presence.",
+  {
+    title: "AI Adoption Strategy",
+    content: "Identify suitable opportunities to integrate AI tools, chatbots and automation into business operations.",
     link: "/",
-    icon: Blocks 
+    icon: Bot,
+  },
+];
+//whyChoose data
+const whyChooseData = [
+  {
+    icon: Target,
+    title: "Business-Focused Recommendations",
+    description:
+      "We understand your business objectives before recommending websites, applications or technology solutions.",
+  },
+  {
+    icon: Wrench,
+    title: "Practical Technical Expertise",
+    description:
+      "Our experience across frontend, backend, CMS and database technologies helps us recommend suitable development approaches.",
+  },
+  {
+    icon: Compass,
+    title: "Complete Digital Perspective",
+    description:
+      "We consider website design, development, user experience, SEO, GEO and technology integration together.",
+  },
+  {
+    icon: Map,
+    title: "Customised Digital Roadmaps",
+    description:
+      "We recommend solutions based on your business requirements rather than generic technology plans.",
+  },
+  {
+    icon: Cpu,
+    title: "Modern Technology & AI Awareness",
+    description:
+      "We help businesses explore useful AI tools, automation and emerging digital technologies.",
+  },
+  {
+    icon: Layers,
+    title: "Strategy with Implementation Understanding",
+    description:
+      "Our development background helps us connect planning with practical implementation requirements.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Support for Growing Businesses",
+    description:
+      "We help startups, small businesses and established organisations plan their next digital improvements.",
+  },
+];
+// technologies we work data
+const technologiesData = [
+  {
+    icon: Code,
+    title: "React.js",
+    description: "Modern website and application interfaces.",
+  },
+  {
+    icon: ServerCog,
+    title: "Node.js & Express.js",
+    description: "Backend application development and APIs.",
+  },
+  {
+    icon: FileCode2,
+    title: "PHP",
+    description: "Custom software and server-side development.",
+  },
+  {
+    icon: Blocks,
+    title: "WordPress & Elementor",
+    description: "CMS websites and content management.",
+  },
+  {
+    icon: Layers,
+    title: "Drupal",
+    description: "Content-rich websites and structured digital platforms.",
+  },
+  {
+    icon: Database,
+    title: "MySQL & MongoDB",
+    description: "Database solutions.",
+  },
+  {
+    icon: BarChart3,
+    title: "Google Analytics 4",
+    description: "Website traffic and user behaviour analysis.",
+  },
+  {
+    icon: Search,
+    title: "Google Search Console",
+    description: "Search performance and indexing analysis.",
+  },
+  {
+    icon: MapPin,
+    title: "Google Business Profile",
+    description: "Local online presence management.",
+  },
+  {
+    icon: Sparkles,
+    title: "SEO & AI Tools",
+    description: "Keyword research, content optimisation and AI-assisted workflows.",
   },
 ];
 // Our Process Data
 const processData = [
   {
     number: "01",
-    title: "Discover",
+    title: "Understanding Your Business",
     description:
-      "We understand your business goals, audience, and requirements to create a clear project roadmap.",
+      "We understand your business model, objectives, target audience and current digital challenges.",
   },
   {
     number: "02",
-    title: "Design & Build",
+    title: "Digital & Technical Assessment",
     description:
-      "We design intuitive interfaces and develop scalable, high-performance digital solutions.",
+      "We review your existing websites, applications, technology infrastructure and online presence.",
   },
   {
     number: "03",
-    title: "Review & Launch",
+    title: "Opportunity & Requirement Analysis",
     description:
-      "We test, refine, and launch your solution to ensure quality, performance, and reliability.",
+      "We identify areas for improvement, technology opportunities and potential digital solutions.",
   },
   {
     number: "04",
-    title: "Support & Maintenance",
+    title: "Strategy & Roadmap Planning",
     description:
-      "We provide ongoing technical support, updates, security monitoring, and performance optimization to keep your digital solutions running smoothly.",
+      "We prepare a practical roadmap covering recommended solutions, priorities, technologies and implementation steps.",
+  },
+  {
+    number: "05",
+    title: "Implementation Planning",
+    description:
+      "We define the development requirements, integrations, resources and timelines needed to execute the strategy.",
+  },
+  {
+    number: "06",
+    title: "Monitoring & Improvement",
+    description:
+      "We review results and recommend improvements based on business goals, user feedback and performance.",
   },
 ];
 //industries Data
@@ -168,28 +360,28 @@ const industriesData = [
     number : "01",
     icon: GraduationCap,
     title: "Education",
-    text: "Learning platforms, school and college websites, student portals.",
+    text: "Digital school platforms, admission systems and learning solutions.",
     img: eduImg,
   },
   {
     number : "02",
     icon: Stethoscope,
     title: "Healthcare",
-    text: "Hospital websites, appointment systems, patient management solutions.",
+    text: "Hospital websites, patient platforms and appointment systems.",
     img: healthcareImg,
   },
   {
     number : "03",
     icon: ShoppingCart,
-    title: "E-commerce",
-    text: "Online stores, secure payments, product catalogs and shopping experiences.",
+    title: "E-commerce & Retail",
+    text: "Online store strategy, ecommerce platforms and customer experience.",
     img: ecomImg,
   },
   {
     number : "04",
     icon: Building2,
     title: "Real Estate",
-    text: "Property websites, listing portals, lead generation and virtual experiences.",
+    text: "Property portals, lead generation and digital marketing strategy.",
     img: estateImg,
   },
   {
@@ -203,87 +395,102 @@ const industriesData = [
     number : "06",
     icon: Factory,
     title: "Manufacturing",
-    text: "Business websites, production workflows, automation and operational software.",
+    text: "Business process automation and operational software planning.",
     img: manufacturingImg,
   },
   {
     number : "07",
     icon: Rocket,
     title: "Startups",
-    text: "MVP development, scalable platforms and digital products for growing businesses.",
+    text: "Digital product strategy, MVP planning and technology selection.",
     img: startupsImg,
   },
   {
     number : "08",
     icon: BriefcaseBusiness,
     title: "Corporate & Technology",
-    text: "Corporate websites, custom software, web applications and digital transformation.",
+    text: "Digital transformation, business applications and software planning.",
     img: technologyImg,
   },
 ]
 //FAQ data
 const faqs = [
   {
-      question: "What does a web development company do?",
-      answer: "A web development company builds and maintains websites and web applications, including frontend interfaces, backend systems, databases, APIs, integrations, testing, deployment, and ongoing technical support."
+    question: "What is digital strategy consulting?",
+    answer:
+      "Digital strategy consulting helps businesses plan how to use websites, software, digital platforms and modern technologies to achieve their business goals.",
   },
   {
-      question: "How much do web development services cost in India?",
-      answer: "The cost of web development depends on factors such as project complexity, required features, technology, integrations, design requirements, content management needs, and ongoing support. CodeTrios provides project-specific estimates based on business and technical requirements."
+    question: "Why does my business need a digital strategy?",
+    answer:
+      "A digital strategy helps businesses identify the right technology investments, improve online visibility, streamline processes and plan digital growth.",
   },
   {
-      question: "How long does it take to develop a website?",
-      answer: "Website development timelines depend on the size and complexity of the project. A simple business website may take a few weeks, while custom websites and web applications with advanced functionality, integrations, or workflows can take longer."
+    question: "What digital consulting services does CodeTrios provide?",
+    answer:
+      "CodeTrios provides website strategy, technology consulting, digital transformation planning, business automation consulting, SEO and GEO strategy, and digital product planning.",
   },
   {
-      question: "Do you develop SEO-friendly websites?",
-      answer: "Yes. CodeTrios follows SEO-friendly development practices such as responsive design, clean site structure, performance optimization, crawlable content, proper technical implementation, and structured data where appropriate."
+    question: "Does CodeTrios provide digital transformation consulting in India?",
+    answer:
+      "Yes. CodeTrios helps businesses in India identify digital opportunities, modernise existing systems and plan technology-driven improvements.",
   },
   {
-      question: "What is the difference between web design and web development?",
-      answer: "Web design focuses on visual appearance, layout, branding, and user experience, while web development focuses on building the frontend and backend functionality that makes a website or web application work."
+    question: "Can CodeTrios help plan a new website or web application?",
+    answer:
+      "Yes. We help define project requirements, website structure, application features, technology selection and development roadmaps.",
   },
   {
-      question: "Does CodeTrios provide custom web development?",
-      answer: "Yes. CodeTrios provides custom web development for businesses and organizations that require specific functionality, integrations, workflows, or application features."
+    question: "Does digital strategy include SEO and GEO?",
+    answer:
+      "Yes. Digital strategy can include search engine optimisation, local SEO, content planning, generative engine optimisation and answer engine optimisation.",
   },
   {
-      question: "Which technologies does CodeTrios use?",
-      answer: "Depending on project requirements, CodeTrios works with technologies including React.js, Node.js, PHP, WordPress, Drupal, Strapi, APIs, databases, and modern web development tools."
+    question: "Can you recommend the right technology for my business?",
+    answer:
+      "Yes. We evaluate your requirements and recommend suitable technologies, platforms, databases and integrations.",
   },
   {
-      question: "Can CodeTrios develop an existing website further?",
-      answer: "Yes. Existing websites can be extended with new features, integrations, performance improvements, redesigns, CMS functionality, and other technical enhancements."
+    question: "Does CodeTrios provide AI consulting?",
+    answer:
+      "We help businesses identify practical AI opportunities, including chatbot integration, AI-powered applications and business process automation.",
   },
   {
-      question: "Does CodeTrios provide website maintenance?",
-      answer: "Yes. Website maintenance can include updates, security improvements, backups, bug fixes, performance optimization, monitoring, and feature enhancements."
+    question: "Can you improve an existing website or software application?",
+    answer:
+      "Yes. We can review existing digital platforms and recommend improvements to design, usability, performance, technology and search visibility.",
   },
   {
-      question: "Can CodeTrios build scalable web applications?",
-      answer: "Yes. CodeTrios develops scalable web applications using appropriate frontend, backend, database, API, and hosting architecture based on project requirements."
+    question: "Does CodeTrios provide digital consulting services outside Delhi NCR?",
+    answer:
+      "Yes. We work with businesses across Delhi NCR and other locations in India.",
   },
-]
-
+];
 //related Services data
 const relatedServices = [
   {
     title: "Website Design",
-    content:"Create professional, responsive and conversion-focused websites with modern UI design and intuitive user experiences.",
+    content:"Creative UI/UX, graphic and interface design that strengthens your brand identity.",
     link: "/website-design-services",
     linkTitle: "Explore Website Design Services",
   },
   {
-    title: "Ecommerce Development",
-    content:"Build high-performing online stores with responsive design, secure payments and ecommerce integrations.",
-    link: "/ecommerce-development-services",
-    linkTitle: "Explore Ecommerce Development Services",
+    title: "Web Development",
+    content:"Custom, responsive and scalable websites built with modern frontend and backend technologies.",
+    link: "/web-development-services",
+    linkTitle: "Explore Web Development Services",
   },
   {
-    title: "Web Application Development",
-    content:"Develop secure and scalable web applications that streamline business processes and improve digital experiences.",
+    title: "Web Applications",
+    content:"Powerful web applications designed to simplify business operations and improve productivity.",
     link: "/web-application-development",
     linkTitle: "Explore Web Application Development",
+  },
+    {
+    title: "eCommerce Solutions",
+    content:"Feature-rich online stores with product management, secure payments and seamless shopping experiences.",
+    link: "/ecommerce-development-services",
+    linkTitle: "Explore Ecommerce Development Services",
   },  
   {
     title: "UI/UX Design",
@@ -293,11 +500,24 @@ const relatedServices = [
   },
   {
     title: "Custom Software Development",
-    content:"Develop custom software solutions that automate workflows, solve business challenges and support long-term growth.",
+    content:"Custom software, API integrations and technology solutions tailored to business needs.",
     link: "/custom-software-solutions",
     linkTitle: "Explore Custom Software Solutions",
   },
+  {
+    title: "Web Hosting Service",
+    content:"Reliable hosting, server setup, website deployment and ongoing technical support.",
+    link: "/web-hosting-services",
+    linkTitle: "Explore Web Hosting Service",
+  },
+  {
+    title: "GEO & SEO Services",
+    content:"Improve Google rankings and AI search visibility through SEO, content optimisation and Generative Engine Optimisation.",
+    link: "/geo-seo-services",
+    linkTitle: "Explore GEO & SEO Services",
+  },            
 ];
+
 
 
 export default function DigitalStrategyService(){
@@ -313,10 +533,10 @@ export default function DigitalStrategyService(){
       <SchemaGraph
           pageType="service"
           pageName="Digital Strategy Consulting Services"
-          pageDescription="CodeTrios provides digital strategy consulting services in India, helping businesses develop customer-focused digital strategies, optimize channels, improve conversions, and measure digital performance."
+          pageDescription="CodeTrios provides digital strategy consulting services in India, helping businesses plan digital transformation, select suitable technologies, improve business processes and develop practical roadmaps for websites, software applications, SEO, GEO and AI integration."
           pageUrl="https://www.codetrios.com/digital-strategy-consulting"
           serviceName="Digital Strategy Consulting Services"
-          serviceDescription="Digital strategy consulting services covering audience research, competitor analysis, channel strategy, brand positioning, customer journeys, conversion planning, and performance measurement."
+          serviceDescription="Digital strategy consulting covering digital transformation planning, website strategy, technology consulting, business process automation, digital product planning, SEO and GEO strategy, website optimisation and AI integration."
           serviceType="Digital Strategy Consulting"
           breadcrumbs={[
               {
@@ -341,9 +561,9 @@ export default function DigitalStrategyService(){
             <Row>
               <Col>
                 <div className='innerBannerContent'>
-                  <div className="tag">Our Services</div>
-                  <h1>Digital Strategy Consulting Services in India</h1>
-                  <p>CodeTrios is a web development company in India helping businesses, startups, organizations, and growing brands build fast, secure, and scalable websites and web applications. We combine modern frontend and backend technologies, responsive development, performance optimization, and maintainable architecture to create digital platforms designed around real business requirements.</p>
+                  <div className="tag">Digital Strategy Consulting Services</div>
+                  <h1>Digital Strategy & Consulting Services in India</h1>
+                  <p>CodeTrios provides digital strategy and consulting services to help businesses make better technology decisions, improve their online presence and achieve their digital goals.From digital transformation and business automation to SEO, GEO and AI integration, we develop practical strategies aligned with your business requirements.</p>
                   <div className='actionRow'>
                     <ActionButton />
                   </div>
@@ -358,13 +578,11 @@ export default function DigitalStrategyService(){
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
-                    <div className="tag">WHAT WE DESIGN</div>
-                    <h2>Website Design Services Built Around Your <span>Business Goals</span></h2>
+                    <div className="tag">OUR CONSULTING SERVICES</div>
+                    <h2>Digital Strategy and Technology <span>Consulting Services</span></h2>
                   </div>
                   <div className='secDetail'>
-                    <p>Our website design services cover the complete design journey, from understanding your business and audience to creating the visual interface and preparing a scalable design system for development. We design websites for companies, startups, institutions, professional organizations, and growing brands.</p>
-                    <p>Our approach focuses on responsive UI/UX, clear information architecture, mobile-first experiences, fast-loading pages, accessibility, SEO-friendly structure, and conversion-focused layouts. The result is a website that is easier for visitors to navigate and easier for businesses to manage and grow.</p>
-                    <p>Depending on your requirements, CodeTrios can design corporate websites, business websites, ecommerce stores, landing pages, WordPress websites, and redesigned digital experiences. Once the design is finalized, our web development services can turn the approved designs into fast, responsive, and scalable websites.</p>
+                    <p>We provide digital consulting and technology planning services to help businesses build a strong digital foundation.</p>
                   </div>
                 </div>
               </Col>
@@ -372,7 +590,7 @@ export default function DigitalStrategyService(){
             <Row>
               <Col>
                 <div className="benefitGrid">
-                  {websiteDesignServices.map((item, index) =>{
+                  {digitalServicesData.map((item, index) =>{
                     const IconComponent = item.icon;
                     return(
                       <div className="benefitCard" key={index} data-reveal="up">
@@ -381,9 +599,15 @@ export default function DigitalStrategyService(){
                             <IconComponent aria-hidden="true" />
                           </div>
                         </div>
-                        <h3><Link to={item.link}>{item.title}</Link></h3>
+                        <h3>{item.title}</h3>
                         <p>{item.content}</p>
                         <span className='benefitGo'><ArrowUpRight /></span>
+                        <h4>What we offer:</h4>
+                        <ul>
+                          {item.offer.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
                       </div>
                     )
                   })}
@@ -397,12 +621,12 @@ export default function DigitalStrategyService(){
               <Row>
                 <Col>
                   <div className='sectionHead'>
-                    <div className="tag">Types of Websites We Design</div>
-                    <h2>Website Design for Every <span>Business Need</span></h2>
-                    <p className='halfWidth'>Different businesses need different website experiences. CodeTrios designs websites around their purpose, content, audience and functionality.</p>
+                    <div className="tag">WHEN YOUR BUSINESS NEEDS A DIGITAL STRATEGY</div>
+                    <h2>Digital Consulting Solutions for <br/>Different <span>Business Requirement</span> </h2>
+                    <p className='halfWidth'>Content  missing</p>
                   </div>
                   <div className="benefitGrid">
-                    {websiteTypes.map((item, index) =>{
+                    {DigitalConsultingTypes.map((item, index) =>{
                       const IconComponent = item.icon;
                       return(
                         <div className="benefitCard" key={index} data-reveal="up">
@@ -421,7 +645,64 @@ export default function DigitalStrategyService(){
               </Row>
             </Container>
         </div>
-
+        {/* Why businesses choose */}
+        <div className='whyChooseUs block-mg-top'>
+          <Container>
+            <Row>
+              <Col>
+                  <div className='why_container'>
+                      <div className="sectionHead">
+                        <div className="tag">WHY CHOOSE CODETRIOS</div>
+                        <h2>Why Choose CodeTrios for <span>Digital Strategy & Consulting?</span></h2>
+                        <p>Choosing the right digital strategy helps businesses invest in technology with a clear purpose. CodeTrios combines practical development experience with technology planning to help businesses make informed digital decisions.</p>
+                      </div>
+                      <div className="why_features">
+                        {whyChooseData.map(({ icon: Icon, title, description }) => (
+                          <div className="features_box" key={title}>
+                            <div className="features_icon" aria-hidden="true">
+                              <Icon size={25} strokeWidth={1.7} />
+                            </div>
+                            <div className="feature_content">
+                              <h3>{title}</h3>
+                              <p>{description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                  </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        {/* Technologies we work */}
+        <div className='whyChooseUs'>
+          <Container>
+            <Row>
+              <Col>
+                  <div className='why_container'>
+                      <div className="sectionHead">
+                        <div className="tag">TECHNOLOGY & DIGITAL PLATFORMS </div>
+                        <h2>Technologies & Digital Platforms We Work With</h2>
+                        <p>Our recommendations are based on business requirements and the technologies suitable for each project.</p>
+                      </div>
+                      <div className="why_features">
+                        {technologiesData.map(({ icon: Icon, title, description }) => (
+                          <div className="features_box" key={title}>
+                            <div className="features_icon" aria-hidden="true">
+                              <Icon size={25} strokeWidth={1.7} />
+                            </div>
+                            <div className="feature_content">
+                              <h3>{title}</h3>
+                              <p>{description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                  </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
         {/* Our Process */}
         <div className='services_process blockPadding'> 
           <Container>
@@ -429,9 +710,9 @@ export default function DigitalStrategyService(){
               <Col>
                 <div className='services_process_container'>
                   <div className='sectionHead'>
-                      <div className="tag">Our Process</div>
-                      <h2>A clear path from <span>idea to launch</span></h2>
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <div className="tag">OUR CONSULTING APPROACH</div>
+                      <h2>Our Digital Strategy Consulting <span>Process</span></h2>
+                      <p>Content missing</p>
                   </div>
                   <div className='services_process_grid'>
                     {processData.map((item) => {
@@ -459,8 +740,8 @@ export default function DigitalStrategyService(){
                 <div className='services_industries_bg'>
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
-                      <h2>Industries <span>We Serve</span></h2>
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <h2>Digital Strategy Consulting for <span>Different Industries</span></h2>
+                      <p>We provide digital strategy and technology consulting for businesses across different industries.</p>
                   </div>
                   <div className="industries-section">
                     <Carousel
@@ -497,31 +778,12 @@ export default function DigitalStrategyService(){
             </Row>
           </Container>
         </div>
-        {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
-          <Container>
-            <Row>
-              <Col>
-                  <div className='why_container'>
-                      <div className="sectionHead">
-                        <div className="tag">Why businesses choose CodeTrios</div>
-                        <h2>Digital Solutions Built Around Your {" "}<span>Goals</span></h2>
-                        <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
-                      </div>
-                      <div className="why_features">
-                        
-                      </div>
-                  </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
         {/* Related Services */}
-        <div className='related-services'>
+        <div className='related-services blockPadding'>
           <Container>
             <Row>
               <Col>
-                <div className='inner-bg'>
+                <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
                     <h2>Explore Our Other Digital Services</h2>
@@ -551,7 +813,7 @@ export default function DigitalStrategyService(){
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our Web <span>Development & Digital</span> Services</h2>
+                          <h2>Questions About Our <span>Digital Strategy Consulting</span></h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>

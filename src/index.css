@@ -279,13 +279,21 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
 .benefitGrid .benefitCard:hover .iconWrap{background: rgba(22, 139, 255, 0.25);}
 .benefitGrid .cardNumber {color: var(--brand-color);font-size: 13px;letter-spacing: 1px;}
 .benefitGrid .benefitCard h3{color: #fff;font-size: 20px;margin: 15px 0 10px;} 
+.benefitGrid .benefitCard h4{color: #fff;font-size: 16px;margin: 15px 0 10px;} 
+.benefitGrid .benefitCard ul{margin-left: 15px;}
+.benefitGrid .benefitCard ul li{
+  list-style-type: disc;
+  color: var(--ct-gray);
+  font-size: 14px;
+  line-height: 30px;
+}
 .benefitGrid .benefitCard a{color: inherit;text-decoration: none;}
 .benefitGrid .benefitCard a:after{content: "";position: absolute;inset: 0;z-index: 1;}
 .benefitGrid .benefitCard p{    text-align: left;color: var(--ct-gray);margin: 0;font-size: 15px;} 
-.benefitGrid .benefitGo{right: 22px;bottom: 20px;display: grid;place-items: center;width: 40px;height: 40px;border-radius: 50%;font-size: 20px;color: var(--ct-gray);background: rgba(4, 22, 43, 0.55);border: 1px solid var(--ct-border);transition: transform 0.3s;position: absolute;top: 28px;right: 10px}
+.benefitGrid .benefitGo{right: 22px;bottom: 20px;display: grid;place-items: center;width: 40px;height: 40px;border-radius: 50%;font-size: 20px;color: var(--ct-gray);background: rgba(4, 22, 43, 0.55);border: 1px solid var(--ct-border);transition: transform 0.3s;position: absolute;top: 28px;right: 10px;display: none;}
 .benefitGrid .benefitGo svg{width: 18px;}
 .benefitGrid .benefitCard:hover .benefitGo{background: linear-gradient(135deg, var(--accent, #38bdf8), #7c5cff);color:var(--ct-white)}
-
+.related-services .benefitGrid .benefitGo{display: grid;}
 /* Card box design */
 
 /* page sub heading */
@@ -376,7 +384,22 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
 .technology-expertise__group-content {min-width: 0;}
 .technology-expertise__group-title {margin: 0 0 12px;color: var(--tech-cyan);font-size: 12px;font-weight: 400;line-height: 1.5;letter-spacing: 0.19em;text-transform: uppercase;}
 .technology-expertise__tags {display: flex;flex-wrap: wrap;gap: 12px;margin: 0;padding: 0;list-style: none;}
-.technology-expertise__tag {display: inline-flex;align-items: center;justify-content: center;min-height: 40px;padding: 8px 22px;border: 1px solid var(--ct-border);border-radius: 4px;color: #e8eef7;background: rgba(7, 19, 33, 0.4);font-size: 14px;font-weight: 400;line-height: 1.5;white-space: nowrap;}
+/* .technology-expertise__tag {display: inline-flex;align-items: center;justify-content: center;min-height: 40px;padding: 8px 22px;border: 1px solid var(--ct-border);border-radius: 4px;color: #e8eef7;background: rgba(7, 19, 33, 0.4);font-size: 14px;font-weight: 400;line-height: 1.5;white-space: nowrap;} */
+.technology-expertise__tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20px;
+    padding: 4px 10px;
+    border: 1px solid var(--ct-border);
+    border-radius: 4px;
+    color: #e8eef7;
+    background: rgba(7, 19, 33, 0.4);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: nowrap;
+}
 /* Technologies Block Style */
 
 /* Why businesses choose CodeTrios */

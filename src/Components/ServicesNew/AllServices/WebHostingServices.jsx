@@ -8,24 +8,36 @@ import '../mainservices.css';
 //icon
 import {
   BriefcaseBusiness,
-  MonitorSmartphone,
-  RefreshCw,
-  PanelsTopLeft,
   ShoppingCart,
-  PenTool,
   Building2,
-  Store,
-  Images,
-  ShoppingBag,
   GraduationCap,
-  HeartPulse,
-  MousePointerClick,
-  Blocks,
   ArrowUpRight,
   Stethoscope,
   Hotel,
   Factory,
   Rocket,
+  Settings2,
+  Globe,
+  Server,
+  Cloud,
+  ArrowLeftRight,
+  Settings,
+  ShieldCheck,
+  DatabaseBackup,
+  Headset,
+  Blocks,
+  HeartPulse,
+  AppWindow,
+  FileCode,
+  SlidersHorizontal,
+  RefreshCw,
+  Layers,
+  Gauge,
+  CloudCog,
+  Terminal,
+  LayoutTemplate,
+  Code2,
+  Globe2, ShoppingBasket
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -45,121 +57,211 @@ import startupsImg from '../../../assets/images/startups-img.jpg';
 import technologyImg from '../../../assets/images/technology-img.jpg';
 const Carousel = CarouselImport.default ?? CarouselImport;
 
-//website Design Services data
-const websiteDesignServices = [
+//Hosting Services data
+const hostingServicesData = [
   { 
-    title: "Business Website Design", 
-    content: "Professional websites that communicate your services, establish credibility and encourage enquiries.",
+    title: "Website Hosting Setup", 
+    content: "Get your website online with the right hosting environment. We assist with hosting selection, account setup, domain connection and website deployment.",
     link: "/",
-    icon: BriefcaseBusiness 
+    icon: Globe 
   },
   { 
-    title: "Responsive Website Design", 
-    content: "Layouts and interactions designed to work effectively across mobile, tablet and desktop screens.",
+    title: "Shared Hosting Configuration", 
+    content: "Set up and configure shared hosting for business websites, blogs, portfolios and small websites that have moderate traffic requirements.",
     link: "/",
-    icon: MonitorSmartphone 
+    icon: Server 
   },
   { 
-    title: "Website Redesign", 
-    content: "Modernize an existing website with improved navigation, visual design, content hierarchy and user experience.",
+    title: "VPS & Cloud Server Setup", 
+    content: "Configure VPS and cloud hosting environments for websites and applications that need more control, flexibility and resources.",
     link: "/",
-    icon: RefreshCw 
+    icon: Cloud 
   },
   { 
-    title: "Landing Page Design", 
-    content: "Focused landing pages designed around specific campaigns, services, products or conversion goals.",
+    title: "Website Migration Services", 
+    content: "Move your website from one hosting provider or server to another while taking care of website files, databases, configurations and domain settings.",
     link: "/",
-    icon: PanelsTopLeft 
+    icon: ArrowLeftRight 
   },
   { 
-    title: "Ecommerce Website Design", 
-    content: "Customer-friendly storefront experiences with intuitive product discovery, shopping flows and responsive layouts.",
+    title: "Server Configuration & Management", 
+    content: "Get assistance with server setup, application configuration, database setup, SSL installation and essential server management tasks.",
     link: "/",
-    icon: ShoppingCart 
+    icon: Settings 
   },
   { 
-    title: "UI/UX Website Design", 
-    content: "Wireframes, user journeys, prototypes and interface designs that make websites easier to navigate and use.",
+    title: "Website Security", 
+    content: "Improve website security with SSL configuration, HTTPS setup, security updates and essential protection measures.",
     link: "/",
-    icon: PenTool 
+    icon: ShieldCheck 
   },
+  { 
+    title: "Website Backup & Recovery", 
+    content: "Protect your website data through backup configuration and recovery planning to help reduce the impact of accidental data loss or technical issues.",
+    link: "/",
+    icon: DatabaseBackup 
+  },
+  { 
+    title: "Hosting Maintenance & Technical Support", 
+    content: "Keep your hosting environment updated with regular checks, troubleshooting, performance monitoring and technical assistance.",
+    link: "/",
+    icon: Headset 
+  },
+  
 ];
-//websiteTypes data
-const websiteTypes = [
+//Hosting service type data
+const hostingServicesType = [
   { 
-    title: "Corporate Websites", 
-    content: "Structured websites for established organizations and larger businesses.",
+    title: "Business & Corporate Websites", 
+    content: "Reliable hosting for company websites and business pages.",
     link: "/",
     icon: Building2 
   },
   { 
-    title: "Small Business Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "WordPress Websites", 
+    content: "Hosting configuration for WordPress websites, blogs and Elementor-based websites.",
     link: "/",
-    icon: Store 
+    icon: Blocks 
   },
   { 
-    title: "Portfolio Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "E-commerce Websites", 
+    content: "Hosting environments configured for online stores, product catalogues and customer transactions.",
     link: "/",
-    icon: Images 
-  },
-  { 
-    title: "Ecommerce Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
-    link: "/",
-    icon: ShoppingBag 
+    icon: ShoppingBasket 
   },
   { 
     title: "Educational Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    content: "Hosting support for school websites, admission portals and educational platforms.",
     link: "/",
     icon: GraduationCap 
   },
   { 
     title: "Healthcare Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    content: "Hosting configuration for hospital websites, diagnostic centres and healthcare portals.",
     link: "/",
     icon: HeartPulse 
   },
   { 
-    title: "Landing Pages", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Web Applications", 
+    content: "Server environments for React, Node.js, PHP and database-driven applications.",
     link: "/",
-    icon: MousePointerClick 
+    icon: AppWindow 
   },
   { 
-    title: "CMS-Based Websites",
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Custom CMS Websites", 
+    content: "Hosting configuration for Drupal and other custom content management systems.",
     link: "/",
-    icon: Blocks 
+    icon: FileCode 
+  },
+];
+//whyChoose data
+const whyChooseData = [
+  {
+    icon: SlidersHorizontal,
+    title: "Hosting Based on Your Requirements",
+    description:"We help select a hosting environment that matches your website's technology, traffic and business needs.",
+  },
+  {
+    icon: Settings2,
+    title: "Complete Setup Assistance",
+    description:"From domain connection to server configuration, we assist with the technical steps required to launch your website.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Website Migration Support",
+    description:"Move your existing website with assistance for files, databases, configurations and domain settings.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Security-Focused Configuration",
+    description:"We help configure SSL, HTTPS, backups and essential website security measures.",
+  },
+  {
+    icon: Layers,
+    title: "Support for Multiple Technologies",
+    description:"Our technical experience covers WordPress, Drupal, React, Node.js, PHP and database-driven websites.",
+  },
+  {
+    icon: Gauge,
+    title: "Performance & Reliability",
+    description:"We help configure hosting environments with performance, stability and website accessibility in mind.",
+  },
+  {
+    icon: Headset,
+    title: "Ongoing Technical Assistance",
+    description:"Get support for hosting-related issues, configuration changes, updates and troubleshooting.",
+  },
+ 
+];
+// technologies we work data
+const technologiesData = [
+  {
+    icon: Server ,
+    title: "Hosting Environments",
+    description: "Shared Hosting, VPS Hosting and Cloud Hosting",
+  },
+  {
+    icon: CloudCog ,
+    title: "Hosting Providers",
+    description: "Hostinger, GoDaddy and other suitable hosting providers",
+  },
+  {
+    icon: Terminal ,
+    title: "Server Technologies",
+    description: "Linux, Apache, Nginx and Plesk",
+  },
+  {
+    icon: LayoutTemplate ,
+    title: "Website Platforms",
+    description: "WordPress, Drupal and Custom CMS",
+  },
+  {
+    icon: Code2 ,
+    title: "Development Technologies",
+    description: "React.js, Node.js, PHP and MySQL",
+  },
+  {
+    icon: ShieldCheck ,
+    title: "Security & Performance",
+    description: "SSL, HTTPS, caching, backups and server optimisation",
+  },
+  {
+    icon: Globe2 ,
+    title: "Domain Management",
+    description: "Domain connection, DNS configuration and nameserver setup",
   },
 ];
 // Our Process Data
 const processData = [
   {
     number: "01",
-    title: "Discover",
-    description:
-      "We understand your business goals, audience, and requirements to create a clear project roadmap.",
+    title: "Understand Your Requirements",
+    description:"We review your website type, technology, expected traffic, storage and performance requirements.",
   },
-  {
+   {
     number: "02",
-    title: "Design & Build",
-    description:
-      "We design intuitive interfaces and develop scalable, high-performance digital solutions.",
+    title: "Hosting Recommendation",
+    description:"We help identify a suitable hosting environment based on your website's technical and business needs.",
   },
-  {
+   {
     number: "03",
-    title: "Review & Launch",
-    description:
-      "We test, refine, and launch your solution to ensure quality, performance, and reliability.",
+    title: "Server & Domain Configuration",
+    description:"We configure hosting, domain DNS, databases, and other required settings.",
   },
-  {
+   {
     number: "04",
-    title: "Support & Maintenance",
-    description:
-      "We provide ongoing technical support, updates, security monitoring, and performance optimization to keep your digital solutions running smoothly.",
+    title: "Website Deployment or Migration",
+    description:"We upload and configure your website, or migrate it from your existing hosting environment.",
+  },
+   {
+    number: "05",
+    title: "Testing & Performance Checks",
+    description:"We check website accessibility, HTTPS, database connectivity and essential website functionality.",
+  },
+   {
+    number: "06",
+    title: "Ongoing Support & Maintenance",
+    description:"We provide technical assistance and hosting maintenance based on the agreed support requirements.",
   },
 ];
 //industries Data
@@ -167,49 +269,49 @@ const industriesData = [
   {
     number : "01",
     icon: GraduationCap,
-    title: "Education",
+    title: "Education & E-Learning",
     text: "Learning platforms, school and college websites, student portals.",
     img: eduImg,
   },
   {
     number : "02",
     icon: Stethoscope,
-    title: "Healthcare",
+    title: "Healthcare & Medical",
     text: "Hospital websites, appointment systems, patient management solutions.",
     img: healthcareImg,
   },
   {
     number : "03",
     icon: ShoppingCart,
-    title: "E-commerce",
+    title: "E-commerce & Retail",
     text: "Online stores, secure payments, product catalogs and shopping experiences.",
     img: ecomImg,
   },
   {
     number : "04",
     icon: Building2,
-    title: "Real Estate",
+    title: "Real Estate & Construction",
     text: "Property websites, listing portals, lead generation and virtual experiences.",
     img: estateImg,
   },
   {
     number : "05",
     icon: Hotel,
-    title: "Hospitality",
+    title: "Hospitality & Tourism",
     text: "Hotel websites, online booking, guest services and reservation systems.",
     img: hospitalityImg,
   },
   {
     number : "06",
     icon: Factory,
-    title: "Manufacturing",
+    title: "Manufacturing & Industrial",
     text: "Business websites, production workflows, automation and operational software.",
     img: manufacturingImg,
   },
   {
     number : "07",
     icon: Rocket,
-    title: "Startups",
+    title: "Startups & Entrepreneurs",
     text: "MVP development, scalable platforms and digital products for growing businesses.",
     img: startupsImg,
   },
@@ -224,80 +326,82 @@ const industriesData = [
 //FAQ data
 const faqs = [
   {
-      question: "What does a web development company do?",
-      answer: "A web development company builds and maintains websites and web applications, including frontend interfaces, backend systems, databases, APIs, integrations, testing, deployment, and ongoing technical support."
+      question: "What are web hosting services?",
+      answer: "Web hosting services provide the server space and resources needed to store website files and make a website accessible on the internet."
   },
   {
-      question: "How much do web development services cost in India?",
-      answer: "The cost of web development depends on factors such as project complexity, required features, technology, integrations, design requirements, content management needs, and ongoing support. CodeTrios provides project-specific estimates based on business and technical requirements."
+      question: "Which hosting is best for a business website?",
+      answer: "Shared hosting may suit smaller websites, while VPS or cloud hosting can be more appropriate for websites with higher traffic or greater resource requirements. The right choice depends on your website."
   },
   {
-      question: "How long does it take to develop a website?",
-      answer: "Website development timelines depend on the size and complexity of the project. A simple business website may take a few weeks, while custom websites and web applications with advanced functionality, integrations, or workflows can take longer."
+      question: "Does CodeTrios provide website hosting setup?",
+      answer: "Yes. CodeTrios assists with hosting selection, account setup, domain connection, server configuration and website deployment."
   },
   {
-      question: "Do you develop SEO-friendly websites?",
-      answer: "Yes. CodeTrios follows SEO-friendly development practices such as responsive design, clean site structure, performance optimization, crawlable content, proper technical implementation, and structured data where appropriate."
+      question: "Can you migrate my website to another hosting provider?",
+      answer: "Yes. We assist with website migration, including files, databases, configurations and domain settings."
   },
   {
-      question: "What is the difference between web design and web development?",
-      answer: "Web design focuses on visual appearance, layout, branding, and user experience, while web development focuses on building the frontend and backend functionality that makes a website or web application work."
+      question: "Do you provide WordPress hosting support?",
+      answer: "Yes. We help configure hosting for WordPress websites, including domain setup, SSL, database configuration and website deployment."
   },
   {
-      question: "Does CodeTrios provide custom web development?",
-      answer: "Yes. CodeTrios provides custom web development for businesses and organizations that require specific functionality, integrations, workflows, or application features."
+      question: "Can you configure VPS and cloud servers?",
+      answer: "Yes. We assist with VPS and cloud server setup, application configuration and deployment based on project requirements."
   },
   {
-      question: "Which technologies does CodeTrios use?",
-      answer: "Depending on project requirements, CodeTrios works with technologies including React.js, Node.js, PHP, WordPress, Drupal, Strapi, APIs, databases, and modern web development tools."
+      question: "Do you provide website backup services?",
+      answer: "We can help configure website and database backups and establish a recovery approach based on your hosting environment."
   },
   {
-      question: "Can CodeTrios develop an existing website further?",
-      answer: "Yes. Existing websites can be extended with new features, integrations, performance improvements, redesigns, CMS functionality, and other technical enhancements."
+      question: "Can you manage an existing hosting account?",
+      answer: "Yes. We can assist with server configuration, troubleshooting, maintenance and other hosting-related technical tasks, depending on the hosting provider and access available."
   },
   {
-      question: "Does CodeTrios provide website maintenance?",
-      answer: "Yes. Website maintenance can include updates, security improvements, backups, bug fixes, performance optimization, monitoring, and feature enhancements."
-  },
-  {
-      question: "Can CodeTrios build scalable web applications?",
-      answer: "Yes. CodeTrios develops scalable web applications using appropriate frontend, backend, database, API, and hosting architecture based on project requirements."
+      question: "Do you provide hosting support across India?",
+      answer: "Yes. CodeTrios provides remote web hosting setup, configuration, migration and technical support for businesses across India."
   },
 ]
-
 //related Services data
 const relatedServices = [
   {
     title: "Website Design",
-    content:"Create professional, responsive and conversion-focused websites with modern UI design and intuitive user experiences.",
+    content:"Creative UI/UX, graphic and interface design that strengthens your brand identity.",
     link: "/website-design-services",
     linkTitle: "Explore Website Design Services",
   },
   {
-    title: "Ecommerce Development",
-    content:"Build high-performing online stores with responsive design, secure payments and ecommerce integrations.",
-    link: "/ecommerce-development-services",
-    linkTitle: "Explore Ecommerce Development Services",
+    title: "Web Development",
+    content:"Custom, responsive and scalable websites built with modern frontend and backend technologies.",
+    link: "/web-development-services",
+    linkTitle: "Explore Web Development Services",
   },
   {
-    title: "Web Application Development",
-    content:"Develop secure and scalable web applications that streamline business processes and improve digital experiences.",
+    title: "Web Applications",
+    content:"Powerful web applications designed to simplify business operations and improve productivity.",
     link: "/web-application-development",
     linkTitle: "Explore Web Application Development",
+  },
+    {
+    title: "eCommerce Solutions",
+    content:"Feature-rich online stores with product management, secure payments and seamless shopping experiences.",
+    link: "/ecommerce-development-services",
+    linkTitle: "Explore Ecommerce Development Services",
   },  
   {
-    title: "UI/UX Design",
-    content:"Design intuitive, accessible and user-focused interfaces that improve usability, engagement and conversions.",
-    link: "/ui-ux-design-services",
-    linkTitle: "Explore UI/UX Design Services",
-  },
-  {
     title: "Custom Software Development",
-    content:"Develop custom software solutions that automate workflows, solve business challenges and support long-term growth.",
+    content:"Custom software, API integrations and technology solutions tailored to business needs.",
     link: "/custom-software-solutions",
     linkTitle: "Explore Custom Software Solutions",
   },
+  {
+    title: "GEO & SEO Services",
+    content:"Improve Google rankings and AI search visibility through SEO, content optimisation and Generative Engine Optimisation.",
+    link: "/geo-seo-services",
+    linkTitle: "Explore GEO & SEO Services",
+  },          
 ];
+
 
 
 export default function WebHostingService(){
@@ -341,9 +445,9 @@ export default function WebHostingService(){
             <Row>
               <Col>
                 <div className='innerBannerContent'>
-                  <div className="tag">Our Services</div>
-                  <h1>Web Hosting Services in India</h1>
-                  <p>CodeTrios is a web development company in India helping businesses, startups, organizations, and growing brands build fast, secure, and scalable websites and web applications. We combine modern frontend and backend technologies, responsive development, performance optimization, and maintainable architecture to create digital platforms designed around real business requirements.</p>
+                  <div className="tag">WEB HOSTING SERVICES</div>
+                  <h1>Reliable & Secure Web Hosting Services in India</h1>
+                  <p>Your website needs more than good design and development. It also needs reliable hosting, strong security and consistent performance. CodeTrios provides web hosting setup, server configuration, website migration and hosting management services to help businesses keep their websites accessible, secure and running smoothly.</p>
                   <div className='actionRow'>
                     <ActionButton />
                   </div>
@@ -358,13 +462,11 @@ export default function WebHostingService(){
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
-                    <div className="tag">WHAT WE DESIGN</div>
-                    <h2>Website Design Services Built Around Your <span>Business Goals</span></h2>
+                    <div className="tag">OUR HOSTING SOLUTIONS</div>
+                    <h2>Website Hosting Services for <span>Businesses</span></h2>
                   </div>
                   <div className='secDetail'>
-                    <p>Our website design services cover the complete design journey, from understanding your business and audience to creating the visual interface and preparing a scalable design system for development. We design websites for companies, startups, institutions, professional organizations, and growing brands.</p>
-                    <p>Our approach focuses on responsive UI/UX, clear information architecture, mobile-first experiences, fast-loading pages, accessibility, SEO-friendly structure, and conversion-focused layouts. The result is a website that is easier for visitors to navigate and easier for businesses to manage and grow.</p>
-                    <p>Depending on your requirements, CodeTrios can design corporate websites, business websites, ecommerce stores, landing pages, WordPress websites, and redesigned digital experiences. Once the design is finalized, our web development services can turn the approved designs into fast, responsive, and scalable websites.</p>
+                    <p>Content missing</p>
                   </div>
                 </div>
               </Col>
@@ -372,7 +474,7 @@ export default function WebHostingService(){
             <Row>
               <Col>
                 <div className="benefitGrid">
-                  {websiteDesignServices.map((item, index) =>{
+                  {hostingServicesData.map((item, index) =>{
                     const IconComponent = item.icon;
                     return(
                       <div className="benefitCard" key={index} data-reveal="up">
@@ -381,7 +483,7 @@ export default function WebHostingService(){
                             <IconComponent aria-hidden="true" />
                           </div>
                         </div>
-                        <h3><Link to={item.link}>{item.title}</Link></h3>
+                        <h3>{item.title}</h3>
                         <p>{item.content}</p>
                         <span className='benefitGo'><ArrowUpRight /></span>
                       </div>
@@ -397,12 +499,12 @@ export default function WebHostingService(){
               <Row>
                 <Col>
                   <div className='sectionHead'>
-                    <div className="tag">Types of Websites We Design</div>
-                    <h2>Website Design for Every <span>Business Need</span></h2>
-                    <p className='halfWidth'>Different businesses need different website experiences. CodeTrios designs websites around their purpose, content, audience and functionality.</p>
+                    <div className="tag">HOSTING FOR EVERY WEBSITE TYPE</div>
+                    <h2>Hosting Solutions for <span>Different Websites</span></h2>
+                    <p className='halfWidth'>We help configure hosting environments for different types of websites and applications.</p>
                   </div>
                   <div className="benefitGrid">
-                    {websiteTypes.map((item, index) =>{
+                    {hostingServicesType.map((item, index) =>{
                       const IconComponent = item.icon;
                       return(
                         <div className="benefitCard" key={index} data-reveal="up">
@@ -421,7 +523,64 @@ export default function WebHostingService(){
               </Row>
             </Container>
         </div>
-
+        {/* Why businesses choose */}
+        <div className='whyChooseUs block-mg-top'>
+          <Container>
+            <Row>
+              <Col>
+                  <div className='why_container'>
+                      <div className="sectionHead">
+                        <div className="tag">WHY CHOOSE CODETRIOS</div>
+                        <h2>Why Choose CodeTrios for <span>Web Hosting</span> Services?</h2>
+                        <p>Content missing</p>
+                      </div>
+                      <div className="why_features">
+                        {whyChooseData.map(({ icon: Icon, title, description }) => (
+                          <div className="features_box" key={title}>
+                            <div className="features_icon" aria-hidden="true">
+                              <Icon size={25} strokeWidth={1.7} />
+                            </div>
+                            <div className="feature_content">
+                              <h3>{title}</h3>
+                              <p>{description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                  </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        {/* Technologies we work */}
+        <div className='whyChooseUs'>
+          <Container>
+            <Row>
+              <Col>
+                  <div className='why_container'>
+                      <div className="sectionHead">
+                        <div className="tag">HOSTING TECHNOLOGIES & PLATFORMS </div>
+                        <h2>Hosting Technologies, Platforms & Server <span>Environments</span></h2>
+                        <p>We work with commonly used hosting environments and website technologies to support different business requirements.</p>
+                      </div>
+                      <div className="why_features">
+                        {technologiesData.map(({ icon: Icon, title, description }) => (
+                          <div className="features_box" key={title}>
+                            <div className="features_icon" aria-hidden="true">
+                              <Icon size={25} strokeWidth={1.7} />
+                            </div>
+                            <div className="feature_content">
+                              <h3>{title}</h3>
+                              <p>{description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                  </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
         {/* Our Process */}
         <div className='services_process blockPadding'> 
           <Container>
@@ -430,8 +589,8 @@ export default function WebHostingService(){
                 <div className='services_process_container'>
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
-                      <h2>A clear path from <span>idea to launch</span></h2>
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <h2>Our Web Hosting Setup Process</h2>
+                      <p>Content missing</p>
                   </div>
                   <div className='services_process_grid'>
                     {processData.map((item) => {
@@ -459,8 +618,8 @@ export default function WebHostingService(){
                 <div className='services_industries_bg'>
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
-                      <h2>Industries <span>We Serve</span></h2>
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <h2>Web Hosting Solutions for Different <span>Industries</span></h2>
+                      <p>Our hosting services support websites and applications across different industries:</p>
                   </div>
                   <div className="industries-section">
                     <Carousel
@@ -497,31 +656,12 @@ export default function WebHostingService(){
             </Row>
           </Container>
         </div>
-        {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
-          <Container>
-            <Row>
-              <Col>
-                  <div className='why_container'>
-                      <div className="sectionHead">
-                        <div className="tag">Why businesses choose CodeTrios</div>
-                        <h2>Digital Solutions Built Around Your {" "}<span>Goals</span></h2>
-                        <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
-                      </div>
-                      <div className="why_features">
-                        
-                      </div>
-                  </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
         {/* Related Services */}
-        <div className='related-services'>
+        <div className='related-services blockPadding'>
           <Container>
             <Row>
               <Col>
-                <div className='inner-bg'>
+                <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
                     <h2>Explore Our Other Digital Services</h2>
@@ -551,7 +691,7 @@ export default function WebHostingService(){
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our Web <span>Development & Digital</span> Services</h2>
+                          <h2>Questions About Our <span>Web Hosting</span> Services</h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>

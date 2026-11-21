@@ -28,16 +28,15 @@ import {
   Factory,
   Rocket,
   Code2,
-  FileCode,
-  LayoutTemplate,
   Atom,
-  Image,
-  Bot,
   Users,
-  Smartphone,
   Palette,
+  Smartphone,
+  LayoutTemplate,
   SearchCheck,
-  Headset,
+  SlidersHorizontal,
+  LifeBuoy,
+  Sparkles
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -150,42 +149,53 @@ const websiteTypes = [
 // why choose us data
 const whyChooseData = [
   {
-    icon: Users,
-    title: "User-Centered Design",
+    icon: Palette,
+    title: "Designs Tailored to Your Business",
     description:
-      "We create intuitive website layouts that make information easy to find and navigate.",
+      "Every business is different. We create website designs that reflect your brand, services, users and business objectives.",
+  },
+  {
+    icon: Users,
+    title: "User-Friendly Experience",
+    description:
+      "We focus on clear layouts, smooth navigation and easy-to-find information to help visitors explore your website easily.",
   },
   {
     icon: Smartphone,
-    title: "Responsive Experiences",
+    title: "Mobile-Responsive Design",
     description:
-      "We design websites that adapt to mobile phones, tablets and desktop screens.",
+      "Your website will be designed to provide a consistent browsing experience across desktops, tablets and smartphones.",
   },
   {
-    icon: Palette,
-    title: "Brand-Focused Approach",
+    icon: LayoutTemplate,
+    title: "Modern & Professional Layouts",
     description:
-      "We align website layouts, visuals and content presentation with your brand identity.",
+      "We use clean layouts, balanced colours, readable typography and engaging visual elements to create a professional impression according to your business.",
   },
   {
     icon: SearchCheck,
-    title: "SEO-Friendly Structure",
+    title: "SEO-Friendly Website Structure",
     description:
-      "We consider page hierarchy, navigation, headings and technical SEO requirements.",
+      "We consider heading hierarchy, page structure, content readability and other SEO fundamentals while designing your website.",
   },
   {
-    icon: Code2,
-    title: "Modern Technologies",
+    icon: MousePointerClick,
+    title: "Conversion-Focused Design",
     description:
-      "We select suitable design tools and frontend technologies for each project.",
+      "We strategically place contact forms, enquiry buttons and calls to action to encourage visitors to connect with your business.",
   },
   {
-    icon: Headset,
-    title: "Ongoing Support",
+    icon: SlidersHorizontal,
+    title: "Easy-to-Manage Websites",
     description:
-      "	We provide website maintenance and technical assistance after launch.",
+      "We design websites with practical content management options, making it easier to update pages, images and website information.",
   },
- 
+  {
+    icon: LifeBuoy,
+    title: "Complete Design & Development Support",
+    description:
+      "From initial design concepts to website launch, our team can assist with UI/UX, website development, testing and ongoing improvements.",
+  },
 ];
 // Our Process Data
 const processData = [
@@ -290,22 +300,27 @@ const technologyGroups = [
   {
     title: "Design & Creative Tools",
     icon: PenTool,
-    technologies: ["Figma", "Adobe Photoshop"],
+    technologies: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Canva"],
   },
   {
     title: "CMS & Website Platforms",
     icon: PanelsTopLeft,
-    technologies: ["WordPress", "Elementor"],
+    technologies: ["WordPress", "Elementor", "Shopify"],
   },
   {
     title: "Frontend Technologies",
     icon: Code2,
-    technologies: ["HTML5", "CSS3", "JavaScript", "jQuery"],
+    technologies: ["HTML5", "CSS3", "JavaScript", "jQuery",  "Sass / SCSS",],
   },
   {
-    title: "Frameworks & AI Tools",
+    title: "Frontend Frameworks & Libraries",
     icon: Atom,
-    technologies: ["Bootstrap", "React.js", "AI-powered design tools"],
+    technologies: ["React.js", "Bootstrap", "Tailwind CSS", "Material UI", "GSAP"],
+  },
+  {
+    title: "AI-Assisted Design Tools",
+    icon: Sparkles,
+    technologies: ["AI-Assisted Design", "AI Website Design Tools", "AI Visual Creation", "AI Design Prototyping"],
   },
 ];
 //FAQ data
@@ -469,7 +484,7 @@ export default function WebsiteDesignService(){
                 <Col>
                   <div className='sectionHead'>
                     <div className="tag">Types of Websites We Design</div>
-                    <h2>Website Design Solutions for <span>Every Business</span></h2>
+                    <h2>Website Design Solutions <br/>for <span>Every Business</span></h2>
                     <p className='halfWidth'>Every business has different goals and audiences. At CodeTrios, we design websites that match your requirements, business, brand identity and business objectives.</p>
                   </div>
                   <div className="benefitGrid">
@@ -500,8 +515,8 @@ export default function WebsiteDesignService(){
                   <div className='why_container'>
                       <div className="sectionHead">
                         <div className="tag">WHY CHOOSE CODETRIOS</div>
-                        <h2>A Website Design <span>Partner</span> Focused on Your <span>Business Goals</span></h2>
-                        <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
+                        <h2>Why Choose CodeTrios for <span>Website Design</span> Services?</h2>
+                        <p>At CodeTrios, we design websites that combine attractive visuals, smooth navigation and practical functionality. Our goal is to create a professional online presence that builds trust, engages visitors and supports your business growth.</p>
                       </div>
                       <div className="why_features">
                         {whyChooseData.map(({ icon: Icon, title, description }) => (
@@ -529,8 +544,8 @@ export default function WebsiteDesignService(){
                 <div className='services_process_container'>
                   <div className='sectionHead'>
                       <div className="tag">OUR WORKING PROCESS</div>
-                      <h2>A clear path from <span>idea to launch</span></h2>
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <h2>Our Website Design <span>Process</span></h2>
+                      <p>We follow a structured process to make sure every website is planned, designed and developed with care.</p>
                   </div>
                   <div className='services_process_grid'>
                     {processData.map((item) => {
@@ -559,9 +574,9 @@ export default function WebsiteDesignService(){
                 <div className="technology-layout">
                   <div className='sectionHead'>
                     <div className="tag">Technologies & Tools</div>
-                    <h2>Website Design <span>Technologies & Tools</span> We Use</h2>
-                    <p>We use modern design tools and frontend technologies to create attractive, responsive and user-friendly website experiences.</p>
-                    <Link to="/" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
+                    <h2>Modern Website Design <span> Technologies & Tools</span> We Work With</h2>
+                    <p>We use modern design tools and frontend technologies to create attractive, responsive and user-friendly website experiences. We choose the right tools and technologies based on your design requirements, brand identity and website goals.</p>
+                    <Link to="/technologies" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                   </div>
                   <div className="technology-grid">
                     <ul className="technology-expertise__groups">
@@ -608,7 +623,8 @@ export default function WebsiteDesignService(){
                 <div className='services_industries_bg'>
                   <div className='sectionHead'>
                       <div className="tag">INDUSTRIES WE SERVE</div>
-                      <h2>Website Design for <span>Different Industries</span></h2>
+                      <h2>Section missing </h2>
+                      {/* <h2>Website Design for <span>Different Industries</span></h2> */}
                       <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
                   </div>
                   <div className="industries-section">
@@ -654,7 +670,7 @@ export default function WebsiteDesignService(){
                 <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
-                    <h2>Explore Our Other Digital Services</h2>
+                    <h2>Explore Our Other <span>Digital Services</span></h2>
                   </div>
                   <div className="benefitGrid">
                     {relatedServices.map((item, index) =>{

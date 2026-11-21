@@ -32,6 +32,12 @@ import {
   UsersRound,
   CalendarCheck,
   Package,
+  MousePointerClick,
+  Layers,
+  ShieldCheck,
+  Blocks,
+  Gauge,
+  Headset 
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -152,6 +158,49 @@ const websiteTypes = [
     link: "/",
     icon: BriefcaseBusiness 
   },
+];
+//whyChoose data
+const whyChooseData = [
+  {
+    icon: BriefcaseBusiness,
+    title: "Business-Focused Solutions",
+    description:"Every application is planned around your business processes, users and specific functional requirements.",
+  },
+  {
+    icon: MousePointerClick,
+    title: "User-Friendly Interface",
+    description:"We create intuitive, responsive interfaces that make applications easier to navigate across desktop, tablet and mobile devices.",
+  }, 
+  {
+    icon: Layers,
+    title: "Scalable Architecture",
+    description:"Our applications are built with a flexible architecture that can support new features, users and changing business needs.",
+  }, 
+  {
+    icon: ShieldCheck,
+    title: "Secure Application Development",
+    description:"We implement appropriate authentication, role-based access and security practices to help protect application data.",
+  }, 
+  {
+    icon: Blocks,
+    title: "Modern Technology Stack",
+    description:"We use technologies such as React.js, Node.js, PHP, MySQL and MongoDB based on project requirements.",
+  }, 
+  {
+    icon: Plug,
+    title: "Seamless API Integration",
+    description:"Connect your application with payment gateways, CRM, ERP and other third-party platforms through API integrations.",
+  }, 
+  {
+    icon: Gauge,
+    title: "Performance-Focused Development",
+    description:"We focus on efficient code, database optimisation and responsive application performance.",
+  }, 
+  {
+    icon: Headset,
+    title: "Ongoing Maintenance & Support",
+    description:"Our support can include bug fixes, updates, performance improvements and new feature development as your application evolves.",
+  }, 
 ];
 //technology data
 const technologyGroups = [
@@ -419,7 +468,7 @@ export default function WebApplicationService(){
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
-                    <div className="tag">CUSTOM WEB APPLICATION SOLUTIONS</div>
+                    <div className="tag">OUR WEB APPLICATION DEVELOPMENT SERVICES</div>
                     <h2>Web Application Development Services Built Around Your <span>Business Goals</span></h2>
                   </div>
                   <div className='secDetail'>
@@ -458,7 +507,7 @@ export default function WebApplicationService(){
                 <Col>
                   <div className='sectionHead'>
                     <div className="tag">APPLICATIONS WE BUILD</div>
-                    <h2>Web Application Solutions for <span>Every Business</span></h2>
+                    <h2>Web Application Solutions <br/>for <span>Every Business</span></h2>
                     <p className='halfWidth'>We develop web applications for different business requirements, industries and operational needs.</p>
                   </div>
                   <div className="benefitGrid">
@@ -481,8 +530,37 @@ export default function WebApplicationService(){
               </Row>
             </Container>
         </div>
+         {/* Why businesses choose */}
+        <div className='whyChooseUs block-mg-top'>
+          <Container>
+            <Row>
+              <Col>
+                  <div className='why_container'>
+                      <div className="sectionHead">
+                        <div className="tag">WHY CHOOSE CODETRIOS</div>
+                        <h2>Why Choose CodeTrios for <span>Web Application</span> Development?</h2>
+                        <p>At CodeTrios, we build web applications around your business goals, user requirements and workflows. From custom dashboards and customer portals to complex business applications, we focus on creating solutions that are easy to use, secure, scalable and ready to grow with your business.</p>
+                      </div>
+                      <div className="why_features">
+                        {whyChooseData.map(({ icon: Icon, title, description }) => (
+                          <div className="features_box" key={title}>
+                            <div className="features_icon" aria-hidden="true">
+                              <Icon size={25} strokeWidth={1.7} />
+                            </div>
+                            <div className="feature_content">
+                              <h3>{title}</h3>
+                              <p>{description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                  </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
         {/* website design Technologies & Tools  */}
-        <div className='technologyStack block-mg-top' aria-labelledby="technology-expertise-title">
+        <div className='technologyStack' aria-labelledby="technology-expertise-title">
           <Container>
             <Row>
               <Col>
@@ -491,7 +569,7 @@ export default function WebApplicationService(){
                     <div className="tag">Technologies & Tools</div>
                     <h2>Technologies & Tools We Work With</h2>
                     <p>We use modern technologies and frameworks to develop powerful, reliable and scalable web applications.</p>
-                    <Link to="/" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
+                    <Link to="/technologies" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                   </div>
                   <div className="technology-grid">
                     <ul className="technology-expertise__groups">
@@ -529,27 +607,8 @@ export default function WebApplicationService(){
             </Row>
           </Container>
         </div>
-        {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
-          <Container>
-            <Row>
-              <Col>
-                  <div className='why_container'>
-                      <div className="sectionHead">
-                        <div className="tag">Why businesses choose CodeTrios</div>
-                        <h2>Digital Solutions Built Around Your {" "}<span>Goals</span></h2>
-                        <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
-                      </div>
-                      <div className="why_features">
-                        
-                      </div>
-                  </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
         {/* Our Process */}
-        <div className='services_process blockPadding'> 
+        <div className='services_process blockPadding block-mg-top'> 
           <Container>
             <Row>
               <Col>
@@ -585,7 +644,7 @@ export default function WebApplicationService(){
                 <div className='services_industries_bg'>
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
-                      <h2>Industries <span>We Serve</span></h2>
+                      <h2>Section missing Industries <span>We Serve</span></h2>
                       <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
                   </div>
                   <div className="industries-section">
@@ -658,7 +717,7 @@ export default function WebApplicationService(){
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our Web <span>Development & Digital</span> Services</h2>
+                          <h2>Questions About Our <span>Web Application</span> Services</h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>

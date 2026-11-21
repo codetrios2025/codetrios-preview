@@ -7,25 +7,40 @@ import Accordion from 'react-bootstrap/Accordion';
 import '../mainservices.css';
 //icon
 import {
-  BriefcaseBusiness,
-  MonitorSmartphone,
-  RefreshCw,
-  PanelsTopLeft,
-  ShoppingCart,
-  PenTool,
-  Building2,
-  Store,
-  Images,
   ShoppingBag,
-  GraduationCap,
-  HeartPulse,
-  MousePointerClick,
-  Blocks,
   ArrowUpRight,
-  Stethoscope,
-  Hotel,
+  Atom,
+  Server,
+  Code,
+  Database,
+  CodeXml,
+  Webhook,
+  Store,
+  PanelsTopLeft,
+  CreditCard,
+  ShoppingCart,
+  Plug,
+  UserRound,
+  Building2,
+  ShoppingBasket,
+  Shirt,
+  Sofa,
+  Repeat,
+  Settings2,
+  Smile,
+  ShieldCheck,
+  SearchCheck,
+  LayoutDashboard,
+  PlugZap,
+  MonitorSmartphone,
+  Headset,
+  ChartNoAxesCombined,
+  Laptop,
+  Utensils,
+  HeartPulse,
+  Armchair,
+  Sparkles,
   Factory,
-  Rocket,
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -45,223 +60,333 @@ import startupsImg from '../../../assets/images/startups-img.jpg';
 import technologyImg from '../../../assets/images/technology-img.jpg';
 const Carousel = CarouselImport.default ?? CarouselImport;
 
-//website Design Services data
-const websiteDesignServices = [
+//E-commerce Development Services data
+const commerceServicesData = [
   { 
-    title: "Business Website Design", 
-    content: "Professional websites that communicate your services, establish credibility and encourage enquiries.",
-    link: "/",
-    icon: BriefcaseBusiness 
-  },
-  { 
-    title: "Responsive Website Design", 
-    content: "Layouts and interactions designed to work effectively across mobile, tablet and desktop screens.",
-    link: "/",
-    icon: MonitorSmartphone 
-  },
-  { 
-    title: "Website Redesign", 
-    content: "Modernize an existing website with improved navigation, visual design, content hierarchy and user experience.",
-    link: "/",
-    icon: RefreshCw 
-  },
-  { 
-    title: "Landing Page Design", 
-    content: "Focused landing pages designed around specific campaigns, services, products or conversion goals.",
-    link: "/",
-    icon: PanelsTopLeft 
-  },
-  { 
-    title: "Ecommerce Website Design", 
-    content: "Customer-friendly storefront experiences with intuitive product discovery, shopping flows and responsive layouts.",
-    link: "/",
-    icon: ShoppingCart 
-  },
-  { 
-    title: "UI/UX Website Design", 
-    content: "Wireframes, user journeys, prototypes and interface designs that make websites easier to navigate and use.",
-    link: "/",
-    icon: PenTool 
-  },
-];
-//websiteTypes data
-const websiteTypes = [
-  { 
-    title: "Corporate Websites", 
-    content: "Structured websites for established organizations and larger businesses.",
-    link: "/",
-    icon: Building2 
-  },
-  { 
-    title: "Small Business Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
-    link: "/",
-    icon: Store 
-  },
-  { 
-    title: "Portfolio Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
-    link: "/",
-    icon: Images 
-  },
-  { 
-    title: "Ecommerce Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Custom E-commerce Website Development", 
+    content: "We develop customised ecommerce websites with features and functionality tailored to your products, customers and business requirements.",
     link: "/",
     icon: ShoppingBag 
   },
   { 
-    title: "Educational Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Online Store Development", 
+    content: "Launch your online store with organised product categories, attractive product pages, shopping carts and easy checkout.",
     link: "/",
-    icon: GraduationCap 
+    icon: Store 
   },
   { 
-    title: "Healthcare Websites", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "E-commerce UI/UX Design", 
+    content: "Create engaging shopping experiences with intuitive navigation, responsive layouts and user-friendly interfaces.",
     link: "/",
-    icon: HeartPulse 
+    icon: PanelsTopLeft 
   },
   { 
-    title: "Landing Pages", 
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Payment Gateway Integration", 
+    content: "Enable convenient online payments by integrating suitable payment gateways into your ecommerce website.",
     link: "/",
-    icon: MousePointerClick 
+    icon: CreditCard 
   },
   { 
-    title: "CMS-Based Websites",
-    content: "Websites designed for companies that need a professional digital presence.",
+    title: "Shopping Cart & Checkout Development", 
+    content: "Make purchasing easier with streamlined shopping carts, secure checkout flows and simplified order placement.",
     link: "/",
-    icon: Blocks 
+    icon: ShoppingCart 
+  },
+  { 
+    title: "E-commerce API Integration", 
+    content: "Connect your online store with payment services, shipping providers, inventory systems and other business applications.",
+    link: "/",
+    icon: Plug 
   },
 ];
-// Our Process Data
+//E-commerce Solutions Type data
+const websiteTypes = [
+  { 
+    title: "B2C E-commerce Websites", 
+    content: "Online shopping platforms that allow businesses to sell products directly to customers.",
+    link: "/",
+    icon: UserRound 
+  },
+  { 
+    title: "B2B E-commerce Platforms", 
+    content: "Business-to-business ecommerce solutions with customer accounts, bulk orders and customised pricing.",
+    link: "/",
+    icon: Building2 
+  },
+  { 
+    title: "Multi-Vendor Marketplace Development", 
+    content: "Online marketplaces where multiple sellers can list and manage their products.",
+    link: "/",
+    icon: Store 
+  },
+  { 
+    title: "Retail & Wholesale Ecommerce Websites", 
+    content: "Digital storefronts for retail and wholesale businesses with product catalogues and order management.",
+    link: "/",
+    icon: ShoppingBasket 
+  },
+  { 
+    title: "Fashion & Apparel Ecommerce Stores", 
+    content: "Online stores for clothing, footwear, accessories and fashion products.",
+    link: "/",
+    icon: Shirt 
+  },
+  { 
+    title: "Electronics & Furniture Ecommerce Stores", 
+    content: "Product-focused ecommerce websites with organised categories, product details and enquiry or purchase options.",
+    link: "/",
+    icon: Sofa 
+  },
+  { 
+    title: "Grocery & Food Ecommerce Stores", 
+    content: "Online ordering platforms for grocery stores, food retailers and local businesses.",
+    link: "/",
+    icon: ShoppingBasket 
+  },
+  { 
+    title: "Subscription-Based Ecommerce Stores", 
+    content: "Ecommerce solutions for recurring products, subscription plans and repeat customer orders.",
+    link: "/",
+    icon: Repeat 
+  },
+];
+//whyChoose data
+const whyChooseData = [
+  {
+    icon: Settings2,
+    title: "Customised E-commerce Solutions",
+    description:"We build ecommerce websites around your products, business model and specific requirements.",
+  },
+  {
+    icon: Smile,
+    title: "User-Friendly Shopping Experience",
+    description:"We create simple navigation, organised product pages, mobile-friendly layouts and smooth checkout experiences to make online shopping easier for customers.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Secure Payment Integration",
+    description:"We integrate suitable payment gateways and configure secure payment workflows to help customers complete online transactions with confidence.",
+  },
+  {
+    icon: SearchCheck,
+    title: "SEO-Friendly Development",
+    description:"We follow SEO-friendly development practices, including clean URLs, mobile responsiveness, metadata support, structured content and performance optimisation to support search visibility.",
+  },
+  {
+    icon: LayoutDashboard,
+    title: "Easy Store Management",
+    description:"We can provide user-friendly administration features to manage products, categories, prices, inventory, customers and orders.",
+  },
+  {
+    icon: PlugZap,
+    title: "Third-Party API Integration",
+    description:"We can connect your ecommerce website with payment gateways, shipping services, inventory systems, CRM platforms and other business tools.",
+  },
+  {
+    icon: MonitorSmartphone,
+    title: "Responsive Design Across Devices",
+    description:"We ensure your online store works smoothly across smartphones, tablets, laptops and desktop computers.",
+  },
+  {
+    icon: Headset,
+    title: "Ongoing Maintenance & Technical Support",
+    description:"We provide website updates, bug fixes, technical assistance and maintenance to help keep your ecommerce platform running smoothly.",
+  },
+  {
+    icon: ChartNoAxesCombined,
+    title: "Business-Focused Development",
+    description:"We focus on practical features that support your business goals, improve customer experience and make online store management more efficient.",
+  },
+ 
+];
+// technologies we work data
+const technologiesData = [
+  {
+    icon: Atom ,
+    title: "React.js",
+    description: "Interactive and modern shopping interfaces with custom theme & design.",
+  },
+  {
+    icon: Server ,
+    title: "Node.js & Express.js",
+    description: "Backend development and ecommerce functionality.",
+  },
+  {
+    icon: Code ,
+    title: "PHP",
+    description: "Custom ecommerce website and backend development.",
+  },
+  {
+    icon: ShoppingBag ,
+    title: "WordPress & WooCommerce",
+    description: "Flexible ecommerce websites and product management..",
+  },
+  {
+    icon: Database ,
+    title: "MySQL & MongoDB",
+    description: "Database management for products, customers and orders.",
+  },
+  {
+    icon: CodeXml ,
+    title: "HTML5, CSS3 & JavaScript",
+    description: "Website structure, styling and interactive features.",
+  },
+  {
+    icon: PanelsTopLeft ,
+    title: "Bootstrap",
+    description: "Responsive layouts for different screen sizes.",
+  },
+  {
+    icon: Webhook ,
+    title: "REST APIs",
+    description: "Payment, shipping and third-party service integrations.",
+  },
+];
+// E-commerce Development Process Data
 const processData = [
   {
     number: "01",
-    title: "Discover",
-    description:
-      "We understand your business goals, audience, and requirements to create a clear project roadmap.",
+    title: "Business & Requirement Analysis",
+    description:"Understand your products, customers, business model and ecommerce requirements.",
   },
   {
     number: "02",
-    title: "Design & Build",
-    description:
-      "We design intuitive interfaces and develop scalable, high-performance digital solutions.",
+    title: "Planning & Architecture",
+    description:"Plan website structure, product categories, shopping features and technical architecture.",
   },
   {
     number: "03",
-    title: "Review & Launch",
-    description:
-      "We test, refine, and launch your solution to ensure quality, performance, and reliability.",
+    title: "UI/UX Design",
+    description:"Create attractive and user-friendly shopping interfaces for desktop and mobile devices.",
   },
   {
     number: "04",
-    title: "Support & Maintenance",
-    description:
-      "We provide ongoing technical support, updates, security monitoring, and performance optimization to keep your digital solutions running smoothly.",
+    title: "Frontend & Backend Development",
+    description:"Develop website interfaces, product management, customer accounts, shopping carts and backend functionality.",
+  },
+  {
+    number: "05",
+    title: "Payment Integration & Testing",
+    description:"Integrate payment gateways and test checkout, orders, website performance and functionality.",
+  },
+  {
+    number: "06",
+    title: "Launch & Ongoing Support",
+    description:"Deploy your ecommerce website and provide maintenance and technical support.",
   },
 ];
 //industries Data
 const industriesData = [
   {
     number : "01",
-    icon: GraduationCap,
-    title: "Education",
-    text: "Learning platforms, school and college websites, student portals.",
+    icon: Shirt,
+    title: "Fashion & Apparel",
+    text: "Online clothing, footwear and accessories stores.",
     img: eduImg,
   },
   {
     number : "02",
-    icon: Stethoscope,
-    title: "Healthcare",
-    text: "Hospital websites, appointment systems, patient management solutions.",
+    icon: Laptop,
+    title: "Electronics & Technology",
+    text: "Electronics and gadget ecommerce platforms.",
     img: healthcareImg,
   },
   {
     number : "03",
-    icon: ShoppingCart,
-    title: "E-commerce",
-    text: "Online stores, secure payments, product catalogs and shopping experiences.",
+    icon: Utensils,
+    title: "Food & Grocery",
+    text: "Online grocery stores and food ordering platforms.",
     img: ecomImg,
   },
   {
     number : "04",
-    icon: Building2,
-    title: "Real Estate",
-    text: "Property websites, listing portals, lead generation and virtual experiences.",
-    img: estateImg,
+    icon: HeartPulse,
+    title: "Healthcare & Wellness",
+    text: "Healthcare product and wellness ecommerce websites.",
+    img: healthcareImg,
   },
   {
     number : "05",
-    icon: Hotel,
-    title: "Hospitality",
-    text: "Hotel websites, online booking, guest services and reservation systems.",
-    img: hospitalityImg,
+    icon: Armchair,
+    title: "Home & Furniture",
+    text: "Furniture, home decor and lifestyle product stores.",
+    img: estateImg,
   },
   {
     number : "06",
-    icon: Factory,
-    title: "Manufacturing",
-    text: "Business websites, production workflows, automation and operational software.",
+    icon: Sparkles,
+    title: "Beauty & Personal Care",
+    text: "Cosmetics, skincare and personal care stores.",
     img: manufacturingImg,
   },
   {
     number : "07",
-    icon: Rocket,
-    title: "Startups",
-    text: "MVP development, scalable platforms and digital products for growing businesses.",
+    icon: Store,
+    title: "Retail & Wholesale",
+    text: "Product catalogues, retail stores and bulk ordering platforms.",
     img: startupsImg,
   },
   {
     number : "08",
-    icon: BriefcaseBusiness,
-    title: "Corporate & Technology",
-    text: "Corporate websites, custom software, web applications and digital transformation.",
-    img: technologyImg,
+    icon: Factory,
+    title: "Manufacturing",
+    text: "Industrial product catalogues and B2B ecommerce solutions.",
+    img: manufacturingImg,
   },
 ]
 //FAQ data
 const faqs = [
   {
-      question: "What does a web development company do?",
-      answer: "A web development company builds and maintains websites and web applications, including frontend interfaces, backend systems, databases, APIs, integrations, testing, deployment, and ongoing technical support."
+      question: "What is ecommerce website development?",
+      answer: "Ecommerce website development is the process of creating an online store where businesses can display products, accept orders and receive payments online."
   },
   {
-      question: "How much do web development services cost in India?",
-      answer: "The cost of web development depends on factors such as project complexity, required features, technology, integrations, design requirements, content management needs, and ongoing support. CodeTrios provides project-specific estimates based on business and technical requirements."
+      question: "How much does ecommerce website development cost in India?",
+      answer: "The cost depends on website features, product quantity, design requirements, integrations and custom functionality. Contact CodeTrios for a project estimate."
   },
   {
-      question: "How long does it take to develop a website?",
-      answer: "Website development timelines depend on the size and complexity of the project. A simple business website may take a few weeks, while custom websites and web applications with advanced functionality, integrations, or workflows can take longer."
+      question: "Does CodeTrios develop custom ecommerce websites?",
+      answer: "Yes. We develop custom ecommerce websites based on business requirements, product types and desired shopping features."
   },
   {
-      question: "Do you develop SEO-friendly websites?",
-      answer: "Yes. CodeTrios follows SEO-friendly development practices such as responsive design, clean site structure, performance optimization, crawlable content, proper technical implementation, and structured data where appropriate."
+      question: "Can you develop an ecommerce website using WooCommerce?",
+      answer: "Yes. We develop WordPress ecommerce websites using WooCommerce, including product setup, payment integration and store customisation."
   },
   {
-      question: "What is the difference between web design and web development?",
-      answer: "Web design focuses on visual appearance, layout, branding, and user experience, while web development focuses on building the frontend and backend functionality that makes a website or web application work."
+      question: "Can you integrate online payment gateways?",
+      answer: "Yes. We can integrate suitable payment gateways to enable online transactions through your ecommerce website."
   },
   {
-      question: "Does CodeTrios provide custom web development?",
-      answer: "Yes. CodeTrios provides custom web development for businesses and organizations that require specific functionality, integrations, workflows, or application features."
+      question: "Can you develop a multi-vendor ecommerce marketplace?",
+      answer: "Yes. We can develop marketplace solutions that support multiple sellers, product listings and order management."
   },
   {
-      question: "Which technologies does CodeTrios use?",
-      answer: "Depending on project requirements, CodeTrios works with technologies including React.js, Node.js, PHP, WordPress, Drupal, Strapi, APIs, databases, and modern web development tools."
+      question: "Will my ecommerce website work on mobile devices?",
+      answer: "Yes. We develop responsive ecommerce websites that adapt to smartphones, tablets and desktop screens."
   },
   {
-      question: "Can CodeTrios develop an existing website further?",
-      answer: "Yes. Existing websites can be extended with new features, integrations, performance improvements, redesigns, CMS functionality, and other technical enhancements."
+      question: "Can I manage products and orders myself?",
+      answer: "Yes. We can provide an administration panel to manage products, categories, customers and orders."
   },
   {
-      question: "Does CodeTrios provide website maintenance?",
-      answer: "Yes. Website maintenance can include updates, security improvements, backups, bug fixes, performance optimization, monitoring, and feature enhancements."
+      question: "Is ecommerce website development SEO-friendly?",
+      answer: "We follow SEO-friendly development practices, including responsive layouts, clean URLs, structured content, metadata support and performance optimisation."
   },
   {
-      question: "Can CodeTrios build scalable web applications?",
-      answer: "Yes. CodeTrios develops scalable web applications using appropriate frontend, backend, database, API, and hosting architecture based on project requirements."
+      question: "Can you redesign my existing ecommerce website?",
+      answer: "Yes. We can redesign existing online stores to improve their appearance, navigation, usability and shopping experience."
+  },
+  {
+      question: "How long does it take to develop an ecommerce website?",
+      answer: "The timeline depends on the number of products, features, integrations and design complexity. We provide an estimated timeline after reviewing your requirements."
+  },
+  {
+      question: "Does CodeTrios provide ecommerce website maintenance?",
+      answer: "Yes. We provide website maintenance, technical support, updates and ongoing improvements based on your requirements."
+  },
+  {
+      question: "Does CodeTrios provide ecommerce development services outside Delhi NCR?",
+      answer: "Yes. We work with businesses across Delhi NCR and other locations in India."
   },
 ]
 
@@ -269,22 +394,22 @@ const faqs = [
 const relatedServices = [
   {
     title: "Website Design",
-    content:"Create professional, responsive and conversion-focused websites with modern UI design and intuitive user experiences.",
+    content:"Creative UI/UX, graphic and interface design that strengthens your brand identity.",
     link: "/website-design-services",
     linkTitle: "Explore Website Design Services",
   },
   {
-    title: "Ecommerce Development",
-    content:"Build high-performing online stores with responsive design, secure payments and ecommerce integrations.",
-    link: "/ecommerce-development-services",
-    linkTitle: "Explore Ecommerce Development Services",
+    title: "Web Development",
+    content:"Custom, responsive and scalable websites built with modern frontend and backend technologies.",
+    link: "/web-development-services",
+    linkTitle: "Explore Web Development Services",
   },
   {
-    title: "Web Application Development",
-    content:"Develop secure and scalable web applications that streamline business processes and improve digital experiences.",
+    title: "Web Applications",
+    content:"Powerful web applications designed to simplify business operations and improve productivity.",
     link: "/web-application-development",
     linkTitle: "Explore Web Application Development",
-  },  
+  }, 
   {
     title: "UI/UX Design",
     content:"Design intuitive, accessible and user-focused interfaces that improve usability, engagement and conversions.",
@@ -293,11 +418,30 @@ const relatedServices = [
   },
   {
     title: "Custom Software Development",
-    content:"Develop custom software solutions that automate workflows, solve business challenges and support long-term growth.",
+    content:"Custom software, API integrations and technology solutions tailored to business needs.",
     link: "/custom-software-solutions",
     linkTitle: "Explore Custom Software Solutions",
   },
+  {
+    title: "Digital Strategy",
+    content:"Strategic digital solutions that help businesses improve their online presence and achieve growth.",
+    link: "/digital-strategy-consulting",
+    linkTitle: "Explore Digital Strategy",
+  },
+  {
+    title: "Web Hosting Service",
+    content:"Reliable hosting, server setup, website deployment and ongoing technical support.",
+    link: "/web-hosting-services",
+    linkTitle: "Explore Web Hosting Service",
+  },
+  {
+    title: "GEO & SEO Services",
+    content:"Improve Google rankings and AI search visibility through SEO, content optimisation and Generative Engine Optimisation.",
+    link: "/geo-seo-services",
+    linkTitle: "Explore GEO & SEO Services",
+  },        
 ];
+
 
 
 export default function EcommerceDevelopmentService(){
@@ -341,9 +485,9 @@ export default function EcommerceDevelopmentService(){
             <Row>
               <Col>
                 <div className='innerBannerContent'>
-                  <div className="tag">Our Services</div>
-                  <h1>Ecommerce Development Company in India</h1>
-                  <p>CodeTrios is a web development company in India helping businesses, startups, organizations, and growing brands build fast, secure, and scalable websites and web applications. We combine modern frontend and backend technologies, responsive development, performance optimization, and maintainable architecture to create digital platforms designed around real business requirements.</p>
+                  <div className="tag">ECOMMERCE DEVELOPMENT SERVICES</div>
+                  <h1>E-commerce Development Company in India</h1>
+                  <p>CodeTrios provides professional & user friendly ecommerce website development services to help businesses sell products online and grow their digital presence. We build user-friendly, responsive and scalable online stores with features that make shopping simple and convenient.From small business ecommerce websites to custom online shopping platforms, we develop solutions with product management, shopping carts, payment gateway integration and order management to support your business needs.</p>
                   <div className='actionRow'>
                     <ActionButton />
                   </div>
@@ -358,13 +502,11 @@ export default function EcommerceDevelopmentService(){
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
-                    <div className="tag">WHAT WE DESIGN</div>
-                    <h2>Website Design Services Built Around Your <span>Business Goals</span></h2>
+                    <div className="tag">OUR ECOMMERCE DEVELOPMENT SERVICES</div>
+                    <h2>E-commerce Development Services Built Around Your <span>Business Goals</span></h2>
                   </div>
                   <div className='secDetail'>
-                    <p>Our website design services cover the complete design journey, from understanding your business and audience to creating the visual interface and preparing a scalable design system for development. We design websites for companies, startups, institutions, professional organizations, and growing brands.</p>
-                    <p>Our approach focuses on responsive UI/UX, clear information architecture, mobile-first experiences, fast-loading pages, accessibility, SEO-friendly structure, and conversion-focused layouts. The result is a website that is easier for visitors to navigate and easier for businesses to manage and grow.</p>
-                    <p>Depending on your requirements, CodeTrios can design corporate websites, business websites, ecommerce stores, landing pages, WordPress websites, and redesigned digital experiences. Once the design is finalized, our web development services can turn the approved designs into fast, responsive, and scalable websites.</p>
+                    <p>Content missing</p>
                   </div>
                 </div>
               </Col>
@@ -372,7 +514,7 @@ export default function EcommerceDevelopmentService(){
             <Row>
               <Col>
                 <div className="benefitGrid">
-                  {websiteDesignServices.map((item, index) =>{
+                  {commerceServicesData.map((item, index) =>{
                     const IconComponent = item.icon;
                     return(
                       <div className="benefitCard" key={index} data-reveal="up">
@@ -381,7 +523,7 @@ export default function EcommerceDevelopmentService(){
                             <IconComponent aria-hidden="true" />
                           </div>
                         </div>
-                        <h3><Link to={item.link}>{item.title}</Link></h3>
+                        <h3>{item.title}</h3>
                         <p>{item.content}</p>
                         <span className='benefitGo'><ArrowUpRight /></span>
                       </div>
@@ -397,9 +539,9 @@ export default function EcommerceDevelopmentService(){
               <Row>
                 <Col>
                   <div className='sectionHead'>
-                    <div className="tag">Types of Websites We Design</div>
-                    <h2>Website Design for Every <span>Business Need</span></h2>
-                    <p className='halfWidth'>Different businesses need different website experiences. CodeTrios designs websites around their purpose, content, audience and functionality.</p>
+                    <div className="tag">TYPES OF ECOMMERCE PLATFORMS</div>
+                    <h2>E-commerce Solutions for <span>Every Business</span></h2>
+                    <p className='halfWidth'>Content missing</p>
                   </div>
                   <div className="benefitGrid">
                     {websiteTypes.map((item, index) =>{
@@ -421,7 +563,64 @@ export default function EcommerceDevelopmentService(){
               </Row>
             </Container>
         </div>
-
+        {/* Why businesses choose */}
+        <div className='whyChooseUs block-mg-top'>
+          <Container>
+            <Row>
+              <Col>
+                  <div className='why_container'>
+                      <div className="sectionHead">
+                        <div className="tag">WHY CHOOSE CODETRIOS</div>
+                        <h2>Why Choose CodeTrios for <span>E-commerce</span> Development?</h2>
+                        <p>Choosing the right ecommerce development partner is important for building a successful online business. At CodeTrios, we combine modern technology, thoughtful design and practical business solutions to create online stores that are easy to manage, convenient to shop from and ready to grow.</p>
+                      </div>
+                      <div className="why_features">
+                        {whyChooseData.map(({ icon: Icon, title, description }) => (
+                          <div className="features_box" key={title}>
+                            <div className="features_icon" aria-hidden="true">
+                              <Icon size={25} strokeWidth={1.7} />
+                            </div>
+                            <div className="feature_content">
+                              <h3>{title}</h3>
+                              <p>{description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                  </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        {/* Technologies we work */}
+        <div className='whyChooseUs'>
+            <Container>
+              <Row>
+                <Col>
+                    <div className='why_container'>
+                        <div className="sectionHead">
+                          <div className="tag">OUR ECOMMERCE TECHNOLOGIES</div>
+                          <h2>E-commerce <span>Technologies</span> We Use</h2>
+                          <p>Content missing</p>
+                        </div>
+                        <div className="why_features">
+                          {technologiesData.map(({ icon: Icon, title, description }) => (
+                            <div className="features_box" key={title}>
+                              <div className="features_icon" aria-hidden="true">
+                                <Icon size={25} strokeWidth={1.7} />
+                              </div>
+                              <div className="feature_content">
+                                <h3>{title}</h3>
+                                <p>{description}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                    </div>
+                </Col>
+              </Row>
+            </Container>
+          </div>
         {/* Our Process */}
         <div className='services_process blockPadding'> 
           <Container>
@@ -430,8 +629,8 @@ export default function EcommerceDevelopmentService(){
                 <div className='services_process_container'>
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
-                      <h2>A clear path from <span>idea to launch</span></h2>
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <h2>Our E-commerce Development Process</h2>
+                      <p>Content missing</p>
                   </div>
                   <div className='services_process_grid'>
                     {processData.map((item) => {
@@ -460,7 +659,7 @@ export default function EcommerceDevelopmentService(){
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
                       <h2>Industries <span>We Serve</span></h2>
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <p>Content missing</p>
                   </div>
                   <div className="industries-section">
                     <Carousel
@@ -497,31 +696,12 @@ export default function EcommerceDevelopmentService(){
             </Row>
           </Container>
         </div>
-        {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
-          <Container>
-            <Row>
-              <Col>
-                  <div className='why_container'>
-                      <div className="sectionHead">
-                        <div className="tag">Why businesses choose CodeTrios</div>
-                        <h2>Digital Solutions Built Around Your {" "}<span>Goals</span></h2>
-                        <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
-                      </div>
-                      <div className="why_features">
-                        
-                      </div>
-                  </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
         {/* Related Services */}
-        <div className='related-services'>
+        <div className='related-services blockPadding  '>
           <Container>
             <Row>
               <Col>
-                <div className='inner-bg'>
+                <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
                     <h2>Explore Our Other Digital Services</h2>
@@ -531,7 +711,7 @@ export default function EcommerceDevelopmentService(){
                       return(
                         <div className="benefitCard" key={index} data-reveal="up">
                           
-                          <h3><Link to={item.link} title={item.link}>{item.title}</Link></h3>
+                          <h3><Link to={item.link}>{item.title}</Link></h3>
                           <p>{item.content}</p>
                           <span className='benefitGo'><ArrowUpRight /></span>
                         </div>
@@ -551,7 +731,7 @@ export default function EcommerceDevelopmentService(){
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our Web <span>Development & Digital</span> Services</h2>
+                          <h2>Questions About Our <span>E-commerce Website</span> Development</h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>

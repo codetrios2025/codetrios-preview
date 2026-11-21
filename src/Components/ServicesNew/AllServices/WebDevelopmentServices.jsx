@@ -30,6 +30,13 @@ import {
   Hospital,
   Users,
   LayoutDashboard,
+  Cpu,
+  Smartphone,
+  Gauge,
+  SearchCheck,
+  ShieldCheck,
+  Plug,
+  Wrench,
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -139,6 +146,57 @@ const websiteTypes = [
     icon: FileText 
   },
 ];
+//whyChoose data
+const whyChooseData = [
+  {
+    icon: Code2,
+    title: "Custom Web Development",
+    description:
+      "We build websites to your business requirements, brand identity, workflows and specific functional needs.",
+  },
+  {
+    icon: Cpu,
+    title: "Modern Technology & Frameworks",
+    description:
+      "Our development expertise includes AI, React.js, Node.js, PHP, WordPress, Drupal, MySQL and MongoDB to deliver solutions suited to different project requirements.",
+  },
+  {
+    icon: Smartphone,
+    title: "Responsive & Mobile-Friendly Websites",
+    description:
+      "We develop websites that adapt smoothly to different screen sizes, providing a consistent experience across desktops, tablets and smartphones.",
+  },
+  {
+    icon: Gauge,
+    title: "Performance-Focused Development",
+    description:
+      "We focus on clean code, efficient database operations and optimised website resources to improve loading speed and overall performance.",
+  },
+  {
+    icon: SearchCheck,
+    title: "SEO-Friendly Development",
+    description:
+      "We follow SEO-friendly development practices, including clean URL structures, proper heading hierarchy, mobile responsiveness and technical optimisation.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Secure & Scalable Solutions",
+    description:
+      "We implement appropriate security practices and flexible architecture to support changing business requirements and future expansion.",
+  },
+  {
+    icon: Plug,
+    title: "API & Third-Party Integration",
+    description:
+      "We connect websites with payment gateways, CRM systems, ERP platforms and other external services to improve functionality and business efficiency.",
+  },
+  {
+    icon: Wrench,
+    title: "Ongoing Maintenance & Technical Support",
+    description:
+      "Our support includes bug fixes, website updates, performance improvements, security updates and new feature development as your business grows.",
+  },
+];
 // Our Process Data
 const processData = [
   {
@@ -181,30 +239,37 @@ const processData = [
 // Our technology Data
 const technologyGroups = [
   {
-    title: "Frontend",
+    title: "Frontend Technologies",
     icon: Monitor,
     technologies: ["React", "JavaScript", "HTML5", "CSS3", "Bootstrap"],
   },
   {
-    title: "Backend",
+    title: "Backend Technologies",
     icon: Settings,
     technologies: ["Node.js", "Express.js", "PHP", "Laravel"],
   },
   {
-    title: "CMS",
+    title: "CMS Technologies",
     icon: FileText,
-    technologies: ["WordPress", "Drupal", "Strapi"],
+    technologies: ["WordPress", "Elementor", "Drupal", "Custom CMS", "Strapi"],
   },
   {
-    title: "Databases",
+    title: "Databases Technologies",
     icon: Database,
     technologies: ["MySQL", "MongoDB"],
   },
   {
-    title: "API Integration",
+    title: "APIs & Integrations",
     icon: Cloud,
     technologies: ["REST APIs", "Payment Gateway APIs"],
-  }
+  },
+  {
+    title: "Cross-Platform Development",
+    icon: Smartphone,
+    technologies: [
+      "React Native",
+    ],
+  },
 ];
 //industries Data
 const industriesData = [
@@ -387,7 +452,7 @@ export default function WebDevelopmentService(){
             <Row>
               <Col>
                 <div className='innerBannerContent'>
-                  <div className="tag">Our Services</div>
+                  <div className="tag">Our Web Development Services</div>
                   <h1>Web Development Company in <span>India</span></h1>
                   <p>At CodeTrios, we provide professional web development services to help businesses build powerful, secure and scalable digital solutions. We develop business websites, web applications, ecommerce platforms and custom software to your requirements. Our development approach focuses on performance, functionality, responsive experiences, secure coding and SEO ,GEO & AEO  friendly architecture. We work with modern technologies to create websites and applications that support your business today and grow with your future needs with help of AI Technology.</p>
                   <div className='actionRow'>
@@ -473,12 +538,22 @@ export default function WebDevelopmentService(){
               <Col>
                   <div className='why_container'>
                       <div className="sectionHead">
-                        <div className="tag">Why businesses choose CodeTrios</div>
-                        <h2>Digital Solutions Built Around Your {" "}<span>Goals</span></h2>
-                        <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
+                        <div className="tag">WHY CHOOSE CODETRIOS</div>
+                        <h2>Why Choose CodeTrios for <span>Web Development</span> Services?</h2>
+                        <p>At CodeTrios, we develop websites and web solutions that help businesses build a strong digital presence and stream line their operations. We combine modern technologies, practical functionality and user-focused development to create solutions that support your business growth.</p>
                       </div>
                       <div className="why_features">
-                        
+                        {whyChooseData.map(({ icon: Icon, title, description }) => (
+                          <div className="features_box" key={title}>
+                            <div className="features_icon" aria-hidden="true">
+                              <Icon size={25} strokeWidth={1.7} />
+                            </div>
+                            <div className="feature_content">
+                              <h3>{title}</h3>
+                              <p>{description}</p>
+                            </div>
+                          </div>
+                        ))}
                       </div>
                   </div>
               </Col>
@@ -493,7 +568,7 @@ export default function WebDevelopmentService(){
                 <div className='services_process_container'>
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
-                      <h2>Our Web Development Process</h2>
+                      <h2>Our Web Development <span>Process</span></h2>
                       <p>We follow a structured development process to build reliable, functional and scalable digital solutions.</p>
                   </div>
                   <div className='services_process_grid'>
@@ -521,10 +596,10 @@ export default function WebDevelopmentService(){
                 <div className="technology-layout">
                   <div className='sectionHead'>
                     <div className="tag">Technology Expertise</div>
-                    <h2>Technologies & Tools We Use for <span>Web Development</span></h2>
-                    <p>We use modern development technologies and frameworks to build reliable and scalable web solutions.</p>
+                    <h2>Modern Technologies We Use for <span>Web Development</span></h2>
+                    <p>We use modern development technologies and frameworks to build reliable and scalable web solutions. We select the right technologies based on project requirements, performance, scalability and long-term maintenance.</p>
                     
-                      <Link to="/" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
+                      <Link to="/technologies" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                   </div>
                   <div className="technology-grid">
                     <ul className="technology-expertise__groups">
@@ -564,7 +639,7 @@ export default function WebDevelopmentService(){
           </Container>
         </div>
         {/* Industries Section */}
-        <div className='services_industries blockPadding' aria-labelledby="industries-heading">
+        <div className='services_industries blockPadding block-mg-top' aria-labelledby="industries-heading">
           <Container>
             <Row>
               <Col>

@@ -558,7 +558,8 @@ export default function GeoSeoService(){
                         <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
                       </div>
                       <div className="why_features">
-                        {whyChooseData.map(({ icon: Icon, title, description }) => (
+                        Content missing
+                        {/* {whyChooseData.map(({ icon: Icon, title, description }) => (
                           <div className="features_box" key={title}>
                             <div className="features_icon" aria-hidden="true">
                               <Icon size={25} strokeWidth={1.7} />
@@ -568,7 +569,7 @@ export default function GeoSeoService(){
                               <p>{description}</p>
                             </div>
                           </div>
-                        ))}
+                        ))} */}
                       </div>
                   </div>
               </Col>
@@ -715,7 +716,7 @@ export default function GeoSeoService(){
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Frequently Asked Questions About <span>SEO, GEO & AEO</span> Services</h2>
+                          <h2>Questions About Our <span>SEO, GEO & AEO</span> Services</h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>
