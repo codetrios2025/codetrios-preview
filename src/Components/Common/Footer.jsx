@@ -12,7 +12,7 @@ const Footer = () => {
             <div className={Style.info}>
               <div className={Style.footerlogo}>
               <img
-                src={`${import.meta.env.BASE_URL}assets/codetrios_logo-C_Tfbldz.svg`}
+                src={`${import.meta.env.BASE_URL}codetrios_logo.svg`}
                 alt="CodeTrios Software Development Company"
                 loading="lazy"
                 decoding="async"
