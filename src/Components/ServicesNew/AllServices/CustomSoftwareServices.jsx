@@ -476,7 +476,7 @@ export default function CustomSoftwareService(){
                     <h2 id='custom-software-heading'>Our <span>Custom Software</span> Development Services</h2>
                   </div>
                   <div className='secDetail'>
-                    <p>We provide custom software development services to help businesses simplify operations, improve productivity and manage their processes through technology.</p>
+                    <p>CodeTrios provide custom software development services to help businesses simplify operations, improve productivity and manage their processes through technology.We develop tailored software solutions, including CRM and ERP systems, business management applications, customer portals, inventory management systems and enterprise applications. Our solutions use modern technologies such as React.js, Node.js, PHP, MySQL and MongoDB, based on project requirements. From planning and development to integration and ongoing support, we build scalable, user-friendly software designed around your business processes and long-term goals.</p>
                   </div>
                 </div>
               </Col>
@@ -619,7 +619,7 @@ export default function CustomSoftwareService(){
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
                       <h2 id='development-process-heading'>Our Custom Software <br/>Development <span>Process</span></h2>
-                      <p>Content missing</p>
+                      <p>At CodeTrios, our custom software development process starts with understanding your business requirements, challenges and workflows. We follow a structured approach that includes requirement analysis, project planning, UI/UX design, software development, API integration, testing and deployment. We also provide ongoing maintenance and technical support to help your software adapt as your business grows.</p>
                   </div>
                   <div className='services_process_grid'>
                     {processData.map((item) => {

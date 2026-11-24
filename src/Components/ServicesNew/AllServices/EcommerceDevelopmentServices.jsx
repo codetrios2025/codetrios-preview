@@ -481,7 +481,7 @@ export default function EcommerceDevelopmentService(){
                     <h2 id="ecommerce-services-heading">E-commerce Development Services Built Around Your <span>Business Goals</span></h2>
                   </div>
                   <div className='secDetail'>
-                    <p>Content missing</p>
+                    <p>CodeTrios provides custom e-commerce development services to help businesses build, manage and grow their online stores. We develop user-friendly, mobile-responsive and SEO-friendly e-commerce websites tailored to your products, customers and business model. From B2C and B2B online stores to multi-vendor marketplaces, our solutions include product catalogues, shopping carts, secure payment gateway integration, order management and custom features. We help create scalable digital shopping experiences designed to improve customer engagement and support business growth.</p>
                   </div>
                 </div>
               </Col>
@@ -606,7 +606,7 @@ export default function EcommerceDevelopmentService(){
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
                       <h2 id="ecommerce-process-heading">Our E-commerce Development <sapn>Process</sapn></h2>
-                      <p>Content missing</p>
+                      <p>At CodeTrios, our e-commerce development process focuses on building secure, user-friendly and scalable online stores that meet your business requirements.</p>
                   </div>
                   <div className='services_process_grid'>
                     {processData.map((item) => {
@@ -635,7 +635,7 @@ export default function EcommerceDevelopmentService(){
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
                       <h2 id="ecommerce-industries-heading">Industries <span>We Serve</span></h2>
-                      <p>Content missing</p>
+                      <p>CodeTrios provides e-commerce development services for businesses across different industries. We build customised online stores and shopping platforms based on each industry's products, customers and selling requirements.</p>
                   </div>
                   <div className="industries-section">
                     <Carousel
