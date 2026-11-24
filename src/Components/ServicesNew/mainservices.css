@@ -14,6 +14,10 @@
   border-bottom: 1px solid var(--ct-border);
   position: relative;
 }
+.ct_service_box:last-child{
+  border: none;
+  padding: 0;
+}
 .ct_service_numver{
      font-size: 30px;
     font-weight: 300;

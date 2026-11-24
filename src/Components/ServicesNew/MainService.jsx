@@ -230,7 +230,7 @@ const serviceData = [
   },
   {
     number : "06",
-    title : "Custom Software & Technology Solutions",
+    title : "Custom Software Solutions",
     icon : Blocks,
     content : "Sometimes your business needs more than a website, that's why we are here. It needs software that follows specific workflows, connects different systems, or reduces repetitive tasks.We develop custom software and technology solutions based on how your business operates, helping teams manage information, improve processes, and work more efficiently.",
     link : "/custom-software-solutions",
@@ -264,7 +264,7 @@ const serviceData = [
   },
   {
     number : "07",
-    title : "Additional Digital Services",
+    title : "Digital Strategy Consulting",
     icon : ChartNoAxesCombined,
     content : " Codetrios provide Complete Support Beyond Digital Development. Building a digital product is only one part of the journey. We also help businesses maintain their websites, improve their online visibility, and manage their technology as their needs change. Our additional services are designed to support you after launch and as your business grows.",
     link : "/digital-strategy-consulting",
@@ -637,7 +637,7 @@ export default function ServicesScreen() {
     />
     <div className='servicesPage innerPageBg'>
       {/* Banner Section */}
-      <div className="innerHeroBanner">
+      <div className="innerHeroBanner" aria-labelledby="services-hero-heading">
         <NetworkBackground />
         <Container>
           <Row>
@@ -645,7 +645,7 @@ export default function ServicesScreen() {
               <div className='innerBannerContent'>
                 <div className="tag">Our Services</div>
                 {/* <h1>Web Design, Development & <span>Digital Solutions</span></h1> */}
-                <h1>Digital Solutions That Help Your <span>Business.</span></h1>
+                <h1 id="services-hero-heading">Digital Solutions That Help Your <span>Business.</span></h1>
                 <p>Need a website, a custom application, or a better way to manage your business online? CodeTrios helps turn your requirements into practical digital solutions. We provide website design, web development, ecommerce development, web applications, custom software, and digital technology services for businesses in India and beyond. From a simple business website to a complex web platform, we focus on building solutions that are easy to use, reliable, and ready to grow with your business.</p>
                 <div className='actionRow'>
                   <ActionButton />
@@ -657,14 +657,14 @@ export default function ServicesScreen() {
       </div>
 
       {/* Services Section */}
-      <div className='weAreBlock blockPadding'>
+      <div className='weAreBlock blockPadding' aria-labelledby="services-list-heading">
         <Container>
           <Row>
             <Col>
               <div className='weAreContent'>
                 <div className='sectionHead'>
                   <div className="tag">What we do</div>
-                  <h2>The Right Digital Services for <span>Every Stage</span> of Your <span>Business.</span></h2>
+                  <h2 id="services-list-heading">The Right Digital Services for <span>Every Stage</span> of Your <span>Business.</span></h2>
                 </div>
                 <div className='secDetail'>
                   <p>Every business needs something new & different from technology. Some need a professional website to reach more customers, while others need custom software to simplify everyday work.At CodeTrios, we bring design, development, and technology together to help businesses solve these challenges. Our services cover the complete journey, from planning and design to development, launch, and ongoing support.</p>
@@ -678,7 +678,7 @@ export default function ServicesScreen() {
               {serviceData.map((item, index) =>{
                   const IconComponent = item.icon;
                   return(
-                    <div className='ct_service_box' key={index}>
+                    <article className='ct_service_box' key={index}>
                       <div className='ct_service_numver'>{item.number}</div>
                       <div className='ct_service_icon'><IconComponent /></div>
                       <div className='ct_service_content'>
@@ -695,9 +695,9 @@ export default function ServicesScreen() {
                         )}
                       </div>
                       <div className='ct_service_link'>
-                        <Link to={item.link} title=''><ArrowRight /></Link>
+                        <Link to={item.link} aria-label={`Explore ${item.title} services`}><ArrowRight aria-hidden="true" /></Link>
                       </div>
-                    </div>
+                    </article>
                   )
                 })}
               </div>
@@ -705,46 +705,15 @@ export default function ServicesScreen() {
           </Row>
         </Container>
       </div>
-      
-      {/* Our Process */}
-      <div className='services_process blockPadding'> 
-        <Container>
-          <Row>
-            <Col>
-              <div className='services_process_container'>
-                <div className='sectionHead'>
-                    <div className="tag">HOW WE WORK</div>
-                    <h2>From Your Idea to a <br/>Working <span>Digital Solution</span></h2>
-                    <p>We keep the development process clear and collaborative to visible to every one. Every project starts with understanding your requirements and ends with a solution that is tested, launched, and ready to use.</p>
-                </div>
-                <div className='services_process_grid'>
-                  {processData.map((item) => {
-                    return (
-                      <div className="process_box box-icon-hover" key={item.number}>
-                        <span className="number">
-                            {item.number}
-                        </span>
-                        <h3>{item.title}</h3>
-                        <p>{item.description}</p>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-
       {/* Industries Section */}
-      <div className='services_industries blockPadding' aria-labelledby="industries-heading">
+      <div className='services_industries blockPadding border-block' aria-labelledby="industries-heading">
         <Container>
           <Row>
             <Col>
               <div className='services_industries_bg'>
                 <div className='sectionHead'>
                     <div className="tag">WHO WE WORK WITH</div>
-                    <h2>Digital Solutions for <br/>Multiple & Different <span>Industries</span></h2>
+                    <h2 id="industries-heading">Digital Solutions for <br/>Multiple & Different <span>Industries</span></h2>
                     <p>Every industry has its own way of working. We partner with businesses and organizations to build websites and applications that fit their day-to-day needs—not the other way around.</p>
                 </div>
                 <div className="industries-section">
@@ -782,17 +751,15 @@ export default function ServicesScreen() {
           </Row>
         </Container>
       </div>
-
       {/* Why businesses choose */}
-      <div className='whyChooseUs block-mg-top'>
+      <div className='whyChooseUs block-mg-top' aria-labelledby="why-choose-heading">
           <Container>
             <Row>
               <Col>
                   <div className='why_container'>
                       <div className="sectionHead">
-                        <div className="tag">Why businesses choose CodeTrios</div>
-                        {/* <h2>Digital Solutions Built Around Your {" "}<span>Goals</span></h2> */}
-                        <h2>Need Heading</h2>
+                        <div className="tag">Why choose CodeTrios</div>
+                        <h2 id="why-choose-heading">Digital Solutions Built Around <span>Your Goals</span></h2>
                         <p>More Than Development. A Team That Understands Your Goals. Finding a best development partner is about more than choosing technologies. You need a team that listens, understands your requirements, and cares about the final result with your requirement and new technology .</p>
                       </div>
                         <div className="why_features">
@@ -813,16 +780,49 @@ export default function ServicesScreen() {
             </Row>
           </Container>
       </div>
+      {/* Our Process */}
+      <div className='services_process blockPadding' aria-labelledby="services-process-heading"> 
+        <Container>
+          <Row>
+            <Col>
+              <div className='services_process_container'>
+                <div className='sectionHead'>
+                    <div className="tag">HOW WE WORK</div>
+                    <h2 id="services-process-heading">From Your Idea to a <br/>Working <span>Digital Solution</span></h2>
+                    <p>We keep the development process clear and collaborative to visible to every one. Every project starts with understanding your requirements and ends with a solution that is tested, launched, and ready to use.</p>
+                </div>
+                <div className='services_process_grid'>
+                  {processData.map((item) => {
+                    return (
+                      <div className="process_box box-icon-hover" key={item.number}>
+                        <span className="number">
+                            {item.number}
+                        </span>
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+      
+
+      
       
       {/* Frequently Asked Questions */}
-      <div className='whyChooseUs'>
+      <div className='whyChooseUs block-mg-top' aria-labelledby="services-faq-heading">
           <Container>
             <Row>
               <Col>
                   <div className='why_container'>
                       <div className="sectionHead">
                         <div className="tag">Frequently Asked Questions</div>
-                        <h2>Questions About Our Web <span>Development & Digital</span> Services</h2>
+                        <h2 id="services-faq-heading">Questions About Our Web <span>Development & Digital</span> Services</h2>
                       </div>
                       <div className="why_features">
                         <Accordion defaultActiveKey="0" className='faqStyle'>
@@ -845,7 +845,7 @@ export default function ServicesScreen() {
       </div>
 
       {/* CAT */}
-      <ProjectCAT />
+      <ProjectCAT sectionId="services-cta-title" tagId="services-cta-title" />
     </div>
     </>
   )

@@ -460,7 +460,7 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
 
 .projectBox h5 {color: var(--ct-gray);margin: 15px 0 10px;font-weight: 500;}
 /* portfolio css */
-.WhatsAppBtn{width: 58px;height: 58px;background: rgb(37, 211, 102);position: fixed;bottom: 20px;right: 90px;border-radius: 50%;display: flex;align-items: center;justify-content: center;box-shadow: 0 6px 20px rgba(0, 0, 0, .25);}
+.WhatsAppBtn{width: 58px;height: 58px;background: rgb(37, 211, 102);position: fixed;bottom: 20px;right: 90px;border-radius: 50%;display: flex;align-items: center;justify-content: center;box-shadow: 0 6px 20px rgba(0, 0, 0, .25);transition:.15s; }
 .WhatsAppBtn svg{width: 26px;height: 26px;}
 .WhatsAppBtn:hover {transform: scale(1.07);}
 

@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { lazy, Suspense  } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import LayoutScreen from "./Components/Common/Layout";
@@ -7,10 +7,8 @@ import HomeRouteV1 from "./Components/HomeRoute_V1/HomeRouteV1";
 
 const AboutUs = lazy(() => import("./Components/AboutusNew/AboutUs"));
 const ServicesScreen = lazy(() => import("./Components/ServicesNew/MainService"));
-// Webste design
+// All Services
 const WebsiteDesign = lazy(() => import("./Components/ServicesNew/AllServices/WebDesignService"));
-const ResponsiveDesign = lazy(() => import("./Components/ServicesNew/WebDesignServices/ResponsiveWebDesign"));
-
 const WebsiteDevelopment = lazy(() => import("./Components/ServicesNew/AllServices/WebDevelopmentServices"));
 const WebApplication = lazy(() => import ('./Components/ServicesNew/AllServices/WebApplicationServices'));
 const UIUXDesign = lazy(() => import ('./Components/ServicesNew/AllServices/DesignService'));
@@ -30,49 +28,40 @@ const NotFound = lazy(() => import('./Components/Pages/404'));
 import WhatsAppButton from './Components/Common/WhatsAppButton';
 import Chatbot from "./Chatbot";
 function App() {
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 1000,
-  //     easing: "ease-in-out",
-  //     once: true,
-  //   });
-  // }, []);
   return (
     <>
     <ScrollTop />
-    <Routes>
-        <Route path="/" element={<LayoutScreen />}>
-        <Route index element={<HomeRouteV1 />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/services" element={<ServicesScreen />} />
+    <Suspense>
+      <Routes>
+          <Route path="/" element={<LayoutScreen />}>
+          <Route index element={<HomeRouteV1 />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/services" element={<ServicesScreen />} />
 
-        {/* Website design route */}
-        <Route path="/website-design-services" element={<WebsiteDesign />} />
-        <Route path="/responsive-website-design" element={<ResponsiveDesign />} />
-        
-        <Route path="/web-development-services" element={<WebsiteDevelopment />} />
-        <Route path="/web-application-development" element={<WebApplication />} />
-        <Route path="/ui-ux-design-services" element={<UIUXDesign />} />
-        <Route path="/ecommerce-development-services" element={<EcommerceDevelopment />} />
-        <Route path="/custom-software-solutions" element={<CustomSoftware />} />
-        <Route path="/digital-strategy-consulting" element={<DigitalStrategy />} />
-        <Route path="/web-hosting-services" element={<WebHosting />} />
-        <Route path="/geo-seo-services" element={<GeoSeoServices />} />
+          {/* Services  route */}
+          <Route path="/website-design-services" element={<WebsiteDesign />} />
+          <Route path="/web-development-services" element={<WebsiteDevelopment />} />
+          <Route path="/web-application-development" element={<WebApplication />} />
+          <Route path="/ui-ux-design-services" element={<UIUXDesign />} />
+          <Route path="/ecommerce-development-services" element={<EcommerceDevelopment />} />
+          <Route path="/custom-software-solutions" element={<CustomSoftware />} />
+          <Route path="/digital-strategy-consulting" element={<DigitalStrategy />} />
+          <Route path="/web-hosting-services" element={<WebHosting />} />
+          <Route path="/geo-seo-services" element={<GeoSeoServices />} />
 
-        {/* Other Routes */}
-        <Route path="/technologies" element={<Technologies />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact-us" element={<ContactUsPage />} />
-        <Route path="/thank-you" element={<ThankyouPage />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
+          {/* Other Routes */}
+          <Route path="/technologies" element={<Technologies />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact-us" element={<ContactUsPage />} />
+          <Route path="/thank-you" element={<ThankyouPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </Suspense>
     <WhatsAppButton />
-    <Chatbot />
-      {/* <ToastContainer />
-      <AppRoutes />
-      <WhatsAppButton />
-      <Chatbot /> */}
+    <Suspense fallback={null}>
+      <Chatbot />
+    </Suspense>
     </>
   );
 }
