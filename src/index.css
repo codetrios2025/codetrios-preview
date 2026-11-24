@@ -146,15 +146,7 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
 }
 
 /* FULLSCREEN LOADER */
-.loader-wrapper {
-  position: fixed;
-  inset: 0;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 99999;
-}
+.loader-wrapper {position: fixed;inset: 0;background: #fff;display: flex;justify-content: center;align-items: center;z-index: 99999;}
 .loader-wrapper div{width: 300px;height: 70px;display: flex;
     justify-content: center;position: relative;}
 /* Stack both images on top of each other (so icon hides cleanly) */
@@ -468,7 +460,31 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
 
 .projectBox h5 {color: var(--ct-gray);margin: 15px 0 10px;font-weight: 500;}
 /* portfolio css */
+.WhatsAppBtn{width: 58px;height: 58px;background: rgb(37, 211, 102);position: fixed;bottom: 20px;right: 90px;border-radius: 50%;display: flex;align-items: center;justify-content: center;box-shadow: 0 6px 20px rgba(0, 0, 0, .25);}
+.WhatsAppBtn svg{width: 26px;height: 26px;}
+.WhatsAppBtn:hover {transform: scale(1.07);}
 
+.contactBox{position: relative;display: grid;grid-template-columns: repeat(3, minmax(0, 1fr));width: 960px;max-width: 100%;margin: 0 auto;
+gap: 20px;}
+.contactBox .box{
+  border: 1px solid var(--ct-border);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 20px;
+  align-items: center;background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+}
+.contactBox .box span{
+  color: var(--ct-gray);
+  margin-bottom: 10px;
+}
+.contactBox .box span svg{width: 40px;height: 40px;}
+.contactBox .box a, .contactBox .box p{font-size: 16px;color: var(--ct-gray);text-align: center;}
+.contactPage .contactForm{    width: 960px;max-width: 100%;margin: 50px auto 0;background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));padding: 30px;border-radius: 20px;}
+.contactPage .contactForm .contactHead span{display: none;}
+.contactPage .buttonFlex{display: flex;justify-content: flex-start;}
+.contactPage .buttonFlex button{width: auto;    padding: 14px 44px;font-size: 14px;}
+.contactBox .box p{margin: 0;}
 @media (max-width: 1399px) {
   .innerBannerContent{width: 740px;}
   .innerBannerContent h1{font-size: 50px;line-height: 60px;}
@@ -553,6 +569,9 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
    .boxContainer .boxElem .rightArea{margin-top: 10px;}
    .boxContainer .boxElem .techLogo{width: 20%;}
    .boxContainer .boxElem{padding: 20px;}
+    
+   .contactBox .box{padding: 20px 10px;}
+   .contactBox .box a, .contactBox .box p{font-size: 14px;}
 }
 
 @media (max-width: 767px) {
@@ -597,10 +616,21 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
   .ourPlatForm h2{font-size: 26px;}
   .boxContainer h5{font-size: 18px;}
   .boxContainer .boxElem{border-radius: 20px;}
+
+  .contactBox{    grid-template-columns: repeat(1, minmax(0, 1fr));gap: 15px;}
+  .contactPage .contactForm{    margin: 40px auto 0;padding: 20px 15px}
+  .contactBox .box{padding: 15px;}
+  .contactBox .box span svg {width: 30px;height: 30px;}
+  #ct-launch{width: 46px!important;height: 46px!important;}
+  #ct-launch svg{width: 20px!important;height: 20px!important;}
+  .WhatsAppBtn{width: 46px;height: 46px;right: 80px;}
+  .WhatsAppBtn svg {width: 20px;height: 20px;}
 }
 
 
 @media (max-width: 580px) {
+  .WhatsAppBtn{    bottom: 12px;right: 65px;}
+
   .ctBtn{font-size: 13px;padding: 10px 8px;}
 
   .innerBannerContent h1 {font-size: 34px;line-height: 40px;}

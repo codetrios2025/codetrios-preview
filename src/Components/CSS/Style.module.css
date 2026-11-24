@@ -459,7 +459,7 @@ display: block;
 .thanksPage{position: relative;text-align: center;padding: 15px;height: 640px;display: flex;align-items: center;flex-direction: column;justify-content: center;
 background: #f0f0f0;
 }
-.thanksPage h1{font-weight: 700;color: #7C3AED;}
+.thanksPage h1{font-weight: 700;color: #0a2349;}
 .thanksPage a{color: #000;text-decoration: underline;}
 .thanksPage p{font-size: 16px;}
 .contactPage{margin-top: 84px;}
@@ -629,7 +629,7 @@ display: flex;align-items: center;justify-content: center;}
 .whyChooseSection.hostingSec p a{display: contents;}
 .weBuild p a, .aboutSec p a, .innerBanner p a{font-weight: 400;color: #0ea5e9;}
 .whyChooseSection p a{margin: 0;}
-.noFound{    background: #7C3AED;
+.noFound{    background: radial-gradient(ellipse at 76% 48%, rgba(0, 91, 190, 0.16), transparent 38%), linear-gradient(115deg, #041326 0%, #061a36 55%, #031126 100%);
     border-top: 1px solid #eef3fa;
     margin-top: 100px;
     padding: 60px 0;}

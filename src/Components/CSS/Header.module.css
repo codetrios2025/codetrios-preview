@@ -23,7 +23,7 @@ header.headerFix .topHead{top: -100px;}
 .footerBox .box{width: 40%;}
 .footerBox .box:last-child{width: 30%;}
 .footerBox h4{font-size: 16px;margin-bottom: 15px;color: #fff;font-weight: 500;}
-.footerBox ul li a{font-size: 14px;color: #b9d8f5;line-height: 34px;}
+.footerBox ul li a{font-size: 14px;color: #b9d8f5;line-height: 20px;display: block;margin-bottom: 15px;}
 .footerBox ul li a:hover{color: #38d8ff;}
 .address{display: flex;flex-direction: column;}
 .address p{color: #b9d8f5;display: flex;width: 100%;position: relative;padding-left: 30px;font-size: 14px;}
@@ -48,13 +48,14 @@ footer{padding: 60px 0 0;    background: radial-gradient(ellipse at 76% 48%, rgb
 .headFlex {display: flex;align-items: center;}
 .getTouch{    padding: 8px 25px;background: linear-gradient(90deg, #8E42FF 0%, #5A63FF 45%, #18A8FF 100%);color: #fff;border-radius: 1cqmin;margin-left: 10px;}
 .getTouch:hover{    background: linear-gradient(90deg, #18A8FF 0%, #5A63FF 55%, #8E42FF 100%);}    
-
+.footerlogo{margin-bottom: 15px;}
 .footerlogo img{background: #fff;height: auto;padding: 10px;border-radius: 10px;}
 .mobMenuHead{display:none}
 .megaColumnTitle {border-bottom: 1px solid rgba(255, 255, 255, 0.1);padding-bottom: 15px;display: flex;align-items: center;gap: 10px;margin-bottom: 8px;}
 .groupIcon {display: flex;align-items: center;justify-content: center;width: 36px;height: 36px;flex-shrink: 0;border-radius: 9px;background: rgba(56, 189, 248, 0.12);color: #38bdf8;}
 .megaColumnTitle h3 {color: #fff;font-size: 16px;font-weight: 500;margin: 0;color: var(--brand-color);}      
 .boxSpace{margin-bottom: 15px;}
+
 @media (min-width:992px){
     /* .head ul li .subMenu{
         position: absolute;
@@ -161,10 +162,7 @@ background: linear-gradient(90deg, #8E42FF 0%, #5A63FF 45%, #18A8FF 100%);
 footer .col-md-3, footer .col-md-9{width: 100%;}
 .footerBox .box:first-child{padding: 0;}
 .footerBox{margin-top: 30px;}
-    .footerBox h4 {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
+    .footerBox h4 {font-size: 16px;margin-bottom: 10px;        line-height: 23px;}
 }
 
 @media (max-width: 767px){
@@ -188,7 +186,7 @@ footer .col-md-3, footer .col-md-9{width: 100%;}
 .footerLink ul li{margin: 0 20px 10px;}
 .footerLink ul{padding-bottom: 15px;margin-bottom: 20px;}
 .footerLink ul li{margin: 0 8px 7px;}
-.footerBox ul li a, .address p{font-size: 13px;line-height: 28px;}
+.footerBox ul li a, .address p{font-size: 13px;line-height: 20px;margin-bottom: 12px;}
 .address p span{line-height: 22px;}
 .address p{margin-bottom: 10px;}
 }

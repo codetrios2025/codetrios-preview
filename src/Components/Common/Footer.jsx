@@ -63,7 +63,7 @@ const Footer = () => {
             <div className={Style.footerBox}>
               <div className={Style.box}>
                 <h4>Quick Link</h4>
-                <nav aria-label="Footer Navigation">
+                <nav aria-label="Footer company navigation">
                   <ul>
                     {/* <li><Link to="/" title="Home">Home</Link></li> */}
                     <li><Link to="/about-us" title="About">About</Link></li>
@@ -76,28 +76,34 @@ const Footer = () => {
               </div>
               <div className={Style.box}>
                 <h4>Design & Experience</h4>
-                <ul className={Style.boxSpace}>
-                  <li><Link to="/website-design-services" title="website design services">Website Design Services</Link></li>
-                  <li><Link to="/ui-ux-design-services" title="ui ux design services">UI/UX Design Services</Link></li>
-                </ul>
+                <nav aria-label="Footer services navigation">
+                  <ul className={Style.boxSpace}>
+                    <li><Link to="/website-design-services" title="website design services">Website Design Services</Link></li>
+                    <li><Link to="/ui-ux-design-services" title="ui ux design services">UI/UX Design Services</Link></li>
+                  </ul>
+                </nav>
                 <h4>Development & Software</h4>
-                <ul>
-                  <li><Link to="/web-development-services" title="web-development-services">Web Development Services</Link></li>
-                  <li><Link to="/web-application-development" title="web application development">Web Application Development</Link></li>
-                  <li><Link to="/ecommerce-development-services" title="ecommerce development services">eCommerce Development</Link></li>
-                  <li><Link to="/custom-software-solutions" title="custom software solutions">Custom Software Solutions</Link></li>
-                  <li><Link to="/ai-automation-solutions" title="AI & Automation Solutions">AI & Automation Solutions</Link></li>
-                </ul>
+                <nav aria-label="Footer services navigation">
+                  <ul>
+                    <li><Link to="/web-development-services" title="web-development-services">Web Development Services</Link></li>
+                    <li><Link to="/web-application-development" title="web application development">Web Application Development</Link></li>
+                    <li><Link to="/ecommerce-development-services" title="ecommerce development services">eCommerce Development</Link></li>
+                    <li><Link to="/custom-software-solutions" title="custom software solutions">Custom Software Solutions</Link></li>
+                    <li><Link to="/ai-automation-solutions" title="AI & Automation Solutions">AI & Automation Solutions</Link></li>
+                  </ul>
+                </nav>
               </div>
               <div className={`${Style.box} ${Style.multiBox}`}>
                 <div className={Style.inbox}>
                   <h4>Growth & Support</h4>
-                  <ul className={Style.boxSpace}>
-                    <li><Link to="/geo-seo-services" title="Geo & SEO Services">SEO, GEO & AEO Services</Link></li>
-                    <li><Link to="/digital-strategy-consulting" title="digital strategy consulting">Digital Strategy & Consulting</Link></li>
-                    <li><Link to="/website-maintenance-services" title="Website Maintenance Services">Website Maintenance Services</Link></li>
-                    <li><Link to="/web-hosting-services" title="web hosting services">Web Hosting Services</Link></li>
-                  </ul>
+                  <nav aria-label="Footer services navigation">
+                    <ul className={Style.boxSpace}>
+                      <li><Link to="/geo-seo-services" title="Geo & SEO Services">SEO, GEO & AEO Services</Link></li>
+                      <li><Link to="/digital-strategy-consulting" title="digital strategy consulting">Digital Strategy & Consulting</Link></li>
+                      <li><Link to="/website-maintenance-services" title="Website Maintenance Services">Website Maintenance Services</Link></li>
+                      <li><Link to="/web-hosting-services" title="web hosting services">Web Hosting Services</Link></li>
+                    </ul>
+                  </nav>
                 </div>
                 <div className={Style.inbox}>
                   <h4>Contact Info</h4>

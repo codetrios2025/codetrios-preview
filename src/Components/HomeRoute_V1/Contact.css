@@ -31,8 +31,7 @@
 }
 .inputFlex{
   display: flex;
-  /* grid-template-columns: repeat(2, minmax(0, 1fr));  */
-  gap: 10px; 
+  gap: 15px; 
   margin:0 0 15px;
 }
 .inputFlex .group{
@@ -91,12 +90,13 @@ input:focus-visible, textarea:focus-visible{
 .buttonFlex button{
   width: 100%;
 }
+.inputFlex .group textarea{height: 100px;}
 @media (max-width: 767px) {
 .closeBtn{ right: 15px;width: 30px;height: 30px;top: 28px;}
-.inputFlex .group input, .formPop .inputFlex .group textarea{padding: 10px 15px 10px 30px;}
-.inputFlex .group .icon svg{width: 14px;}
+.inputFlex .group input, .inputFlex .group textarea{padding: 10px 15px 10px 33px;}
+.inputFlex .group .icon svg{width: 16px;}
 .inputFlex .group .icon{top: 9px;left: 10px;}
 .contactHead h3{font-size: 24px;}
 .contactHead{margin-bottom: 20px;}
-
+.inputFlex{flex-direction: column; }
 }

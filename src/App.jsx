@@ -23,6 +23,12 @@ const GeoSeoServices = lazy(() => import ('./Components/ServicesNew/AllServices/
 // Other Pages
 const Technologies = lazy(() => import ('./Components/Pages/Technologies'));
 const Portfolio = lazy(() => import('./Components/Pages/Portfolios'));
+const ContactUsPage = lazy(() => import('./Components/Pages/ContactUs'));
+const ThankyouPage = lazy(() => import('./Components/Pages/ThankYou'));
+const NotFound = lazy(() => import('./Components/Pages/404'));
+
+import WhatsAppButton from './Components/Common/WhatsAppButton';
+import Chatbot from "./Chatbot";
 function App() {
   // useEffect(() => {
   //   AOS.init({
@@ -35,7 +41,7 @@ function App() {
     <>
     <ScrollTop />
     <Routes>
-      <Route path="/" element={<LayoutScreen />}>
+        <Route path="/" element={<LayoutScreen />}>
         <Route index element={<HomeRouteV1 />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/services" element={<ServicesScreen />} />
@@ -56,8 +62,13 @@ function App() {
         {/* Other Routes */}
         <Route path="/technologies" element={<Technologies />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact-us" element={<ContactUsPage />} />
+        <Route path="/thank-you" element={<ThankyouPage />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
+    <WhatsAppButton />
+    <Chatbot />
       {/* <ToastContainer />
       <AppRoutes />
       <WhatsAppButton />
