@@ -7,37 +7,9 @@ import Accordion from 'react-bootstrap/Accordion';
 import '../mainservices.css';
 //icon
 import {
-  BriefcaseBusiness,
-  ShoppingCart,
-  Building2,
-  Blocks,
-  ArrowUpRight,
-  Stethoscope,
-  Hotel,
-  Factory,
-  Rocket, 
-  Search,
-  Sparkles,
-  MessageCircleQuestion,
-  MapPin,
-  Settings,
-  FileText,
-  FileSearch,
-  ExternalLink,
-  MapPinned,
-  Code2,
-  BrainCircuit,
-  MessageSquareText,
-  NotebookPen,
-  ClipboardCheck,
-  Network,
-  GraduationCap,
-  Target,
-  Crosshair,
-  ChartNoAxesCombined,
-  RefreshCw,
-  CodeXml,
-} from "lucide-react";
+  BriefcaseBusiness,ShoppingCart,Building2,ArrowUpRight,Stethoscope,Hotel,Factory,Rocket, Search,
+  Sparkles,MessageCircleQuestion,MapPin,Settings,FileText,FileSearch,ExternalLink,MapPinned,Code2,BrainCircuit,MessageSquareText,
+  NotebookPen,ClipboardCheck,UtensilsCrossed,GraduationCap,Target,Settings2,Bot,BarChart3,RefreshCw,Truck,Landmark} from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
 import SEO from '../../SEO/websiteMeta';
@@ -54,6 +26,9 @@ import hospitalityImg from '../../../assets/images/hospitality-img.jpg';
 import manufacturingImg from '../../../assets/images/manufacturing-img.jpg'; 
 import startupsImg from '../../../assets/images/startups-img.jpg';
 import technologyImg from '../../../assets/images/technology-img.jpg';
+import foodRestaurantsImg from '../../../assets/images/food-restaurants-img.webp';
+import logisticsImg from '../../../assets/images/logistics-transportation.webp';
+import financeImg from '../../../assets/images/finance-professional-services.webp';
 const Carousel = CarouselImport.default ?? CarouselImport;
 import {
   SearchConsoleIcon,
@@ -68,37 +43,31 @@ const SeoServicesData = [
   { 
     title: "Search Engine Optimisation (SEO)", 
     content: "Improve your website's visibility on Google and other search engines through technical SEO, keyword research, on-page optimisation and quality content.",
-    link: "/",
     icon: Search 
   },
   { 
     title: "Generative Engine Optimisation (GEO)", 
     content: "Prepare your website content for AI-powered search experiences by improving content quality, brand information, topical relevance and online discoverability.",
-    link: "/",
     icon: Sparkles 
   },
   { 
     title: "Answer Engine Optimisation (AEO)", 
     content: "Make your website more useful for question-based searches with clear answers, informative content, structured headings and relevant FAQs.",
-    link: "/",
     icon: MessageCircleQuestion 
   },
   { 
     title: "Local SEO", 
     content: "Improve your visibility in location-based searches and help nearby customers discover your business, services and contact information.",
-    link: "/",
     icon: MapPin 
   },
   { 
     title: "Technical SEO", 
     content: "Improve website crawlability, indexing, page performance, mobile usability, website structure and technical health.",
-    link: "/",
     icon: Settings 
   },
   { 
     title: "Content SEO", 
     content: "Create and optimise website pages, service descriptions and blogs around relevant search topics and customer needs.",
-    link: "/",
     icon: FileText 
   },
 ];
@@ -107,97 +76,99 @@ const SEOTypes = [
   { 
     title: "On-Page SEO", 
     content: "Optimise page titles, meta descriptions, headings, URLs, internal links and website content to improve search relevance.",
-    link: "/",
     icon: FileSearch 
   },
   { 
     title: "Off-Page SEO", 
     content: "Build your website's online authority through relevant backlinks, brand mentions and genuine industry relationships.",
-    link: "/",
     icon: ExternalLink 
   },
   { 
     title: "Local SEO", 
     content: "Improve local search visibility through Google Business Profile optimisation, business information consistency and location-focused content.",
-    link: "/",
     icon: MapPinned 
   },
   { 
     title: "Technical SEO", 
     content: "Identify and resolve issues related to indexing, crawling, broken links, redirects, site speed and website structure.",
-    link: "/",
     icon: Code2 
   },
   { 
     title: "Ecommerce SEO", 
     content: "Optimise product pages, category pages, product descriptions and website navigation to improve online store visibility.",
-    link: "/",
     icon: ShoppingCart 
   },
   { 
     title: "AI Search Optimisation", 
     content: "Improve how your brand, services and expertise are represented across AI-powered search and discovery experiences.",
-    link: "/",
     icon: BrainCircuit 
   },
   { 
     title: "Answer Engine Optimisation", 
     content: "Create question-focused content, FAQs and clear informational sections that address common customer queries.",
-    link: "/",
     icon: MessageSquareText 
   },
   { 
     title: "Content Marketing & Blog SEO",
     content: "Develop useful blogs, articles and website content that attract relevant visitors and answer search intent.",
-    link: "/",
     icon: NotebookPen 
   },
   { 
     title: "Website SEO Audit",
     content: "Analyse your website's technical health, content quality, keyword targeting and optimisation opportunities.",
-    link: "/",
     icon: ClipboardCheck 
   },
 ];
 //whyChoose data
 const whyChooseData = [
   {
-    icon: Network,
-    title: "SEO & GEO Integrated Strategy",
-    description:
-      "Combine traditional SEO practices with optimization for AI-powered search experiences.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Technical & Content Expertise",
-    description:
-      "Address website performance, search accessibility, content quality and website structure.",
-  },
-  {
     icon: Target,
-    title: "Business-Focused Approach",
+    title: "SEO Strategies Based on Your Business",
     description:
-      "Build optimization strategies around your services, audience, competition and business objectives.",
+      "We create SEO strategies around your industry, services, target users and business.",
   },
   {
-    icon: Crosshair,
-    title: "Search Intent Optimization",
+    icon: Settings2,
+    title: "Technical SEO Expertise",
     description:
-      "Align website pages with the information customers are actively looking for.",
+      "We work on website structure, page speed, mobile usability, indexing, crawlability and technical issues that can affect search performance.",
   },
   {
-    icon: ChartNoAxesCombined,
-    title: "Transparent Performance Tracking",
+    icon: Bot,
+    title: "GEO & AI Search Optimisation",
     description:
-      "Monitor search visibility, organic traffic, indexing and relevant business enquiries.",
+      "We structure website content to clearly communicate your business, services and expertise, making information easier for search engines and AI-powered platforms to understand.",
+  },
+  {
+    icon: MessageCircleQuestion,
+    title: "Answer Engine Optimisation (AEO)",
+    description:
+      "We create clear, question-focused content with useful answers, descriptive headings and relevant FAQs to support answer-based searches.",
+  },
+  {
+    icon: MapPin,
+    title: "Local SEO for Better Reach",
+    description:
+      "We help improve local online visibility through Google Business Profile optimisation, location-focused content and consistent business information.",
+  },
+  {
+    icon: FileText,
+    title: "Human-Friendly & SEO-Focused Content",
+    description:
+      "We develop useful, readable content that addresses customer questions while naturally incorporating relevant search terms.",
+  },
+  {
+    icon: BarChart3,
+    title: "Data-Driven SEO Improvements",
+    description:
+      "We use tools such as Google Analytics and Search Console to monitor website performance, understand search traffic and identify opportunities for improvement.",
   },
   {
     icon: RefreshCw,
-    title: "Continuous Optimization",
+    title: "Continuous Optimisation & Support",
     description:
-      "Identify new opportunities and improve your website based on performance data.",
+      "SEO requires ongoing attention. We help with content updates, technical improvements, performance monitoring and strategy adjustments as search trends evolve.",
   },
- 
 ];
 // Tools we use
 const toolsData = [
@@ -330,6 +301,27 @@ const industriesData = [
     text: "Corporate websites, custom software, web applications and digital transformation.",
     img: technologyImg,
   },
+  {
+    number : "09",
+    icon: UtensilsCrossed,
+    title: "Food & Restaurants",
+    text: "Restaurant websites, digital menus, online ordering and table reservation systems.",
+    img: foodRestaurantsImg,
+  },
+  {
+    number : "10",
+    icon: Truck,
+    title: "Logistics & Transportation",
+    text: "Logistics websites, shipment tracking, fleet management and transport applications.",
+    img: logisticsImg,
+  },
+  {
+    number : "11",
+    icon: Landmark,
+    title: "Finance & Consulting",
+    text: "Financial service websites, client portals, reporting dashboards and business applications.",
+    img: financeImg,
+  },
 ]
 //FAQ data
 const faqs = [
@@ -460,14 +452,14 @@ export default function GeoSeoService(){
         faqs={faqs}
     />
       <div className='servicesPage innerPageBg allService'>
-        <div className="innerHeroBanner">
+        <div className="innerHeroBanner" aria-labelledby="geo-seo-hero-heading">
           <NetworkBackground />
           <Container>
             <Row>
               <Col>
                 <div className='innerBannerContent'>
                   <div className="tag">SEO, GEO & AI Search Optimization</div>
-                  <h1>SEO, GEO & AEO Services in India</h1>
+                  <h1 id="seo-geo-hero-heading">SEO, GEO & AEO <br/>Services in <span>India</span></h1>
                   <p>Help your business get discovered online with CodeTrios SEO, GEO and AEO services. We help businesses improve search engine visibility, reach relevant audiences and build a stronger digital presence across traditional and AI-powered search platforms. From technical SEO and content optimisation to local SEO and AI search visibility, we focus on strategies that help customers find your business when they search for products, services and solutions.</p>
 
                   <div className='actionRow'>
@@ -478,14 +470,14 @@ export default function GeoSeoService(){
             </Row>
           </Container>
         </div>
-        <div className='weAreBlock blockPadding'>
+        <div className='weAreBlock blockPadding' aria-labelledby="seo-geo-aeo-services-heading">
           <Container>
             <Row>
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
                     <div className="tag">OUR SEO & AI SEARCH SERVICES</div>
-                    <h2>SEO, GEO & AEO Services Built Around Your <span>Business Goals</span></h2>
+                    <h2 id="seo-geo-aeo-services-heading">SEO, GEO & AEO Services Built Around Your <span>Business Goals</span></h2>
                   </div>
                   <div className='secDetail'>
                     <p>Online visibility is about more than ranking for keywords. Your website needs to reach the right users, provide useful information and build trust.</p>
@@ -517,13 +509,13 @@ export default function GeoSeoService(){
             </Row>
           </Container>
         </div>
-        <div className='service-block-2 border-block blockPadding'>
+        <div className='service-block-2 border-block blockPadding' aria-labelledby="seo-geo-service-inclusions-heading">
             <Container>
               <Row>
                 <Col>
                   <div className='sectionHead'>
                     <div className="tag">SEO & AI SEARCH OPTIMIZATION</div>
-                    <h2>SEO, GEO & AEO Solutions for <span>Every Business</span></h2>
+                    <h2 id="seo-geo-service-inclusions-heading">SEO, GEO & AEO Solutions <br/>for <span>Every Business</span></h2>
                     <p className='halfWidth'>Different businesses have different Users and search requirements. We develop optimisation strategies based on your industry, services, target locations and business objectives.</p>
                   </div>
                   <div className="benefitGrid">
@@ -547,19 +539,18 @@ export default function GeoSeoService(){
             </Container>
         </div>
         {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="why-choose-codetrios-seo-heading">
           <Container>
             <Row>
               <Col>
                   <div className='why_container'>
                       <div className="sectionHead">
                         <div className="tag">Why businesses choose CodeTrios</div>
-                        <h2>Why Choose CodeTrios for <span>SEO & GEO Services?</span></h2>
-                        <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
+                        <h2 id="why-choose-codetrios-seo-heading">Why Choose CodeTrios for <span>SEO & GEO Services?</span></h2>
+                        <p>At CodeTrios, we focus on improving your online visibility across search engines, local search results and AI-powered search platforms.</p>
                       </div>
                       <div className="why_features">
-                        Content missing
-                        {/* {whyChooseData.map(({ icon: Icon, title, description }) => (
+                        {whyChooseData.map(({ icon: Icon, title, description }) => (
                           <div className="features_box" key={title}>
                             <div className="features_icon" aria-hidden="true">
                               <Icon size={25} strokeWidth={1.7} />
@@ -569,7 +560,7 @@ export default function GeoSeoService(){
                               <p>{description}</p>
                             </div>
                           </div>
-                        ))} */}
+                        ))}
                       </div>
                   </div>
               </Col>
@@ -577,14 +568,14 @@ export default function GeoSeoService(){
           </Container>
         </div>
         {/* Tools we work */}
-        <div className='whyChooseUs'>
+        <div className='whyChooseUs' aria-labelledby="seo-geo-tools-heading">
             <Container>
               <Row>
                 <Col>
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">SEO & ANALYTICS TOOLS</div>
-                          <h2><span>SEO, GEO & AEO</span> Tools We Work With</h2>
+                          <h2 id="seo-geo-tools-heading"><span>SEO, GEO & AEO</span> Tools We Work With</h2>
                           <p>CodeTrios combines strategy, design, development, deployment, hosting, optimization, and technical support to help businesses build and improve their digital presence. Our solutions are planned around your goals, users, technology requirements, and long-term growth.</p>
                         </div>
                         <div className="why_features">
@@ -606,14 +597,14 @@ export default function GeoSeoService(){
             </Container>
           </div>
         {/* Our Process */}
-        <div className='services_process blockPadding'> 
+        <div className='services_process blockPadding' aria-labelledby="seo-geo-process-heading"> 
           <Container>
             <Row>
               <Col>
                 <div className='services_process_container'>
                   <div className='sectionHead'>
                       <div className="tag">OUR OPTIMIZATION WORKFLOW</div>
-                      <h2>Our SEO, GEO & AEO Process</h2>
+                      <h2 id="seo-geo-process-heading">Our SEO, GEO & AEO <span>Process</span></h2>
                       <p>We follow a structured approach to understand your website, identify opportunities and improve its online visibility in the world.</p>
                   </div>
                   <div className='services_process_grid'>
@@ -635,20 +626,20 @@ export default function GeoSeoService(){
           </Container>
         </div>
         {/* Industries Section */}
-        <div className='services_industries blockPadding' aria-labelledby="industries-heading">
+        <div className='services_industries blockPadding' aria-labelledby="seo-industries-heading">
           <Container>
             <Row>
               <Col>
                 <div className='services_industries_bg'>
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
-                      <h2>Industries <span>We Serve</span></h2>
+                      <h2 id="seo-industries-heading">Industries <span>We Serve</span></h2>
                       <p>CodeTrios designs and develops digital solutions for businesses and organisations across multiple industries. From corporate websites and educational portals to healthcare platforms and ecommerce applications, we deliver solutions tailored to industry-specific needs.</p>
                   </div>
                   <div className="industries-section">
                     <Carousel
-                        autoPlaySpeed={1500}
-                        transitionDuration={500}
+                       autoPlaySpeed={3000}
+                        transitionDuration={600}
                         responsive={RelatedServicesSlide}
                         arrows={false}
                         autoPlay={true}
@@ -682,23 +673,23 @@ export default function GeoSeoService(){
         </div>
         
         {/* Related Services */}
-        <div className='related-services blockPadding'>
+        <div className='related-services blockPadding' aria-labelledby="related-digital-services-heading">
           <Container>
             <Row>
               <Col>
                 <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
-                    <h2>Explore Our Other Digital Services</h2>
+                    <h2 id="related-digital-services-heading">Explore Our Other <span>Digital Services</span></h2>
                   </div>
                   <div className="benefitGrid">
                     {relatedServices.map((item, index) =>{
                       return(
                         <div className="benefitCard" key={index} data-reveal="up">
                           
-                          <h3><Link to={item.link} title={item.link}>{item.title}</Link></h3>
+                          <h3><Link to={item.link}>{item.title}</Link></h3>
                           <p>{item.content}</p>
-                          <span className='benefitGo'><ArrowUpRight /></span>
+                          <Link to={item.link} title={item.linkTitle} aria-label={item.linkTitle} className='benefitGo'><ArrowUpRight /></Link>
                         </div>
                       )
                     })}
@@ -709,14 +700,14 @@ export default function GeoSeoService(){
           </Container>
         </div>
         {/* Frequently Asked Questions */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="seo-geo-aeo-faqs-heading">
             <Container>
               <Row>
                 <Col>
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our <span>SEO, GEO & AEO</span> Services</h2>
+                          <h2 id="seo-geo-aeo-faqs-heading">Questions About Our <span>SEO, GEO & AEO</span> Services</h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>
@@ -737,7 +728,7 @@ export default function GeoSeoService(){
               </Row>
             </Container>
         </div>
-        <ProjectCAT />
+        <ProjectCAT sectionId="seo-services-cta-heading" tagId="seo-services-cta-heading" />
       </div>
     </>
   )

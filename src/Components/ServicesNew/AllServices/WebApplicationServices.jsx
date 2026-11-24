@@ -37,7 +37,7 @@ import {
   ShieldCheck,
   Blocks,
   Gauge,
-  Headset 
+  Headset,Truck,Landmark
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -55,6 +55,8 @@ import hospitalityImg from '../../../assets/images/hospitality-img.jpg';
 import manufacturingImg from '../../../assets/images/manufacturing-img.jpg'; 
 import startupsImg from '../../../assets/images/startups-img.jpg';
 import technologyImg from '../../../assets/images/technology-img.jpg';
+import logisticsImg from '../../../assets/images/logistics-transportation.webp';
+import financeImg from '../../../assets/images/finance-professional-services.webp';
 const Carousel = CarouselImport.default ?? CarouselImport;
 
 //website Design Services data
@@ -252,13 +254,13 @@ const processData = [
       "We develop frontend interfaces, backend functionality, databases and required integrations.",
   },
   {
-    number: "04",
+    number: "05",
     title: "Testing & Optimisation",
     description:
       "We test application functionality, security, performance and compatibility across different devices and browsers.",
   },
   {
-    number: "04",
+    number: "06",
     title: "Deployment & Support",
     description:
       "We deploy the application, configure the server and provide ongoing technical support and maintenance.",
@@ -269,58 +271,65 @@ const industriesData = [
   {
     number : "01",
     icon: GraduationCap,
-    title: "Education",
-    text: "Learning platforms, school and college websites, student portals.",
+    title: "Education & E-Learning",
+    text: "School management systems, student portals, online examination platforms and learning management applications.",
     img: eduImg,
   },
   {
     number : "02",
     icon: Stethoscope,
-    title: "Healthcare",
-    text: "Hospital websites, appointment systems, patient management solutions.",
+    title: "Healthcare & Medical",
+    text: "Hospital management systems, patient portals, appointment management applications and diagnostic reporting platforms.",
     img: healthcareImg,
   },
   {
     number : "03",
     icon: ShoppingCart,
-    title: "E-commerce",
-    text: "Online stores, secure payments, product catalogs and shopping experiences.",
+    title: "E-commerce & Retail",
+    text: "Inventory management applications, order management systems, vendor dashboards and customer portals.",
     img: ecomImg,
   },
   {
     number : "04",
     icon: Building2,
-    title: "Real Estate",
-    text: "Property websites, listing portals, lead generation and virtual experiences.",
+    title: "Real Estate & Construction",
+    text: "Property management applications, lead management systems, project tracking dashboards and customer portals.",
     img: estateImg,
   },
   {
     number : "05",
     icon: Hotel,
-    title: "Hospitality",
-    text: "Hotel websites, online booking, guest services and reservation systems.",
+    title: "Hospitality & Tourism",
+    text: "Hotel management applications, booking management systems, reservation dashboards and customer management platforms.",
     img: hospitalityImg,
   },
   {
     number : "06",
     icon: Factory,
-    title: "Manufacturing",
-    text: "Business websites, production workflows, automation and operational software.",
+    title: "Manufacturing & Industrial",
+    text: "Production management systems, inventory applications, order tracking and operational dashboards.",
     img: manufacturingImg,
   },
   {
     number : "07",
-    icon: Rocket,
-    title: "Startups",
-    text: "MVP development, scalable platforms and digital products for growing businesses.",
-    img: startupsImg,
+    icon: Truck,
+    title: "Logistics & Transportation",
+    text: "Fleet management applications, shipment tracking systems, delivery management and logistics dashboards.",
+    img: logisticsImg,
   },
   {
     number : "08",
     icon: BriefcaseBusiness,
     title: "Corporate & Technology",
-    text: "Corporate websites, custom software, web applications and digital transformation.",
+    text: "CRM systems, ERP applications, employee management portals, reporting dashboards and workflow automation tools.",
     img: technologyImg,
+  },
+  {
+    number : "09",
+    icon: Landmark,
+    title: "Finance & Professional Services",
+    text: "Client portals, document management systems, business reporting applications and workflow automation solutions.",
+    img: financeImg,
   },
 ]
 //FAQ data
@@ -445,14 +454,14 @@ export default function WebApplicationService(){
           faqs={faqs}
       />
       <div className='servicesPage innerPageBg allService'>
-        <div className="innerHeroBanner">
+        <div className="innerHeroBanner" aria-labelledby="web-app-hero-title">
           <NetworkBackground />
           <Container>
             <Row>
               <Col>
                 <div className='innerBannerContent'>
                   <div className="tag">WEB APPLICATION DEVELOPMENT SERVICES</div>
-                  <h1>Web Application Development Company in India</h1>
+                  <h1 id="web-app-hero-title">Web Application Development Company in <span>India</span></h1>
                   <p>At CodeTrios, we develop custom web applications that help businesses streamline operations, automate workflows and improve productivity. We build secure, responsive and scalable applications tailored to your business requirements. from customer portals and management dashboards to enterprise applications and custom business software, we create solutions that simplify complex processes and support business growth.</p>
                   <div className='actionRow'>
                     <ActionButton />
@@ -462,14 +471,14 @@ export default function WebApplicationService(){
             </Row>
           </Container>
         </div>
-        <div className='weAreBlock blockPadding'>
+        <div className='weAreBlock blockPadding' aria-labelledby="web-app-services-title">
           <Container>
             <Row>
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
                     <div className="tag">OUR WEB APPLICATION DEVELOPMENT SERVICES</div>
-                    <h2>Web Application Development Services Built Around Your <span>Business Goals</span></h2>
+                    <h2 id="web-app-services-title">Web Application Development Services Built Around Your <span>Business Goals</span></h2>
                   </div>
                   <div className='secDetail'>
                     <p>Every business has unique operational needs. At CodeTrios, we develop custom web applications that solve business challenges, improve efficiency and deliver better digital experiences.</p>
@@ -501,13 +510,13 @@ export default function WebApplicationService(){
             </Row>
           </Container>
         </div>
-        <div className='service-block-2 border-block blockPadding'>
+        <div className='service-block-2 border-block blockPadding' aria-labelledby="web-app-types-title">
             <Container>
               <Row>
                 <Col>
                   <div className='sectionHead'>
                     <div className="tag">APPLICATIONS WE BUILD</div>
-                    <h2>Web Application Solutions <br/>for <span>Every Business</span></h2>
+                    <h2 id="web-app-types-title">Web Application Solutions <br/>for <span>Every Business</span></h2>
                     <p className='halfWidth'>We develop web applications for different business requirements, industries and operational needs.</p>
                   </div>
                   <div className="benefitGrid">
@@ -531,14 +540,14 @@ export default function WebApplicationService(){
             </Container>
         </div>
          {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="web-app-why-choose-title">
           <Container>
             <Row>
               <Col>
                   <div className='why_container'>
                       <div className="sectionHead">
                         <div className="tag">WHY CHOOSE CODETRIOS</div>
-                        <h2>Why Choose CodeTrios for <span>Web Application</span> Development?</h2>
+                        <h2 id="web-app-why-choose-title">Why Choose CodeTrios for <span>Web Application</span> Development?</h2>
                         <p>At CodeTrios, we build web applications around your business goals, user requirements and workflows. From custom dashboards and customer portals to complex business applications, we focus on creating solutions that are easy to use, secure, scalable and ready to grow with your business.</p>
                       </div>
                       <div className="why_features">
@@ -560,14 +569,14 @@ export default function WebApplicationService(){
           </Container>
         </div>
         {/* website design Technologies & Tools  */}
-        <div className='technologyStack' aria-labelledby="technology-expertise-title">
+        <div className='technologyStack' aria-labelledby="web-app-technology-title">
           <Container>
             <Row>
               <Col>
                 <div className="technology-layout">
                   <div className='sectionHead'>
                     <div className="tag">Technologies & Tools</div>
-                    <h2>Technologies & Tools We Work With</h2>
+                    <h2 id="web-app-technology-title">Modern Technologies We Use for <span>Web Application</span> Development</h2>
                     <p>We use modern technologies and frameworks to develop powerful, reliable and scalable web applications.</p>
                     <Link to="/technologies" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                   </div>
@@ -608,20 +617,20 @@ export default function WebApplicationService(){
           </Container>
         </div>
         {/* Our Process */}
-        <div className='services_process blockPadding block-mg-top'> 
+        <div className='services_process blockPadding block-mg-top' aria-labelledby="web-app-process-title"> 
           <Container>
             <Row>
               <Col>
                 <div className='services_process_container'>
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
-                      <h2>Our Web Application Development <span>Process</span></h2>
+                      <h2 id="web-app-process-title">Our Web Application Development <span>Process</span></h2>
                       <p>We follow a structured development process to deliver reliable, secure and scalable web applications.</p>
                   </div>
                   <div className='services_process_grid'>
                     {processData.map((item) => {
                       return (
-                        <div className="process_box box-icon-hover" key={item.number}>
+                        <div className="process_box box-icon-hover" key={item.title}>
                           <span className="number">
                               {item.number}
                           </span>
@@ -637,20 +646,20 @@ export default function WebApplicationService(){
           </Container>
         </div>
         {/* Industries Section */}
-        <div className='services_industries blockPadding' aria-labelledby="industries-heading">
+        <div className='services_industries blockPadding' aria-labelledby="web-app-industries-title">
           <Container>
             <Row>
               <Col>
                 <div className='services_industries_bg'>
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
-                      <h2>Section missing Industries <span>We Serve</span></h2>
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <h2 id="web-app-industries-title">Industries <span>We Serve</span></h2>
+                      <p>CodeTrios develops custom web applications for businesses that need more than a traditional website. We create browser-based applications, management systems, dashboards and customer portals designed around industry-specific workflows and operational requirements.</p>
                   </div>
                   <div className="industries-section">
                     <Carousel
-                        autoPlaySpeed={1500}
-                        transitionDuration={500}
+                        autoPlaySpeed={3000}
+                        transitionDuration={600}
                         responsive={RelatedServicesSlide}
                         arrows={false}
                         autoPlay={true}
@@ -683,23 +692,22 @@ export default function WebApplicationService(){
           </Container>
         </div>
         {/* Related Services */}
-        <div className='related-services blockPadding'>
+        <div className='related-services blockPadding' aria-labelledby="web-app-related-services-title">
           <Container>
             <Row>
               <Col>
                 <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
-                    <h2>Explore Our Other Digital Services</h2>
+                    <h2 id="web-app-related-services-title">Explore Our Other <span>Digital Services</span></h2>
                   </div>
                   <div className="benefitGrid">
                     {relatedServices.map((item, index) =>{
                       return(
                         <div className="benefitCard" key={index} data-reveal="up">
-                          
-                          <h3><Link to={item.link} title={item.link}>{item.title}</Link></h3>
+                          <h3><Link to={item.link}>{item.title}</Link></h3>
                           <p>{item.content}</p>
-                          <span className='benefitGo'><ArrowUpRight /></span>
+                          <Link to={item.link} title={item.linkTitle} aria-label={item.linkTitle} className='benefitGo'><ArrowUpRight /></Link>
                         </div>
                       )
                     })}
@@ -710,14 +718,14 @@ export default function WebApplicationService(){
           </Container>
         </div>
         {/* Frequently Asked Questions */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="web-app-faq-title">
             <Container>
               <Row>
                 <Col>
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our <span>Web Application</span> Services</h2>
+                          <h2 id="web-app-faq-title">Questions About Our <span>Web Application</span> Services</h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>
@@ -738,7 +746,7 @@ export default function WebApplicationService(){
               </Row>
             </Container>
         </div>
-        <ProjectCAT />
+        <ProjectCAT sectionId="web-app-cta-title" tagId="web-app-cta-title" />
       </div>
     </>
   )

@@ -6,34 +6,9 @@ import "react-multi-carousel/lib/styles.css";
 import Accordion from 'react-bootstrap/Accordion';
 import '../mainservices.css';
 //icon
-import {
-  BriefcaseBusiness,
-  MonitorSmartphone,
-  PanelsTopLeft,
-  ShoppingCart,
-  Building2,
-  GraduationCap,
-  HeartPulse,
-  MousePointerClick,
-  ArrowUpRight,
-  Stethoscope,
-  Hotel,
-  Factory,
-  Rocket,
-  Users,
-  Smartphone,
-  Workflow,
-  LayoutDashboard,
-  Cloud,
-  ChartNoAxesCombined,
-  ContactRound,
-  UserRoundCheck,
-  Route,
-  Component,
-  Accessibility,
-  Target,
-  WandSparkles,
-} from "lucide-react";
+import {BriefcaseBusiness,MonitorSmartphone,PanelsTopLeft,ShoppingCart,GraduationCap,HeartPulse,MousePointerClick,ArrowUpRight,
+  Stethoscope,Factory,Rocket,Users,Smartphone,LayoutDashboard,Cloud,ChartNoAxesCombined,ContactRound,
+  UserRoundCheck,Route,Component,Accessibility,Target,WandSparkles,LayoutTemplate} from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
 import SEO from '../../SEO/websiteMeta';
@@ -63,37 +38,31 @@ const UIUXServicesData = [
   { 
     title: "User Interface (UI) Design", 
     content: "Create clean, modern and visually appealing interfaces that reflect your brand identity.",
-    link: "/",
     icon: PanelsTopLeft 
   },
   { 
     title: "User Experience (UX) Design", 
     content: "Improve how users interact with your website or application through simple and intuitive experiences.",
-    link: "/",
     icon: Users 
   },
   { 
     title: "Website UI/UX Design", 
     content: "Design engaging website layouts with clear navigation, organised content and user-friendly interactions.",
-    link: "/",
     icon: MonitorSmartphone 
   },
   { 
     title: "Mobile App UI/UX Design", 
     content: "Create intuitive mobile app experiences with easy navigation and consistent interface elements.",
-    link: "/",
     icon: Smartphone 
   },
   { 
     title: "Wireframing & Prototyping", 
     content: "Plan page structures and create interactive prototypes before the development process begins.",
-    link: "/",
-    icon: FigmaIcon 
+    icon: LayoutTemplate 
   },
   { 
     title: "Dashboard & Web Application Design", 
     content: "Design organised dashboards and application interfaces that make complex tasks easier to manage.",
-    link: "/",
     icon: LayoutDashboard 
   },
 ];
@@ -102,49 +71,41 @@ const UiUxTypes = [
   { 
     title: "Business Websites", 
     content: "Professional website interfaces that help visitors understand your services and take action.",
-    link: "/",
     icon: BriefcaseBusiness 
   },
   { 
     title: "E-commerce Platforms", 
     content: "Easy-to-use shopping experiences with clear product layouts and smooth navigation.",
-    link: "/",
     icon: ShoppingCart 
   },
   { 
     title: "Mobile Applications", 
     content: "User-friendly interfaces designed for mobile screens and everyday interactions.",
-    link: "/",
     icon: Smartphone 
   },
   { 
     title: "Educational Platforms", 
     content: "Simple interfaces for school websites, learning platforms and student portals.",
-    link: "/",
     icon: GraduationCap 
   },
   { 
     title: "Healthcare Platforms", 
     content: "Clear and accessible designs for hospital websites, appointment systems and patient portals.",
-    link: "/",
     icon: HeartPulse 
   },
   { 
     title: "SaaS Applications", 
     content: "Intuitive interfaces for software products, subscription platforms and online tools.",
-    link: "/",
     icon: Cloud 
   },
   { 
     title: "Admin Dashboards", 
     content: "Well-organised dashboards for managing data, users and business activities.",
-    link: "/",
     icon: ChartNoAxesCombined 
   },
   { 
     title: "Customer Portals",
     content: "Easy-to-navigate interfaces that help customers access services and information.",
-    link: "/",
     icon: ContactRound 
   },
 ];
@@ -211,7 +172,7 @@ const toolsData = [
   },
   {
     icon: AIToolsIcon ,
-    title: "AI",
+    title: "AI-Assisted Design",
     description: "Using multiple ai tool .",
   },
   {
@@ -283,34 +244,20 @@ const industriesData = [
   },
   {
     number : "04",
-    icon: Building2,
-    title: "Real Estate",
-    text: "Property websites, listing portals, lead generation and virtual experiences.",
-    img: estateImg,
-  },
-  {
-    number : "05",
-    icon: Hotel,
-    title: "Hospitality",
-    text: "Hotel websites, online booking, guest services and reservation systems.",
-    img: hospitalityImg,
-  },
-  {
-    number : "06",
     icon: Rocket,
     title: "Startups",
     text: "MVP designs, product interfaces and prototypes.",
     img: startupsImg,
   },
   {
-    number : "07",
+    number : "05",
     icon: BriefcaseBusiness,
     title: "Corporate & Technology",
     text: "Business websites, dashboards and software interfaces.",
     img: technologyImg,
   },
   {
-    number : "08",
+    number : "06",
     icon: Factory,
     title: "Finance & Consulting",
     text: "Client portals, reporting dashboards and business applications.",
@@ -417,10 +364,10 @@ export default function UiUxDesignService(){
       <SchemaGraph
           pageType="service"
           pageName="UI UX Design Services"
-          pageDescription="CodeTrios provides UI UX design services focused on intuitive, responsive and user-friendly digital experiences for websites and web applications."
+          pageDescription="CodeTrios provides UI/UX design services in India for websites, mobile applications, SaaS products and digital platforms, focusing on intuitive interfaces and user-friendly experiences."
           pageUrl="https://www.codetrios.com/ui-ux-design-services"
           serviceName="UI UX Design Services"
-          serviceDescription="Professional UI/UX design services in India for websites, web applications and digital products."
+          serviceDescription="Professional UI/UX design services for website interfaces, mobile applications, web applications, dashboards, wireframes and interactive prototypes."
           serviceType="UI UX Design"
           breadcrumbs={[
               {
@@ -439,14 +386,14 @@ export default function UiUxDesignService(){
           faqs={faqs}
       />
       <div className='servicesPage innerPageBg allService'>
-        <div className="innerHeroBanner">
+        <div className="innerHeroBanner" aria-labelledby="ui-ux-hero-heading">
           <NetworkBackground />
           <Container>
             <Row>
               <Col>
                 <div className='innerBannerContent'>
                   <div className="tag">UI/UX DESIGN SERVICES</div>
-                  <h1>Professional UI/UX Design Services in India</h1>
+                  <h1 is="ui-ux-hero-heading">UI/UX Design Services in <span>India</span></h1>
                   <p>At CodeTrios, we create user-friendly and visually engaging digital experiences that make websites and applications easy to use. Our UI/UX design services focus on understanding user needs, improving navigation and creating interfaces that support your business goals. From website interfaces to mobile applications, we design digital experiences that are simple, consistent and effective.</p>
                   <div className='actionRow'>
                     <ActionButton />
@@ -456,17 +403,17 @@ export default function UiUxDesignService(){
             </Row>
           </Container>
         </div>
-        <div className='weAreBlock blockPadding'>
+        <div className='weAreBlock blockPadding' aria-labelledby="ui-ux-services-heading">
           <Container>
             <Row>
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
                     <div className="tag">OUR UI/UX DESIGN SERVICES</div>
-                    <h2>UI/UX Design Services Built Around Your Business</h2>
+                    <h2 id="ui-ux-services-heading">UI/UX Design Services Built Around <span>Your Business</span></h2>
                   </div>
                   <div className='secDetail'>
-                    <p>Content Missing</p>
+                    <p>At CodeTrios, we provide UI/UX design services that combine visual appeal, usability and functionality. We design user-friendly websites, mobile applications, dashboards and digital platforms that make it easier for people to interact with your business. From wireframing  to interface design and user experience optimisation, we create digital experiences aligned with your brand identity, audience needs and business goals.</p>
                   </div>
                 </div>
               </Col>
@@ -494,14 +441,14 @@ export default function UiUxDesignService(){
             </Row>
           </Container>
         </div>
-        <div className='service-block-2 border-block blockPadding'>
+        <div className='service-block-2 border-block blockPadding' aria-labelledby="digital-products-heading">
             <Container>
               <Row>
                 <Col>
                   <div className='sectionHead'>
                     <div className="tag">DIGITAL PRODUCTS WE DESIGN</div>
-                    <h2>UI/UX Design Solutions for <span>Every Business</span></h2>
-                    <p className='halfWidth'>Content missing</p>
+                    <h2 id="digital-products-heading">UI/UX Design Solutions <br/>for <span>Every Business</span></h2>
+                    <p className='halfWidth'>Every business needs a digital experience that is easy to use, visually engaging and designed around its customers. CodeTrios provides UI/UX design solutions for different industries and business needs, including corporate websites, e-commerce platforms, mobile applications, educational portals, healthcare platforms, SaaS products and business dashboards. We create user friendly Design so that user can understand easily.</p>
                   </div>
                   <div className="benefitGrid">
                     {UiUxTypes.map((item, index) =>{
@@ -524,14 +471,14 @@ export default function UiUxDesignService(){
             </Container>
         </div>
         {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="why-choose-heading">
           <Container>
             <Row>
               <Col>
                   <div className='why_container'>
                       <div className="sectionHead">
                         <div className="tag">WHY CHOOSE CODETRIOS</div>
-                        <h2>Why Businesses Choose CodeTrios for <span>UI/UX Design</span></h2>
+                        <h2 id="why-choose-heading">Why Businesses Choose CodeTrios for <span>UI/UX Design</span></h2>
                         <p>CodeTrios combines user experience strategy, interface design, responsive layouts, design systems, and business objectives to create digital experiences that are intuitive, consistent, accessible, and aligned with measurable business goals.</p>
                         <p>User-centered design approach, Mobile-first and responsive layouts, Conversion-focused user journeys, Consistent design systems, Wireframes and interactive prototypes, Modern and scalable UI components, Performance-aware design decisions, Designs aligned with business goals</p>
                       </div>
@@ -555,15 +502,15 @@ export default function UiUxDesignService(){
           </Container>
         </div>
         {/* Tools we work */}
-        <div className='whyChooseUs'>
+        <div className='whyChooseUs' aria-labelledby="ui-ux-tools-heading">
             <Container>
               <Row>
                 <Col>
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">OUR DESIGN TOOLKIT</div>
-                          <h2>UI/UX Design <span>Tools & Technologies</span> We Use</h2>
-                          <p>Content missing</p>
+                          <h2 id="ui-ux-tools-heading">UI/UX Design <span>Tools & Technologies</span> We Use</h2>
+                          <p>We select the right tools and design approach based on your project requirements and user needs.</p>
                         </div>
                         <div className="why_features">
                           {toolsData.map(({ icon: Icon, title, description }) => (
@@ -584,14 +531,14 @@ export default function UiUxDesignService(){
             </Container>
           </div>
         {/* Our Process */}
-        <div className='services_process blockPadding'> 
+        <div className='services_process blockPadding' aria-labelledby="aaui-ux-process-headinga"> 
           <Container>
             <Row>
               <Col>
                 <div className='services_process_container'>
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
-                      <h2>Our UI/UX Design <span>Process</span></h2>
+                      <h2 id="ui-ux-process-heading">Our UI/UX Design <span>Process</span></h2>
                       <p>Content missing</p>
                   </div>
                   <div className='services_process_grid'>
@@ -620,13 +567,13 @@ export default function UiUxDesignService(){
                 <div className='services_industries_bg'>
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
-                      <h2>Industries <span>We Serve</span></h2>
+                      <h2 id="industries-heading">Industries <span>We Serve</span></h2>
                       <p>Content missing</p>
                   </div>
                   <div className="industries-section">
                     <Carousel
-                        autoPlaySpeed={1500}
-                        transitionDuration={500}
+                        autoPlaySpeed={3000}
+                        transitionDuration={600}
                         responsive={RelatedServicesSlide}
                         arrows={false}
                         autoPlay={true}
@@ -659,23 +606,22 @@ export default function UiUxDesignService(){
           </Container>
         </div>
         {/* Related Services */}
-        <div className='related-services blockPadding'>
+        <div className='related-services blockPadding' aria-labelledby="related-services-heading">
           <Container>
             <Row>
               <Col>
                 <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
-                    <h2>Explore Our Other Digital Services</h2>
+                    <h2 id="related-services-heading">Explore Our Other <span>Digital Services</span></h2>
                   </div>
                   <div className="benefitGrid">
                     {relatedServices.map((item, index) =>{
                       return(
                         <div className="benefitCard" key={index} data-reveal="up">
-                          
                           <h3><Link to={item.link}>{item.title}</Link></h3>
                           <p>{item.content}</p>
-                          <span className='benefitGo'><ArrowUpRight /></span>
+                          <Link to={item.link} title={item.linkTitle} aria-label={item.linkTitle} className='benefitGo'><ArrowUpRight /></Link>
                         </div>
                       )
                     })}
@@ -686,14 +632,14 @@ export default function UiUxDesignService(){
           </Container>
         </div>
         {/* Frequently Asked Questions */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="ui-ux-faqs-heading">
             <Container>
               <Row>
                 <Col>
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our <span>UI/UX Design</span> Services</h2>
+                          <h2 id="ui-ux-faqs-heading">Questions About Our <span>UI/UX Design</span> Services</h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>
@@ -714,7 +660,7 @@ export default function UiUxDesignService(){
               </Row>
             </Container>
         </div>
-        <ProjectCAT />
+        <ProjectCAT sectionId="ui-ux-cta-heading" tagId="ui-ux-cta-heading" />
       </div>
     </>
   )

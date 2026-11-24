@@ -7,40 +7,10 @@ import Accordion from 'react-bootstrap/Accordion';
 import '../mainservices.css';
 //icon
 import {
-  BriefcaseBusiness,
-  ShoppingCart,
-  Building2,
-  GraduationCap,
-  ArrowUpRight,
-  Stethoscope,
-  Hotel,
-  Factory,
-  Rocket,
-  Code2,
-  ContactRound,
-  Network,
-  Workflow,
-  PlugZap,
-  CloudCog,
-  RefreshCw,
-  LayoutDashboard,
-  Hospital,
-  UsersRound,
-  Kanban,
-  CalendarCheck,
-  ChartNoAxesCombined,
-  Target,
-  SlidersHorizontal,
-  Layers,
-  MousePointerClick,
-  Boxes,
-  Headset,
-  Monitor,
-  Server,
-  Database,
-  Smartphone,
-  Blocks, 
-} from "lucide-react";
+  BriefcaseBusiness,ShoppingCart,Building2,GraduationCap,ArrowUpRight,Stethoscope,Hotel,Factory,Rocket,Code2,ContactRound,Network,
+  Workflow,PlugZap,CloudCog,RefreshCw,Hospital,UsersRound,ChartNoAxesCombined,Target,SlidersHorizontal,Layers,MousePointerClick,Boxes,
+  Headset,Monitor,Server,Database,Smartphone,Blocks,Package,
+  PanelsTopLeft,ListTodo,UserCog,CalendarClock,Files,MonitorCog,Truck } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
 import SEO from '../../SEO/websiteMeta';
@@ -57,56 +27,50 @@ import hospitalityImg from '../../../assets/images/hospitality-img.jpg';
 import manufacturingImg from '../../../assets/images/manufacturing-img.jpg'; 
 import startupsImg from '../../../assets/images/startups-img.jpg';
 import technologyImg from '../../../assets/images/technology-img.jpg';
+import logisticsImg from '../../../assets/images/logistics-transportation.webp';
+
 const Carousel = CarouselImport.default ?? CarouselImport;
 
 //Custom Software Services data
 const customServicesData = [
   { 
-    title: "Custom Business Software Development", 
-    content: "We develop business software tailored to your organisation's workflows, helping you manage daily operations, business information, employees and customers from a centralised platform.",
-    link: "/",
+    title: "Custom Business Software", 
+    content: "Tailor-made software solutions designed to manage your business operations, workflows and specific requirements.",
     icon: Code2 
   },
   { 
     title: "Enterprise Software Development", 
-    content: "Build software that supports complex business operations, multiple departments, user roles and organisational workflows.",
-    link: "/",
+    content: "Scalable software solutions that help organisations manage complex processes, teams,  resources and business operations.",
     icon: Building2 
   },
   { 
-    title: "CRM & Customer Management Solutions", 
-    content: "Manage customer information, enquiries, sales activities and business relationships through customised customer relationship management software.",
-    link: "/",
+    title: "CRM Software Development", 
+    content: "Customer relationship management systems to organise customer information, manage leads, track interactions and improve sales processes.",
     icon: ContactRound 
   },
   { 
-    title: "ERP & Management Software Development", 
-    content: "We develop customised management systems to connect business operations, organise information and improve workflow management.",
-    link: "/",
+    title: "ERP Software Development", 
+    content: "Integrated business management solutions that connect departments, resources, inventory and business operations.",
     icon: Network 
   },
   { 
     title: "Business Process Automation", 
-    content: "Reduce repetitive manual work by automating business activities, notifications, approvals and data processing through customised software.",
-    link: "/",
+    content: "Custom automation solutions that reduce repetitive manual tasks, streamline workflows and improve operational efficiency.",
     icon: Workflow 
   },
   { 
-    title: "API Development & Third-Party Integration", 
-    content: "Connect different software applications and services through reliable API development and integration solutions.",
-    link: "/",
+    title: "API Development & Integration", 
+    content: "Custom APIs and third-party integrations that connect software applications, databases and external platforms.",
     icon: PlugZap 
   },
   { 
-    title: "SaaS & Custom Application Development", 
-    content: "Develop software products and browser-based platforms designed around your business model, users and application requirements.",
-    link: "/",
+    title: "SaaS Application Development", 
+    content: "Cloud-based software applications that allow users to access business tools and services through the internet.",
     icon: CloudCog 
   },
   { 
     title: "Software Modernisation & Maintenance", 
-    content: "Improve existing applications through technology upgrades, code improvements, database optimisation and ongoing software maintenance.",
-    link: "/",
+    content: "Upgrade existing software, improve performance, add new functionality and maintain applications as business requirements evolve.",
     icon: RefreshCw 
   },
   
@@ -115,52 +79,74 @@ const customServicesData = [
 //Custom Software type data
 const customServicesTypes = [
   { 
-    title: "Business Management Systems", 
-    content: "Manage business activities, employees, customers, tasks and operational information through customised software.",
-    link: "/",
-    icon: LayoutDashboard 
+    title: "Customer Relationship Management (CRM) Software", 
+    content: "Manage customer records, sales enquiries, leads, follow-ups and customer communication through a centralised system.",
+    icon: UsersRound 
   },
   { 
-    title: "School Management Software", 
-    content: "Digital solutions for student records, admissions, attendance, fees, communication and school administration.",
-    link: "/",
+    title: "Enterprise Resource Planning (ERP) Software", 
+    content: "Connect business functions such as finance, inventory, purchasing, human resources and operations in one integrated platform.",
+    icon: Building2 
+  },
+  { 
+    title: "Business Management Systems", 
+    content: "Manage business activities, employees, customers, tasks and operational information through customised software.",
+    icon: BriefcaseBusiness 
+  },
+  { 
+    title: "School & Education Management Software", 
+    content: "Manage student records, admissions, attendance, fee collection, examinations, academic activities and parent communication.",
     icon: GraduationCap 
   },
   { 
     title: "Hospital & Healthcare Management Software", 
-    content: "Applications for appointment management, doctor information, patient records and healthcare operations.",
-    link: "/",
+    content: "Support hospital administration through patient records, appointment scheduling, doctor management, billing and diagnostic workflows.",
     icon: Hospital 
   },
   { 
     title: "Inventory & Stock Management Software", 
-    content: "Track products, stock levels, purchases, orders and inventory activities through a centralised system.",
-    link: "/",
-    icon: UsersRound 
+    content: "Track products, stock levels, purchases, suppliers, warehouses and inventory movements.",
+    icon: Package 
   },
   { 
     title: "Customer & Employee Portals", 
     content: "Create secure portals where customers, employees and business partners can access relevant information and services.",
-    link: "/",
-    icon: UsersRound 
+    icon: PanelsTopLeft 
   },
   { 
     title: "Project & Task Management Software", 
-    content: "Manage projects, assign tasks, track progress and organise team activities.",
-    link: "/",
-    icon: Kanban 
+    content: "Organise projects, assign tasks, monitor progress, manage deadlines and coordinate team activities.",
+    icon: ListTodo 
   },
   { 
-    title: "Booking & Appointment Systems", 
-    content: "Develop customised booking platforms for appointments, reservations and service scheduling.",
-    link: "/",
-    icon: CalendarCheck 
+    title: "Employee & HR Management Software", 
+    content: "Manage employee information, attendance, leave requests, payroll-related workflows and internal processes.",
+    icon: UserCog 
   },
   { 
-    title: "Reporting & Analytics Dashboards", 
-    content: "Organise business data into useful reports, performance summaries and management dashboards.",
-    link: "/",
+    title: "Booking & Appointment Management Software", 
+    content: "Allow customers to schedule appointments, manage bookings, receive confirmations and track service availability.",
+    icon: CalendarClock 
+  },
+  { 
+    title: "E-commerce & Order Management Software", 
+    content: "Manage product catalogues, customer orders, payments, deliveries and online sales operations.",
+    icon: ShoppingCart 
+  },
+  { 
+    title: "Business Intelligence & Reporting Software", 
+    content: "Create dashboards and reports to monitor business activities, analyse performance and support informed decisions.",
     icon: ChartNoAxesCombined 
+  },
+  { 
+    title: "Document & Workflow Management Software", 
+    content: "Organise business documents, manage approvals, track requests and automate internal workflows",
+    icon: Files 
+  },
+  { 
+    title: "Custom Web-Based Management Systems", 
+    content: "Develop specialised software for business requirements that cannot be handled effectively by standard off-the-shelf applications.",
+    icon: MonitorCog 
   },
 ];
 //whyChoose data
@@ -308,10 +294,10 @@ const industriesData = [
   },
   {
     number : "06",
-    icon: Factory,
+    icon: Truck,
     title: "Logistics & Transportation",
     text: "Shipment tracking and fleet management applications.",
-    img: "Need image",
+    img: logisticsImg,
   },
   {
     number : "07",
@@ -463,15 +449,15 @@ export default function CustomSoftwareService(){
           faqs={faqs}
       />
       <div className='servicesPage innerPageBg allService'>
-        <div className="innerHeroBanner">
+        <div className="innerHeroBanner" aria-labelledby="custom-software-heading	">
           <NetworkBackground />
           <Container>
             <Row>
               <Col>
                 <div className='innerBannerContent'>
                   <div className="tag">Our Custom Software Services</div>
-                  <h1>Custom Software Development Company in India</h1>
-                  <p>CodeTrios is a custom software development company in India, helping businesses build digital solutions tailored to their operations, workflows and business goals. We design and develop custom business applications, enterprise software, automation systems, API integrations and scalable technology solutions. Whether you want to automate business operations, develop a management system, connect existing applications or build software from scratch, we create solutions based on Best Custom Software Development Company in Indiayour specific requirements.</p>
+                  <h1 id='custom-software-heading'>Custom Software Development Company in <span>India</span></h1>
+                  <p>CodeTrios is a custom software development company in India, helping businesses build digital solutions tailored to their operations, workflows and business goals. We design and develop custom business applications, enterprise software, automation systems, API integrations and scalable technology solutions. Whether you want to automate business operations, develop a management system, connect existing applications or build software from scratch, we create solutions based on Best Custom Software Development Company in India your specific requirements.</p>
                   <div className='actionRow'>
                     <ActionButton />
                   </div>
@@ -480,17 +466,16 @@ export default function CustomSoftwareService(){
             </Row>
           </Container>
         </div>
-        <div className='weAreBlock blockPadding'>
+        <div className='weAreBlock blockPadding' aria-labelledby="custom-software-heading" >
           <Container>
             <Row>
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
                     <div className="tag">WHAT WE DEVELOP</div>
-                    <h2>Our Custom Software Development Services</h2>
+                    <h2 id='custom-software-heading'>Our <span>Custom Software</span> Development Services</h2>
                   </div>
                   <div className='secDetail'>
-                    <p>Need more content</p>
                     <p>We provide custom software development services to help businesses simplify operations, improve productivity and manage their processes through technology.</p>
                   </div>
                 </div>
@@ -519,14 +504,14 @@ export default function CustomSoftwareService(){
             </Row>
           </Container>
         </div>
-        <div className='service-block-2 border-block blockPadding'>
+        <div className='service-block-2 border-block blockPadding' aria-labelledby="software-types-heading">
             <Container>
               <Row>
                 <Col>
                   <div className='sectionHead'>
                     <div className="tag">TYPES OF SOFTWARE WE DEVELOP</div>
-                    <h2>Custom Software Solutions for <br/><span>Different Business</span></h2>
-                    <p className='halfWidth'>Content Missing</p>
+                    <h2 id="software-types-heading">Custom Software Solutions for <br/><span>Different Business Needs</span></h2>
+                    <p className='halfWidth'>Every business has unique operational needs. CodeTrios develops different types of custom software to help organisations manage daily activities, automate processes and improve business performance.</p>
                   </div>
                   <div className="benefitGrid">
                     {customServicesTypes.map((item, index) =>{
@@ -549,14 +534,14 @@ export default function CustomSoftwareService(){
             </Container>
         </div>
         {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="why-choose-heading">
           <Container>
             <Row>
               <Col>
                   <div className='why_container'>
                       <div className="sectionHead">
-                        <div className="tag">Why businesses choose CodeTrios</div>
-                        <h2>Why Choose CodeTrios for <span>Custom Software</span> Development?</h2>
+                        <div className="tag">WHY CHOOSE CODETRIOS</div>
+                        <h2 id='why-choose-heading'>Why Choose CodeTrios for <span>Custom Software</span> Development?</h2>
                         <p>Choosing the right software development partner helps ensure your technology supports your actual business requirements. CodeTrios combines business understanding, modern development technologies and practical software solutions.</p>
                       </div>
                       <div className="why_features">
@@ -578,14 +563,14 @@ export default function CustomSoftwareService(){
           </Container>
         </div>
         {/* Technologies we work */}
-        <div className='technologyStack block-mg-top' aria-labelledby="technology-expertise-title">
+        <div className='technologyStack' aria-labelledby="technology-expertise-title">
           <Container>
             <Row>
               <Col>
                 <div className="technology-layout">
                   <div className='sectionHead'>
                     <div className="tag">TECHNOLOGY STACK</div>
-                    <h2>Technologies & Tools for <span>Custom Software</span> Development</h2>
+                    <h2 id="technology-expertise-title">Technologies & Tools for <span>Custom Software</span> Development</h2>
                     <p>We select technologies according to application requirements, performance needs and future scalability.</p>
                     <Link to="/technologies" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                   </div>
@@ -626,14 +611,14 @@ export default function CustomSoftwareService(){
           </Container>
         </div>
         {/* Our Process */} 
-        <div className='services_process blockPadding'> 
+        <div className='services_process blockPadding block-mg-top' aria-labelledby="development-process-heading"> 
           <Container>
             <Row>
               <Col>
                 <div className='services_process_container'>
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
-                      <h2>Our Custom Software Development <span>Process</span></h2>
+                      <h2 id='development-process-heading'>Our Custom Software <br/>Development <span>Process</span></h2>
                       <p>Content missing</p>
                   </div>
                   <div className='services_process_grid'>
@@ -662,13 +647,13 @@ export default function CustomSoftwareService(){
                 <div className='services_industries_bg'>
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
-                      <h2>Industries <span>We Serve</span></h2>
+                      <h2 aria-labelledby="industries-heading">Industries <span>We Serve</span></h2>
                       <p>CodeTrios develops custom software solutions for businesses and organisations across different industries.</p>
                   </div>
                   <div className="industries-section">
                     <Carousel
-                        autoPlaySpeed={1500}
-                        transitionDuration={500}
+                        autoPlaySpeed={3000}
+                        transitionDuration={600}
                         responsive={RelatedServicesSlide}
                         arrows={false}
                         autoPlay={true}
@@ -702,23 +687,23 @@ export default function CustomSoftwareService(){
         </div>
         
         {/* Related Services */}
-        <div className='related-services'>
+        <div className='related-services blockPadding' aria-labelledby="related-services-heading">
           <Container>
             <Row>
               <Col>
-                <div className='inner-bg'>
+                <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
-                    <h2>Explore Our Other Digital Services</h2>
+                    <h2 id='related-services-heading'>Explore Our Other <span>Digital Services</span></h2>
                   </div>
                   <div className="benefitGrid">
                     {relatedServices.map((item, index) =>{
                       return(
                         <div className="benefitCard" key={index} data-reveal="up">
                           
-                          <h3><Link to={item.link} title={item.link}>{item.title}</Link></h3>
+                          <h3><Link to={item.link}>{item.title}</Link></h3>
                           <p>{item.content}</p>
-                          <span className='benefitGo'><ArrowUpRight /></span>
+                          <Link to={item.link} title={item.linkTitle} aria-label={item.linkTitle} className='benefitGo'><ArrowUpRight /></Link>
                         </div>
                       )
                     })}
@@ -729,14 +714,14 @@ export default function CustomSoftwareService(){
           </Container>
         </div>
         {/* Frequently Asked Questions */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="custom-software-faq-heading">
             <Container>
               <Row>
                 <Col>
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our <span>Custom Software</span> Development</h2>
+                          <h2 id='custom-software-faq-heading'>Questions About Our <span>Custom Software</span> Development</h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>

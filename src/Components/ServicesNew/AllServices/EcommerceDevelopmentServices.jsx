@@ -6,42 +6,9 @@ import "react-multi-carousel/lib/styles.css";
 import Accordion from 'react-bootstrap/Accordion';
 import '../mainservices.css';
 //icon
-import {
-  ShoppingBag,
-  ArrowUpRight,
-  Atom,
-  Server,
-  Code,
-  Database,
-  CodeXml,
-  Webhook,
-  Store,
-  PanelsTopLeft,
-  CreditCard,
-  ShoppingCart,
-  Plug,
-  UserRound,
-  Building2,
-  ShoppingBasket,
-  Shirt,
-  Sofa,
-  Repeat,
-  Settings2,
-  Smile,
-  ShieldCheck,
-  SearchCheck,
-  LayoutDashboard,
-  PlugZap,
-  MonitorSmartphone,
-  Headset,
-  ChartNoAxesCombined,
-  Laptop,
-  Utensils,
-  HeartPulse,
-  Armchair,
-  Sparkles,
-  Factory,
-} from "lucide-react";
+import {ShoppingBag,ArrowUpRight,Atom,Server,Code,Database,CodeXml,Webhook,Store,PanelsTopLeft,CreditCard,ShoppingCart,
+  Plug,UserRound,Building2,ShoppingBasket,Shirt,Sofa,Repeat,Settings2,Smile,ShieldCheck,SearchCheck,LayoutDashboard,PlugZap,
+  MonitorSmartphone,Headset,ChartNoAxesCombined,Laptop,Utensils,HeartPulse,Armchair,Sparkles,Factory,} from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
 import SEO from '../../SEO/websiteMeta';
@@ -50,14 +17,14 @@ import ActionButton from '../../ActionButton/ActionButton';
 import ProjectCAT from '../../ActionButton/ProjectCAT';
 
 //Images
-import eduImg from '../../../assets/images/edu-img.jpg';
-import healthcareImg from '../../../assets/images/healthcare-img.jpg';
-import ecomImg from '../../../assets/images/ecom-img.jpg';
-import estateImg from '../../../assets/images/estate-img.jpg';
-import hospitalityImg from '../../../assets/images/hospitality-img.jpg';
-import manufacturingImg from '../../../assets/images/manufacturing-img.jpg'; 
-import startupsImg from '../../../assets/images/startups-img.jpg';
-import technologyImg from '../../../assets/images/technology-img.jpg';
+import fashionImg from '../../../assets/images/fashion-ecommerce.webp';
+import electronicsImg from '../../../assets/images/electronics-ecommerce.webp';
+import foodGroceryImg from '../../../assets/images/food-grocery-ecommerce.webp';
+import healthcareEcomImg from '../../../assets/images/healthcare-ecommerce.webp';
+import furnitureImg from '../../../assets/images/furniture-ecommerce.webp';
+import beautyImg from '../../../assets/images/beauty-ecommerce.webp';
+import retailImg from '../../../assets/images/retail-wholesale-ecommerce.webp';
+import manufacturingEcomImg from '../../../assets/images/manufacturing-ecommerce.webp';
 const Carousel = CarouselImport.default ?? CarouselImport;
 
 //E-commerce Development Services data
@@ -282,56 +249,64 @@ const industriesData = [
     icon: Shirt,
     title: "Fashion & Apparel",
     text: "Online clothing, footwear and accessories stores.",
-    img: eduImg,
+    img: fashionImg,
+    alt: "Fashion and apparel ecommerce website development",
   },
   {
     number : "02",
     icon: Laptop,
     title: "Electronics & Technology",
     text: "Electronics and gadget ecommerce platforms.",
-    img: healthcareImg,
+    img: electronicsImg,
+    alt: "Electronics and technology ecommerce website development",
   },
   {
     number : "03",
-    icon: Utensils,
+    icon: ShoppingBasket,
     title: "Food & Grocery",
     text: "Online grocery stores and food ordering platforms.",
-    img: ecomImg,
+    img: foodGroceryImg,
+    alt: "Food and grocery ecommerce website development",
   },
   {
     number : "04",
     icon: HeartPulse,
     title: "Healthcare & Wellness",
     text: "Healthcare product and wellness ecommerce websites.",
-    img: healthcareImg,
+    img: healthcareEcomImg,
+    alt: "Healthcare and wellness ecommerce website development",
   },
   {
     number : "05",
     icon: Armchair,
     title: "Home & Furniture",
     text: "Furniture, home decor and lifestyle product stores.",
-    img: estateImg,
+    img: furnitureImg,
+    alt: "Home and furniture ecommerce website development",
   },
   {
     number : "06",
     icon: Sparkles,
     title: "Beauty & Personal Care",
     text: "Cosmetics, skincare and personal care stores.",
-    img: manufacturingImg,
+    img: beautyImg,
+    alt: "Beauty and personal care ecommerce website development",
   },
   {
     number : "07",
     icon: Store,
     title: "Retail & Wholesale",
     text: "Product catalogues, retail stores and bulk ordering platforms.",
-    img: startupsImg,
+    img: retailImg,
+    alt: "Retail and wholesale ecommerce website development",
   },
   {
     number : "08",
     icon: Factory,
     title: "Manufacturing",
     text: "Industrial product catalogues and B2B ecommerce solutions.",
-    img: manufacturingImg,
+    img: manufacturingEcomImg,
+    alt: "Manufacturing and industrial B2B ecommerce website development",
   },
 ]
 //FAQ data
@@ -479,14 +454,14 @@ export default function EcommerceDevelopmentService(){
           faqs={faqs}
       />
       <div className='servicesPage innerPageBg allService'>
-        <div className="innerHeroBanner">
+        <div className="innerHeroBanner" aria-labelledby="ecommerce-hero-heading">
           <NetworkBackground />
           <Container>
             <Row>
               <Col>
                 <div className='innerBannerContent'>
                   <div className="tag">ECOMMERCE DEVELOPMENT SERVICES</div>
-                  <h1>E-commerce Development Company in India</h1>
+                  <h1 id="ecommerce-hero-heading">E-commerce Development Company in India</h1>
                   <p>CodeTrios provides professional & user friendly ecommerce website development services to help businesses sell products online and grow their digital presence. We build user-friendly, responsive and scalable online stores with features that make shopping simple and convenient.From small business ecommerce websites to custom online shopping platforms, we develop solutions with product management, shopping carts, payment gateway integration and order management to support your business needs.</p>
                   <div className='actionRow'>
                     <ActionButton />
@@ -496,14 +471,14 @@ export default function EcommerceDevelopmentService(){
             </Row>
           </Container>
         </div>
-        <div className='weAreBlock blockPadding'>
+        <div className='weAreBlock blockPadding' aria-labelledby="ecommerce-services-heading">
           <Container>
             <Row>
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
                     <div className="tag">OUR ECOMMERCE DEVELOPMENT SERVICES</div>
-                    <h2>E-commerce Development Services Built Around Your <span>Business Goals</span></h2>
+                    <h2 id="ecommerce-services-heading">E-commerce Development Services Built Around Your <span>Business Goals</span></h2>
                   </div>
                   <div className='secDetail'>
                     <p>Content missing</p>
@@ -534,14 +509,14 @@ export default function EcommerceDevelopmentService(){
             </Row>
           </Container>
         </div>
-        <div className='service-block-2 border-block blockPadding'>
+        <div className='service-block-2 border-block blockPadding' aria-labelledby="ecommerce-platform-types-heading">
             <Container>
               <Row>
                 <Col>
                   <div className='sectionHead'>
                     <div className="tag">TYPES OF ECOMMERCE PLATFORMS</div>
-                    <h2>E-commerce Solutions for <span>Every Business</span></h2>
-                    <p className='halfWidth'>Content missing</p>
+                    <h2 id="ecommerce-platform-types-heading">E-commerce Solutions for <span>Every Business</span></h2>
+                    <p className='halfWidth'>Every online business has different selling requirements. Whether you want to sell directly to customers, supply products to other businesses or build a multi-vendor marketplace, CodeTrios develops e-commerce platforms tailored to your business model.</p>
                   </div>
                   <div className="benefitGrid">
                     {websiteTypes.map((item, index) =>{
@@ -564,14 +539,14 @@ export default function EcommerceDevelopmentService(){
             </Container>
         </div>
         {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="why-choose-codetrios-heading">
           <Container>
             <Row>
               <Col>
                   <div className='why_container'>
                       <div className="sectionHead">
                         <div className="tag">WHY CHOOSE CODETRIOS</div>
-                        <h2>Why Choose CodeTrios for <span>E-commerce</span> Development?</h2>
+                        <h2 id="why-choose-codetrios-heading">Why Choose CodeTrios for <span>E-commerce</span> Development?</h2>
                         <p>Choosing the right ecommerce development partner is important for building a successful online business. At CodeTrios, we combine modern technology, thoughtful design and practical business solutions to create online stores that are easy to manage, convenient to shop from and ready to grow.</p>
                       </div>
                       <div className="why_features">
@@ -593,14 +568,14 @@ export default function EcommerceDevelopmentService(){
           </Container>
         </div>
         {/* Technologies we work */}
-        <div className='whyChooseUs'>
+        <div className='whyChooseUs' aria-labelledby="ecommerce-technologies-heading">
             <Container>
               <Row>
                 <Col>
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">OUR ECOMMERCE TECHNOLOGIES</div>
-                          <h2>E-commerce <span>Technologies</span> We Use</h2>
+                          <h2 id="ecommerce-technologies-heading">E-commerce <span>Technologies</span> We Use</h2>
                           <p>We select technologies according to your business model, functionality and future growth requirements.</p>
                           <Link to="/technologies" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                         </div>
@@ -623,14 +598,14 @@ export default function EcommerceDevelopmentService(){
             </Container>
           </div>
         {/* Our Process */}
-        <div className='services_process blockPadding'> 
+        <div className='services_process blockPadding' aria-labelledby="ecommerce-process-heading"> 
           <Container>
             <Row>
               <Col>
                 <div className='services_process_container'>
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
-                      <h2>Our E-commerce Development Process</h2>
+                      <h2 id="ecommerce-process-heading">Our E-commerce Development <sapn>Process</sapn></h2>
                       <p>Content missing</p>
                   </div>
                   <div className='services_process_grid'>
@@ -652,20 +627,20 @@ export default function EcommerceDevelopmentService(){
           </Container>
         </div>
         {/* Industries Section */}
-        <div className='services_industries blockPadding' aria-labelledby="industries-heading">
+        <div className='services_industries blockPadding' aria-labelledby="ecommerce-industries-heading">
           <Container>
             <Row>
               <Col>
                 <div className='services_industries_bg'>
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
-                      <h2>Industries <span>We Serve</span></h2>
+                      <h2 id="ecommerce-industries-heading">Industries <span>We Serve</span></h2>
                       <p>Content missing</p>
                   </div>
                   <div className="industries-section">
                     <Carousel
-                        autoPlaySpeed={1500}
-                        transitionDuration={500}
+                        autoPlaySpeed={3000}
+                        transitionDuration={600}
                         responsive={RelatedServicesSlide}
                         arrows={false}
                         autoPlay={true}
@@ -678,7 +653,7 @@ export default function EcommerceDevelopmentService(){
                         return (
                           <article className="industry-card" key={item.number}>
                             <div className="industry-card-image">
-                              <img src={item.img} alt={`${item.title} industry`} loading="lazy" decoding="async" width="400" height="480"/>
+                              <img src={item.img} alt={`${item.alt} industry`} loading="lazy" decoding="async" width="400" height="480"/>
                             </div>
                             <div className="industry-card-overlay" />
                             {/* <span className="industry-card-number">{item.number}</span> */}
@@ -698,23 +673,22 @@ export default function EcommerceDevelopmentService(){
           </Container>
         </div>
         {/* Related Services */}
-        <div className='related-services blockPadding  '>
+        <div className='related-services blockPadding' aria-labelledby="related-services-heading">
           <Container>
             <Row>
               <Col>
                 <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
-                    <h2>Explore Our Other Digital Services</h2>
+                    <h2 id="related-services-heading">Explore Our Other <span>Digital Services</span></h2>
                   </div>
                   <div className="benefitGrid">
                     {relatedServices.map((item, index) =>{
                       return(
                         <div className="benefitCard" key={index} data-reveal="up">
-                          
                           <h3><Link to={item.link}>{item.title}</Link></h3>
                           <p>{item.content}</p>
-                          <span className='benefitGo'><ArrowUpRight /></span>
+                          <Link to={item.link} title={item.linkTitle} aria-label={item.linkTitle} className='benefitGo'><ArrowUpRight /></Link>
                         </div>
                       )
                     })}
@@ -725,14 +699,14 @@ export default function EcommerceDevelopmentService(){
           </Container>
         </div>
         {/* Frequently Asked Questions */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="ecommerce-faqs-heading">
             <Container>
               <Row>
                 <Col>
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our <span>E-commerce Website</span> Development</h2>
+                          <h2 id="ecommerce-faqs-heading">Questions About Our <span>E-commerce Website</span> Development</h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>
@@ -753,7 +727,7 @@ export default function EcommerceDevelopmentService(){
               </Row>
             </Container>
         </div>
-        <ProjectCAT />
+        <ProjectCAT sectionId="ecommerce-cta-heading" tagId="ecommerce-cta-heading" />
       </div>
     </>
   )

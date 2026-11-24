@@ -3,7 +3,7 @@ import Logo from "../../assets/images/codetrios_logo.svg";
 import Style from "../CSS/Header.module.css";
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin   } from "lucide-react";
-
+import { FacebookIcon, InstagramIcon, LinkedinIcon } from "../ServicesNew/SVGIcon";
 const Footer = () => {
   return (
     <footer className={Style.footer}>
@@ -26,7 +26,7 @@ const Footer = () => {
                 Custom Web Development, Mobile App Development, MERN Stack, SaaS
                 Products, AI Automation, and Ongoing Maintenance Services.
               </p>
-              {/* <ul>
+              <ul>
                 <li>
                   <a
                     href="https://www.facebook.com/profile.php?id=61581161434863"
@@ -34,7 +34,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     aria-label="CodeTrios Facebook"
                   >
-                    <FaFacebookF />
+                    <FacebookIcon  />
                   </a>
                 </li>
                 <li>
@@ -44,7 +44,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     aria-label="CodeTrios Instagram"
                   >
-                    <FaInstagram />
+                    <InstagramIcon  />
                   </a>
                 </li>
                 <li>
@@ -54,10 +54,10 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     aria-label="CodeTrios LinkedinIn"
                   >
-                    <FaLinkedinIn />
+                    <LinkedinIcon  />
                   </a>
                 </li>
-              </ul> */}
+              </ul>
             </div>
           </Col>
           <Col md={8}>

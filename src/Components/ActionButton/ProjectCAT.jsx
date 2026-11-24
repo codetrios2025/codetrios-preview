@@ -8,7 +8,7 @@ import {
 
 import './projetCAT.css';
 
-export default function ProjectCAT() {
+export default function ProjectCAT({sectionId, tagId}) {
   const [isOPen, setIsopen] = useState(false);
       const formOpenHandler=()=>{
           setIsopen(true);
@@ -17,14 +17,14 @@ export default function ProjectCAT() {
           setIsopen(false);
       }
   return (
-    <div className="projectCAT">
+    <div className="projectCAT" aria-labelledby={sectionId}>
       <Container>
         <Row>
           <Col>
             <div className="projectCAT__container">
               <div className='sectionHead'>
                 <div className="tag">Let’s work together</div>
-                <h2>Have a Project in Mind? <br /><span>Let's Make It Happen.</span></h2>
+                <h2 id={tagId}>Have a Project in Mind? <br /><span>Let's Make It Happen.</span></h2>
                 <p>Tell us what you're planning. We'll help you understand the possibilities and find a practical way forward to your business.</p>
               </div>
               <div className="projectCAT__btn">

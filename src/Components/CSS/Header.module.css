@@ -55,7 +55,7 @@ header.headerFix .topHead{top: -100px;}
 .copyRight small{margin: 0;color: #fff;}
 .info ul{display:flex;align-items: center;justify-content: flex-start;}
 .info ul li{margin-right: 20px;}
-.info ul li a{color: #212529;font-size: 20px;}
+.info ul li a{color: #b9d8f5;font-size: 20px;}
 .info p{margin: 10px 0;font-size: 14px;color: #b9d8f5;}
 /* footer */
 footer{padding: 80px 0 0;    background: radial-gradient(ellipse at 76% 48%, rgba(0, 91, 190, 0.16), transparent 38%), linear-gradient(115deg, #041326 0%, #061a36 55%, #031126 100%);
@@ -77,53 +77,43 @@ footer{padding: 80px 0 0;    background: radial-gradient(ellipse at 76% 48%, rgb
 
 .footerlogo img{background: #fff;height: auto;padding: 10px;border-radius: 10px;}
 .mobMenuHead{display:none}
-
+.megaColumnTitle {border-bottom: 1px solid rgba(255, 255, 255, 0.1);padding-bottom: 15px;display: flex;align-items: center;gap: 10px;margin-bottom: 8px;}
+.groupIcon {display: flex;align-items: center;justify-content: center;width: 36px;height: 36px;flex-shrink: 0;border-radius: 9px;background: rgba(56, 189, 248, 0.12);color: #38bdf8;}
+.megaColumnTitle h3 {color: #fff;font-size: 16px;font-weight: 500;margin: 0;color: var(--brand-color);}      
 @media (min-width:992px){
-    .head ul li .subMenu{
+    /* .head ul li .subMenu{
         position: absolute;
         top: 0;
         left: 0;
         width: 300px;
         display: none;
         height: 0;
-    }
-.head ul li .subMenu ul{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background: #0a2349;
-        border: 1px solid var(--ct-border);
-        padding: 15px 0;
-        transition: all 0.2s linear;
-        box-shadow: 0px 3px 20px 0px #0000001c;
-        border-radius: 10px;
-        overflow: hidden;
+    } */
+.head ul li .subMenu{position: absolute;top: calc(100% + 0);left: 50%;transform: translate(-50%, 10px);
+  width: min(940px, calc(100vw - 40px));
+  transition:opacity 0.25s ease,transform 0.25s ease,visibility 0.25s ease;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  padding-top: 18px;
 }
-.head ul li:hover .subMenu{height: auto;
-        top: 33px;
-        display: flex;
-        padding-top: 20px;
-        flex-direction: column;}
+.head ul li:hover .subMenu{opacity: 1;visibility: visible;pointer-events: auto;transform: translate(-50%, 0);}
+
+.head ul li .subMenu a{padding: 8px 15px;border-left: 2px solid transparent;transition:.4s;}   
+.head ul li .subMenu a:hover{background: #0b1c33;border-radius: 6px;padding: 8px 15px 8px 25px;color: var(--brand-color);border-color: var(--brand-color);}
+.megaGrid {display: grid;grid-template-columns: 1fr 1fr 1fr;gap: 15px;width: 100%;background: #0d2343;border: 1px solid #23466d;border-radius: 14px;padding: 15px;box-shadow: 0 20px 55px rgba(0, 0, 0, 0.4);}  
+.megaColumn {background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));border-radius: 10px;border: 1px solid rgba(255, 255, 255, 0.1);padding: 15px 10px;}
 .head ul li .subMenu li{width: 100%;margin: 0 0 0 0;}
 .head ul li .subMenu li:last-child{margin: 0;}
-.head ul li .subMenu li a{
-            padding: 10px 15px;
-        font-weight: 500;
-        border-left: 2px solid transparent;
-}
-.head ul li .subMenu li a:hover{
-            background: #0f2d5b;
-        color: #fff;
-        border-color: var(--brand-color);
-}
+.head ul li .subMenu li a{padding: 10px 15px;font-weight: 500;border-left: 2px solid transparent;}
+.head ul li .subMenu li a:hover{background: #0f2d5b;color: #fff;border-color: var(--brand-color);}
 .head ul li .subMenu li a:hover::before{content: none;}
 }
 
 
 @media (max-width:1200px){
-    .head ul li .subMenu{top: -200px;}
     .footerLink ul li a{font-size: 14px;}
-    .head ul li a{    padding: 25px 15px;}
     .getTouch{padding: 8px 20px;}
 }
 
@@ -151,6 +141,9 @@ footer{padding: 80px 0 0;    background: radial-gradient(ellipse at 76% 48%, rgb
     align-items: center;
     padding: 10px 15px;
     background: linear-gradient(145deg, rgba(17, 43, 73, 0.95), rgba(5, 20, 40, 0.96)) ;
+    position: sticky;
+        top: 0;
+        z-index: 999;
 }
 .mainMenu button{margin: 0;padding: 0;
 background: linear-gradient(90deg, #8E42FF 0%, #5A63FF 45%, #18A8FF 100%);
@@ -165,6 +158,23 @@ background: linear-gradient(90deg, #8E42FF 0%, #5A63FF 45%, #18A8FF 100%);
     z-index: 9;
 }
 .head .logo img{width: 120px;}
+.megaGrid{background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;}
+.megaColumnTitle{gap:5px}    
+.megaColumnTitle .groupIcon{width: 20px;height: 20px;border-radius: 5px;background: transparent;}
+.megaColumnTitle .groupIcon svg{width: 16px;}
+.megaColumn{background: #0a2349;border-radius: 10px;padding: 15px;}
+.megaColumnTitle{    margin-bottom: 0;padding: 0 0;border: none;}
+.megaColumnTitle h3{color: var(--brand-color);    font-size: 14px;font-weight: 500;}
+.header .mainMenu ul li .subMenu a {
+    border: none;
+    padding: 5px 0;
+    font-size: 13px;
+}
 
 }
 

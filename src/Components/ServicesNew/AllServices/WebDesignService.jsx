@@ -36,7 +36,7 @@ import {
   SearchCheck,
   SlidersHorizontal,
   LifeBuoy,
-  Sparkles
+  Sparkles,UtensilsCrossed
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -51,8 +51,9 @@ import healthcareImg from '../../../assets/images/healthcare-img.jpg';
 import ecomImg from '../../../assets/images/ecom-img.jpg';
 import estateImg from '../../../assets/images/estate-img.jpg';
 import hospitalityImg from '../../../assets/images/hospitality-img.jpg';
-import manufacturingImg from '../../../assets/images/manufacturing-img.jpg'; 
+import manufacturingImg from '../../../assets/images/manufacturing-img.jpg';
 import startupsImg from '../../../assets/images/startups-img.jpg';
+import foodRestaurantsImg from '../../../assets/images/food-restaurants-img.webp';
 import technologyImg from '../../../assets/images/technology-img.jpg';
 const Carousel = CarouselImport.default ?? CarouselImport;
 
@@ -61,31 +62,26 @@ const websiteDesignServices = [
   { 
     title: "Business Website Design", 
     content: "Professional websites that showcase your services, build trust and generate enquiries.",
-    link: "/",
     icon: BriefcaseBusiness, 
   },
   { 
     title: "Responsive Website Design", 
     content: "Mobile-friendly designs that work smoothly across smartphones, tablets and desktops.",
-    link: "/",
     icon: MonitorSmartphone 
   },
   { 
     title: "Website Redesign", 
     content: "Modernise your existing website with better layouts, navigation and user experience.",
-    link: "/",
     icon: RefreshCw 
   },
   { 
     title: "Landing Page Design", 
     content: "Engaging landing pages designed to promote services, products and campaigns.",
-    link: "/",
     icon: PanelsTopLeft 
   },
   { 
     title: "Ecommerce Website Design", 
     content: "User-friendly online stores with organised products and smooth shopping experiences.",
-    link: "/",
     icon: ShoppingCart 
   },
   // { 
@@ -100,49 +96,41 @@ const websiteTypes = [
   { 
     title: "Corporate Websites", 
     content: "Professional websites that showcase your organisation, services and brand identity.",
-    link: "/",
     icon: Building2 
   },
   { 
     title: "Small Business Websites", 
     content: "Affordable, modern websites that help small businesses build an online presence.",
-    link: "/",
     icon: Store 
   },
   { 
     title: "Portfolio Websites", 
     content: "Creative websites that highlight your work, projects, skills and achievements.",
-    link: "/",
     icon: Images 
   },
   { 
     title: "Ecommerce Websites", 
     content: "Online stores designed for easy product browsing and smooth shopping experiences.",
-    link: "/",
     icon: ShoppingBag 
   },
   { 
     title: "Educational Websites", 
     content: "Informative websites for schools, colleges and educational institutions.",
-    link: "/",
     icon: GraduationCap 
   },
   { 
     title: "Healthcare Websites", 
     content: "User-friendly websites for hospitals, clinics and healthcare professionals.",
-    link: "/",
     icon: HeartPulse 
   },
   { 
     title: "Landing Pages", 
     content: "Focused web pages designed to promote products, services and campaigns.",
-    link: "/",
     icon: MousePointerClick 
   },
   { 
     title: "CMS-Based Websites",
     content: "Easy-to-manage websites that let you update content without technical knowledge.",
-    link: "/",
     icon: Blocks 
   },
 ];
@@ -241,57 +229,57 @@ const industriesData = [
   {
     number : "01",
     icon: GraduationCap,
-    title: "Education",
-    text: "Learning platforms, school and college websites, student portals.",
+    title: "Education & E-Learning",
+    text: "Modern website designs for schools, colleges, coaching institutes and online learning platforms.",
     img: eduImg,
   },
   {
     number : "02",
     icon: Stethoscope,
-    title: "Healthcare",
-    text: "Hospital websites, appointment systems, patient management solutions.",
+    title: "Healthcare & Medical",
+    text: "Professional website designs for hospitals, clinics, diagnostic centres and healthcare professionals.",
     img: healthcareImg,
   },
   {
     number : "03",
     icon: ShoppingCart,
-    title: "E-commerce",
-    text: "Online stores, secure payments, product catalogs and shopping experiences.",
+    title: "E-commerce & Retail",
+    text: "Attractive online store designs with organised product displays, intuitive navigation and smooth shopping experiences.",
     img: ecomImg,
   },
   {
     number : "04",
     icon: Building2,
-    title: "Real Estate",
-    text: "Property websites, listing portals, lead generation and virtual experiences.",
+    title: "Real Estate & Construction",
+    text: "Property listing websites, builder websites and real estate designs that showcase projects and properties effectively.",
     img: estateImg,
   },
   {
     number : "05",
     icon: Hotel,
-    title: "Hospitality",
-    text: "Hotel websites, online booking, guest services and reservation systems.",
+    title: "Hospitality & Tourism",
+    text: "Engaging website designs for hotels, resorts, travel agencies and tourism businesses.",
     img: hospitalityImg,
   },
   {
     number : "06",
-    icon: Factory,
-    title: "Manufacturing",
-    text: "Business websites, production workflows, automation and operational software.",
-    img: manufacturingImg,
+    icon: UtensilsCrossed,
+    title: "Food & Restaurants",
+    text: "Creative website designs for restaurants, cafes, bakeries and food businesses with menus and enquiry options.",
+    img: foodRestaurantsImg,
   },
   {
     number : "07",
     icon: Rocket,
-    title: "Startups",
-    text: "MVP development, scalable platforms and digital products for growing businesses.",
+    title: "Startups & Small Businesses",
+    text: "Modern, affordable and scalable website designs that help new businesses establish their online presence.",
     img: startupsImg,
   },
   {
     number : "08",
     icon: BriefcaseBusiness,
     title: "Corporate & Technology",
-    text: "Corporate websites, custom software, web applications and digital transformation.",
+    text: "Professional corporate websites for IT companies, technology businesses, agencies and service providers.",
     img: technologyImg,
   },
 ]
@@ -315,7 +303,7 @@ const technologyGroups = [
   {
     title: "Frontend Frameworks & Libraries",
     icon: Atom,
-    technologies: ["React.js", "Bootstrap", "Tailwind CSS", "Material UI", "GSAP"],
+    technologies: ["React.js", "Next.js", "Bootstrap", "Tailwind CSS", "Material UI", "GSAP"],
   },
   {
     title: "AI-Assisted Design Tools",
@@ -420,14 +408,14 @@ export default function WebsiteDesignService(){
       />
       <div className='servicesPage innerPageBg allService'>
         {/* Hero Banner Section */}
-        <div className="innerHeroBanner">
+        <div className="innerHeroBanner" aria-labelledby="website-design-page-title">
           <NetworkBackground />
           <Container>
             <Row>
               <Col>
                 <div className='innerBannerContent'>
                   <div className="tag">Our Website Design Services</div>
-                  <h1>Website Design Company in <span>India</span></h1>
+                  <h1 id="website-design-page-title">Website Design <br/>Company in <span>India</span></h1>
                   <p>At CodeTrios, we design modern, responsive and user-friendly websites that help businesses build credibility, connect with their audience and grow online.We provide professional website design and development services in Delhi NCR and across India, creating websites that combine attractive design, smooth performance, easy navigation and SEO-friendly structure.</p>
                   <div className='actionRow'>
                     <ActionButton />
@@ -438,14 +426,14 @@ export default function WebsiteDesignService(){
           </Container>
         </div>
         {/* Website Design Services Section  */}
-        <div className='weAreBlock blockPadding'>
+        <div className='weAreBlock blockPadding' aria-labelledby="website-design-services-title">
           <Container>
             <Row>
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
                     <div className="tag">WHAT WE DESIGN</div>
-                    <h2>Website Design Services Built Around Your <span>Business Goals</span></h2>
+                    <h2 id="website-design-services-title">Website Design Services Built Around Your <span>Business Goals</span></h2>
                   </div>
                   <div className='secDetail'>
                     <p>At CodeTrios, we create modern, responsive and user-friendly website designs that reflect your brand and support your business growth. From business websites to ecommerce stores, we focus on attractive layouts, easy navigation, mobile-friendly experiences and SEO-friendly structures.</p>
@@ -466,7 +454,7 @@ export default function WebsiteDesignService(){
                             <IconComponent aria-hidden="true" />
                           </div>
                         </div>
-                        <h3><Link to={item.link}>{item.title}</Link></h3>
+                        <h3>{item.title}</h3>
                         <p>{item.content}</p>
                         <span className='benefitGo'><ArrowUpRight /></span>
                       </div>
@@ -478,13 +466,13 @@ export default function WebsiteDesignService(){
           </Container>
         </div>
         {/* Website Type */}
-        <div className='service-block-2 border-block blockPadding'>
+        <div className='service-block-2 border-block blockPadding' aria-labelledby="website-types-title">
             <Container>
               <Row>
                 <Col>
                   <div className='sectionHead'>
                     <div className="tag">Types of Websites We Design</div>
-                    <h2>Website Design Solutions <br/>for <span>Every Business</span></h2>
+                    <h2 id="website-types-title">Website Design Solutions <br/>for <span>Every Business</span></h2>
                     <p className='halfWidth'>Every business has different goals and audiences. At CodeTrios, we design websites that match your requirements, business, brand identity and business objectives.</p>
                   </div>
                   <div className="benefitGrid">
@@ -508,14 +496,14 @@ export default function WebsiteDesignService(){
             </Container>
         </div>
         {/* Why businesses choose Section */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="why-choose-codetrios-title">
           <Container>
             <Row>
               <Col>
                   <div className='why_container'>
                       <div className="sectionHead">
                         <div className="tag">WHY CHOOSE CODETRIOS</div>
-                        <h2>Why Choose CodeTrios for <span>Website Design</span> Services?</h2>
+                        <h2 id="why-choose-codetrios-title">Why Choose CodeTrios for <span>Website Design</span> Services?</h2>
                         <p>At CodeTrios, we design websites that combine attractive visuals, smooth navigation and practical functionality. Our goal is to create a professional online presence that builds trust, engages visitors and supports your business growth.</p>
                       </div>
                       <div className="why_features">
@@ -537,14 +525,14 @@ export default function WebsiteDesignService(){
           </Container>
         </div>
         {/* Our Process Section */}
-        <div className='services_process blockPadding'> 
+        <div className='services_process blockPadding' aria-labelledby="website-design-process-title"> 
           <Container>
             <Row>
               <Col>
                 <div className='services_process_container'>
                   <div className='sectionHead'>
                       <div className="tag">OUR WORKING PROCESS</div>
-                      <h2>Our Website Design <span>Process</span></h2>
+                      <h2 id="website-design-process-title">Our Website Design <span>Process</span></h2>
                       <p>We follow a structured process to make sure every website is planned, designed and developed with care.</p>
                   </div>
                   <div className='services_process_grid'>
@@ -574,7 +562,7 @@ export default function WebsiteDesignService(){
                 <div className="technology-layout">
                   <div className='sectionHead'>
                     <div className="tag">Technologies & Tools</div>
-                    <h2>Modern Website Design <span> Technologies & Tools</span> We Work With</h2>
+                    <h2 id="technology-expertise-title">Modern Website Design <span> Technologies & Tools</span> We Work With</h2>
                     <p>We use modern design tools and frontend technologies to create attractive, responsive and user-friendly website experiences. We choose the right tools and technologies based on your design requirements, brand identity and website goals.</p>
                     <Link to="/technologies" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                   </div>
@@ -623,14 +611,13 @@ export default function WebsiteDesignService(){
                 <div className='services_industries_bg'>
                   <div className='sectionHead'>
                       <div className="tag">INDUSTRIES WE SERVE</div>
-                      <h2>Section missing </h2>
-                      {/* <h2>Website Design for <span>Different Industries</span></h2> */}
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <h2 id="industries-heading">Website Design for <br/><span>Different Industries</span></h2>
+                      <p>CodeTrios provides professional website design services for businesses across different industries. We create user-friendly and responsive website designs that reflect each industry's identity, users and business goals.</p>
                   </div>
                   <div className="industries-section">
                     <Carousel
-                        autoPlaySpeed={1500}
-                        transitionDuration={500}
+                        autoPlaySpeed={3000}
+                        transitionDuration={600}
                         responsive={RelatedServicesSlide}
                         arrows={false}
                         autoPlay={true}
@@ -663,23 +650,22 @@ export default function WebsiteDesignService(){
           </Container>
         </div>
         {/* Related Services */}
-        <div className='related-services blockPadding '>
+        <div className='related-services blockPadding ' aria-labelledby="related-services-title">
           <Container>
             <Row>
               <Col>
                 <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
-                    <h2>Explore Our Other <span>Digital Services</span></h2>
+                    <h2 id="related-services-title">Explore Our Other <span>Digital Services</span></h2>
                   </div>
                   <div className="benefitGrid">
                     {relatedServices.map((item, index) =>{
                       return(
                         <div className="benefitCard" key={index} data-reveal="up">
-                          
                           <h3><Link to={item.link}>{item.title}</Link></h3>
                           <p>{item.content}</p>
-                          <span className='benefitGo'><ArrowUpRight /></span>
+                          <Link to={item.link} title={item.linkTitle} aria-label={item.linkTitle} className='benefitGo'><ArrowUpRight /></Link>
                         </div>
                       )
                     })}
@@ -690,14 +676,14 @@ export default function WebsiteDesignService(){
           </Container>
         </div>
         {/* Frequently Asked Questions */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="website-design-faq-title">
             <Container>
               <Row>
                 <Col>
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our <span>Website Design Services</span></h2>
+                          <h2 id="website-design-faq-title">Questions About Our <span>Website Design Services</span></h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>
@@ -718,7 +704,7 @@ export default function WebsiteDesignService(){
               </Row>
             </Container>
         </div>
-        <ProjectCAT />
+        <ProjectCAT sectionId="website-design-cta-title" tagId="website-design-cta-title" />
       </div>
     </>
   )

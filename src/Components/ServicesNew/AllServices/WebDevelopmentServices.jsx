@@ -36,7 +36,7 @@ import {
   SearchCheck,
   ShieldCheck,
   Plug,
-  Wrench,
+  Wrench,Truck 
 } from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
@@ -54,6 +54,8 @@ import hospitalityImg from '../../../assets/images/hospitality-img.jpg';
 import manufacturingImg from '../../../assets/images/manufacturing-img.jpg'; 
 import startupsImg from '../../../assets/images/startups-img.jpg';
 import technologyImg from '../../../assets/images/technology-img.jpg';
+import logisticsImg from '../../../assets/images/logistics-transportation.webp';
+
 const Carousel = CarouselImport.default ?? CarouselImport;
 
 //website Design Services data
@@ -61,37 +63,31 @@ const webDevelopmentServicesData = [
   { 
     title: "Frontend Development", 
     content: "Build responsive and interactive user interfaces using React.js, JavaScript, HTML5, CSS3 and modern frontend technologies.",
-    link: "/",
     icon: Monitor 
   },
   { 
     title: "Backend Development", 
     content: "Develop secure server-side applications, business logic, databases and custom backend functionality.",
-    link: "/",
     icon: Server 
   },
   { 
     title: "Full Stack Development", 
     content: "Get complete web development solutions covering frontend, backend, database management and API integration.",
-    link: "/",
     icon: Layers 
   },
   { 
     title: "Custom Web Development", 
     content: "Develop tailored websites and web solutions designed around your specific business requirements.",
-    link: "/",
     icon: Code2 
   },
   { 
     title: "Web Application Development", 
     content: "Build feature-rich web applications that simplify business operations and improve productivity.",
-    link: "/",
     icon: AppWindow 
   },
   { 
     title: "API Development & Integration", 
     content: "Connect websites and applications with third-party services, payment gateways and external systems.",
-    link: "/",
     icon: Workflow 
   },
 ];
@@ -100,49 +96,41 @@ const websiteTypes = [
   { 
     title: "Corporate Websites", 
     content: "Scalable corporate websites with structured content, business information and custom functionality.",
-    link: "/",
     icon: Building2 
   },
   { 
     title: "Business Websites", 
     content: "Professional websites that showcase services, generate enquiries and support business growth.",
-    link: "/",
     icon: BriefcaseBusiness 
   },
   { 
     title: "Ecommerce Platforms", 
     content: "Online shopping platforms with product management, payment integration and order management.",
-    link: "/",
     icon: ShoppingCart 
   },
   { 
     title: "Educational Portals", 
     content: "School and college websites, admission systems, student portals and educational management platforms.",
-    link: "/",
     icon: GraduationCap 
   },
   { 
     title: "Healthcare Platforms", 
     content: "Hospital websites, doctor profiles, appointment booking systems and healthcare applications.",
-    link: "/",
     icon: Hospital 
   },
   { 
     title: "Customer Portals", 
     content: "Secure platforms where customers can access information, manage accounts and interact with your business.",
-    link: "/",
     icon: Users 
   },
   { 
     title: "Web-Based Management Systems", 
     content: "Custom applications for managing projects, employees, operations, records and business workflows.",
-    link: "/",
     icon: LayoutDashboard 
   },
   { 
     title: "CMS-Based Websites",
     content: "Content management solutions using WordPress, Drupal and custom CMS platforms for easy website management.",
-    link: "/",
     icon: FileText 
   },
 ];
@@ -254,7 +242,7 @@ const technologyGroups = [
     technologies: ["WordPress", "Elementor", "Drupal", "Custom CMS", "Strapi"],
   },
   {
-    title: "Databases Technologies",
+    title: "Database Technologies",
     icon: Database,
     technologies: ["MySQL", "MongoDB"],
   },
@@ -276,57 +264,57 @@ const industriesData = [
   {
     number : "01",
     icon: GraduationCap,
-    title: "Education",
-    text: "Learning platforms, school and college websites, student portals.",
+    title: "Education & E-Learning",
+    text: "School websites, educational portals, online admission systems and learning platforms.",
     img: eduImg,
   },
   {
     number : "02",
     icon: Stethoscope,
-    title: "Healthcare",
-    text: "Hospital websites, appointment systems, patient management solutions.",
+    title: "Healthcare & Medical",
+    text: "Hospital websites, doctor directories, appointment booking systems and healthcare portals.",
     img: healthcareImg,
   },
   {
     number : "03",
     icon: ShoppingCart,
-    title: "E-commerce",
-    text: "Online stores, secure payments, product catalogs and shopping experiences.",
+    title: "E-commerce & Retail",
+    text: "Online stores, product catalogues, shopping cart systems and payment gateway integrations.",
     img: ecomImg,
   },
   {
     number : "04",
     icon: Building2,
-    title: "Real Estate",
-    text: "Property websites, listing portals, lead generation and virtual experiences.",
+    title: "Real Estate & Construction",
+    text: "Property listing platforms, real estate websites, project showcases and enquiry management systems.",
     img: estateImg,
   },
   {
     number : "05",
     icon: Hotel,
-    title: "Hospitality",
-    text: "Hotel websites, online booking, guest services and reservation systems.",
+    title: "Hospitality & Tourism",
+    text: "Hotel websites, travel platforms, booking systems and customer enquiry solutions.",
     img: hospitalityImg,
   },
   {
     number : "06",
     icon: Factory,
-    title: "Manufacturing",
-    text: "Business websites, production workflows, automation and operational software.",
+    title: "Manufacturing & Industrial",
+    text: "Company websites, product catalogues, dealer portals and business enquiry platforms.",
     img: manufacturingImg,
   },
   {
     number : "07",
-    icon: Rocket,
-    title: "Startups",
-    text: "MVP development, scalable platforms and digital products for growing businesses.",
-    img: startupsImg,
+    icon: Truck,
+    title: "Logistics & Transportation",
+    text: "Logistics websites, shipment tracking platforms and transport management solutions.",
+    img: logisticsImg,
   },
   {
     number : "08",
     icon: BriefcaseBusiness,
     title: "Corporate & Technology",
-    text: "Corporate websites, custom software, web applications and digital transformation.",
+    text: "Business websites, service platforms, company portals and technology-based web solutions.",
     img: technologyImg,
   },
 ]
@@ -424,10 +412,10 @@ export default function WebDevelopmentService(){
       <SchemaGraph
           pageType="service"
           pageName="Web Development Services"
-          pageDescription="CodeTrios provides professional web development services in India, building scalable, responsive and high-performance websites and web solutions for businesses."
+          pageDescription="CodeTrios provides web development services in India, including custom website development, frontend and backend development, ecommerce platforms, web applications, CMS development and API integration for businesses."
           pageUrl="https://www.codetrios.com/web-development-services"
           serviceName="Web Development Services"
-          serviceDescription="Professional web development services in India for businesses and organizations."
+          serviceDescription="Professional web development services for businesses in India, covering responsive websites, custom web solutions, web applications, ecommerce development, CMS platforms and third-party integrations."
           serviceType="Web Development"
           breadcrumbs={[
               {
@@ -446,14 +434,14 @@ export default function WebDevelopmentService(){
           faqs={faqs}
       />
       <div className='servicesPage innerPageBg allService'>
-        <div className="innerHeroBanner">
+        <div className="innerHeroBanner" aria-labelledby="webdev-hero-title">
           <NetworkBackground />
           <Container>
             <Row>
               <Col>
                 <div className='innerBannerContent'>
                   <div className="tag">Our Web Development Services</div>
-                  <h1>Web Development Company in <span>India</span></h1>
+                  <h1 id="webdev-hero-title">Web Development <br/>Company in <span>India</span></h1>
                   <p>At CodeTrios, we provide professional web development services to help businesses build powerful, secure and scalable digital solutions. We develop business websites, web applications, ecommerce platforms and custom software to your requirements. Our development approach focuses on performance, functionality, responsive experiences, secure coding and SEO ,GEO & AEO  friendly architecture. We work with modern technologies to create websites and applications that support your business today and grow with your future needs with help of AI Technology.</p>
                   <div className='actionRow'>
                     <ActionButton />
@@ -463,14 +451,14 @@ export default function WebDevelopmentService(){
             </Row>
           </Container>
         </div>
-        <div className='weAreBlock blockPadding'>
+        <div className='weAreBlock blockPadding' aria-labelledby="webdev-services-title">
           <Container>
             <Row>
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
                     <div className="tag">WHAT WE DEVELOP</div>
-                    <h2>Web Development Services Built Around Your <span>Business Goals</span></h2>
+                    <h2 id='webdev-services-title'>Web Development Services Built Around Your <span>Business Goals</span></h2>
                   </div>
                   <div className='secDetail'>
                     <p>Every business needs reliable technology to operate and grow online. At CodeTrios, we develop websites and web applications that combine functionality, performance and scalability.</p>
@@ -502,13 +490,13 @@ export default function WebDevelopmentService(){
             </Row>
           </Container>
         </div>
-        <div className='service-block-2 border-block blockPadding'>
+        <div className='service-block-2 border-block blockPadding' aria-labelledby="webdev-types-title">
             <Container>
               <Row>
                 <Col>
                   <div className='sectionHead'>
                     <div className="tag">Types of Websites We Develop</div>
-                    <h2>Web Development Solutions <br/>for <span>Every Business</span></h2>
+                    <h2 id="webdev-types-title">Web Development Solutions <br/>for <span>Every Business</span></h2>
                     <p className='halfWidth'>Different businesses require different digital solutions. CodeTrios develops websites and applications based on business goals, industry requirements and technical needs.</p>
                   </div>
                   <div className="benefitGrid">
@@ -532,14 +520,14 @@ export default function WebDevelopmentService(){
             </Container>
         </div>
         {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="webdev-why-choose-title">
           <Container>
             <Row>
               <Col>
                   <div className='why_container'>
                       <div className="sectionHead">
                         <div className="tag">WHY CHOOSE CODETRIOS</div>
-                        <h2>Why Choose CodeTrios for <span>Web Development</span> Services?</h2>
+                        <h2 id="webdev-why-choose-title">Why Choose CodeTrios for <span>Web Development</span> Services?</h2>
                         <p>At CodeTrios, we develop websites and web solutions that help businesses build a strong digital presence and stream line their operations. We combine modern technologies, practical functionality and user-focused development to create solutions that support your business growth.</p>
                       </div>
                       <div className="why_features">
@@ -561,14 +549,14 @@ export default function WebDevelopmentService(){
           </Container>
         </div>
         {/* Our Process */}
-        <div className='services_process blockPadding'> 
+        <div className='services_process blockPadding' aria-labelledby="webdev-process-title"> 
           <Container>
             <Row>
               <Col>
                 <div className='services_process_container'>
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
-                      <h2>Our Web Development <span>Process</span></h2>
+                      <h2 id="webdev-process-title">Our Web Development <span>Process</span></h2>
                       <p>We follow a structured development process to build reliable, functional and scalable digital solutions.</p>
                   </div>
                   <div className='services_process_grid'>
@@ -589,14 +577,14 @@ export default function WebDevelopmentService(){
             </Row>
           </Container>
         </div>
-        <div className='technologyStack block-mg-top' aria-labelledby="technology-expertise-title">
+        <div className='technologyStack block-mg-top' aria-labelledby="webdev-technology-title">
           <Container>
             <Row>
               <Col>
                 <div className="technology-layout">
                   <div className='sectionHead'>
                     <div className="tag">Technology Expertise</div>
-                    <h2>Modern Technologies We Use for <span>Web Development</span></h2>
+                    <h2 id="webdev-technology-title">Modern Technologies We Use for <span>Web Development</span></h2>
                     <p>We use modern development technologies and frameworks to build reliable and scalable web solutions. We select the right technologies based on project requirements, performance, scalability and long-term maintenance.</p>
                     
                       <Link to="/technologies" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
@@ -639,20 +627,20 @@ export default function WebDevelopmentService(){
           </Container>
         </div>
         {/* Industries Section */}
-        <div className='services_industries blockPadding block-mg-top' aria-labelledby="industries-heading">
+        <div className='services_industries blockPadding block-mg-top' aria-labelledby="webdev-industries-title">
           <Container>
             <Row>
               <Col>
                 <div className='services_industries_bg'>
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
-                      <h2>Industries <span>We Serve</span></h2>
-                      <p>CodeTrios designs and develops digital solutions for businesses and organizations across multiple industries. From education portals and healthcare websites to ecommerce platforms and business management systems, we tailor our approach to industry-specific requirements.</p>
+                      <h2 id="webdev-industries-title">Industries <span>We Serve</span></h2>
+                      <p>Different industries have different digital requirements. CodeTrios provides custom web development services to help businesses build functional, responsive and scalable websites that support their day-to-day operations and business objectives.</p>
                   </div>
                   <div className="industries-section">
                     <Carousel
-                        autoPlaySpeed={1500}
-                        transitionDuration={500}
+                        autoPlaySpeed={3000}
+                        transitionDuration={600}
                         responsive={RelatedServicesSlide}
                         arrows={false}
                         autoPlay={true}
@@ -685,24 +673,23 @@ export default function WebDevelopmentService(){
           </Container>
         </div>
         {/* Related Services */}
-        <div className='related-services blockPadding'>
+        <div className='related-services blockPadding' aria-labelledby="webdev-related-services-title">
           <Container>
             <Row>
               <Col>
                 <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
-                    <h2>Explore Our Other Digital Services</h2>
+                    <h2 id="webdev-related-services-title">Explore Our Other <span>Digital Services</span></h2>
                     <p>CodeTrios offers a range of digital solutions to help businesses develop, manage and improve their online presence.</p>
                   </div>
                   <div className="benefitGrid">
                     {relatedServices.map((item, index) =>{
                       return(
                         <div className="benefitCard" key={index} data-reveal="up">
-                          
-                          <h3><Link to={item.link} title={item.linkTitle}>{item.title}</Link></h3>
+                          <h3><Link to={item.link}>{item.title}</Link></h3>
                           <p>{item.content}</p>
-                          <span className='benefitGo'><ArrowUpRight /></span>
+                          <Link to={item.link} title={item.linkTitle} aria-label={item.linkTitle} className='benefitGo'><ArrowUpRight /></Link>
                         </div>
                       )
                     })}
@@ -713,14 +700,14 @@ export default function WebDevelopmentService(){
           </Container>
         </div>
         {/* Frequently Asked Questions */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="webdev-faq-title">
             <Container>
               <Row>
                 <Col>
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our Web <span>Development & Digital</span> Services</h2>
+                          <h2 id="webdev-faq-title">Questions About Our Web <span>Development & Digital</span> Services</h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>
@@ -741,7 +728,7 @@ export default function WebDevelopmentService(){
               </Row>
             </Container>
         </div>
-        <ProjectCAT />
+        <ProjectCAT sectionId="webdev-cta-title" tagId="webdev-cta-title" />
       </div>
     </>
   )

@@ -62,49 +62,41 @@ const hostingServicesData = [
   { 
     title: "Website Hosting Setup", 
     content: "Get your website online with the right hosting environment. We assist with hosting selection, account setup, domain connection and website deployment.",
-    link: "/",
     icon: Globe 
   },
   { 
     title: "Shared Hosting Configuration", 
     content: "Set up and configure shared hosting for business websites, blogs, portfolios and small websites that have moderate traffic requirements.",
-    link: "/",
     icon: Server 
   },
   { 
     title: "VPS & Cloud Server Setup", 
     content: "Configure VPS and cloud hosting environments for websites and applications that need more control, flexibility and resources.",
-    link: "/",
     icon: Cloud 
   },
   { 
     title: "Website Migration Services", 
     content: "Move your website from one hosting provider or server to another while taking care of website files, databases, configurations and domain settings.",
-    link: "/",
     icon: ArrowLeftRight 
   },
   { 
     title: "Server Configuration & Management", 
     content: "Get assistance with server setup, application configuration, database setup, SSL installation and essential server management tasks.",
-    link: "/",
     icon: Settings 
   },
   { 
     title: "Website Security", 
     content: "Improve website security with SSL configuration, HTTPS setup, security updates and essential protection measures.",
-    link: "/",
     icon: ShieldCheck 
   },
   { 
     title: "Website Backup & Recovery", 
     content: "Protect your website data through backup configuration and recovery planning to help reduce the impact of accidental data loss or technical issues.",
-    link: "/",
     icon: DatabaseBackup 
   },
   { 
     title: "Hosting Maintenance & Technical Support", 
     content: "Keep your hosting environment updated with regular checks, troubleshooting, performance monitoring and technical assistance.",
-    link: "/",
     icon: Headset 
   },
   
@@ -114,43 +106,36 @@ const hostingServicesType = [
   { 
     title: "Business & Corporate Websites", 
     content: "Reliable hosting for company websites and business pages.",
-    link: "/",
     icon: Building2 
   },
   { 
     title: "WordPress Websites", 
     content: "Hosting configuration for WordPress websites, blogs and Elementor-based websites.",
-    link: "/",
     icon: Blocks 
   },
   { 
     title: "E-commerce Websites", 
     content: "Hosting environments configured for online stores, product catalogues and customer transactions.",
-    link: "/",
     icon: ShoppingBasket 
   },
   { 
     title: "Educational Websites", 
     content: "Hosting support for school websites, admission portals and educational platforms.",
-    link: "/",
     icon: GraduationCap 
   },
   { 
     title: "Healthcare Websites", 
     content: "Hosting configuration for hospital websites, diagnostic centres and healthcare portals.",
-    link: "/",
     icon: HeartPulse 
   },
   { 
     title: "Web Applications", 
     content: "Server environments for React, Node.js, PHP and database-driven applications.",
-    link: "/",
     icon: AppWindow 
   },
   { 
     title: "Custom CMS Websites", 
     content: "Hosting configuration for Drupal and other custom content management systems.",
-    link: "/",
     icon: FileCode 
   },
 ];
@@ -439,14 +424,14 @@ export default function WebHostingService(){
           faqs={faqs}
       />
       <div className='servicesPage innerPageBg allService'>
-        <div className="innerHeroBanner">
+        <div className="innerHeroBanner" aria-labelledby="web-hosting-hero-heading">
           <NetworkBackground />
           <Container>
             <Row>
               <Col>
                 <div className='innerBannerContent'>
                   <div className="tag">WEB HOSTING SERVICES</div>
-                  <h1>Reliable & Secure Web Hosting Services in India</h1>
+                  <h1 id="web-hosting-hero-heading">Reliable & Secure Web Hosting Services in India</h1>
                   <p>Your website needs more than good design and development. It also needs reliable hosting, strong security and consistent performance. CodeTrios provides web hosting setup, server configuration, website migration and hosting management services to help businesses keep their websites accessible, secure and running smoothly.</p>
                   <div className='actionRow'>
                     <ActionButton />
@@ -456,14 +441,14 @@ export default function WebHostingService(){
             </Row>
           </Container>
         </div>
-        <div className='weAreBlock blockPadding'>
+        <div className='weAreBlock blockPadding' aria-labelledby="hosting-services-heading">
           <Container>
             <Row>
               <Col>
                 <div className='weAreContent'>
                   <div className='sectionHead'>
                     <div className="tag">OUR HOSTING SOLUTIONS</div>
-                    <h2>Website Hosting Services for <span>Businesses</span></h2>
+                    <h2 id="hosting-services-heading">Website Hosting Services for <span>Businesses</span></h2>
                   </div>
                   <div className='secDetail'>
                     <p>Content missing</p>
@@ -494,13 +479,13 @@ export default function WebHostingService(){
             </Row>
           </Container>
         </div>
-        <div className='service-block-2 border-block blockPadding'>
+        <div className='service-block-2 border-block blockPadding' aria-labelledby="hosting-website-types-heading">
             <Container>
               <Row>
                 <Col>
                   <div className='sectionHead'>
                     <div className="tag">HOSTING FOR EVERY WEBSITE TYPE</div>
-                    <h2>Hosting Solutions for <span>Different Websites</span></h2>
+                    <h2 id="hosting-website-types-heading">Hosting Solutions for <span>Different Websites</span></h2>
                     <p className='halfWidth'>We help configure hosting environments for different types of websites and applications.</p>
                   </div>
                   <div className="benefitGrid">
@@ -524,14 +509,14 @@ export default function WebHostingService(){
             </Container>
         </div>
         {/* Why businesses choose */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="why-choose-hosting-heading">
           <Container>
             <Row>
               <Col>
                   <div className='why_container'>
                       <div className="sectionHead">
                         <div className="tag">WHY CHOOSE CODETRIOS</div>
-                        <h2>Why Choose CodeTrios for <span>Web Hosting</span> Services?</h2>
+                        <h2 id="why-choose-hosting-heading">Why Choose CodeTrios for <span>Web Hosting</span> Services?</h2>
                         <p>Content missing</p>
                       </div>
                       <div className="why_features">
@@ -553,14 +538,14 @@ export default function WebHostingService(){
           </Container>
         </div>
         {/* Technologies we work */}
-        <div className='whyChooseUs'>
+        <div className='whyChooseUs' aria-labelledby="hosting-technologies-heading">
           <Container>
             <Row>
               <Col>
                   <div className='why_container'>
                       <div className="sectionHead">
                         <div className="tag">HOSTING TECHNOLOGIES & PLATFORMS </div>
-                        <h2>Hosting Technologies, Platforms & Server <span>Environments</span></h2>
+                        <h2 id="hosting-technologies-heading">Hosting Technologies, Platforms & Server <span>Environments</span></h2>
                         <p>We work with commonly used hosting environments and website technologies to support different business requirements.</p>
                         <Link to="/technologies" className="ct-primery-btn ctBtn">Explore Our Technology Expertise <ArrowUpRight className="icon" aria-hidden="true" /></Link>
                       </div>
@@ -583,14 +568,14 @@ export default function WebHostingService(){
           </Container>
         </div>
         {/* Our Process */}
-        <div className='services_process blockPadding'> 
+        <div className='services_process blockPadding' aria-labelledby="hosting-process-heading"> 
           <Container>
             <Row>
               <Col>
                 <div className='services_process_container'>
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
-                      <h2>Our Web Hosting Setup Process</h2>
+                      <h2 id="hosting-process-heading">Our Web Hosting Setup <span>Process</span></h2>
                       <p>Content missing</p>
                   </div>
                   <div className='services_process_grid'>
@@ -612,20 +597,20 @@ export default function WebHostingService(){
           </Container>
         </div>
         {/* Industries Section */}
-        <div className='services_industries blockPadding' aria-labelledby="industries-heading">
+        <div className='services_industries blockPadding' aria-labelledby="hosting-industries-heading">
           <Container>
             <Row>
               <Col>
                 <div className='services_industries_bg'>
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
-                      <h2>Web Hosting Solutions for Different <span>Industries</span></h2>
+                      <h2 id="hosting-industries-heading">Industries <span>We Support</span></h2>
                       <p>Our hosting services support websites and applications across different industries:</p>
                   </div>
                   <div className="industries-section">
                     <Carousel
-                        autoPlaySpeed={1500}
-                        transitionDuration={500}
+                        autoPlaySpeed={3000}
+                        transitionDuration={600}
                         responsive={RelatedServicesSlide}
                         arrows={false}
                         autoPlay={true}
@@ -658,23 +643,23 @@ export default function WebHostingService(){
           </Container>
         </div>
         {/* Related Services */}
-        <div className='related-services blockPadding'>
+        <div className='related-services blockPadding' aria-labelledby="related-services-heading">
           <Container>
             <Row>
               <Col>
                 <div className=''>
                   <div className="sectionHead">
                     <div className="tag">Related Services</div>
-                    <h2>Explore Our Other Digital Services</h2>
+                    <h2 id="related-services-heading">Explore Our Other <span>Digital Services</span></h2>
                   </div>
                   <div className="benefitGrid">
                     {relatedServices.map((item, index) =>{
                       return(
                         <div className="benefitCard" key={index} data-reveal="up">
                           
-                          <h3><Link to={item.link} title={item.link}>{item.title}</Link></h3>
+                          <h3><Link to={item.link}>{item.title}</Link></h3>
                           <p>{item.content}</p>
-                          <span className='benefitGo'><ArrowUpRight /></span>
+                          <Link to={item.link} title={item.linkTitle} aria-label={item.linkTitle} className='benefitGo'><ArrowUpRight /></Link>
                         </div>
                       )
                     })}
@@ -685,14 +670,14 @@ export default function WebHostingService(){
           </Container>
         </div>
         {/* Frequently Asked Questions */}
-        <div className='whyChooseUs block-mg-top'>
+        <div className='whyChooseUs block-mg-top' aria-labelledby="hosting-faq-heading">
             <Container>
               <Row>
                 <Col>
                     <div className='why_container'>
                         <div className="sectionHead">
                           <div className="tag">Frequently Asked Questions</div>
-                          <h2>Questions About Our <span>Web Hosting</span> Services</h2>
+                          <h2 id="hosting-faq-heading">Questions About Our <span>Web Hosting</span> Services</h2>
                         </div>
                         <div className="why_features">
                           <Accordion defaultActiveKey="0" className='faqStyle'>
@@ -713,7 +698,7 @@ export default function WebHostingService(){
               </Row>
             </Container>
         </div>
-        <ProjectCAT />
+        <ProjectCAT sectionId="hosting-cta-title" tagId="hosting-cta-title" />
       </div>
     </>
   )
