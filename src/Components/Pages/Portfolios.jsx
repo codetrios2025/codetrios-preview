@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 //Icon
 import NetworkBackground from '../UI/NetworkBackground.jsx';
@@ -121,10 +121,10 @@ const PortfolioPage = () => {
                         </div>
                           <div className="content">
                               <div className="tags">
-                                  <h6>{item.tag}</h6>
-                                  <h6>{item.content}</h6>
+                                  <span>{item.tag}</span>
+                                  <span>{item.content}</span>
                               </div>
-                            <h5>{item.title}</h5>
+                            <h3>{item.title}</h3>
                           </div>
                     </article>
                   ))}

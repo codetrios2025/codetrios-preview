@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
-import technologiesBanner from '../../assets/images/tech_banner.webp';
-import { Link } from 'react-router-dom';
 //logo icon
 import HTML from '../../assets/images/icon/html_logo.webp';
-import css from '../../assets/images/icon/css_logo.webp';
 import js from '../../assets/images/icon/js_logo.webp';
 import bootstrap from '../../assets/images/icon/bootstrap_logo.webp';
 import vue from '../../assets/images/icon/vue_logo.webp';
@@ -192,7 +189,7 @@ const TechnologiesPage = ()=>{
                     <Row>
                     <Col>
                         <div className='innerBannerContent'>
-                        <div className="tag">Our Services</div>
+                        <div className="tag">Our technologies</div>
                         {/* <h1>Web Design, Development & <span>Digital Solutions</span></h1> */}
                         <h1>Web Development Technologies & Digital Solutions Expertise</h1>
                         <p>CodeTrios is a web development and digital solutions company in India using modern frontend, backend, mobile, CMS, ecommerce, database, cloud, AI, and API technologies to build websites, web applications, ecommerce platforms, custom software, and digital solutions.</p>
@@ -225,7 +222,7 @@ const TechnologiesPage = ()=>{
                                 <h2>Frontend Development Technologies</h2>
                                 <div className="boxElem">
                                     <div className="leftArea">
-                                        <h5>Front-End Development</h5>
+                                        <h3>Front-End Development</h3>
                                         <p>We craft high-performance, interactive, and visually stunning front-end experiences using modern JavaScript frameworks and UI technologies. Our focus is on building interfaces that are fast, responsive, accessible, and aligned with your brand identity. With pixel-perfect precision and smooth user flows, we ensure your customers enjoy an intuitive and seamless digital experience across all devices.</p>
                                     </div>
                                     <div className="rightArea">
@@ -233,44 +230,44 @@ const TechnologiesPage = ()=>{
                                             <figure>
                                                 <img src={reactVite} alt='Web Development, Web Application Development, Custom Software Development' />
                                             </figure>
-                                            <h6>React.js + Vite</h6>
+                                            <h4>React.js + Vite</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={HTML} alt='' />
                                             </figure>
-                                            <h6>HTML5</h6>
+                                            <h4>HTML5</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={tailwind} alt='' />
                                             </figure>
-                                            <h6>Tailwind CSS</h6>
+                                            <h4>Tailwind CSS</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={js} alt='' />
                                             </figure>
-                                            <h6>JavaScript</h6>
+                                            <h4>JavaScript</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={bootstrap} alt='' />
                                             </figure>
-                                            <h6>Bootstrap</h6>
+                                            <h4>Bootstrap</h4>
                                         </div>
                                         
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={vue} alt='' />
                                             </figure>
-                                            <h6>Vue.js</h6>
+                                            <h4>Vue.js</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={reactNative} alt='' />
                                             </figure>
-                                            <h6>React Native</h6>
+                                            <h4>React Native</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -279,7 +276,7 @@ const TechnologiesPage = ()=>{
                                 <h2>AI & Generative AI Technologies</h2>
                                 <div className="boxElem">
                                     <div className="leftArea">
-                                        <h5>AI & Generative AI Development</h5>
+                                        <h3>AI & Generative AI Development</h3>
                                         <p>We integrate modern AI and generative AI technologies into websites, web applications, business workflows, and custom software solutions. Depending on project requirements, our solutions can use AI APIs, conversational AI, content generation, automation, search, and intelligent business workflows. </p>
                                     </div>
                                     <div className="rightArea">
@@ -287,31 +284,31 @@ const TechnologiesPage = ()=>{
                                             <figure>
                                                 <img src={openAI} alt='' />
                                             </figure>
-                                            <h6>OpenAI</h6>
+                                            <h4>OpenAI</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={claude} alt='' />
                                             </figure>
-                                            <h6>Claude</h6>
+                                            <h4>Claude</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={gemini} alt='' />
                                             </figure>
-                                            <h6>Gemini</h6>
+                                            <h4>Gemini</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={perplexity} alt='' />
                                             </figure>
-                                            <h6>Perplexity</h6>
+                                            <h4>Perplexity</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={github} alt='' />
                                             </figure>
-                                            <h6>Github Copilot</h6>
+                                            <h4>Github Copilot</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -320,7 +317,7 @@ const TechnologiesPage = ()=>{
                                 <h2>Backend Development Technologies</h2>
                                 <div className="boxElem">
                                     <div className="leftArea">
-                                        <h5>Back-End Development</h5>
+                                        <h3>Back-End Development</h3>
                                         <p>We deliver secure, scalable, and high-performance backend systems designed to handle complex business logic, heavy loads, and real-time interactions. Our backend architecture ensures speed, reliability, and seamless data processing to support your web and mobile applications.</p>
                                     </div>
                                     <div className="rightArea">
@@ -328,55 +325,55 @@ const TechnologiesPage = ()=>{
                                             <figure>
                                                 <img src={php} alt='' />
                                             </figure>
-                                            <h6>PHP</h6>
+                                            <h4>PHP</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={express} alt='' />
                                             </figure>
-                                            <h6>Express.js</h6>
+                                            <h4>Express.js</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={laravel} alt='' />
                                             </figure>
-                                            <h6>Laravel</h6>
+                                            <h4>Laravel</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={drupal} alt='' />
                                             </figure>
-                                            <h6>Drupal</h6>
+                                            <h4>Drupal</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={node} alt='' />
                                             </figure>
-                                            <h6>Node.js</h6>
+                                            <h4>Node.js</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={wordpress} alt='' />
                                             </figure>
-                                            <h6>WordPress</h6>
+                                            <h4>WordPress</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={strapi} alt='' />
                                             </figure>
-                                            <h6>Strapi</h6>
+                                            <h4>Strapi</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={Python} alt='' />
                                             </figure>
-                                            <h6>Python</h6>
+                                            <h4>Python</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={zframe} alt='' />
                                             </figure>
-                                            <h6>Zend Framework</h6>
+                                            <h4>Zend Framework</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -385,7 +382,7 @@ const TechnologiesPage = ()=>{
                                 <h2>UI/UX Design Technologies</h2>
                                 <div className="boxElem">
                                     <div className="leftArea">
-                                        <h5>UI/UX Design & Creative Tools</h5>
+                                        <h3>UI/UX Design & Creative Tools</h3>
                                         <p>CodeTrios uses modern UI/UX and creative design tools to create wireframes, design systems, prototypes, visual assets and user-centered digital experiences.</p>
                                     </div>
                                     <div className="rightArea">
@@ -393,37 +390,37 @@ const TechnologiesPage = ()=>{
                                             <figure>
                                                 <img src={figma} alt='' />
                                             </figure>
-                                            <h6>Figma</h6>
+                                            <h4>Figma</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={adobeXD} alt='' />
                                             </figure>
-                                            <h6>Adobe XD</h6>
+                                            <h4>Adobe XD</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={Illustrator} alt='' />
                                             </figure>
-                                            <h6>Illustrator</h6>
+                                            <h4>Illustrator</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={photoshop} alt='' />
                                             </figure>
-                                            <h6>Photoshop</h6>
+                                            <h4>Photoshop</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={corelDraw} alt='' />
                                             </figure>
-                                            <h6>CorelDraw</h6>
+                                            <h4>CorelDraw</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={canva} alt='' />
                                             </figure>
-                                            <h6>Canva</h6>
+                                            <h4>Canva</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -432,7 +429,7 @@ const TechnologiesPage = ()=>{
                                 <h2>Animation & Motion Technologies</h2>
                                 <div className="boxElem">
                                     <div className="leftArea">
-                                        <h5>Animation, Motion & 3D</h5>
+                                        <h3>Animation, Motion & 3D</h3>
                                         <p>We enhance digital experiences with smooth, engaging, and visually appealing animations. From micro-interactions to full-scale motion graphics, our team uses advanced animation frameworks to bring interfaces and brand stories to life.</p>
                                     </div>
                                     <div className="rightArea">
@@ -440,31 +437,31 @@ const TechnologiesPage = ()=>{
                                             <figure>
                                                 <img src={gsap} alt='' />
                                             </figure>
-                                            <h6>GSAP</h6>
+                                            <h4>GSAP</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={three} alt='' />
                                             </figure>
-                                            <h6>Three.js</h6>
+                                            <h4>Three.js</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={lottie} alt='' />
                                             </figure>
-                                            <h6>LottieFiles</h6>
+                                            <h4>LottieFiles</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={anime} alt='' />
                                             </figure>
-                                            <h6>Anime.js</h6>
+                                            <h4>Anime.js</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={aos_logo} alt='' />
                                             </figure>
-                                            <h6>AOS Animation</h6>
+                                            <h4>AOS Animation</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -473,7 +470,7 @@ const TechnologiesPage = ()=>{
                                 <h2>Cloud & Infrastructure Technologies</h2>
                                 <div className="boxElem">
                                     <div className="leftArea">
-                                        <h5>Cloud</h5>
+                                        <h3>Cloud</h3>
                                         <p>Modern businesses need secure, scalable, and high-performing cloud infrastructure. At CodeTrios, we help organizations migrate, deploy, and manage applications across leading cloud platforms using DevOps best practices. From cloud migration and CI/CD pipelines to containerization and infrastructure automation, we build reliable cloud solutions that improve performance, reduce costs, and support business growth. </p>
                                     </div>
                                     <div className="rightArea">
@@ -481,19 +478,19 @@ const TechnologiesPage = ()=>{
                                             <figure>
                                                 <img src={aws} alt='' />
                                             </figure>
-                                            <h6>AWS</h6>
+                                            <h4>AWS</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={gCloud} alt='' />
                                             </figure>
-                                            <h6>Google Cloud</h6>
+                                            <h4>Google Cloud</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={hostinger} alt='' />
                                             </figure>
-                                            <h6>Hostinger</h6>
+                                            <h4>Hostinger</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -502,7 +499,7 @@ const TechnologiesPage = ()=>{
                                 <h2>Database Technologies</h2>
                                 <div className="boxElem">
                                     <div className="leftArea">
-                                        <h5>Database Development</h5>
+                                        <h3>Database Development</h3>
                                         <p>Our database solutions ensure your applications run smoothly, securely, and efficiently. We architect data structures that scale with your business and support high-speed queries, analytics, and transaction-heavy workloads.</p>
                                     </div>
                                     <div className="rightArea">
@@ -510,25 +507,25 @@ const TechnologiesPage = ()=>{
                                             <figure>
                                                 <img src={monogoDB} alt='' />
                                             </figure>
-                                            <h6>MongoDB</h6>
+                                            <h4>MongoDB</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={mysql} alt='' />
                                             </figure>
-                                            <h6>MySQL</h6>
+                                            <h4>MySQL</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={sql} alt='' />
                                             </figure>
-                                            <h6>SQL Server</h6>
+                                            <h4>SQL Server</h4>
                                         </div>
                                         <div className="techLogo">
                                             <figure>
                                                 <img src={cloudSql} alt='' />
                                             </figure>
-                                            <h6>Google Cloud SQL</h6>
+                                            <h4>Google Cloud SQL</h4>
                                         </div>
                                     </div>
                                 </div>

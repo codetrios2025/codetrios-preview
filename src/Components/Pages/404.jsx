@@ -10,7 +10,7 @@ const NotFound = () => {
         <Row>
           <Col>
             <div className={Style.content}>
-              <h5>404</h5>
+              <div className={Style.statusCode}>404</div>
               <h1>Page Not Found</h1>
               <div className={Style.noFoundBtn}>
                 <Link to="/" className="notFound__btn notFound__btn--primary"> Back to Home </Link>
