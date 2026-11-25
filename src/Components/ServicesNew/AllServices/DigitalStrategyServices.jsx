@@ -515,7 +515,7 @@ export default function DigitalStrategyService(){
                     <h2 id='digital-services-heading'>Our Digital <span>Strategy & Consulting</span> Services</h2>
                   </div>
                   <div className='secDetail'>
-                    <p>We provide digital consulting and technology planning services to help businesses build a strong digital foundation.</p>
+                    <p>At CodeTrios, we help you find practical ways to improve your online presence easily, simplify everyday tasks and make your business more efficient. Whether you are planning a new website, exploring custom software, automating business processes or improving your visibility on Google and AI-powered search platforms, we guide you at every step. Our goal is simple: understand your challenges, recommend the right digital solutions,Social Media Presence  and create a clear roadmap that supports your business today.</p>
                   </div>
                 </div>
               </Col>
@@ -556,7 +556,7 @@ export default function DigitalStrategyService(){
                   <div className='sectionHead'>
                     <div className="tag">WHEN YOUR BUSINESS NEEDS A DIGITAL STRATEGY</div>
                     <h2 id="business-challenges-heading">Digital Consulting Solutions for <br/>Different <span>Business Requirement</span> </h2>
-                    <p className='halfWidth'>Content missing</p>
+                    <p className='halfWidth'>Every business has different goals, challenges and technology needs. At CodeTrios, we provide digital consulting solutions that help you find the right direction for your business.</p>
                   </div>
                   <div className="benefitGrid">
                     {DigitalConsultingTypes.map((item, index) =>{
@@ -665,7 +665,7 @@ export default function DigitalStrategyService(){
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
                       <h2 id="strategy-process-heading">Our Digital Strategy <br/>Consulting <span>Process</span></h2>
-                      <p>Content missing</p>
+                      <p>At CodeTrios, our digital strategy process begins with understanding your business, goals and current challenges. We assess your existing digital presence, identify opportunities for improvement and recommend the right technologies and solutions for your needs. </p>
                   </div>
                   <div className='services_process_grid'>
                     {processData.map((item) => {

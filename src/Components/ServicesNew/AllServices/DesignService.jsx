@@ -6,9 +6,15 @@ import "react-multi-carousel/lib/styles.css";
 import Accordion from 'react-bootstrap/Accordion';
 import '../mainservices.css';
 //icon
-import {BriefcaseBusiness,MonitorSmartphone,PanelsTopLeft,ShoppingCart,GraduationCap,HeartPulse,MousePointerClick,ArrowUpRight,
+import {BriefcaseBusiness,MonitorSmartphone,PanelsTopLeft,ShoppingCart,GraduationCap,HeartPulse,ArrowUpRight,
   Stethoscope,Factory,Rocket,Users,Smartphone,LayoutDashboard,Cloud,ChartNoAxesCombined,ContactRound,
-  UserRoundCheck,Route,Component,Accessibility,Target,WandSparkles,LayoutTemplate} from "lucide-react";
+  UserRoundCheck,LayoutTemplate,
+  MousePointerClick,
+  SwatchBook,
+  Component,
+  Gauge,
+  Target,
+  Accessibility} from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
 import SEO from '../../SEO/websiteMeta';
@@ -25,6 +31,8 @@ import hospitalityImg from '../../../assets/images/hospitality-img.jpg';
 import manufacturingImg from '../../../assets/images/manufacturing-img.jpg'; 
 import startupsImg from '../../../assets/images/startups-img.jpg';
 import technologyImg from '../../../assets/images/technology-img.jpg';
+
+
 const Carousel = CarouselImport.default ?? CarouselImport;
 import {
   FigmaIcon,
@@ -113,45 +121,58 @@ const UiUxTypes = [
 const whyChooseData = [
   {
     icon: UserRoundCheck,
-    title: "User-Centered Design",
-    description:"Design decisions based on user needs, behaviour and project objectives.",
+    title: "User-Centred Design Approach",
+    description:
+      "We understand your target audience, user behaviour, and expectations to create designs that solve real user problems and make navigation easier.",
   },
   {
-    icon: MonitorSmartphone,
-    title: "Responsive & Mobile-First Design",
-    description:"Interfaces designed to provide consistent experiences across different screen sizes.",
-  },
-  {
-    icon: Route,
-    title: "Intuitive User Journeys",
-    description:"Clear navigation and structured interactions that help users complete tasks.",
-  },
-  {
-    icon: Component,
-    title: "Consistent Design Systems",
-    description:"Reusable interface components, typography, colours and design guidelines.",
-  },
-  {
-    icon: Accessibility,
-    title: "Accessibility-Focused Interfaces",
-    description:"Design considerations that help make digital experiences more inclusive.",
+    icon: Smartphone,
+    title: "Mobile-First & Responsive Layouts",
+    description:
+      "We design interfaces that work smoothly across smartphones, tablets, laptops, and desktops, ensuring a experience on every screen size.",
   },
   {
     icon: MousePointerClick,
-    title: "Interactive Prototyping",
-    description:"Interactive prototypes to review layouts, navigation and user interactions.",
+    title: "Conversion-Focused User Journeys",
+    description:
+      "We plan clear navigation, meaningful calls to action, and simple user journeys that help users find information and complete desired actions.",
+  },
+  {
+    icon: SwatchBook,
+    title: "Consistent Design Systems",
+    description:
+      "We maintain consistency in colours, typography, buttons, icons, spacing, and other visual elements to create a recognisable and professional brand experience.",
+  },
+  {
+    icon: FigmaIcon,
+    title: "Wireframes & Interactive Prototypes",
+    description:
+      "We create wireframes and clickable prototypes to demonstrate layouts, functionality, and user flows before moving into development.",
+  },
+  {
+    icon: Component,
+    title: "Modern & Scalable UI Components",
+    description:
+      "We design reusable interface components that make future updates, new features, and platform expansion easier.",
+  },
+  {
+    icon: Gauge,
+    title: "Performance-Aware Design Decisions",
+    description:
+      "We consider image sizes, visual elements, animations, and layout complexity to support faster loading and smooth interactions.",
   },
   {
     icon: Target,
-    title: "Business-Focused Design",
-    description:"Interface decisions aligned with business goals and intended user actions.",
+    title: "Designs Aligned with Business Goals",
+    description:
+      "We connect design decisions with your business objectives, whether the goal is generating enquiries, increasing sales, improving engagement, or building customer trust.",
   },
   {
-    icon: WandSparkles,
-    title: "Design Refinement",
-    description:"Design improvements based on feedback, reviews and usability considerations.",
+    icon: Accessibility,
+    title: "Focus on Accessibility & Usability",
+    description:
+      "We consider readability, colour contrast, clear navigation, and intuitive interactions to make digital experiences accessible to a wider audience.",
   },
- 
 ];
 // Tools we use
 const toolsData = [
@@ -483,8 +504,7 @@ export default function UiUxDesignService(){
                         <p>User-centered design approach, Mobile-first and responsive layouts, Conversion-focused user journeys, Consistent design systems, Wireframes and interactive prototypes, Modern and scalable UI components, Performance-aware design decisions, Designs aligned with business goals</p>
                       </div>
                       <div className="why_features">
-                        Content missing
-                        {/* {whyChooseData.map(({ icon: Icon, title, description }) => (
+                        {whyChooseData.map(({ icon: Icon, title, description }) => (
                           <div className="features_box" key={title}>
                             <div className="features_icon" aria-hidden="true">
                               <Icon size={25} strokeWidth={1.7} />
@@ -494,7 +514,7 @@ export default function UiUxDesignService(){
                               <p>{description}</p>
                             </div>
                           </div>
-                        ))} */}
+                        ))}
                       </div>
                   </div>
               </Col>
@@ -539,7 +559,7 @@ export default function UiUxDesignService(){
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
                       <h2 id="ui-ux-process-heading">Our UI/UX Design <span>Process</span></h2>
-                      <p>Content missing</p>
+                      <p>At CodeTrios, we follow a structured UI/UX design process to create websites and applications that are visually appealing, easy to navigate, and user-friendly. We focus on understanding your business goals, audience expectations, and user behaviour to deliver designs that combine creativity with functionality. </p>
                   </div>
                   <div className='services_process_grid'>
                     {processData.map((item) => {
@@ -568,7 +588,7 @@ export default function UiUxDesignService(){
                   <div className='sectionHead'>
                       <div className="tag">WHO WE WORK WITH</div>
                       <h2 id="industries-heading">Industries <span>We Serve</span></h2>
-                      <p>Content missing</p>
+                      <p>Codetrios understand that every industry has different user expectations, business goals, and design requirements. Our team creates customised user interfaces and experiences that make digital platforms easy to use, visually appealing, and aligned with your brand identity. </p>
                   </div>
                   <div className="industries-section">
                     <Carousel

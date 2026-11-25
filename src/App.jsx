@@ -17,7 +17,8 @@ const CustomSoftware = lazy(() => import ('./Components/ServicesNew/AllServices/
 const DigitalStrategy = lazy(() => import ('./Components/ServicesNew/AllServices/DigitalStrategyServices'));
 const WebHosting = lazy(() => import ('./Components/ServicesNew/AllServices/WebHostingServices'));
 const GeoSeoServices = lazy(() => import ('./Components/ServicesNew/AllServices/GeoSeoServices'));
-
+const WebsiteMaintenance = lazy(() => import ('./Components/ServicesNew/AllServices/WebsiteMaintenanceServices'));;
+const AIAutomation = lazy(() => import ('./Components/ServicesNew/AllServices/AIAutomation'));
 // Other Pages
 const Technologies = lazy(() => import ('./Components/Pages/Technologies'));
 const Portfolio = lazy(() => import('./Components/Pages/Portfolios'));
@@ -48,6 +49,8 @@ function App() {
           <Route path="/digital-strategy-consulting" element={<DigitalStrategy />} />
           <Route path="/web-hosting-services" element={<WebHosting />} />
           <Route path="/geo-seo-services" element={<GeoSeoServices />} />
+          <Route path="/website-maintenance-services" element={<WebsiteMaintenance />} />
+          <Route path="ai-automation-solutions" element={<AIAutomation />}/>
 
           {/* Other Routes */}
           <Route path="/technologies" element={<Technologies />} />

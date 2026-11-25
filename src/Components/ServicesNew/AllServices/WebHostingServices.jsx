@@ -451,7 +451,7 @@ export default function WebHostingService(){
                     <h2 id="hosting-services-heading">Website Hosting Services for <span>Businesses</span></h2>
                   </div>
                   <div className='secDetail'>
-                    <p>Content missing</p>
+                    <p>Every business needs reliable hosting to keep its website accessible, secure and running smoothly. At CodeTrios, we help businesses choose and configure hosting solutions based on their website requirements, traffic and budget. Whether you have a business website, WordPress site, e-commerce store or custom web application, we assist with hosting setup, server configuration, website migration, backups and ongoing technical support. Our goal is to make website hosting easier to manage while providing a stable foundation for your online presence.</p>
                   </div>
                 </div>
               </Col>
@@ -517,7 +517,7 @@ export default function WebHostingService(){
                       <div className="sectionHead">
                         <div className="tag">WHY CHOOSE CODETRIOS</div>
                         <h2 id="why-choose-hosting-heading">Why Choose CodeTrios for <span>Web Hosting</span> Services?</h2>
-                        <p>Content missing</p>
+                        <p>At CodeTrios, we focus on understanding your website requirements and providing practical hosting solutions that fit your business needs. From initial configuration to ongoing technical assistance, we help make hosting management simpler and more reliable.</p>
                       </div>
                       <div className="why_features">
                         {whyChooseData.map(({ icon: Icon, title, description }) => (
@@ -576,7 +576,7 @@ export default function WebHostingService(){
                   <div className='sectionHead'>
                       <div className="tag">Our Process</div>
                       <h2 id="hosting-process-heading">Our Web Hosting Setup <span>Process</span></h2>
-                      <p>Content missing</p>
+                      <p>At CodeTrios, our web hosting process starts with understanding your website, technical requirements and expected traffic. We help identify a suitable hosting environment, plan the setup and configure the server according to your project's needs.</p>
                   </div>
                   <div className='services_process_grid'>
                     {processData.map((item) => {
