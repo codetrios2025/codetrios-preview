@@ -1,3 +1,4 @@
+
 import React from "react";
 
 import OrganizationSchema from "./OrganizationSchema";
@@ -7,79 +8,93 @@ import ServiceSchema from "./ServiceSchema";
 import BreadcrumbSchema from "./BreadcrumbSchema";
 import FAQSchema from "./FAQSchema";
 import ItemListSchema from "./ItemListSchema";
+
 const SchemaGraph = ({
-    pageType = "website",
+  pageType = "website",
 
-    pageName,
-    pageDescription,
-    pageUrl,
+  pageName,
+  pageDescription,
+  pageUrl,
 
-    serviceName,
-    serviceDescription,
-    serviceType,
+  serviceName,
+  serviceDescription,
+  serviceType,
 
-    breadcrumbs = [],
+  breadcrumbs = [],
+  faqs = [],
 
-    faqs = [],
-
-    itemListName,
-    itemListDescription,
-    itemListItems = []
+  itemListName,
+  itemListDescription,
+  itemListItems = [],
 }) => {
+  const hasWebPageData = Boolean(
+    pageName && pageDescription && pageUrl
+  );
 
-    return (
-        <>
-            {/* Organization */}
-            <OrganizationSchema />
-
-            {/* Website */}
-            <WebsiteSchema />
-
-            {/* Page */}
-            {pageName && pageDescription && pageUrl && (
-                <WebPageSchema
-                    name={pageName}
-                    description={pageDescription}
-                    url={pageUrl}
-                />
-            )}
-
-            {/* Service */}
-            {pageType === "service" &&
-                serviceName &&
-                serviceDescription &&
-                serviceType && (
-                    <ServiceSchema
-                        name={serviceName}
-                        description={serviceDescription}
-                        url={pageUrl}
-                        serviceType={serviceType}
-                    />
-                )}
-
-            {/* Breadcrumb */}
-            {breadcrumbs.length > 0 && (
-                <BreadcrumbSchema
-                    items={breadcrumbs}
-                />
-            )}
-            {/* FAQ */}
-            {faqs.length > 0 && (
-                <FAQSchema faqs={faqs} />
-            )}
-            {/* ==============================
-                ITEM LIST
-            ============================== */}
-            {itemListItems.length > 0 && (
-                <ItemListSchema
-                    name={itemListName}
-                    description={itemListDescription}
-                    url={pageUrl}
-                    items={itemListItems}
-                />
-            )}
-        </>
+  const hasServiceData =
+    pageType === "service" &&
+    Boolean(
+      serviceName &&
+      serviceDescription &&
+      serviceType &&
+      pageUrl
     );
+
+  const hasBreadcrumbs =
+    Array.isArray(breadcrumbs) && breadcrumbs.length > 0;
+
+  const hasFaqs =
+    Array.isArray(faqs) && faqs.length > 0;
+
+  const hasItemList =
+    Array.isArray(itemListItems) && itemListItems.length > 0;
+
+  return (
+    <>
+      {/* Global identity schemas */}
+      <OrganizationSchema />
+      <WebsiteSchema />
+
+      {/* Page schema */}
+      {hasWebPageData && (
+        <WebPageSchema
+          name={pageName}
+          description={pageDescription}
+          url={pageUrl}
+        />
+      )}
+
+      {/* Service page schema */}
+      {hasServiceData && (
+        <ServiceSchema
+          name={serviceName}
+          description={serviceDescription}
+          url={pageUrl}
+          serviceType={serviceType}
+        />
+      )}
+
+      {/* Breadcrumb schema */}
+      {hasBreadcrumbs && (
+        <BreadcrumbSchema items={breadcrumbs} />
+      )}
+
+      {/* FAQ schema */}
+      {hasFaqs && (
+        <FAQSchema faqs={faqs} />
+      )}
+
+      {/* Item list schema */}
+      {hasItemList && (
+        <ItemListSchema
+          name={itemListName}
+          description={itemListDescription}
+          url={pageUrl}
+          items={itemListItems}
+        />
+      )}
+    </>
+  );
 };
 
 export default SchemaGraph;

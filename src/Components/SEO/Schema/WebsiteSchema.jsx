@@ -13,7 +13,7 @@ const WebsiteSchema = () => {
         "name": "CodeTrios",
 
         "description":
-            "CodeTrios is a web design and development company providing professional website design, web development, UI/UX, React, ecommerce, SEO and GEO services.",
+            "CodeTrios provides website design, web development, eCommerce development, web applications, custom software, UI/UX design, and AI automation solutions for businesses.",
 
         "publisher": {
             "@id": "https://www.codetrios.com/#organization"

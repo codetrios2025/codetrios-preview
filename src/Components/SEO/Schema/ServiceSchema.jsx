@@ -1,59 +1,50 @@
+
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
 const ServiceSchema = ({
-    name,
-    description,
-    url,
-    serviceType,
-    areaServed = [
-        "India",
-        "United States",
-        "United Kingdom",
-        "Canada",
-        "Australia",
-        "United Arab Emirates"
-    ]
+  name,
+  description,
+  url,
+  serviceType,
+  areaServed = ["India"],
 }) => {
+  if (!name || !description || !url || !serviceType) {
+    return null;
+  }
 
-    const schema = {
-        "@context": "https://schema.org",
-        "@type": "Service",
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
 
-        "@id": `${url}#service`,
+    "@id": `${url}#service`,
 
-        "name": name,
+    "name": name,
+    "description": description,
+    "url": url,
+    "serviceType": serviceType,
 
-        "description": description,
+    "provider": {
+      "@id": "https://www.codetrios.com/#organization",
+    },
 
-        "url": url,
+    "mainEntityOfPage": {
+      "@id": `${url}#webpage`,
+    },
 
-        "serviceType": serviceType,
+    "areaServed": areaServed.map((country) => ({
+      "@type": "Country",
+      "name": country,
+    })),
+  };
 
-        "provider": {
-            "@type": "Organization",
-            "@id": "https://www.codetrios.com/#organization",
-            "name": "CodeTrios",
-            "url": "https://www.codetrios.com/",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.codetrios.com/codetrios_logo.webp"
-            }
-        },
-
-        "areaServed": areaServed.map((country) => ({
-            "@type": "Country",
-            "name": country
-        }))
-    };
-
-    return (
-        <Helmet>
-            <script type="application/ld+json">
-                {JSON.stringify(schema)}
-            </script>
-        </Helmet>
-    );
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(schema).replace(/</g, "\\u003c")}
+      </script>
+    </Helmet>
+  );
 };
 
 export default ServiceSchema;

@@ -1,22 +1,57 @@
+
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://www.codetrios.com/#organization",
+
   "name": "CodeTrios",
   "url": "https://www.codetrios.com/",
-  "description": "CodeTrios is a web design and development company providing website design, web development, UI/UX design, React development, ecommerce development, SEO and GEO services.",
+
+  "description": "CodeTrios is a web development and digital solutions company in India providing website design, custom web development, eCommerce development, web applications, UI/UX design, custom software, SEO, GEO, and AI automation solutions for businesses.",
+
+  "logo": {
+    "@type": "ImageObject",
+    "@id": "https://www.codetrios.com/#logo",
+    "url": "https://www.codetrios.com/codetrios_logo.webp",
+    "contentUrl": "https://www.codetrios.com/codetrios_logo.webp"
+  },
+
   "areaServed": {
     "@type": "Country",
     "name": "India"
   },
+
   "knowsAbout": [
-    "Web Design",
+    "Website Design",
     "Web Development",
-    "UI UX Design",
+    "Responsive Web Design",
+    "UI/UX Design",
     "React Development",
-    "Ecommerce Development",
+    "eCommerce Development",
+    "Web Application Development",
+    "Custom Software Development",
     "Search Engine Optimization",
     "Generative Engine Optimization",
-    "LLM Optimization"
-  ]
+    "Answer Engine Optimization",
+    "Large Language Model Optimization",
+    "Artificial Intelligence",
+    "Business Process Automation",
+    "AI Chatbot Development"
+  ],
+
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61581161434863",
+    "https://www.instagram.com/codetrios",
+    "https://www.linkedin.com/in/code-trio-90ba31385/"
+  ],
+
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "info@codetrios.com",
+    "availableLanguage": [
+      "English",
+      "Hindi"
+    ]
+  }
 }
