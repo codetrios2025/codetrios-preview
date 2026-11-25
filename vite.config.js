@@ -13,21 +13,4 @@ export default defineConfig({
       generateScopedName: "[local]",
     },
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (/\/node_modules\/(react|react-dom|scheduler)\//.test(id)) {
-            return "react-vendor";
-          }
-          if (/\/node_modules\/react-router(?:-dom)?\//.test(id)) {
-            return "router-vendor";
-          }
-          if (/\/node_modules\/(bootstrap|react-bootstrap)\//.test(id)) {
-            return "bootstrap-vendor";
-          }
-        },
-      },
-    },
-  },
 })

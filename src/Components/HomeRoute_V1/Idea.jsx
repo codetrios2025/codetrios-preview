@@ -2,10 +2,18 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import './Idea.css';
 import {
+  ClipboardList,
+  Code2,
+  FlaskConical,
+  Globe,
   Headphones,
+  Lightbulb,
   MessagesSquare,
+  PenTool,
   Phone,
+  Rocket,
   ShieldCheck,
+  Star,
   Zap,
 } from 'lucide-react'
 import ContactUs from "./Contact";
@@ -24,28 +32,28 @@ export default function Idea (){
                 <div className="value-card">
                   <span><MessagesSquare /></span>
                   <div>
-                    <h3>Free Consultation</h3>
+                    <h5>Free Consultation</h5>
                     <p>30-min strategy call</p>
                   </div>
                 </div>
                 <div className="value-card">
                   <span><ShieldCheck /></span>
                   <div>
-                    <h3>NDA Protected</h3>
+                    <h5>NDA Protected</h5>
                     <p>Your idea stays yours</p>
                   </div>
                 </div>
                 <div className="value-card">
                   <span><Zap /></span>
                   <div>
-                    <h3>Quick Kickstart</h3>
+                    <h5>Quick Kickstart</h5>
                     <p>Start within 48 hours</p>
                   </div>
                 </div>
                 <div className="value-card">
                   <span><Headphones /></span>
                   <div>
-                    <h3>Ongoing Support</h3>
+                    <h5>Ongoing Support</h5>
                     <p>Growth after launch</p>
                   </div>
                 </div>

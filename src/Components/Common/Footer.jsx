@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import Logo from "../../assets/images/codetrios_logo.svg";
 import Style from "../CSS/Header.module.css";
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin   } from "lucide-react";
@@ -12,7 +13,7 @@ const Footer = () => {
             <div className={Style.info}>
               <div className={Style.footerlogo}>
               <img
-                src={`${import.meta.env.BASE_URL}codetrios_logo.svg`}
+                src={Logo}
                 alt="CodeTrios Software Development Company"
                 loading="lazy"
                 decoding="async"
@@ -61,7 +62,7 @@ const Footer = () => {
           <Col md={9}>
             <div className={Style.footerBox}>
               <div className={Style.box}>
-                <h2>Quick Link</h2>
+                <h4>Quick Link</h4>
                 <nav aria-label="Footer company navigation">
                   <ul>
                     {/* <li><Link to="/" title="Home">Home</Link></li> */}
@@ -74,14 +75,14 @@ const Footer = () => {
                 </nav>
               </div>
               <div className={Style.box}>
-                <h2>Design & Experience</h2>
+                <h4>Design & Experience</h4>
                 <nav aria-label="Footer services navigation">
                   <ul className={Style.boxSpace}>
                     <li><Link to="/website-design-services" title="website design services">Website Design Services</Link></li>
                     <li><Link to="/ui-ux-design-services" title="ui ux design services">UI/UX Design Services</Link></li>
                   </ul>
                 </nav>
-                <h2>Development & Software</h2>
+                <h4>Development & Software</h4>
                 <nav aria-label="Footer services navigation">
                   <ul>
                     <li><Link to="/web-development-services" title="web-development-services">Web Development Services</Link></li>
@@ -94,7 +95,7 @@ const Footer = () => {
               </div>
               <div className={`${Style.box} ${Style.multiBox}`}>
                 <div className={Style.inbox}>
-                  <h2>Growth & Support</h2>
+                  <h4>Growth & Support</h4>
                   <nav aria-label="Footer services navigation">
                     <ul className={Style.boxSpace}>
                       <li><Link to="/geo-seo-services" title="Geo & SEO Services">SEO, GEO & AEO Services</Link></li>
@@ -105,7 +106,7 @@ const Footer = () => {
                   </nav>
                 </div>
                 <div className={Style.inbox}>
-                  <h2>Contact Info</h2>
+                  <h4>Contact Info</h4>
                   <address className={Style.address}>
                     <p>
                       <Mail className={Style.icon} />

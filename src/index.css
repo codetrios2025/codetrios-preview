@@ -442,11 +442,11 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
 .boxContainer:last-child{margin: 0;}
 .boxContainer .boxElem {border: 1px solid var(--ct-border);border-radius: 28px;background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));padding: 40px;backdrop-filter: blur(6px);display: flex;flex-wrap: wrap;color: #fff;position: relative;align-items: center;}
 .boxContainer .boxElem .leftArea {width: 50%;padding-right: 50px;display: flex;flex-direction: column;justify-content: center;}
-.boxContainer h5, .boxContainer h3 {font-size: 22px;font-weight: 500;margin: 0 0 10px;}
+.boxContainer h5 {font-size: 22px;font-weight: 500;margin: 0 0 10px;}
 .boxContainer .boxElem .leftArea  p{color: var(--ct-gray);}
 .boxContainer .boxElem .rightArea {width: 50%;display: flex;justify-content: center;gap: 10px;flex-wrap: wrap;align-content: flex-start;}
 .boxContainer .boxElem .techLogo {width: 20%;text-align: center;margin-bottom: 20px;padding: 10px 0;border-radius: 10px;border: 1px solid transparent;cursor: pointer;display: flex;flex-direction: column;justify-content: center;align-items: center;background: #fff;}
-.boxContainer .boxElem .techLogo h6, .boxContainer .boxElem .techLogo h4 {font-size: 13px;margin: 10px 0 0;color: #000;font-weight: 500;}
+.boxContainer .boxElem .techLogo h6 {font-size: 13px;margin: 10px 0 0;color: #000;font-weight: 500;}
 
 /* portfolio css */
 .portfolioPage .actionBtn .ct-secoundary-btn{display: none;}
@@ -456,10 +456,9 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
 .projectBox:hover .projectImg .scrollAnime {background-position: center 100%;}
 .projectBox .content .tags {display: flex;align-items: center;gap: 4px;flex-wrap: wrap;}
 .projectBox .content {padding: 15px;}
-.projectBox .content .tags span {background: #224f8b;display: inline-block;color: #fff;font-size: 12px;line-height: 1.2;padding: 3px 7px;border-radius: 4px;margin: 0;font-weight: 400;}
+.projectBox .content .tags h6 {background: #224f8b;display: inline-block;color: #fff;font-size: 12px;padding: 3px 7px;border-radius: 4px;margin: 0;font-weight: 400;}
 
-.projectBox h5, .projectBox h3 {color: var(--ct-gray);margin: 15px 0 10px;font-weight: 500;}
-.projectBox h3 {font-size: 1.25rem;}
+.projectBox h5 {color: var(--ct-gray);margin: 15px 0 10px;font-weight: 500;}
 /* portfolio css */
 .WhatsAppBtn{width: 58px;height: 58px;background: rgb(37, 211, 102);position: fixed;bottom: 20px;right: 90px;border-radius: 50%;display: flex;align-items: center;justify-content: center;box-shadow: 0 6px 20px rgba(0, 0, 0, .25);transition:.15s; }
 .WhatsAppBtn svg{width: 26px;height: 26px;}
@@ -615,7 +614,7 @@ gap: 20px;}
   .formPop .closeBtn{ right: 15px;width: 30px;height: 30px;top: 20px;}
 
   .ourPlatForm h2{font-size: 26px;}
-  .boxContainer h5, .boxContainer h3{font-size: 18px;}
+  .boxContainer h5{font-size: 18px;}
   .boxContainer .boxElem{border-radius: 20px;}
 
   .contactBox{    grid-template-columns: repeat(1, minmax(0, 1fr));gap: 15px;}
@@ -649,7 +648,7 @@ gap: 20px;}
   .industries-carousel-item {padding: 0;}
 
   .boxContainer .boxElem .techLogo {width: 31%;}
-  .boxContainer .boxElem .techLogo h6, .boxContainer .boxElem .techLogo h4{font-size: 11px;}
+  .boxContainer .boxElem .techLogo h6{font-size: 11px;}
   .boxContainer .boxElem{padding: 20px 15px;}
 
 }

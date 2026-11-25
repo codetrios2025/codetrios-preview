@@ -218,15 +218,14 @@ position: relative;
 }
 .projectBox .content{padding: 15px;}
 .projectBox .content .tags{display: flex;align-items: center;gap: 4px;flex-wrap: wrap;}
-.projectBox .content .tags span{background: #8b5cf6;
+.projectBox .content .tags h6{background: #8b5cf6;
     display: inline-block;
     color: #fff;
     font-size: 12px;
-    line-height: 1.2;
     padding: 3px 7px;
     border-radius: 10px;
     margin: 0;}
-.projectBox .content .tags span:last-child{background: #acacac;}
+.projectBox .content .tags h6:last-child{background: #acacac;}    
 .projectBox .projectImg .scrollAnime{
         background-position: center 0;
     background-repeat: no-repeat;
@@ -253,7 +252,7 @@ position: relative;
     color: #5e5757;
     margin: 0;
 }
-.projectBox h5, .projectBox h3{color: #000;margin: 15px 0 10px;font-weight: 500;}
+.projectBox h5{color: #000;margin: 15px 0 10px;font-weight: 500;}
 .contactPage{overflow: hidden;}
 /* Contact Section */
 .contactSec .contactFomr{
@@ -402,9 +401,8 @@ display: block;
     flex-direction: column;
     justify-content: center;
     align-items: center;}
-.boxContainer .boxElem .techLogo h6, .boxContainer .boxElem .techLogo h4{font-size: 16px;margin: 10px 0 0;}
+.boxContainer .boxElem .techLogo h6{font-size: 16px;margin: 10px 0 0;}
 .boxContainer h5{font-size: 26px;font-weight: 700;margin: 0 0 20px;}
-.boxContainer h3{font-size: 26px;font-weight: 700;margin: 0 0 20px;}
 .PortfolioPage .buttonFlex{display: none;}
 .boxContainer .boxElem .techLogo:hover{background: #fff;border-color: #7C3AED;}
 
@@ -644,11 +642,9 @@ display: flex;align-items: center;justify-content: center;}
     color: #fff;
     text-align: center;
 }
-.noFound .content .statusCode {
+.noFound .content h5 {
     margin: 0;
     font-size: 40px;
-    font-weight: 500;
-    line-height: 1.2;
 }
 .noFound .content h1 {
     margin: 0;
@@ -776,7 +772,7 @@ display: flex;align-items: center;justify-content: center;}
 .servicesDetail .innerBanner {padding: 30px 0 40px;}    
 .heroBanner{margin-top: 60px;}
 .heroBanner img{    width: 100%;height: 100%;object-fit: cover;}
-.projectBox h5, .projectBox h3{margin: 10px 0 0;}
+.projectBox h5{margin: 10px 0 0;}
 .aboutContent{padding: 0;}
 .aboutContent ul li{line-height: 24px;margin-bottom: 6px;}
 
@@ -839,9 +835,8 @@ display: flex;align-items: center;justify-content: center;}
     .contactSec .leftArea::before{position: absolute;content: '';top: 0;width: 100%;height: 100%;right: -100%;background: #7C3AED;}
 .boxContainer h4{font-size: 26px;margin-top: 30px;}   
 .boxContainer h5{font-size: 22px;}
-.boxContainer h3{font-size: 22px;}
 .boxContainer .boxElem{padding: 15px;margin-top: 15px;} 
-.boxContainer .boxElem .techLogo h6, .boxContainer .boxElem .techLogo h4{font-size: 14px;}
+.boxContainer .boxElem .techLogo h6{font-size: 14px;}
 .whyUs ul li{margin-bottom: 15px;}    
 .whyUs ul li h4{font-size: 16px;}
     .aboutContent ul, .aboutContent ol{margin: 0;}
@@ -896,7 +891,7 @@ display: flex;align-items: center;justify-content: center;}
     .noFound .content h1 {
         font-size: 40px;
     }
-.noFound .content .statusCode{font-size: 30px;}
+.noFound .content h5{font-size: 30px;}        
 .heroBanner .detail{margin-top: 70px;}    
 .heroBanner .content .heroTagline{font-size: 14px;}    
 .industriesSection ul li{width: 50%;}   
@@ -904,7 +899,6 @@ display: flex;align-items: center;justify-content: center;}
 .catButton{flex-direction: column;}    
 .boxContainer h4{font-size: 20px;margin-top: 30px;}   
 .boxContainer h5{font-size: 18px;margin-bottom: 15px;}  
-.boxContainer h3{font-size: 18px;margin-bottom: 15px;}
 .heroBanner .content h6{padding: 5px 10px;}    
 .heroBanner .content p span, .ideaSec .ideaElem .content p span {display: contents;}
 .inputFlex{flex-direction: column;}
