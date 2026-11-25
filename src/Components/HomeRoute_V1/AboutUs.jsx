@@ -5,7 +5,36 @@ import webImage from '../../assets/images/growth_about.webp';
 import { ArrowUpRight, Workflow, ShieldCheck, ChartNoAxesCombined, MonitorSmartphone, Bot } from "lucide-react";
 import { Link } from 'react-router-dom';
 import ContactUs from './Contact';
-const AboutUs = ({data}) =>{
+
+const whyChooseData = [
+  {
+    title: "End-to-End Development",
+    icon: Workflow,
+    content: "Design, full-stack engineering, and launch—handled by one expert team.",
+  },
+  {
+    title: "SEO & Geo-Targeted Growth",
+    icon: ChartNoAxesCombined,
+    content: "Built to rank higher on search engines and attract local customers.",
+  },
+  {
+    title: "Continuous Care & Security",
+    icon: ShieldCheck,
+    content: "24/7 performance tracking, updates, and maintenance long after launch.",
+  },
+  {
+    title: "Responsive Mobile Design",
+    icon: MonitorSmartphone,
+    content: "Seamless, ultra-fast performance across every device and screen size.",
+  },
+  {
+    title: "AI chatboat Development",
+    icon: Bot,
+    content: "We build chatboat where customer can chat and response according to there requirement.",
+  },
+];
+
+const AboutUs = () =>{
   const [isOPen, setIsopen] = useState(false);
     const formOpenHandler=()=>{
         setIsopen(true);
@@ -13,50 +42,25 @@ const AboutUs = ({data}) =>{
     const formCloseHandler=()=>{
         setIsopen(false);
     }
-    const whyChooseData = [
-      {
-        title: "End-to-End Development",
-        icon: Workflow,
-        content: "Design, full-stack engineering, and launch—handled by one expert team.",
-      },
-      {
-        title: "SEO & Geo-Targeted Growth",
-        icon: ChartNoAxesCombined,
-        content: "Built to rank higher on search engines and attract local customers.",
-      },
-      {
-        title: "Continuous Care & Security",
-        icon: ShieldCheck,
-        content: "24/7 performance tracking, updates, and maintenance long after launch.",
-      },
-      {
-        title: "Responsive Mobile Design",
-        icon: MonitorSmartphone,
-        content: "Seamless, ultra-fast performance across every device and screen size.",
-      },
-      {
-        title: "AI chatboat Development",
-        icon: Bot,
-        content: "We build chatboat where customer can chat and response according to there requirement.",
-      },
-    ];
+
 
     //console.log(aboutContent)
     return(
-        <div className="newAbout">
+      <div className="newAbout">
+        <section aria-labelledby="about-title">
             <Container>
                 <Row>
                     <Col md={5}>
                         {/* figure wipes open; the image inside settles from a zoom and drifts slightly while you scroll */}
                         <figure data-reveal="clip" data-reveal-duration="1.3s">
-                            <img src={webImage} className='imgFull' alt='Full-Stack Web Development that Drives Business Growth' width="1536" height="1024" loading="lazy" data-parallax="0.01" />
+                            <img src={webImage} className='imgFull' alt='CodeTrios digital solutions and web development' width="1536" height="1024" loading="lazy" data-parallax="0.01" />
                         </figure>
                     </Col>
                     <Col md={7}>
                         <div className="aboutContent">
                           <div className='sectionHead'>
                             <div className="tag" data-reveal="up">About Codetrios</div>
-                            <h2 data-reveal="up">High-Performance Web Development That Grow Your Business</h2>
+                            <h2 id="about-title" data-reveal="up">High-Performance Web Development That Grow Your Business</h2>
                           </div>
                             <p data-reveal="up">Codetrios is a <span>Best Website Development Company in Delhi/NCR</span>, ensures that the whole technical part is flawlessly managed and compliments the creative design of web pages with fast loading speed and error-free functioning.</p>
                             <p data-reveal="up">A Creative Web Designing Company in Delhi makes sure your website has a responsive, trendy design, with customers placed in the centre to give a Best representation to your business brand. </p>
@@ -72,52 +76,52 @@ const AboutUs = ({data}) =>{
                     </Col>
                 </Row>
             </Container>
-            <div className="whyUsSec">
-              <Container>
-                <Row>
-                  <Col>
-                    <div className="whyHead">
-                      <div className='sectionHead'>
-                        <div className="tag" data-reveal="up">Beneftis</div>
-                        <h2 data-reveal="up">Why Choose <span>Codetrios?</span></h2>
-                        <p className='halfWidth' data-reveal="up">At Codetrios, our work doesn’t stop at launch. We provide continuous website maintenance, updates, security monitoring, and performance optimization to ensure long-term success.</p>
-                        {/* <h2>Built for Your Vision. <span>Engineered for Growth.</span></h2> */}
-                      </div>
-                      <div className="benefitGrid">
-                        {whyChooseData.map((item, index) =>{
-                          const IconComponent = item.icon;
-                          return(
-                            <div className="benefitCard" key={index} data-reveal="up">
-                              <div className="cardTop">
-                                <div className="iconWrap">
-                                  <IconComponent aria-hidden="true" />
-                                </div>
-                              </div>
-                              <h3>{item.title}</h3>
-                              <p>{item.content}</p>
+        </section>
+        <section className="whyUsSec" aria-labelledby="why-choose-title">
+          <Container>
+            <Row>
+              <Col>
+                <div className="whyHead">
+                  <div className='sectionHead'>
+                    <div className="tag" data-reveal="up">Beneftis</div>
+                    <h2 id="why-choose-title" data-reveal="up">Why Choose <span>Codetrios?</span></h2>
+                    <p className='halfWidth' data-reveal="up">At Codetrios, our work doesn’t stop at launch. We provide continuous website maintenance, updates, security monitoring, and performance optimization to ensure long-term success.</p>
+                  </div>
+                  <div className="benefitGrid">
+                    {whyChooseData.map((item, index) =>{
+                      const IconComponent = item.icon;
+                      return(
+                        <div className="benefitCard" key={index} data-reveal="up">
+                          <div className="cardTop">
+                            <div className="iconWrap">
+                              <IconComponent aria-hidden="true" />
                             </div>
-                          )
-                        })}
-                        <div className="projectBtn" data-reveal="zoom">
-                          <button type='button' onClick={formOpenHandler} className="ctBtn ct-primery-btn">Start A Project Now <ArrowUpRight className="icon" /></button>
+                          </div>
+                          <h3>{item.title}</h3>
+                          <p>{item.content}</p>
                         </div>
-                      </div>
+                      )
+                    })}
+                    <div className="projectBtn" data-reveal="zoom">
+                      <button type='button' onClick={formOpenHandler} className="ctBtn ct-primery-btn">Start A Project Now <ArrowUpRight className="icon" /></button>
                     </div>
-                  </Col>
-                </Row>
-              </Container>
-            </div>
-            {isOPen && 
-                <div className="formPop">
-                    <div className="formElem">
-                        <button type='button' onClick={formCloseHandler} className="closeBtn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-x preview-icon"><path vectorEffect="non-scaling-stroke" d="M18 6 6 18"/><path vectorEffect="non-scaling-stroke" d="m6 6 12 12"/></svg>
-                        </button>
-                        <ContactUs />
-                    </div>
+                  </div>
                 </div>
-            }
-        </div>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+        {isOPen && 
+            <div className="formPop">
+                <div className="formElem">
+                    <button type='button' onClick={formCloseHandler} className="closeBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-x preview-icon"><path vectorEffect="non-scaling-stroke" d="M18 6 6 18"/><path vectorEffect="non-scaling-stroke" d="m6 6 12 12"/></svg>
+                    </button>
+                    <ContactUs />
+                </div>
+            </div>
+        }
+      </div>
     )
 }
 

@@ -236,8 +236,8 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
   background: transparent;
 }
 .ct-secoundary-btn:hover{
-  color:var(--sl-accent-2);
-  border-color: var(--sl-accent-2);
+  color:var(--ct-gray);
+  border-color: var(--ct-gray);
 }
 
 /* inner page banner */

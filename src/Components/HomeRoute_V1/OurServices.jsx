@@ -12,13 +12,13 @@ import bgDesign from "../../assets/svg/bg-design-services.svg";
 
 const OurServices = () => {
   return (
-    <section className="servicesSection blockPadding" id="our-services">
+    <section className="servicesSection blockPadding" id="our-services" aria-labelledby="services-title">
       <Container>
         <Row>
           <Col>
             <div className='sectionHead'>
               <div className="tag" data-reveal="up">WHAT WE DO</div>
-              <h2 data-reveal="up">Our <span>Services</span></h2>
+              <h2 id="services-title" data-reveal="up">Our <span>Services</span></h2>
               <p className="halfWidth" data-reveal="up">At CodeTrios, we keep your website running smoothly with regular updates, security checks, and performance improvements. Our website maintenance services help your business stay secure, fast, and up to date. </p>
             </div>
             <div className="servicesGrid">
@@ -65,7 +65,7 @@ const OurServices = () => {
                 </article>
                 <article className={`card card-e`} data-reveal="up">
                   <div className="cardBg" style={{ "--img": `url(${bgApps})` }} aria-hidden="true" />
-                  <span>Custom Platforms</span>
+                  <span>Search & AI Visibility</span>
                   <h3><Link to='/geo-seo-services'>GEO & SEO Services</Link></h3>
                   <p>CodeTrios helps businesses increase their ranks across all search engines and AI-powered platforms through  LLM Optimization ,AI SEO & GEO Services. We optimize your website, content, and digital authority so your business becomes the trusted answer in Google Search, AI Overviews, ChatGPT, Gemini, Claude, Perplexity, and all AI-driven search experiences. </p>
                   <span className="cardGo"><ArrowUpRight aria-hidden="true" /></span>
