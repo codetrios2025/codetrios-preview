@@ -13,13 +13,12 @@ import {BriefcaseBusiness,ShoppingCart,Building2,GraduationCap,ArrowUpRight,Stet
   Zap,
   Code2,
   Smile,
-  LifeBuoy,BrainCircuit,FilePenLine, Network,Layers,UtensilsCrossed,MonitorCog,Truck,Wallet} from "lucide-react";
+  LifeBuoy,BrainCircuit,FilePenLine, Network,Layers,UtensilsCrossed,MonitorCog,Truck,Wallet,Server} from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
 import SEO from '../../SEO/websiteMeta';
 import SchemaGraph from '../../SEO/Schema/SchemaGraph';
 import ActionButton from '../../ActionButton/ActionButton';
-import ProjectCAT from '../../ActionButton/ProjectCAT';
 
 //Images
 import EducationImg from '../../../assets/images/edu-ai-img.webp';
@@ -204,7 +203,7 @@ const technologyGroups = [
   },
   {
     title: "Backend Technologies",
-    icon: Settings,
+    icon: Server,
     technologies: ["Node.js", "Express.js", "PHP", "Laravel"],
   },
   {
@@ -547,7 +546,7 @@ export default function AIAutomationServices(){
                 <Col>
                   <div className='sectionHead'>
                     <div className="tag">BUSINESS WORKFLOW AUTOMATION</div>
-                    <h2 id="ai-automation-types-heading">AI & Automation Solutions for <br/><span>Different Business</span> Needs</h2>
+                    <h2 id="ai-automation-types-heading">Business Processes We Can <span>Automate</span></h2>
                     <p className='halfWidth'>Every business has different processes, challenges and opportunities for automation. At CodeTrios, we help businesses identify the right AI and automation solutions based on their daily operations and goals.</p>
                   </div>
                   <div className="benefitGrid">

@@ -7,18 +7,8 @@ import Accordion from 'react-bootstrap/Accordion';
 import '../mainservices.css';
 //icon
 import {BriefcaseBusiness,RefreshCw,ShoppingCart,Building2,GraduationCap,ArrowUpRight,Stethoscope,Hotel,Factory,Monitor,Settings,
-  Rocket,Compass,Globe,Cpu,Workflow,Layers,Gauge,Bot,Code2,Database,Target,Wrench,Map,TrendingUp,ChartNoAxesCombined,SearchCheck,
-FileText,
-  ShieldCheck,
-  DatabaseBackup,
-  Bug,
-  Server,
-  Sparkles, ShieldAlert,FileCode2,
-  Blocks,
-  Activity,
-  SlidersHorizontal,
-  LifeBuoy,CloudUpload
-} from "lucide-react";
+  Rocket,Cpu,Layers,Gauge,Code2,Database,Wrench,FileText,ShieldCheck,DatabaseBackup,Bug,Server,Sparkles, ShieldAlert,FileCode2,
+  Blocks,Activity,SlidersHorizontal,LifeBuoy,CloudUpload} from "lucide-react";
 //componetnts
 import NetworkBackground from '../../UI/NetworkBackground';
 import SEO from '../../SEO/websiteMeta';
@@ -528,7 +518,7 @@ export default function WebsiteMaintenanceServices(){
                   {MaintenanceServicesData.map((item, index) =>{
                     const IconComponent = item.icon;
                     return(
-                      <div className="benefitCard" key={index} data-reveal="up">
+                      <div className="benefitCard" key={index}>
                         <div className="cardTop">
                           <div className="iconWrap">
                             <IconComponent aria-hidden="true" />
