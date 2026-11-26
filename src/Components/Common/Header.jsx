@@ -65,7 +65,7 @@ const Header=()=>{
                                 <div className={Style.logo}>
                                     <Link to="/" aria-label="CodeTrios homepage">
                                         <img
-                                            src={Logo}
+                                            src={`${import.meta.env.BASE_URL}codetrios_logo.svg`}
                                             alt="CodeTrios"
                                             width="180"
                                             height="42"
@@ -82,7 +82,7 @@ const Header=()=>{
                                             <div className={Style.logo}>
                                                 <Link to="/" aria-label="CodeTrios homepage">
                                                     <img
-                                                        src={Logo}
+                                                        src={`${import.meta.env.BASE_URL}codetrios_logo.svg`}
                                                         alt="CodeTrios"
                                                         width="180"
                                                         height="42"

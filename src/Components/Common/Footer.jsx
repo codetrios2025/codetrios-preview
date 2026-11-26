@@ -13,7 +13,7 @@ const Footer = () => {
             <div className={Style.info}>
               <div className={Style.footerlogo}>
               <img
-                src={Logo}
+                src={`${import.meta.env.BASE_URL}codetrios_logo.svg`}
                 alt="CodeTrios Software Development Company"
                 loading="lazy"
                 decoding="async"

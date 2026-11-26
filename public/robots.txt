@@ -1,4 +1,9 @@
+
+# CodeTrios - Robots.txt
+# Website: https://www.codetrios.com/
+
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://www.codetrios.com/sitemap.xml

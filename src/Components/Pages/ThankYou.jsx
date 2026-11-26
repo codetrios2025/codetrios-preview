@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Style from "../CSS/Style.module.css";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 //Icon
 
 //Components
@@ -25,6 +26,11 @@ const ThankyouPage = () => {
 
   return (
     <>
+    <Helmet>
+        <title>Thank You | CodeTrios</title>
+        <meta name="robots" content="noindex, follow"/>
+        <link rel="canonical" href="https://www.codetrios.com/thank-you"/>
+      </Helmet>
       <div className={Style.innerPage}>
         <div className={Style.thanksPage}>
           <h1>Thank You for your interest!</h1>
