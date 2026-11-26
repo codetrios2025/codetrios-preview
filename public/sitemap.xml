@@ -1,112 +1,89 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <!-- Homepage -->
     <url>
         <loc>https://www.codetrios.com/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
     </url>
 
     <!-- Company Pages -->
     <url>
         <loc>https://www.codetrios.com/about-us</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
     </url>
 
-    <!-- Services Main Page -->
+    <!-- Main Services Page -->
     <url>
         <loc>https://www.codetrios.com/services</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
     </url>
 
-    <!-- Individual Service Pages -->
+    <!-- Website Design Services -->
     <url>
         <loc>https://www.codetrios.com/website-design-services</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
     </url>
 
+    <!-- Web Development Services -->
     <url>
         <loc>https://www.codetrios.com/web-development-services</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://www.codetrios.com/web-application-development</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
     </url>
 
-    <url>
-        <loc>https://www.codetrios.com/ui-ux-design-services</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
+    <!-- Ecommerce Development -->
     <url>
         <loc>https://www.codetrios.com/ecommerce-development-services</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
     </url>
 
+    <!-- Custom Software Development -->
     <url>
         <loc>https://www.codetrios.com/custom-software-solutions</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
     </url>
 
+    <!-- AI Automation Services -->
     <url>
         <loc>https://www.codetrios.com/ai-automation-solutions</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
     </url>
 
+    <!-- Website Maintenance Services -->
     <url>
         <loc>https://www.codetrios.com/website-maintenance-services</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
     </url>
 
+    <!-- UI/UX Design Services -->
+    <url>
+        <loc>https://www.codetrios.com/ui-ux-design-services</loc>
+    </url>
+
+    <!-- Digital Strategy Consulting -->
     <url>
         <loc>https://www.codetrios.com/digital-strategy-consulting</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
     </url>
 
+    <!-- Web Hosting Services -->
     <url>
         <loc>https://www.codetrios.com/web-hosting-services</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
     </url>
 
+    <!-- SEO and GEO Services -->
     <url>
         <loc>https://www.codetrios.com/geo-seo-services</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
     </url>
 
-    <!-- Other Important Pages -->
+    <!-- Supporting Pages -->
     <url>
         <loc>https://www.codetrios.com/technologies</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
     </url>
 
     <url>
         <loc>https://www.codetrios.com/portfolio</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
     </url>
 
+    <!-- Contact Page -->
     <url>
         <loc>https://www.codetrios.com/contact-us</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
     </url>
 
 </urlset>

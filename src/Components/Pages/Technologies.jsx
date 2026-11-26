@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
-import technologiesBanner from '../../assets/images/tech_banner.webp';
 import { Link } from 'react-router-dom';
+import Accordion from 'react-bootstrap/Accordion';
+import {ArrowUpRight} from "lucide-react";
 //logo icon
 import HTML from '../../assets/images/icon/html_logo.webp';
 import css from '../../assets/images/icon/css_logo.webp';
@@ -19,7 +20,7 @@ import drupal from '../../assets/images/icon/drupal_icon.webp';
 import node from '../../assets/images/icon/node_logo.webp';
 import Python from '../../assets/images/icon/paython_logo.webp';
 import strapi from '../../assets/images/icon/strapi_logo.webp';
-import zframe from '../../assets/images/icon/zframe_logo.webp';
+import woocommerce from '../../assets/images/icon/woocommerce-icon.webp';
 
 import mysql from '../../assets/images/icon/mysql_logo.webp';
 import sql from '../../assets/images/icon/sql_logo.webp';
@@ -50,14 +51,357 @@ import perplexity from '../../assets/images/icon/perplexity_ai_logo.webp';
 import github from '../../assets/images/icon/github_copilot_ai_logo.webp';
 import gemini from '../../assets/images/icon/Gemini_ai_logo.webp';
 
+import RESTapi from '../../assets/images/icon/rest-api-icon.webp';
+import thirdParty from '../../assets/images/icon/Third-party-icon.webp';
+import paymentGat from '../../assets/images/icon/Payment-icon.webp';
+import Webhooks from '../../assets/images/icon/webhooks-icon.webp';
+
 import NetworkBackground from '../UI/NetworkBackground.jsx';
 import SEO from '../SEO/websiteMeta.jsx';
 import SchemaGraph from '../SEO/Schema/SchemaGraph.jsx';
 import ActionButton from '../ActionButton/ActionButton.jsx';
 import ProjectCAT from '../ActionButton/ProjectCAT.jsx';
 
-const TechnologiesPage = ()=>{
 
+const technologyGroups = [
+    {
+        id: 'frontend',
+        title: 'Frontend Development Technologies',
+        subtitle: 'Frontend Development',
+        description:
+            'CodeTrios uses modern frontend technologies to develop responsive, fast-loading, and interactive websites and web applications. Our frontend development stack includes JavaScript frameworks, HTML, CSS, and modern UI frameworks. We select suitable technologies to create accessible interfaces, improve user experience, and support scalable digital products.',
+        technologies: [
+            { name: 'React.js + Vite', image: reactVite },
+            { name: 'HTML5', image: HTML },
+            { name: 'CSS3', image: css },
+            { name: 'JavaScript', image: js },
+            { name: 'Bootstrap', image: bootstrap },
+            { name: 'Tailwind CSS', image: tailwind },
+            { name: 'Vue.js', image: vue }
+        ],
+        applications: [
+            'Responsive website development',
+            'Frontend web application development',
+            'Interactive user interfaces',
+            'Custom website development'
+        ]
+    },
+    {
+        id: 'backend',
+        title: 'Backend Development Technologies',
+        subtitle: 'Backend Development',
+        description:
+            'Our backend development technologies help build secure, scalable, and reliable web applications. CodeTrios works with PHP, Laravel, Node.js, Express.js, and Python to develop server-side functionality, business logic, database connectivity, and application APIs. The backend architecture is selected according to project complexity, security requirements, and expected application growth.',
+        technologies: [
+            { name: 'PHP', image: php },
+            { name: 'Laravel', image: laravel },
+            { name: 'Node.js', image: node },
+            { name: 'Express.js', image: express },
+            { name: 'Python', image: Python }
+        ],
+        applications: [
+            'Custom backend development',
+            'Business application development',
+            'Server-side programming',
+            'API and database integration'
+        ]
+    },
+    {
+        id: 'cms',
+        title: 'CMS & Ecommerce Technologies',
+        subtitle: 'Content Management & Ecommerce Development',
+        description:
+            'CodeTrios uses content management systems and ecommerce technologies to develop manageable business websites and online stores. Our CMS expertise includes WordPress, Drupal, and Strapi. We also use WooCommerce for customized ecommerce functionality, product management, shopping experiences, and online store development.',
+        technologies: [
+            { name: 'WordPress', image: wordpress },
+            { name: 'Drupal', image: drupal },
+            { name: 'Strapi', image: strapi },
+            { name: 'WooCommerce', image: woocommerce }
+        ],
+        applications: [
+            'Business website development',
+            'CMS website development',
+            'WooCommerce development',
+            'Content management solutions',
+            'Custom ecommerce websites'
+        ]
+    },
+    // {
+    //     id: 'mobile',
+    //     title: 'Mobile Application Development Technologies',
+    //     subtitle: 'Cross-Platform Mobile Development',
+    //     description:
+    //         'CodeTrios uses React Native for cross-platform mobile application development. It enables the development of mobile experiences for Android and iOS using a shared JavaScript and React-based development approach. Mobile application architecture is planned according to functionality, device compatibility, performance, and business requirements.',
+    //     technologies: [
+    //         { name: 'React Native', image: reactNative }
+    //     ],
+    //     applications: [
+    //         'Cross-platform mobile applications',
+    //         'Android application development',
+    //         'iOS application development',
+    //         'Mobile API integration'
+    //     ]
+    // },
+    {
+        id: 'database',
+        title: 'Database Technologies',
+        subtitle: 'Database Design & Management',
+        description:
+            'Reliable database architecture is essential for secure and efficient applications. CodeTrios works with relational and NoSQL database technologies to organize, store, retrieve, and manage application data. Our database selection considers data structure, application requirements, performance, scalability, and long-term maintenance.',
+        technologies: [
+            { name: 'MySQL', image: mysql },
+            { name: 'MongoDB', image: monogoDB },
+            { name: 'Microsoft SQL Server', image: sql },
+            { name: 'Google Cloud SQL', image: cloudSql }
+        ],
+        applications: [
+            'Database architecture',
+            'Relational database management',
+            'Application data management',
+            'Database integration'
+        ]
+    },
+    {
+        id: 'cloud',
+        title: 'Cloud, Hosting & Infrastructure Technologies',
+        subtitle: 'Cloud Infrastructure & Hosting',
+        description:
+            'CodeTrios uses cloud and hosting platforms to deploy and support websites and applications. Our infrastructure choices consider application availability, security, performance, scalability, and hosting requirements. We work with AWS, Google Cloud, and Hostinger according to project needs and deployment environments.',
+        technologies: [
+            { name: 'Amazon Web Services (AWS)', image: aws },
+            { name: 'Google Cloud', image: gCloud },
+            { name: 'Hostinger', image: hostinger }
+        ],
+        applications: [
+            'Website and application hosting',
+            'Cloud deployment',
+            'Application infrastructure',
+            'Hosting configuration and management'
+        ]
+    },
+    {
+        id: 'uiux',
+        title: 'UI/UX & Creative Design Technologies',
+        subtitle: 'User Interface & Experience Design',
+        description:
+            'Our UI/UX design process uses modern creative tools to plan intuitive and visually consistent digital experiences. CodeTrios uses Figma, Adobe Photoshop, and Adobe Illustrator for wireframes, interface layouts, visual assets, prototypes, and design systems. Our design approach focuses on usability, accessibility, brand consistency, and user experience.',
+        technologies: [
+            { name: 'Figma', image: figma },
+            { name: 'Adobe Photoshop', image: photoshop },
+            { name: 'Adobe Illustrator', image: Illustrator },
+            { name: 'Adobe XD', image: adobeXD },
+            { name: 'Canva', image: canva }
+        ],
+        applications: [
+            'UI/UX design',
+            'Website wireframing',
+            'Interactive prototypes',
+            'Design systems',
+            'Creative visual assets'
+        ]
+    },
+    {
+        id: 'animation',
+        title: 'Animation & Interactive Technologies',
+        subtitle: 'Web Animation, Motion & 3D Experiences',
+        description:
+            'CodeTrios uses modern animation libraries to create engaging website interactions, motion effects, and interactive digital experiences. Our animation technologies include GSAP, Three.js, Lottie, Anime.js, and AOS. These tools help create smooth transitions, micro-interactions, animated interfaces, and interactive visual elements while considering website performance and usability.',
+        technologies: [
+            { name: 'GSAP', image: gsap },
+            { name: 'Three.js', image: three },
+            { name: 'Lottie', image: lottie },
+            { name: 'Anime.js', image: anime },
+            { name: 'AOS', image: aos_logo }
+        ],
+        applications: [
+            'Website animations',
+            'Interactive 3D experiences',
+            'Motion graphics',
+            'Micro-interactions',
+            'Animated user interfaces'
+        ]
+    },
+    {
+        id: 'ai',
+        title: 'AI & Generative AI Technologies',
+        subtitle: 'AI Integration & Generative AI Solutions',
+        description:
+            'CodeTrios explores and integrates generative AI technologies into websites, web applications, and business workflows. Depending on project requirements, AI models and APIs can support conversational interfaces, content generation, intelligent search, data processing, and workflow automation. We select AI solutions based on integration requirements, reliability, security, and business objectives.',
+        technologies: [
+            { name: 'OpenAI', image: openAI },
+            { name: 'Anthropic Claude', image: claude },
+            { name: 'Google Gemini', image: gemini },
+            { name: 'Perplexity', image: perplexity },
+            { name: 'GitHub Copilot', image: github }
+        ],
+        applications: [
+            'AI-powered application features',
+            'Conversational AI integration',
+            'AI API integration',
+            'Content generation workflows',
+            'Business process automation'
+        ]
+    },
+    // {
+    //     id: 'developer-tools',
+    //     title: 'AI-Powered Development Tools',
+    //     subtitle: 'AI-Assisted Software Development',
+    //     description:
+    //         'AI-powered development assistants can support developer productivity, code suggestions, documentation, debugging, and development workflows. CodeTrios uses development tools such as GitHub Copilot where appropriate to assist software development while maintaining developer review, testing, code quality, and project-specific engineering standards.',
+    //     technologies: [
+    //         { name: 'GitHub Copilot', image: github }
+    //     ],
+    //     applications: [
+    //         'AI-assisted coding',
+    //         'Code suggestions',
+    //         'Developer productivity',
+    //         'Code documentation assistance'
+    //     ]
+    // },
+
+    {
+        id: 'api',
+        title: 'API Development & Integration Technologies',
+        subtitle: 'Application Programming Interfaces',
+        description:
+            'APIs connect websites, mobile applications, databases, and external business platforms. CodeTrios develops and integrates APIs to support application communication, data exchange, authentication, and third-party services. API integration is planned according to security, reliability, documentation, and application requirements.',
+        technologies: [
+            { name: 'REST API', image: RESTapi },
+            { name: 'Third-Party API Integration', image: thirdParty  },
+            { name: 'Payment Gateway Integration', image: paymentGat },
+            { name: 'Webhooks', image: Webhooks },
+        ],
+        applications: [
+            'REST API development',
+            'Third-party API integration',
+            'Payment gateway integration',
+            'Application data exchange',
+        ]
+    }
+];
+const relatedServices = [
+  {
+    title: "Website Design",
+    content:"Creative UI/UX, graphic and interface design that strengthens your brand identity.",
+    link: "/website-design-services",
+    linkTitle: "Explore Website Design Services",
+  },
+  {
+    title: "Web Development",
+    content:"Custom, responsive and scalable websites built with modern frontend and backend technologies.",
+    link: "/web-development-services",
+    linkTitle: "Explore Web Development Services",
+  },
+  {
+    title: "Web Applications",
+    content:"Powerful web applications designed to simplify business operations and improve productivity.",
+    link: "/web-application-development",
+    linkTitle: "Explore Web Application Development",
+  },
+    {
+    title: "eCommerce Solutions",
+    content:"Feature-rich online stores with product management, secure payments and seamless shopping experiences.",
+    link: "/ecommerce-development-services",
+    linkTitle: "Explore Ecommerce Development Services",
+  },  
+  {
+    title: "UI/UX Design",
+    content:"Design intuitive, accessible and user-focused interfaces that improve usability, engagement and conversions.",
+    link: "/ui-ux-design-services",
+    linkTitle: "Explore UI/UX Design Services",
+  },
+  {
+    title: "Custom Software Development",
+    content:"Custom software, API integrations and technology solutions tailored to business needs.",
+    link: "/custom-software-solutions",
+    linkTitle: "Explore Custom Software Solutions",
+  },
+  {
+    title: "AI Automation Solutions",
+    content:"AI integrations and intelligent business workflow automation.",
+    link: "/ai-automation-solutions",
+    linkTitle: "Explore AI Automation Solutions",
+  },
+          
+];
+const faqs = [
+    {
+        question: 'What technologies does CodeTrios use for web development?',
+        answer:
+            'CodeTrios uses modern web development technologies including React.js, Vue.js, JavaScript, HTML5, CSS3, PHP, Laravel, Node.js, Express.js, MySQL, and MongoDB. The technology stack is selected according to project requirements, performance, security, scalability, and business objectives.'
+    },
+    {
+        question: 'Which frontend technologies does CodeTrios use?',
+        answer:
+            'Our frontend development technologies include React.js, Vite, Vue.js, JavaScript, HTML5, CSS3, Bootstrap, and Tailwind CSS. These technologies help us create responsive websites and interactive web application interfaces.'
+    },
+    {
+        question: 'Which backend technologies does CodeTrios use?',
+        answer:
+            'CodeTrios works with PHP, Laravel, Node.js, Express.js, and Python for backend development. These technologies support server-side functionality, application logic, API development, and database integration.'
+    },
+    {
+        question: 'Which technologies are used for ecommerce development?',
+        answer:
+            'Ecommerce development can use technologies such as React.js, PHP, Node.js, MySQL, MongoDB, WordPress, and WooCommerce. The final technology selection depends on product requirements, store functionality, integrations, and business goals.'
+    },
+    {
+        question: 'Does CodeTrios provide AI-powered application development?',
+        answer:
+            'Yes. CodeTrios can integrate AI models and APIs into websites, web applications, and business workflows. Depending on project requirements, these integrations can support conversational AI, content generation, intelligent features, and workflow automation.'
+    },
+    {
+        question: 'How does CodeTrios select the right technology for a project?',
+        answer:
+            'CodeTrios evaluates project requirements, business objectives, application complexity, security, performance, scalability, integration needs, development costs, and long-term maintenance before selecting a suitable technology stack.'
+    }
+];
+const TechnologiesPage = ()=>{
+    const schemaItems = [
+        ['React.js', 'Frontend JavaScript library for interactive web application interfaces.'],
+        ['Vite', 'Frontend build tool used for modern web application development.'],
+        ['HTML5', 'Markup language for structured website content.'],
+        ['CSS3', 'Styling technology for responsive web interfaces.'],
+        ['JavaScript', 'Programming language for interactive web experiences.'],
+        ['Bootstrap', 'Frontend framework for responsive interfaces.'],
+        ['Tailwind CSS', 'Utility-first CSS framework for web interface styling.'],
+        ['Vue.js', 'JavaScript framework for interactive web applications.'],
+        ['PHP', 'Server-side programming language for web development.'],
+        ['Laravel', 'PHP framework for backend and web application development.'],
+        ['Node.js', 'JavaScript runtime for server-side development.'],
+        ['Express.js', 'Node.js framework for backend and API development.'],
+        ['Python', 'Programming language for application development and automation.'],
+        ['WordPress', 'Content management platform for business websites.'],
+        ['Drupal', 'Content management system for structured websites.'],
+        ['Strapi', 'Headless CMS for API-driven applications.'],
+        ['WooCommerce', 'Ecommerce platform built for WordPress.'],
+        ['React Native', 'Framework for cross-platform mobile application development.'],
+        ['MySQL', 'Relational database management system.'],
+        ['MongoDB', 'NoSQL database for flexible application data storage.'],
+        ['Microsoft SQL Server', 'Relational database management platform.'],
+        ['Google Cloud SQL', 'Managed relational database service on Google Cloud.'],
+        ['AWS', 'Cloud platform for application infrastructure and deployment.'],
+        ['Google Cloud', 'Cloud computing platform for application infrastructure.'],
+        ['Hostinger', 'Web hosting platform.'],
+        ['Figma', 'Interface design and prototyping tool.'],
+        ['Adobe Photoshop', 'Creative image editing and visual design software.'],
+        ['Adobe Illustrator', 'Vector graphic design software.'],
+        ['GSAP', 'JavaScript animation library.'],
+        ['Three.js', 'JavaScript library for interactive 3D graphics.'],
+        ['Lottie', 'Technology for lightweight vector animations.'],
+        ['Anime.js', 'JavaScript animation library.'],
+        ['AOS', 'Library for scroll-based animation effects.'],
+        ['OpenAI', 'AI platform and models for generative AI integrations.'],
+        ['Anthropic Claude', 'AI models for generative AI integrations.'],
+        ['Google Gemini', 'Google AI models for generative AI integrations.'],
+        ['GitHub Copilot', 'AI-assisted software development tool.'],
+        ['REST APIs', 'Interfaces for application communication and data exchange.'],
+        ['Webhooks', 'Mechanism for event-driven application communication.']
+    ];
+    const schemaItemList = schemaItems.map(([name, description]) => ({
+        name,
+        description
+    }));
     return(
         <>
         <SEO page="technologies" />
@@ -78,123 +422,17 @@ const TechnologiesPage = ()=>{
             ]}
             itemListName="Technologies Used by CodeTrios"
             itemListDescription="Frontend, backend, database, CMS, cloud, AI, UI/UX, and development technologies used by CodeTrios for web development, web applications, ecommerce, custom software, and digital solutions."
-            itemListItems={[
-                {
-                    name: "React.js",
-                    description: "Frontend technology used by CodeTrios for responsive and interactive web applications."
-                },
-                {
-                    name: "Vite",
-                    description: "Modern frontend build tool used with React for fast web application development."
-                },
-                {
-                    name: "JavaScript",
-                    description: "Core web development technology used for interactive and dynamic web experiences."
-                },
-                {
-                    name: "HTML5",
-                    description: "Web markup technology used to build structured websites and web applications."
-                },
-                {
-                    name: "CSS3",
-                    description: "Styling technology used to create responsive and accessible web interfaces."
-                },
-                {
-                    name: "Bootstrap",
-                    description: "Frontend framework used for responsive website and application interfaces."
-                },
-                {
-                    name: "Tailwind CSS",
-                    description: "Utility-first CSS framework used for modern responsive user interfaces."
-                },
-                {
-                    name: "Vue.js",
-                    description: "Frontend JavaScript framework used for interactive web applications."
-                },
-                {
-                    name: "React Native",
-                    description: "Technology used for cross-platform mobile application development."
-                },
-                {
-                    name: "PHP",
-                    description: "Backend programming language used for websites, web applications, and CMS development."
-                },
-                {
-                    name: "Laravel",
-                    description: "PHP framework used for scalable web application and backend development."
-                },
-                {
-                    name: "Node.js",
-                    description: "JavaScript runtime used for backend development, APIs, and scalable web applications."
-                },
-                {
-                    name: "Express.js",
-                    description: "Node.js framework used for API and backend application development."
-                },
-                {
-                    name: "WordPress",
-                    description: "CMS platform used by CodeTrios for business websites and customized WordPress solutions."
-                },
-                {
-                    name: "Drupal",
-                    description: "CMS platform used for structured content management and enterprise websites."
-                },
-                {
-                    name: "Strapi",
-                    description: "Headless CMS used for API-driven web application development."
-                },
-                {
-                    name: "Python",
-                    description: "Programming language used for application development, automation, and AI-related solutions."
-                },
-                {
-                    name: "MySQL",
-                    description: "Relational database used for websites, web applications, and business software."
-                },
-                {
-                    name: "SQL Server",
-                    description: "Relational database platform used for enterprise data management and applications."
-                },
-                {
-                    name: "MongoDB",
-                    description: "NoSQL database used for scalable and flexible application data storage."
-                },
-                {
-                    name: "AWS",
-                    description: "Cloud platform used for application deployment, hosting, infrastructure, and scalable digital solutions."
-                },
-                {
-                    name: "Google Cloud",
-                    description: "Cloud platform used for application hosting, deployment, and scalable infrastructure."
-                },
-                {
-                    name: "Figma",
-                    description: "UI/UX design tool used for interface design, wireframes, prototypes, and design systems."
-                },
-                {
-                    name: "GSAP",
-                    description: "Animation library used for interactive web animations and motion experiences."
-                },
-                {
-                    name: "Three.js",
-                    description: "JavaScript 3D library used for interactive 3D web experiences."
-                },
-                {
-                    name: "Lottie",
-                    description: "Animation technology used for lightweight web animations and micro-interactions."
-                }
-            ]}
+            itemListItems={schemaItemList}
         />
-        <div className='servicesPage innerPageBg'>
-            <div className="innerHeroBanner">
+        <section  className='servicesPage innerPageBg'>
+            <section  className="innerHeroBanner">
                 <NetworkBackground />
                 <Container>
                     <Row>
                     <Col>
                         <div className='innerBannerContent'>
-                        <div className="tag">Our Services</div>
-                        {/* <h1>Web Design, Development & <span>Digital Solutions</span></h1> */}
-                        <h1>Web Development Technologies & Digital Solutions Expertise</h1>
+                        <div className="tag">OUR TECHNOLOGY STACK</div>
+                        <h1>Technologies We Use for Web Development & Digital Solutions</h1>
                         <p>CodeTrios is a web development and digital solutions company in India using modern frontend, backend, mobile, CMS, ecommerce, database, cloud, AI, and API technologies to build websites, web applications, ecommerce platforms, custom software, and digital solutions.</p>
                         <div className='actionRow'>
                             <ActionButton />
@@ -203,342 +441,111 @@ const TechnologiesPage = ()=>{
                     </Col>
                     </Row>
                 </Container>
-            </div>
-            {/* <div className={Style.innerBanner}>
+            </section >
+            <section  className="ourPlatForm blockPadding">
                 <Container>
                     <Row>
                         <Col>
-                            <div className={Style.content}>
-                                <h1>Web Development Technologies & Digital Solutions Expertise</h1>
-                                <p>CodeTrios is a web development and digital solutions company in India using modern frontend, backend, mobile, CMS, ecommerce, database, cloud, AI, and API technologies to build websites, web applications, ecommerce platforms, custom software, and digital solutions.</p>
-                                <CATButton />
-                            </div>
+                            {technologyGroups.map((group) => (
+                                <section className="boxContainer" id={group.id} key={group.id}>
+                                     <h2>{group.title}</h2>
+                                     <div className="boxElem">
+                                        <div className="leftArea">
+                                            <h3>{group.subtitle}</h3>
+                                            <p>{group.description}</p>
+                                            <div className="technologyApplications">
+                                                {/* <h4>Applications &amp; Use Cases</h4> */}
+                                                <ul>
+                                                    {group.applications.map((application) => (
+                                                        <li key={application}>
+                                                            {application}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="rightArea">
+                                            {group.technologies.map((technology)=>(
+                                                <div className="techLogo">
+                                                    <figure>
+                                                        <img
+                                                            src={technology.image}
+                                                            alt=""
+                                                            loading="lazy"
+                                                            decoding="async"
+                                                            width="70"
+                                                            height="70"
+                                                        />
+                                                    </figure>
+                                                    <h4>{technology.name}</h4>
+                                                </div>
+                                            ))}
+                                        </div>
+                                     </div>
+                                </section>
+                            ))}
+                            
                         </Col>
                     </Row>
                 </Container>
-            </div> */}
-            <div className="ourPlatForm blockPadding">
+            </section >
+            {/* Related Services */}
+            <div className='related-services blockPadding' aria-labelledby="technologies-services-heading">
+                <Container>
+                <Row>
+                    <Col>
+                    <div className=''>
+                        <div className="sectionHead">
+                        <div className="tag">Related Services</div>
+                        <h2 id="technologies-services-heading">Explore Our Other <span>Digital Services</span></h2>
+                        </div>
+                        <div className="benefitGrid">
+                        {relatedServices.map((item, index) =>{
+                            return(
+                            <div className="benefitCard" key={index} data-reveal="up">
+                                <h3><Link to={item.link}>{item.title}</Link></h3>
+                                <p>{item.content}</p>
+                                <Link to={item.link} title={item.linkTitle} aria-label={item.linkTitle} className='benefitGo'><ArrowUpRight /></Link>
+                            </div>
+                            )
+                        })}
+                        </div>
+                    </div>
+                    </Col>
+                </Row>
+                </Container>
+            </div>
+            {/* Frequently Asked Questions */}
+            <div className='whyChooseUs' aria-labelledby="technologies-faq-heading">
                 <Container>
                     <Row>
-                        <Col>
-                            <div className="boxContainer">
-                                <h2>Frontend Development Technologies</h2>
-                                <div className="boxElem">
-                                    <div className="leftArea">
-                                        <h5>Front-End Development</h5>
-                                        <p>We craft high-performance, interactive, and visually stunning front-end experiences using modern JavaScript frameworks and UI technologies. Our focus is on building interfaces that are fast, responsive, accessible, and aligned with your brand identity. With pixel-perfect precision and smooth user flows, we ensure your customers enjoy an intuitive and seamless digital experience across all devices.</p>
-                                    </div>
-                                    <div className="rightArea">
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={reactVite} alt='Web Development, Web Application Development, Custom Software Development' />
-                                            </figure>
-                                            <h6>React.js + Vite</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={HTML} alt='' />
-                                            </figure>
-                                            <h6>HTML5</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={tailwind} alt='' />
-                                            </figure>
-                                            <h6>Tailwind CSS</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={js} alt='' />
-                                            </figure>
-                                            <h6>JavaScript</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={bootstrap} alt='' />
-                                            </figure>
-                                            <h6>Bootstrap</h6>
-                                        </div>
-                                        
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={vue} alt='' />
-                                            </figure>
-                                            <h6>Vue.js</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={reactNative} alt='' />
-                                            </figure>
-                                            <h6>React Native</h6>
-                                        </div>
-                                    </div>
-                                </div>
+                    <Col>
+                        <div className='why_container'>
+                            <div className="sectionHead">
+                                <div className="tag">Frequently Asked Questions</div>
+                                <h2 id="technologies-faq-heading">Questions About Our <span>Technologies</span></h2>
                             </div>
-                            <div className="boxContainer">
-                                <h2>AI & Generative AI Technologies</h2>
-                                <div className="boxElem">
-                                    <div className="leftArea">
-                                        <h5>AI & Generative AI Development</h5>
-                                        <p>We integrate modern AI and generative AI technologies into websites, web applications, business workflows, and custom software solutions. Depending on project requirements, our solutions can use AI APIs, conversational AI, content generation, automation, search, and intelligent business workflows. </p>
-                                    </div>
-                                    <div className="rightArea">
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={openAI} alt='' />
-                                            </figure>
-                                            <h6>OpenAI</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={claude} alt='' />
-                                            </figure>
-                                            <h6>Claude</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={gemini} alt='' />
-                                            </figure>
-                                            <h6>Gemini</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={perplexity} alt='' />
-                                            </figure>
-                                            <h6>Perplexity</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={github} alt='' />
-                                            </figure>
-                                            <h6>Github Copilot</h6>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div className="why_features">
+                                <Accordion defaultActiveKey="0" className='faqStyle'>
+                                    {faqs.map((item, index) =>{
+                                        return(
+                                            <Accordion.Item eventKey={index.toString()} key={index}>
+                                                <Accordion.Header>{item.question}</Accordion.Header>
+                                                <Accordion.Body>
+                                                    <p>{item.answer}</p>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+                                        )
+                                    })}
+                                </Accordion>
                             </div>
-                            <div className="boxContainer">
-                                <h2>Backend Development Technologies</h2>
-                                <div className="boxElem">
-                                    <div className="leftArea">
-                                        <h5>Back-End Development</h5>
-                                        <p>We deliver secure, scalable, and high-performance backend systems designed to handle complex business logic, heavy loads, and real-time interactions. Our backend architecture ensures speed, reliability, and seamless data processing to support your web and mobile applications.</p>
-                                    </div>
-                                    <div className="rightArea">
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={php} alt='' />
-                                            </figure>
-                                            <h6>PHP</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={express} alt='' />
-                                            </figure>
-                                            <h6>Express.js</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={laravel} alt='' />
-                                            </figure>
-                                            <h6>Laravel</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={drupal} alt='' />
-                                            </figure>
-                                            <h6>Drupal</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={node} alt='' />
-                                            </figure>
-                                            <h6>Node.js</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={wordpress} alt='' />
-                                            </figure>
-                                            <h6>WordPress</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={strapi} alt='' />
-                                            </figure>
-                                            <h6>Strapi</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={Python} alt='' />
-                                            </figure>
-                                            <h6>Python</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={zframe} alt='' />
-                                            </figure>
-                                            <h6>Zend Framework</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="boxContainer">
-                                <h2>UI/UX Design Technologies</h2>
-                                <div className="boxElem">
-                                    <div className="leftArea">
-                                        <h5>UI/UX Design & Creative Tools</h5>
-                                        <p>CodeTrios uses modern UI/UX and creative design tools to create wireframes, design systems, prototypes, visual assets and user-centered digital experiences.</p>
-                                    </div>
-                                    <div className="rightArea">
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={figma} alt='' />
-                                            </figure>
-                                            <h6>Figma</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={adobeXD} alt='' />
-                                            </figure>
-                                            <h6>Adobe XD</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={Illustrator} alt='' />
-                                            </figure>
-                                            <h6>Illustrator</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={photoshop} alt='' />
-                                            </figure>
-                                            <h6>Photoshop</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={corelDraw} alt='' />
-                                            </figure>
-                                            <h6>CorelDraw</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={canva} alt='' />
-                                            </figure>
-                                            <h6>Canva</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="boxContainer">
-                                <h2>Animation & Motion Technologies</h2>
-                                <div className="boxElem">
-                                    <div className="leftArea">
-                                        <h5>Animation, Motion & 3D</h5>
-                                        <p>We enhance digital experiences with smooth, engaging, and visually appealing animations. From micro-interactions to full-scale motion graphics, our team uses advanced animation frameworks to bring interfaces and brand stories to life.</p>
-                                    </div>
-                                    <div className="rightArea">
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={gsap} alt='' />
-                                            </figure>
-                                            <h6>GSAP</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={three} alt='' />
-                                            </figure>
-                                            <h6>Three.js</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={lottie} alt='' />
-                                            </figure>
-                                            <h6>LottieFiles</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={anime} alt='' />
-                                            </figure>
-                                            <h6>Anime.js</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={aos_logo} alt='' />
-                                            </figure>
-                                            <h6>AOS Animation</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="boxContainer">
-                                <h2>Cloud & Infrastructure Technologies</h2>
-                                <div className="boxElem">
-                                    <div className="leftArea">
-                                        <h5>Cloud</h5>
-                                        <p>Modern businesses need secure, scalable, and high-performing cloud infrastructure. At CodeTrios, we help organizations migrate, deploy, and manage applications across leading cloud platforms using DevOps best practices. From cloud migration and CI/CD pipelines to containerization and infrastructure automation, we build reliable cloud solutions that improve performance, reduce costs, and support business growth. </p>
-                                    </div>
-                                    <div className="rightArea">
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={aws} alt='' />
-                                            </figure>
-                                            <h6>AWS</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={gCloud} alt='' />
-                                            </figure>
-                                            <h6>Google Cloud</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={hostinger} alt='' />
-                                            </figure>
-                                            <h6>Hostinger</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="boxContainer">
-                                <h2>Database Technologies</h2>
-                                <div className="boxElem">
-                                    <div className="leftArea">
-                                        <h5>Database Development</h5>
-                                        <p>Our database solutions ensure your applications run smoothly, securely, and efficiently. We architect data structures that scale with your business and support high-speed queries, analytics, and transaction-heavy workloads.</p>
-                                    </div>
-                                    <div className="rightArea">
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={monogoDB} alt='' />
-                                            </figure>
-                                            <h6>MongoDB</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={mysql} alt='' />
-                                            </figure>
-                                            <h6>MySQL</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={sql} alt='' />
-                                            </figure>
-                                            <h6>SQL Server</h6>
-                                        </div>
-                                        <div className="techLogo">
-                                            <figure>
-                                                <img src={cloudSql} alt='' />
-                                            </figure>
-                                            <h6>Google Cloud SQL</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
+                        </div>
+                    </Col>
                     </Row>
                 </Container>
             </div>
             <ProjectCAT />
-        </div>
+        </section >
         </>
     )
 }

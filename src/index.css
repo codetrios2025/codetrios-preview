@@ -443,11 +443,27 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
 .boxContainer .boxElem {border: 1px solid var(--ct-border);border-radius: 28px;background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));padding: 40px;backdrop-filter: blur(6px);display: flex;flex-wrap: wrap;color: #fff;position: relative;align-items: center;}
 .boxContainer .boxElem .leftArea {width: 50%;padding-right: 50px;display: flex;flex-direction: column;justify-content: center;}
 .boxContainer h5 {font-size: 22px;font-weight: 500;margin: 0 0 10px;}
-.boxContainer .boxElem .leftArea  p{color: var(--ct-gray);}
+.boxContainer .boxElem .leftArea  p{color: var(--ct-gray);font-size: 14px;}
 .boxContainer .boxElem .rightArea {width: 50%;display: flex;justify-content: center;gap: 10px;flex-wrap: wrap;align-content: flex-start;}
 .boxContainer .boxElem .techLogo {width: 20%;text-align: center;margin-bottom: 20px;padding: 10px 0;border-radius: 10px;border: 1px solid transparent;cursor: pointer;display: flex;flex-direction: column;justify-content: center;align-items: center;background: #fff;}
-.boxContainer .boxElem .techLogo h6 {font-size: 13px;margin: 10px 0 0;color: #000;font-weight: 500;}
-
+.boxContainer .boxElem .techLogo h4 {font-size: 13px;margin: 10px 0 0;color: #000;font-weight: 500;}
+.boxContainer .boxElem .techLogo figure img{width: auto;max-width: 100%;height: auto;}
+.technologyApplications h4{}
+.technologyApplications ul{display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 0;
+    padding: 0;
+    list-style: none;}
+.technologyApplications ul li{padding: 5px 11px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #eef7ff;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+    background: color-mix(in srgb, var(--accent) 18%, rgba(4, 22, 43, 0.5));
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);}
 /* portfolio css */
 .portfolioPage .actionBtn .ct-secoundary-btn{display: none;}
 .projectBox{position: relative;margin-top: 30px;border-radius: 10px;padding: 0;overflow: hidden;border: 1px solid var(--ct-border);background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));}

@@ -38,7 +38,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/codetrios/"
+                    href="https://www.instagram.com/trioscode/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="CodeTrios Instagram"
