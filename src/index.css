@@ -448,7 +448,6 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
 .boxContainer .boxElem .techLogo {width: 20%;text-align: center;margin-bottom: 20px;padding: 10px 0;border-radius: 10px;border: 1px solid transparent;cursor: pointer;display: flex;flex-direction: column;justify-content: center;align-items: center;background: #fff;}
 .boxContainer .boxElem .techLogo h4 {font-size: 13px;margin: 10px 0 0;color: #000;font-weight: 500;}
 .boxContainer .boxElem .techLogo figure img{width: auto;max-width: 100%;height: auto;}
-.technologyApplications h4{}
 .technologyApplications ul{display: flex;
     flex-wrap: wrap;
     gap: 8px;
