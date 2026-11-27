@@ -1,16 +1,16 @@
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
+
 import HeroBanner from "./HeroBanner";
-import AboutUs from "./AboutUs";
-// import OurServices from "./Services/OurServices";
-import OurServices from "./OurServices";
-import IndustriesWork from "./IndustriesWork";
+
 import ScrollFX from "./AnimationScreen/Scrollfx";
+
 import SEO from "../SEO/websiteMeta";
 import SchemaGraph from "../SEO/Schema/SchemaGraph";
 import HomeServiceSchema from "../SEO/HomeServiceSchema";
 import SeoData from "../SEO/Seo.json";
 
 const Idea = lazy(() => import("./Idea"));
+const HomeBelowFold = lazy(() => import("./HomeBelowFold"));
 const homeSeo = SeoData.home;
 
 const HomeRouteV1 = () => {
@@ -74,16 +74,16 @@ const HomeRouteV1 = () => {
       <HomeServiceSchema />
       <ScrollFX />
       <HeroBanner />
-      <AboutUs />
-      <OurServices />
-      <IndustriesWork />
-      <div ref={ideaRef}>
+      <Suspense fallback={null}>
+        <HomeBelowFold />
+      </Suspense>
+      <section ref={ideaRef} aria-label="Share your project idea">
         {shouldLoadIdea && (
           <Suspense fallback={null}>
             <Idea />
           </Suspense>
         )}
-      </div>
+      </section>
     </>
   );
 };

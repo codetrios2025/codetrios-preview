@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Style from '../CSS/Header.module.css';
-import { Link, Outlet  } from "react-router-dom";
-import Logo from '../../assets/images/codetrios_logo.svg';
+import { Link } from "react-router-dom";
 import ContactUs from "../HomeRoute_V1/Contact";
 import { Menu, ChevronDown, CodeXml, Mails, Phone, TrendingUp, Palette } from "lucide-react";
 const Header=()=>{
@@ -15,16 +14,22 @@ const Header=()=>{
     setSubOpen(false);
   };
    useEffect(() => {
+    let frameId = 0;
+
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      if (frameId) return;
+      frameId = window.requestAnimationFrame(() => {
+        frameId = 0;
+        setIsScrolled(window.scrollY > 50);
+      });
     };
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      if (frameId) {
+        window.cancelAnimationFrame(frameId);
+      }
     };
   }, []);
 
@@ -121,7 +126,7 @@ const Header=()=>{
                                                         <div className={Style.megaColumn}>
                                                             <div className={Style.megaColumnTitle}>
                                                                 <span className={Style.groupIcon}><Palette /></span>
-                                                                <h3>Design & Experience</h3>
+                                                                <div>Design & Experience</div>
                                                             </div>
                                                             <div className={Style.serviceLinks}>
                                                                 <Link onClick={closeMenu} to="/website-design-services" title="website design services">Website Design Services</Link>
@@ -131,7 +136,7 @@ const Header=()=>{
                                                         <div className={Style.megaColumn}>
                                                             <div className={Style.megaColumnTitle}>
                                                                 <span className={Style.groupIcon}><CodeXml /></span>
-                                                                <h3>Development & Software</h3>
+                                                                <div>Development & Software</div>
                                                             </div>
                                                             <div className={Style.serviceLinks}>
                                                                 <Link onClick={closeMenu} to="/web-development-services" title="web-development-services">Web Development Services</Link>
@@ -144,7 +149,7 @@ const Header=()=>{
                                                         <div className={Style.megaColumn}>
                                                             <div className={Style.megaColumnTitle}>
                                                                 <span className={Style.groupIcon}><TrendingUp /></span>
-                                                                <h3>Growth & Support</h3>
+                                                                <div>Growth & Support</div>
                                                             </div>
                                                             <div className={Style.serviceLinks}>
                                                                 <Link onClick={closeMenu} to="/geo-seo-services" title="Geo & SEO Services">SEO, GEO & AEO Services</Link>

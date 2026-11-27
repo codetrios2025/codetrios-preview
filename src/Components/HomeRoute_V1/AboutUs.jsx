@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import './About.css';
 import webImage from '../../assets/images/growth_about.webp';
+import webImageSmall from '../../assets/images/growth_about-800.webp';
 import { ArrowUpRight, Workflow, ShieldCheck, ChartNoAxesCombined, MonitorSmartphone, Bot } from "lucide-react";
 import { Link } from 'react-router-dom';
 import ContactUs from './Contact';
@@ -53,7 +54,7 @@ const AboutUs = () =>{
                     <Col md={5}>
                         {/* figure wipes open; the image inside settles from a zoom and drifts slightly while you scroll */}
                         <figure data-reveal="clip" data-reveal-duration="1.3s">
-                            <img src={webImage} className='imgFull' alt='CodeTrios digital solutions and web development' width="1536" height="1024" loading="lazy" data-parallax="0.01" />
+                            <img src={webImageSmall} srcSet={`${webImageSmall} 800w, ${webImage} 1536w`} sizes="(max-width: 767px) 100vw, (max-width: 1199px) 42vw, 550px" className='imgFull' alt='CodeTrios digital solutions and web development' width="1536" height="1024" loading="lazy" data-parallax="0.01" />
                         </figure>
                     </Col>
                     <Col md={7}>

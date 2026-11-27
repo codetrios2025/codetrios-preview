@@ -131,7 +131,7 @@
     },
     {
       id: "hosting",
-      keys: ["hosting", "host", "domain", "server", "uptime", "ssl", "maintenance",  "web hosting", "hosting service", "hosting migration", "server migration" "support", "backup", "migrate"],
+      keys: ["hosting", "host", "domain", "server", "uptime", "ssl", "maintenance",  "web hosting", "hosting service", "hosting migration", "server migration", "support", "backup", "migrate"],
       answer:
         "We offer web hosting so your site stays fast, secure and online without you having to manage servers yourself.",
       links: [["Web hosting", P + "web-hosting-services"]],

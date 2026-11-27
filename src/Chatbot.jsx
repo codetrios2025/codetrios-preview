@@ -9,14 +9,55 @@ import { useEffect } from "react";
  */
 export default function Chatbot() {
   useEffect(() => {
-    // Already loaded (React StrictMode runs effects twice in development)
     if (window.CodeTriosBot || document.getElementById("codetrios-chatbot-script")) return;
 
-    const s = document.createElement("script");
-    s.id = "codetrios-chatbot-script";
-    s.src = "/codetrios-chatbot.js";
-    s.async = true;
-    document.body.appendChild(s);
+    let loaded = false;
+    let idleCallbackId;
+    let fallbackTimerId;
+    const interactionEvents = ["scroll", "click", "touchstart", "keydown"];
+
+    const removeListeners = () => {
+      interactionEvents.forEach((eventName) => {
+        window.removeEventListener(eventName, loadChatbot);
+      });
+    };
+
+    const loadChatbot = () => {
+      if (loaded || window.CodeTriosBot || document.getElementById("codetrios-chatbot-script")) return;
+      loaded = true;
+      removeListeners();
+      if (idleCallbackId !== undefined && "cancelIdleCallback" in window) {
+        window.cancelIdleCallback(idleCallbackId);
+      }
+      if (fallbackTimerId !== undefined) window.clearTimeout(fallbackTimerId);
+
+      const script = document.createElement("script");
+      script.id = "codetrios-chatbot-script";
+      script.src = "/codetrios-chatbot.js";
+      script.async = true;
+      document.body.appendChild(script);
+    };
+
+    interactionEvents.forEach((eventName) => {
+      window.addEventListener(eventName, loadChatbot, {
+        once: true,
+        passive: true,
+      });
+    });
+
+    if ("requestIdleCallback" in window) {
+      idleCallbackId = window.requestIdleCallback(loadChatbot, { timeout: 3000 });
+    } else {
+      fallbackTimerId = window.setTimeout(loadChatbot, 3000);
+    }
+
+    return () => {
+      removeListeners();
+      if (idleCallbackId !== undefined && "cancelIdleCallback" in window) {
+        window.cancelIdleCallback(idleCallbackId);
+      }
+      if (fallbackTimerId !== undefined) window.clearTimeout(fallbackTimerId);
+    };
   }, []);
 
   return null; // the widget draws its own UI

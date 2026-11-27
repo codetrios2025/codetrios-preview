@@ -59,9 +59,10 @@
   width: 20px;
   height: 20px;
 }
-.value-card h5{
+.value-card h3{
   font-size: 14px;
   color: #fff;
+  font-weight: 700;
   margin: 0 0 5px;
 }
 .value-card p{

@@ -17,6 +17,7 @@ import php from '../../assets/images/icon/php_logo.webp';
 import laravel from '../../assets/images/icon/laravel_logo.webp';
 import wordpress from '../../assets/images/icon/wordpress_logo.webp';
 import drupal from '../../assets/images/icon/drupal_icon.webp';
+import Zframe from '../../assets/images/icon/zframe_logo.webp';
 import node from '../../assets/images/icon/node_logo.webp';
 import Python from '../../assets/images/icon/paython_logo.webp';
 import strapi from '../../assets/images/icon/strapi_logo.webp';
@@ -50,6 +51,7 @@ import claude from '../../assets/images/icon/Claude_ai_logo.webp';
 import perplexity from '../../assets/images/icon/perplexity_ai_logo.webp';
 import github from '../../assets/images/icon/github_copilot_ai_logo.webp';
 import gemini from '../../assets/images/icon/Gemini_ai_logo.webp';
+import cPanel from '../../assets/images/icon/cPanel-plesk-logo.webp';
 
 import RESTapi from '../../assets/images/icon/rest-api-icon.webp';
 import thirdParty from '../../assets/images/icon/Third-party-icon.webp';
@@ -67,9 +69,9 @@ const technologyGroups = [
     {
         id: 'frontend',
         title: 'Frontend Development Technologies',
-        subtitle: 'Frontend Development',
+        subtitle: 'Beautiful websites that are easy to use. ',
         description:
-            'CodeTrios uses modern frontend technologies to develop responsive, fast-loading, and interactive websites and web applications. Our frontend development stack includes JavaScript frameworks, HTML, CSS, and modern UI frameworks. We select suitable technologies to create accessible interfaces, improve user experience, and support scalable digital products.',
+            'The frontend is what visitors see and interact with when they visit your website or use your application. We use modern frontend technologies to create attractive, responsive, and user-friendly experiences that work across mobile phones, tablets, and desktops.',
         technologies: [
             { name: 'React.js + Vite', image: reactVite },
             { name: 'HTML5', image: HTML },
@@ -89,15 +91,16 @@ const technologyGroups = [
     {
         id: 'backend',
         title: 'Backend Development Technologies',
-        subtitle: 'Backend Development',
+        subtitle: 'The technology that makes everything work behind the scenes.',
         description:
-            'Our backend development technologies help build secure, scalable, and reliable web applications. CodeTrios works with PHP, Laravel, Node.js, Express.js, and Python to develop server-side functionality, business logic, database connectivity, and application APIs. The backend architecture is selected according to project complexity, security requirements, and expected application growth.',
+            'The technology that makes everything work behind the scenes.From login systems and contact forms to dashboards and complex business features, backend development handles the functionality that powers your website or application. We build reliable backend solutions that help your digital products work smoothly.',
         technologies: [
             { name: 'PHP', image: php },
             { name: 'Laravel', image: laravel },
             { name: 'Node.js', image: node },
             { name: 'Express.js', image: express },
-            { name: 'Python', image: Python }
+            { name: 'Python', image: Python },
+            { name: 'Zend Framework', image: Zframe }
         ],
         applications: [
             'Custom backend development',
@@ -108,10 +111,10 @@ const technologyGroups = [
     },
     {
         id: 'cms',
-        title: 'CMS & Ecommerce Technologies',
-        subtitle: 'Content Management & Ecommerce Development',
+        title: 'CMS Development Technologies',
+        subtitle: 'Manage your website content without depending on a developer for every update.',
         description:
-            'CodeTrios uses content management systems and ecommerce technologies to develop manageable business websites and online stores. Our CMS expertise includes WordPress, Drupal, and Strapi. We also use WooCommerce for customized ecommerce functionality, product management, shopping experiences, and online store development.',
+            'Manage your website content without depending on a developer for every update. A Content Management System (CMS) makes it easy to add pages, update information, upload images, and manage website content. We build and customize CMS websites that give you more control over your online presence.',
         technologies: [
             { name: 'WordPress', image: wordpress },
             { name: 'Drupal', image: drupal },
@@ -126,28 +129,12 @@ const technologyGroups = [
             'Custom ecommerce websites'
         ]
     },
-    // {
-    //     id: 'mobile',
-    //     title: 'Mobile Application Development Technologies',
-    //     subtitle: 'Cross-Platform Mobile Development',
-    //     description:
-    //         'CodeTrios uses React Native for cross-platform mobile application development. It enables the development of mobile experiences for Android and iOS using a shared JavaScript and React-based development approach. Mobile application architecture is planned according to functionality, device compatibility, performance, and business requirements.',
-    //     technologies: [
-    //         { name: 'React Native', image: reactNative }
-    //     ],
-    //     applications: [
-    //         'Cross-platform mobile applications',
-    //         'Android application development',
-    //         'iOS application development',
-    //         'Mobile API integration'
-    //     ]
-    // },
     {
         id: 'database',
         title: 'Database Technologies',
-        subtitle: 'Database Design & Management',
+        subtitle: 'Keep your business data organized, secure, and easy to access.',
         description:
-            'Reliable database architecture is essential for secure and efficient applications. CodeTrios works with relational and NoSQL database technologies to organize, store, retrieve, and manage application data. Our database selection considers data structure, application requirements, performance, scalability, and long-term maintenance.',
+            'At CodeTrios, we use database technologies that help websites and applications store, retrieve, and manage data efficiently. We choose the right database based on your project requirements and the type of information your application needs to handle.',
         technologies: [
             { name: 'MySQL', image: mysql },
             { name: 'MongoDB', image: monogoDB },
@@ -163,14 +150,16 @@ const technologyGroups = [
     },
     {
         id: 'cloud',
-        title: 'Cloud, Hosting & Infrastructure Technologies',
-        subtitle: 'Cloud Infrastructure & Hosting',
+        title: 'Cloud & Infrastructure Technologies',
+        subtitle: 'Keep your website and applications running smoothly, securely, and reliably.',
         description:
-            'CodeTrios uses cloud and hosting platforms to deploy and support websites and applications. Our infrastructure choices consider application availability, security, performance, scalability, and hosting requirements. We work with AWS, Google Cloud, and Hostinger according to project needs and deployment environments.',
+            'A great website needs more than good design and development. It also needs reliable hosting, server configuration, and proper infrastructure to perform well. At CodeTrios, we work with hosting platforms and server technologies to deploy websites, manage applications, and keep digital solutions running smoothly.',
         technologies: [
             { name: 'Amazon Web Services (AWS)', image: aws },
             { name: 'Google Cloud', image: gCloud },
-            { name: 'Hostinger', image: hostinger }
+            { name: 'Hostinger', image: hostinger },
+            { name: 'cPanel & Plesk', image: cPanel }
+            
         ],
         applications: [
             'Website and application hosting',
@@ -182,9 +171,9 @@ const technologyGroups = [
     {
         id: 'uiux',
         title: 'UI/UX & Creative Design Technologies',
-        subtitle: 'User Interface & Experience Design',
+        subtitle: 'Designing digital experiences that look great and feel easy to use.',
         description:
-            'Our UI/UX design process uses modern creative tools to plan intuitive and visually consistent digital experiences. CodeTrios uses Figma, Adobe Photoshop, and Adobe Illustrator for wireframes, interface layouts, visual assets, prototypes, and design systems. Our design approach focuses on usability, accessibility, brand consistency, and user experience.',
+            'CodeTrios uses modern UI/UX and creative design tools to create wireframes, design systems, prototypes, visual assets and user-centered digital experiences. From the first wireframe to the final design, we focus on making every screen simple, consistent, and easy for users to understand.',
         technologies: [
             { name: 'Figma', image: figma },
             { name: 'Adobe Photoshop', image: photoshop },
@@ -203,9 +192,9 @@ const technologyGroups = [
     {
         id: 'animation',
         title: 'Animation & Interactive Technologies',
-        subtitle: 'Web Animation, Motion & 3D Experiences',
+        subtitle: 'Bring your website to life with engaging animations and smooth interactions.',
         description:
-            'CodeTrios uses modern animation libraries to create engaging website interactions, motion effects, and interactive digital experiences. Our animation technologies include GSAP, Three.js, Lottie, Anime.js, and AOS. These tools help create smooth transitions, micro-interactions, animated interfaces, and interactive visual elements while considering website performance and usability.',
+            'Bring your website to life with engaging animations and smooth interactions.Animations and motion effects make websites and applications more engaging, interactive, and visually appealing. At CodeTrios, we use modern animation tools and technologies to create smooth transitions, interactive elements, scrolling effects, and visual experiences that capture visitors attention without affecting usability.',
         technologies: [
             { name: 'GSAP', image: gsap },
             { name: 'Three.js', image: three },
@@ -224,9 +213,9 @@ const technologyGroups = [
     {
         id: 'ai',
         title: 'AI & Generative AI Technologies',
-        subtitle: 'AI Integration & Generative AI Solutions',
+        subtitle: 'Make your business smarter with AI-powered solutions.',
         description:
-            'CodeTrios explores and integrates generative AI technologies into websites, web applications, and business workflows. Depending on project requirements, AI models and APIs can support conversational interfaces, content generation, intelligent search, data processing, and workflow automation. We select AI solutions based on integration requirements, reliability, security, and business objectives.',
+            'Artificial Intelligence (AI) is changing how businesses work, communicate, and serve their customers. At CodeTrios, we explore AI and Generative AI technologies to help businesses automate repetitive tasks, create useful content, improve customer interactions, and build smarter digital experiences. We do',
         technologies: [
             { name: 'OpenAI', image: openAI },
             { name: 'Anthropic Claude', image: claude },
@@ -262,9 +251,9 @@ const technologyGroups = [
     {
         id: 'api',
         title: 'API Development & Integration Technologies',
-        subtitle: 'Application Programming Interfaces',
+        subtitle: 'Connect your website, applications, and business tools seamlessly.',
         description:
-            'APIs connect websites, mobile applications, databases, and external business platforms. CodeTrios develops and integrates APIs to support application communication, data exchange, authentication, and third-party services. API integration is planned according to security, reliability, documentation, and application requirements.',
+            'At CodeTrios, we develop and integrate APIs that help your digital platforms work together, reduce manual work, and provide a smoother experience for your customers. APIs help different websites, applications, and software systems communicate and share information. Whether you want to connect your website with a payment gateway, integrate third-party services, or exchange data between your website and mobile app, APIs make it possible.',
         technologies: [
             { name: 'REST API', image: RESTapi },
             { name: 'Third-Party API Integration', image: thirdParty  },
@@ -420,7 +409,7 @@ const TechnologiesPage = ()=>{
                     url: "https://www.codetrios.com/technologies"
                 }
             ]}
-            itemListName="Technologies Used by CodeTrios"
+            itemListName="Web Development Technologies Used by CodeTrios"
             itemListDescription="Frontend, backend, database, CMS, cloud, AI, UI/UX, and development technologies used by CodeTrios for web development, web applications, ecommerce, custom software, and digital solutions."
             itemListItems={schemaItemList}
         />
@@ -432,8 +421,8 @@ const TechnologiesPage = ()=>{
                     <Col>
                         <div className='innerBannerContent'>
                         <div className="tag">OUR TECHNOLOGY STACK</div>
-                        <h1>Technologies We Use for Web Development & Digital Solutions</h1>
-                        <p>CodeTrios is a web development and digital solutions company in India using modern frontend, backend, mobile, CMS, ecommerce, database, cloud, AI, and API technologies to build websites, web applications, ecommerce platforms, custom software, and digital solutions.</p>
+                        <h1>Technologies We Use to Build Modern Digital Solutions</h1>
+                        <p>At CodeTrios, we work with modern technologies, programming languages, frameworks, and platforms to build secure, scalable, high-performing digital solutions. From business websites and ecommerce platforms to custom web applications and mobile apps, we select the right technology based on your project requirements, business goals, and future growth.</p>
                         <div className='actionRow'>
                             <ActionButton />
                         </div>
@@ -442,7 +431,24 @@ const TechnologiesPage = ()=>{
                     </Row>
                 </Container>
             </section >
-            <section  className="ourPlatForm blockPadding">
+            <div className='weAreBlock blockPadding' aria-labelledby="technology-stack-heading">
+                <Container>
+                <Row>
+                    <Col>
+                    <div className='weAreContent'>
+                        <div className='sectionHead'>
+                        <div className="tag">INTELLIGENT BUSINESS SOLUTIONS</div>
+                        <h2 id='technology-stack-heading'>Web Development Technologies We Use to <span>Build Digital Solutions</span></h2>
+                        </div>
+                        <div className='secDetail'>
+                        <p>We work with a wide range of modern technologies to deliver flexible, efficient, and future-ready digital solutions.</p>
+                        </div>
+                    </div>
+                    </Col>
+                </Row>
+                </Container>
+            </div>
+            <section  className="ourPlatForm blockPadding" aria-labelledby="technology-stack-heading">
                 <Container>
                     <Row>
                         <Col>

@@ -53,8 +53,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <!-- Fonts used above the fold -->
-    <link rel="preload" href="%BASE_URL%assets/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="%BASE_URL%assets/fonts/BricolageGrotesque-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./src/assets/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./src/assets/fonts/BricolageGrotesque-Bold.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" as="image" href="/codetrios_logo.svg" fetchpriority="high" />
     <!-- Viewport -->
     <meta
@@ -68,30 +68,68 @@
       content="LrYq1xUfpFgGpnFX7HA-wmRxAdZgc03kPBMJ1KK61Sc"
     />
 
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://www.google-analytics.com" />
-
-    <!-- Google Analytics 4 + Google Ads -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-QRFGCRY4CP"
-    ></script>
-
     <script>
       window.dataLayer = window.dataLayer || [];
+      window.gtag = function () {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag("js", new Date());
+      window.gtag("config", "G-QRFGCRY4CP");
+      window.gtag("config", "AW-18425023725");
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      (function () {
+        var loaded = false;
+        var idleCallbackId;
+        var fallbackTimerId;
+        var interactionEvents = ["scroll", "click", "touchstart", "keydown"];
 
-      gtag("js", new Date());
+        function removeListeners() {
+          interactionEvents.forEach(function (eventName) {
+            window.removeEventListener(eventName, loadTag);
+          });
+        }
 
-      /* Google Analytics 4 */
-      gtag("config", "G-QRFGCRY4CP");
+        function loadTag() {
+          if (loaded) return;
+          loaded = true;
+          removeListeners();
+          if (idleCallbackId !== undefined && "cancelIdleCallback" in window) {
+            window.cancelIdleCallback(idleCallbackId);
+          }
+          if (fallbackTimerId !== undefined) {
+            window.clearTimeout(fallbackTimerId);
+          }
 
-      /* Google Ads */
-      gtag("config", "AW-18425023725");
+          var script = document.createElement("script");
+          script.async = true;
+          script.src =
+            "https://www.googletagmanager.com/gtag/js?id=G-QRFGCRY4CP";
+          document.head.appendChild(script);
+        }
+
+        function scheduleAfterLoad() {
+          if ("requestIdleCallback" in window) {
+            idleCallbackId = window.requestIdleCallback(loadTag, {
+              timeout: 3000,
+            });
+          } else {
+            fallbackTimerId = window.setTimeout(loadTag, 3000);
+          }
+        }
+
+        interactionEvents.forEach(function (eventName) {
+          window.addEventListener(eventName, loadTag, {
+            once: true,
+            passive: true,
+          });
+        });
+
+        if (document.readyState === "complete") {
+          scheduleAfterLoad();
+        } else {
+          window.addEventListener("load", scheduleAfterLoad, { once: true });
+        }
+      })();
     </script>
   </head>
 
