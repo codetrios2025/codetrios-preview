@@ -14,7 +14,7 @@ import {
   Cpu,
 } from "lucide-react";
 
-import eduImg from '../../assets/images/edu-img.jpg';
+import eduImg from '../../assets/images/edu-img.webp';
 import healthcareImg from '../../assets/images/healthcare-img.jpg';
 import ecomImg from '../../assets/images/ecom-img.jpg';
 import estateImg from '../../assets/images/estate-img.jpg';

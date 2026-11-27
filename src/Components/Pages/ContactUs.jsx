@@ -16,8 +16,9 @@ const ContactUsPage = () => {
                 <Row>
                 <Col>
                     <div className='innerBannerContent'>
-                    <h1>Contact Us</h1>
-                    <p>Send us your query and you will hear from one of our experts soon</p>
+                      <div className="tag">Contact Us</div>
+                      <h1>Let's Talk About <br/>Your <span>Next Project</span>.</h1>
+                      <p>Have an idea, need a new website, or looking for the right technology partner? We're here to understand your requirements and help you bring your vision to life.</p>
                     </div>
                 </Col>
                 </Row>

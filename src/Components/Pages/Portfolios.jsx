@@ -95,9 +95,8 @@ const PortfolioPage = () => {
                 <Col>
                     <div className='innerBannerContent'>
                     <div className="tag">Our Portfolio</div>
-                    {/* <h1>Web Design, Development & <span>Digital Solutions</span></h1> */}
-                    <h1>Web Development Portfolio</h1>
-                    <p>Explore selected web design, web development, ecommerce, web application, UI/UX, CMS and custom software projects delivered by CodeTrios for businesses in India and beyond.</p>
+                    <h1>Ideas We've <span>Built</span>. Solutions We've <span>Delivered</span>.</h1>
+                    <p>Explore our work across website design, web development, and custom applications. Every project reflects our focus on quality, creativity, and building digital solutions that make a difference.</p>
                     <div className='actionRow'>
                         <ActionButton />
                     </div>

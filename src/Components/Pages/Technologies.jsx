@@ -421,7 +421,7 @@ const TechnologiesPage = ()=>{
                     <Col>
                         <div className='innerBannerContent'>
                         <div className="tag">OUR TECHNOLOGY STACK</div>
-                        <h1>Technologies We Use to Build Modern Digital Solutions</h1>
+                        <h1>Technologies We Use to Build <span>Modern Digital</span> Solutions</h1>
                         <p>At CodeTrios, we work with modern technologies, programming languages, frameworks, and platforms to build secure, scalable, high-performing digital solutions. From business websites and ecommerce platforms to custom web applications and mobile apps, we select the right technology based on your project requirements, business goals, and future growth.</p>
                         <div className='actionRow'>
                             <ActionButton />
