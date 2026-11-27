@@ -474,7 +474,7 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
 .projectBox .content .tags {display: flex;align-items: center;gap: 4px;flex-wrap: wrap;}
 .projectBox .content {padding: 15px;}
 .projectBox .content .tags h6 {background: #224f8b;display: inline-block;color: #fff;font-size: 12px;padding: 3px 7px;border-radius: 4px;margin: 0;font-weight: 400;}
-
+.projectBox h4{color: var(--ct-gray);margin: 0;font-size: 14px;font-weight: 400;}
 .projectBox h5 {color: var(--ct-gray);margin: 15px 0 10px;font-weight: 500;}
 /* portfolio css */
 .WhatsAppBtn{width: 58px;height: 58px;background: rgb(37, 211, 102);position: fixed;bottom: 20px;right: 90px;border-radius: 50%;display: flex;align-items: center;justify-content: center;box-shadow: 0 6px 20px rgba(0, 0, 0, .25);transition:.15s; }
