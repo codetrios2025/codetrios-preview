@@ -103,15 +103,14 @@ export default function ScrollFX({
     const update = () => {
       const sy = window.scrollY;
       const vh = window.innerHeight;
-
-      if (barRef.current) {
-        const max = root.scrollHeight - vh;
-        barRef.current.style.transform = `scaleX(${max > 0 ? Math.min(sy / max, 1) : 0})`;
-      }
+      const max = root.scrollHeight - vh;
+      const progressScale = max > 0 ? Math.min(sy / max, 1) : 0;
+      const updates = [];
 
       moving.forEach((el) => {
         const d = el.dataset;
         let y = null;
+        let opacity = null;
         if (d.parallax !== undefined) {
           const r = (el.parentElement || el).getBoundingClientRect(); // parent is not transformed, so no feedback loop
           y = (vh / 2 - (r.top + r.height / 2)) * (parseFloat(d.parallax) || 0);
@@ -122,11 +121,19 @@ export default function ScrollFX({
         } else if (d.drift !== undefined) {
           y = sy * (parseFloat(d.drift) || 0);
         }
-        if (y !== null) el.style.setProperty("--py", `${y.toFixed(1)}px`);
         if (d.scrollFade !== undefined) {
           const dist = vh * (parseFloat(d.scrollFade) || 0.7);
-          el.style.opacity = String(Math.min(1, Math.max(0, 1 - sy / dist)));
+          opacity = String(Math.min(1, Math.max(0, 1 - sy / dist)));
         }
+        updates.push({ el, y, opacity });
+      });
+
+      if (barRef.current) {
+        barRef.current.style.transform = `scaleX(${progressScale})`;
+      }
+      updates.forEach(({ el, y, opacity }) => {
+        if (y !== null) el.style.setProperty("--py", `${y.toFixed(1)}px`);
+        if (opacity !== null) el.style.opacity = opacity;
       });
     };
 

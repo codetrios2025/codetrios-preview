@@ -13,7 +13,7 @@ const Footer = () => {
             <div className={Style.info}>
               <div className={Style.footerlogo}>
               <img
-                src={Logo}
+                src={`${import.meta.env.BASE_URL}codetrios_logo.svg`}
                 alt="CodeTrios Software Development Company"
                 loading="lazy"
                 decoding="async"
@@ -38,7 +38,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/codetrios/"
+                    href="https://www.instagram.com/trioscode/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="CodeTrios Instagram"

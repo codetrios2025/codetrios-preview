@@ -56,13 +56,21 @@
       id: "services",
       keys: ["services", "what do you do", "what do you offer", "offer", "what can you build", "capabilities", "solutions"],
       answer:
-        "We help businesses get online and grow. Our main services are:\n" +
-        "• Website design\n• Web development\n• Web application development\n" +
-        "• UI/UX design\n• E-commerce development\n• Custom software solutions\n" +
-        "• Digital strategy consulting\n• Web hosting\n• GEO & SEO\n\n" +
-        "Tell me which one interests you and I'll share more.",
+      "CodeTrios helps businesses build, improve and grow their digital presence. Our main services include:\n" +
+      "• Website design\n" +
+      "• Web development\n" +
+      "• Web application development\n" +
+      "• UI/UX design\n" +
+      "• E-commerce development\n" +
+      "• Custom software solutions\n" +
+      "• AI & automation solutions\n" +
+      "• Website maintenance and support\n" +
+      "• Digital strategy consulting\n" +
+      "• Web hosting\n" +
+      "• GEO & SEO services\n\n" +
+      "Tell me which service interests you and I'll share more.",
       links: [["All services", P + "services"]],
-      replies: ["Website design", "E-commerce", "Custom software", "Get a quote"]
+      replies: ["Website design", "AI automation", "Website maintenance", "E-commerce", "Custom software", "Get a quote"]
     },
     {
       id: "design",
@@ -123,7 +131,7 @@
     },
     {
       id: "hosting",
-      keys: ["hosting", "host", "domain", "server", "uptime", "ssl", "maintenance", "support", "backup", "migrate"],
+      keys: ["hosting", "host", "domain", "server", "uptime", "ssl", "maintenance",  "web hosting", "hosting service", "hosting migration", "server migration", "support", "backup", "migrate"],
       answer:
         "We offer web hosting so your site stays fast, secure and online without you having to manage servers yourself.",
       links: [["Web hosting", P + "web-hosting-services"]],
@@ -137,6 +145,66 @@
       links: [["GEO & SEO services", P + "geo-seo-services"]],
       replies: ["Website design", "Digital strategy", "Get a quote"]
     },
+    {
+      id: "ai-automation",
+      keys: [
+        "ai automation",
+        "ai automation solutions",
+        "artificial intelligence",
+        "ai solutions",
+        "business automation",
+        "workflow automation",
+        "process automation",
+        "automate business",
+        "ai chatbot",
+        "chatbot development",
+        "intelligent automation",
+        "ai integration",
+        "automated workflows",
+        "n8n",
+        "zapier",
+        "make automation"
+      ],
+      answer:
+        "CodeTrios provides AI and automation solutions that help businesses reduce repetitive tasks, improve workflows and work more efficiently. " +
+        "Our solutions can include AI-powered chatbots, business process automation, workflow integrations, intelligent applications and AI API integrations. " +
+        "We can help identify automation opportunities and develop solutions around your business requirements.",
+      links: [
+        ["AI & Automation Solutions", P + "ai-automation-solutions"]
+      ],
+      replies: ["Custom software", "Web applications", "Get a quote"]
+    },
+    {
+      id: "maintenance",
+      keys: [
+        "website maintenance",
+        "website maintenance services",
+        "website support",
+        "website update",
+        "website updates",
+        "website management",
+        "maintain my website",
+        "maintain website",
+        "website repair",
+        "website fixing",
+        "website security",
+        "website backup",
+        "wordpress maintenance",
+        "website bug fixing",
+        "website performance",
+        "website errors",
+        "website not working",
+        "ongoing website support"
+      ],
+      answer:
+        "CodeTrios offers website maintenance and support to help keep your website secure, updated and running smoothly. " +
+        "Maintenance requirements can include website updates, bug fixes, security checks, backups, performance improvements and technical support, depending on your website and support needs.",
+      links: [
+        ["Website Maintenance Services", P + "website-maintenance-services"]
+      ],
+      replies: ["Web hosting", "Web development", "Get a quote"]
+    },
+
     {
       id: "tech",
       keys: ["technology", "technologies", "tech stack", "stack", "react", "node", "wordpress", "php", "python", "angular", "vue", "next", "laravel", "framework", "language"],

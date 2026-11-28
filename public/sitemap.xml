@@ -1,39 +1,89 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.codetrios.com/</loc>
-  </url>
-  <url>
-    <loc>https://www.codetrios.com/about-us</loc>
-  </url>
-  <url>
-    <loc>https://www.codetrios.com/services</loc>
-  </url>
-  <url>
-    <loc>https://www.codetrios.com/website-design-services</loc>
-  </url>
-  <url>
-    <loc>https://www.codetrios.com/web-development-services</loc>
-  </url>
-  <url>
-    <loc>https://www.codetrios.com/web-application-development</loc>
-  </url>
-  <url>
-    <loc>https://www.codetrios.com/ui-ux-design-services</loc>
-  </url>
-  <url>
-    <loc>https://www.codetrios.com/ecommerce-development-services</loc>
-  </url>
-  <url>
-    <loc>https://www.codetrios.com/custom-software-solutions</loc>
-  </url>
-  <url>
-    <loc>https://www.codetrios.com/digital-strategy-consulting</loc>
-  </url>
-  <url>
-    <loc>https://www.codetrios.com/web-hosting-services</loc>
-  </url>
-  <url>
-    <loc>https://www.codetrios.com/geo-seo-services</loc>
-  </url>
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://www.codetrios.com/</loc>
+    </url>
+
+    <!-- Company Pages -->
+    <url>
+        <loc>https://www.codetrios.com/about-us</loc>
+    </url>
+
+    <!-- Main Services Page -->
+    <url>
+        <loc>https://www.codetrios.com/services</loc>
+    </url>
+
+    <!-- Website Design Services -->
+    <url>
+        <loc>https://www.codetrios.com/website-design-services</loc>
+    </url>
+
+    <!-- Web Development Services -->
+    <url>
+        <loc>https://www.codetrios.com/web-development-services</loc>
+    </url>
+
+    <url>
+        <loc>https://www.codetrios.com/web-application-development</loc>
+    </url>
+
+    <!-- Ecommerce Development -->
+    <url>
+        <loc>https://www.codetrios.com/ecommerce-development-services</loc>
+    </url>
+
+    <!-- Custom Software Development -->
+    <url>
+        <loc>https://www.codetrios.com/custom-software-solutions</loc>
+    </url>
+
+    <!-- AI Automation Services -->
+    <url>
+        <loc>https://www.codetrios.com/ai-automation-solutions</loc>
+    </url>
+
+    <!-- Website Maintenance Services -->
+    <url>
+        <loc>https://www.codetrios.com/website-maintenance-services</loc>
+    </url>
+
+    <!-- UI/UX Design Services -->
+    <url>
+        <loc>https://www.codetrios.com/ui-ux-design-services</loc>
+    </url>
+
+    <!-- Digital Strategy Consulting -->
+    <url>
+        <loc>https://www.codetrios.com/digital-strategy-consulting</loc>
+    </url>
+
+    <!-- Web Hosting Services -->
+    <url>
+        <loc>https://www.codetrios.com/web-hosting-services</loc>
+    </url>
+
+    <!-- SEO and GEO Services -->
+    <url>
+        <loc>https://www.codetrios.com/geo-seo-services</loc>
+    </url>
+
+    <!-- Supporting Pages -->
+    <url>
+        <loc>https://www.codetrios.com/technologies</loc>
+    </url>
+
+    <url>
+        <loc>https://www.codetrios.com/portfolio</loc>
+    </url>
+
+    <!-- Contact Page -->
+    <url>
+        <loc>https://www.codetrios.com/contact-us</loc>
+    </url>
+
 </urlset>

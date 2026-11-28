@@ -1,30 +1,37 @@
+
 import React from "react";
 
 const FAQSchema = ({ faqs = [] }) => {
+  const validFaqs = faqs.filter(
+    (faq) =>
+      faq?.question?.trim() &&
+      faq?.answer?.trim()
+  );
 
-    if (!faqs.length) return null;
+  if (!validFaqs.length) return null;
 
-    const schema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": faqs.map((faq) => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-            }
-        }))
-    };
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
 
-    return (
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-                __html: JSON.stringify(schema)
-            }}
-        />
-    );
+    "mainEntity": validFaqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question.trim(),
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer.trim(),
+      },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(schema),
+      }}
+    />
+  );
 };
 
 export default FAQSchema;

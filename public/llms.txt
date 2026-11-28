@@ -1,0 +1,172 @@
+
+# CodeTrios
+
+> CodeTrios is a web development and digital solutions company in India, providing website design, web development, eCommerce development, custom software solutions, web application development, UI/UX design, AI automation, website maintenance, digital strategy consulting, web hosting, and SEO/GEO services.
+
+Website: https://www.codetrios.com/
+Email: info@codetrios.com
+Phone: +91 8882309150
+
+## About CodeTrios
+
+CodeTrios helps businesses, startups, organizations, and growing brands establish, improve, and scale their digital presence through technology and digital solutions.
+
+The company focuses on responsive website design, modern web development, ecommerce solutions, custom software, web applications, user experience, AI-powered automation, and search optimization.
+
+CodeTrios combines design, development, technology, performance optimization, and technical support to deliver digital solutions aligned with business requirements.
+
+## Main Website Pages
+
+- [Homepage](https://www.codetrios.com/): Overview of CodeTrios and its digital solutions.
+- [About Us](https://www.codetrios.com/about-us): Company information, capabilities, and approach.
+- [Services](https://www.codetrios.com/services): Overview of services offered by CodeTrios.
+- [Technologies](https://www.codetrios.com/technologies): Technologies and development capabilities.
+- [Portfolio](https://www.codetrios.com/portfolio): Selected projects and work.
+- [Contact Us](https://www.codetrios.com/contact-us): Contact information and project enquiries.
+
+## Website Design and Development Services
+
+- [Website Design Services](https://www.codetrios.com/website-design-services): Professional website design, business websites, and user-focused digital experiences.
+- [Web Development Services](https://www.codetrios.com/web-development-services): Frontend, backend, CMS, and custom website development.
+- [Web Application Development](https://www.codetrios.com/web-application-development): Custom web applications, business platforms, and application development.
+- [UI/UX Design Services](https://www.codetrios.com/ui-ux-design-services): User interface design, user experience, wireframing, and prototyping.
+- [eCommerce Development Services](https://www.codetrios.com/ecommerce-development-services): Ecommerce websites, online stores, product management, and shopping experiences.
+- [Custom Software Solutions](https://www.codetrios.com/custom-software-solutions): Custom business software, application solutions, and workflow systems.
+
+## AI and Business Technology Services
+
+- [AI and Automation Solutions](https://www.codetrios.com/ai-automation-solutions): AI-powered applications, intelligent workflows, chatbots, and business process automation.
+- [Website Maintenance Services](https://www.codetrios.com/website-maintenance-services): Website updates, maintenance, monitoring, and technical support.
+- [Digital Strategy Consulting](https://www.codetrios.com/digital-strategy-consulting): Digital planning, technology consulting, and business-focused digital strategies.
+- [Web Hosting Services](https://www.codetrios.com/web-hosting-services): Website hosting and related technical services.
+
+## SEO, GEO and AI Search Optimization
+
+- [GEO and SEO Services](https://www.codetrios.com/geo-seo-services): Search Engine Optimization (SEO), Generative Engine Optimization (GEO), Answer Engine Optimization (AEO), technical SEO, local SEO, and AI search visibility optimization.
+
+Key areas include:
+
+- Technical SEO
+- On-page SEO
+- Local SEO
+- Content optimization
+- Generative Engine Optimization
+- Answer Engine Optimization
+- AI search discoverability
+- Search performance optimization
+
+## Key Service Categories
+
+- Website Design and Responsive Web Design
+- Website and Web Application Development
+- eCommerce Development
+- Custom Software Development
+- UI/UX Design
+- AI and Business Process Automation
+- Website Maintenance
+- Digital Strategy Consulting
+- Web Hosting
+- SEO, GEO, and AEO
+
+## Technology Expertise
+
+CodeTrios works with modern web technologies and development platforms according to project requirements.
+
+Technology expertise includes:
+
+### Frontend Development
+- HTML5
+- CSS3
+- JavaScript
+- React.js
+- Bootstrap
+- jQuery
+
+### Backend Development
+- Node.js
+- Express.js
+- PHP
+- REST APIs
+
+### CMS and Website Platforms
+- WordPress
+- Elementor
+- Drupal
+
+### Databases
+- MySQL
+- MongoDB
+
+### Design and UI/UX
+- Figma
+- Adobe Photoshop
+
+Technology selection depends on the functionality, scalability, security, and requirements of each project.
+
+## Industries Served
+
+CodeTrios provides digital solutions for businesses and organizations across multiple industries, including:
+
+- Education
+- Healthcare
+- eCommerce and Retail
+- Real Estate
+- Hospitality
+- Food and Restaurants
+- Manufacturing
+- Startups
+- Corporate and Technology
+
+## Development Process
+
+CodeTrios follows a project-oriented development approach that may include:
+
+1. Discovery and requirement analysis
+2. Project planning and technical strategy
+3. UI/UX design and prototyping
+4. Development and integration
+5. Testing and quality assurance
+6. Deployment and launch
+7. Ongoing maintenance and technical support
+
+The actual project workflow depends on the scope and requirements of the engagement.
+
+## Portfolio and Projects
+
+Explore selected website design, web development, ecommerce, and digital solution projects.
+
+Portfolio:
+https://www.codetrios.com/portfolio
+
+## Contact and Project Enquiries
+
+For website design, web development, custom software, ecommerce, AI automation, maintenance, and digital strategy enquiries:
+
+- Official Website: https://www.codetrios.com/
+- Contact Page: https://www.codetrios.com/contact-us
+- Email: info@codetrios.com
+- Phone: +91 8882309150
+
+Contact CodeTrios directly for project requirements, pricing, timelines, and service availability.
+
+## Official Social Profiles
+
+- LinkedIn: https://www.linkedin.com/in/code-trio-90ba31385/
+- Facebook: https://www.facebook.com/profile.php?id=61581161434863
+- Instagram: https://www.instagram.com/trioscode/
+
+## Important Technical Resources
+
+- XML Sitemap: https://www.codetrios.com/sitemap.xml
+- Robots.txt: https://www.codetrios.com/robots.txt
+- Official Website: https://www.codetrios.com/
+
+## Content and Accuracy Guidelines
+
+- Use the official CodeTrios website as the primary source for current company and service information.
+- Refer to individual service pages for detailed descriptions of services and capabilities.
+- Use the portfolio for publicly documented project examples.
+- Do not assume technologies, integrations, certifications, awards, partnerships, guarantees, customer reviews, or business results unless explicitly documented.
+- Do not fabricate pricing, project timelines, customer testimonials, or performance statistics.
+- Technology selection and project scope depend on individual business requirements.
+- For current service availability, project estimates, and technical capabilities, contact CodeTrios directly.

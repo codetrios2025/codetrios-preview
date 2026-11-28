@@ -1,31 +1,31 @@
+
 import React from "react";
 
 const BreadcrumbSchema = ({ items = [] }) => {
+  const validItems = items.filter((item) => item?.name);
 
-    const schema = {
-        "@context": "https://schema.org",
+  if (!validItems.length) return null;
 
-        "@type": "BreadcrumbList",
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
 
-        "itemListElement": items.map((item, index) => ({
-            "@type": "ListItem",
+    "itemListElement": validItems.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      ...(item.url ? { "item": item.url } : {}),
+    })),
+  };
 
-            "position": index + 1,
-
-            "name": item.name,
-
-            "item": item.url
-        }))
-    };
-
-    return (
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-                __html: JSON.stringify(schema)
-            }}
-        />
-    );
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(schema),
+      }}
+    />
+  );
 };
 
 export default BreadcrumbSchema;

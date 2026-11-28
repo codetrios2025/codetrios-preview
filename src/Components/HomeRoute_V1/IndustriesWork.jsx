@@ -14,7 +14,7 @@ import {
   Cpu,
 } from "lucide-react";
 
-import eduImg from '../../assets/images/edu-img.jpg';
+import eduImg from '../../assets/images/edu-img.webp';
 import healthcareImg from '../../assets/images/healthcare-img.jpg';
 import ecomImg from '../../assets/images/ecom-img.jpg';
 import estateImg from '../../assets/images/estate-img.jpg';
@@ -84,7 +84,7 @@ const industriesData = [
 
 export default function IndustriesWork(){
   return(
-    <div className="ourIndustries blockPadding" id="Industries">
+    <div className="ourIndustries blockPadding" id="Industries" aria-labelledby="industries-title">
       <Container>
         <Row>
           <Col>
@@ -92,7 +92,7 @@ export default function IndustriesWork(){
               <div className="content">
                 <div className='sectionHead'>
                   <div className="tag" data-reveal="up">WHO WE WORK WITH</div>
-                  <h2 data-reveal="up">Industries We Serve</h2>
+                  <h2 id="industries-title" data-reveal="up">Industries We Serve</h2>
                   <p data-reveal="up">Digital Solutions for Different Industries. Every industry has its own requirements. We work with businesses and organizations to create websites and applications that support their day-to-day needs.</p>
                 </div>
               </div>

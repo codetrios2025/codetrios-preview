@@ -1,34 +1,34 @@
 @font-face {
     font-family: 'Rubik';
-    src: url('/assets/fonts/Rubik-Light.woff2') format('woff2');
+    src: url('./assets/fonts/Rubik-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Rubik';
-    src: url('/assets/fonts/Rubik-Regular.woff2') format('woff2');
+    src: url('./assets/fonts/Rubik-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Rubik';
-    src: url('/assets/fonts/Rubik-Medium.woff2') format('woff2');
+    src: url('./assets/fonts/Rubik-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Rubik';
-    src: url('/assets/fonts/Rubik-Bold.woff2') format('woff2');
+    src: url('./assets/fonts/Rubik-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'BricolageGrotesque-Bold';
-    src: url('/assets/fonts/BricolageGrotesque-Bold.woff2') format('woff2');
+    src: url('./assets/fonts/BricolageGrotesque-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -42,6 +42,7 @@
     ascent-override: 93%;
     descent-override: 25%;
     line-gap-override: 0%;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Bricolage Fallback';
@@ -50,6 +51,7 @@
     ascent-override: 95%;
     descent-override: 25%;
     line-gap-override: 0%;
+    font-display: swap;
 }
 
 :root {
@@ -236,8 +238,8 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
   background: transparent;
 }
 .ct-secoundary-btn:hover{
-  color:var(--sl-accent-2);
-  border-color: var(--sl-accent-2);
+  color:var(--ct-gray);
+  border-color: var(--ct-gray);
 }
 
 /* inner page banner */
@@ -443,11 +445,26 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
 .boxContainer .boxElem {border: 1px solid var(--ct-border);border-radius: 28px;background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));padding: 40px;backdrop-filter: blur(6px);display: flex;flex-wrap: wrap;color: #fff;position: relative;align-items: center;}
 .boxContainer .boxElem .leftArea {width: 50%;padding-right: 50px;display: flex;flex-direction: column;justify-content: center;}
 .boxContainer h5 {font-size: 22px;font-weight: 500;margin: 0 0 10px;}
-.boxContainer .boxElem .leftArea  p{color: var(--ct-gray);}
+.boxContainer .boxElem .leftArea  p{color: var(--ct-gray);font-size: 14px;}
 .boxContainer .boxElem .rightArea {width: 50%;display: flex;justify-content: center;gap: 10px;flex-wrap: wrap;align-content: flex-start;}
 .boxContainer .boxElem .techLogo {width: 20%;text-align: center;margin-bottom: 20px;padding: 10px 0;border-radius: 10px;border: 1px solid transparent;cursor: pointer;display: flex;flex-direction: column;justify-content: center;align-items: center;background: #fff;}
-.boxContainer .boxElem .techLogo h6 {font-size: 13px;margin: 10px 0 0;color: #000;font-weight: 500;}
-
+.boxContainer .boxElem .techLogo h4 {font-size: 13px;margin: 10px 0 0;color: #000;font-weight: 500;}
+.boxContainer .boxElem .techLogo figure img{width: auto;max-width: 100%;height: auto;}
+.technologyApplications ul{display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 0;
+    padding: 0;
+    list-style: none;}
+.technologyApplications ul li{padding: 5px 11px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #eef7ff;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+    background: color-mix(in srgb, var(--accent) 18%, rgba(4, 22, 43, 0.5));
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);}
 /* portfolio css */
 .portfolioPage .actionBtn .ct-secoundary-btn{display: none;}
 .projectBox{position: relative;margin-top: 30px;border-radius: 10px;padding: 0;overflow: hidden;border: 1px solid var(--ct-border);background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));}
@@ -457,7 +474,7 @@ header .mainMenu ul li .subMenuMob ul{margin: 0;}
 .projectBox .content .tags {display: flex;align-items: center;gap: 4px;flex-wrap: wrap;}
 .projectBox .content {padding: 15px;}
 .projectBox .content .tags h6 {background: #224f8b;display: inline-block;color: #fff;font-size: 12px;padding: 3px 7px;border-radius: 4px;margin: 0;font-weight: 400;}
-
+.projectBox h4{color: var(--ct-gray);margin: 0;font-size: 14px;font-weight: 400;}
 .projectBox h5 {color: var(--ct-gray);margin: 15px 0 10px;font-weight: 500;}
 /* portfolio css */
 .WhatsAppBtn{width: 58px;height: 58px;background: rgb(37, 211, 102);position: fixed;bottom: 20px;right: 90px;border-radius: 50%;display: flex;align-items: center;justify-content: center;box-shadow: 0 6px 20px rgba(0, 0, 0, .25);transition:.15s; }
